@@ -1,0 +1,328 @@
+/* Mac-style Window Container */
+.mac-window {
+    background: var(--deep-navy-100);
+    border: 1px solid var(--deep-navy-400);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.mac-window:hover {
+    border-color: var(--deep-navy-800);
+}
+
+.mac-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.mac-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.mac-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.mac-btn.red {
+    background: #ff5f56;
+}
+
+.mac-btn.yellow {
+    background: #ffbd2e;
+}
+
+.mac-btn.green {
+    background: #27c93f;
+}
+
+.mac-title {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.75rem;
+    color: var(--powder-blue-400);
+}
+
+/* Terminal Styles */
+.terminal-content {
+    background: rgba(0, 6, 19, 0.8);
+    border-radius: 8px;
+    padding: 1rem;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    border: 1px solid var(--deep-navy-400);
+    position: relative;
+}
+
+.terminal-line {
+    margin-bottom: 0.25rem;
+}
+
+.terminal-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1.2em;
+    background: var(--deep-navy-800);
+    vertical-align: middle;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Workflow Visualization */
+.workflow-canvas {
+    height: 280px;
+    background: rgba(0, 13, 39, 0.5);
+    border-radius: 12px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+.workflow-node {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 2;
+}
+
+.node-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    background: #ffffff;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1);
+}
+
+.workflow-line {
+    position: absolute;
+    height: 2px;
+    background: var(--deep-navy-400);
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff;
+    z-index: 3;
+}
+
+/* Success Banner Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--deep-navy-800);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Value Proposition Section */
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.value-card {
+    background: linear-gradient(135deg, rgba(0, 32, 96, 0.1) 0%, rgba(0, 13, 39, 0.4) 100%);
+    border: 1px solid var(--deep-navy-400);
+    padding: 3rem;
+    border-radius: 24px;
+    height: 100%;
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.value-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Pain vs Solution Table */
+.problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--deep-navy-400);
+    border: 1px solid var(--deep-navy-400);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.problem-cell {
+    background: var(--deep-navy-200);
+    padding: 2rem;
+}
+
+.problem-header {
+    background: var(--deep-navy-300);
+    padding: 1.5rem 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+}
+
+/* Savings Comparison Graph */
+.savings-comparison-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 320px;
+    padding: 2rem 1rem 3rem;
+    border-bottom: 1px solid var(--deep-navy-400);
+    gap: 1rem;
+}
+
+.savings-bar-wrapper {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.savings-bar-value {
+    font-weight: 800;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 0.75rem;
+    line-height: 1;
+}
+
+.savings-bar {
+    width: 100%;
+    max-width: 120px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    transition: all 0.5s ease;
+}
+
+.savings-bar-label {
+    font-size: 0.75rem;
+    margin-top: 1.25rem;
+    color: var(--text-secondary);
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.savings-arrow-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    color: var(--deep-navy-800);
+    opacity: 0.5;
+    padding-bottom: 2rem;
+    /* Compensate for bottom labels height to keep arrow centered with bars */
+}
+
+/* Page Transition Utility */
+.page-enter {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.page-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 400ms, transform 400ms;
+}
+
+/* Enhanced Card Hover */
+.value-card,
+.service-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.value-card:hover,
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 32, 96, 0.2);
+    border-color: var(--deep-navy-800);
+}
+
+@media (max-width: 768px) {
+    .problem-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .terminal-content {
+        font-size: 0.7rem;
+        padding: 0.75rem;
+    }
+
+    .node-icon-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+
+    .workflow-canvas {
+        height: 200px;
+    }
+
+    .value-card {
+        padding: 2rem;
+    }
+
+    .mac-window {
+        padding: 1rem;
+    }
+
+    .savings-comparison-container {
+        min-height: 280px;
+    }
+
+    .savings-bar-wrapper {
+        width: 45%;
+    }
+
+    .savings-bar-value {
+        font-size: 1.5rem;
+    }
+}

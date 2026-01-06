@@ -1,0 +1,132 @@
+/* Corporate Layout - Dark & Premium Enterprise */
+.corporate-layout {
+    min-height: 100vh;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+}
+
+.corporate-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 13, 39, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--deep-navy-400);
+    padding: 1rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.corporate-nav .logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    letter-spacing: -0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 1001;
+}
+
+.corporate-nav .logo .logo-icon {
+    color: var(--deep-navy-800);
+}
+
+/* Desktop Styles */
+.links.desktop-only {
+    display: flex;
+    align-items: center;
+}
+
+.links.desktop-only a {
+    color: var(--text-secondary);
+    margin-left: 2.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.links.desktop-only a:hover {
+    color: var(--text-primary);
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--deep-navy-100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    z-index: 1000;
+    transform: translateY(-100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.open {
+    transform: translateY(0);
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.btn-consultancy {
+    background: linear-gradient(135deg, var(--deep-navy-500) 0%, var(--deep-navy-600) 100%);
+    color: white !important;
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 15px rgba(0, 32, 96, 0.4);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Responsive Overrides */
+@media (max-width: 900px) {
+    .corporate-nav {
+        padding: 1rem 2rem;
+    }
+
+    .links.desktop-only {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+}
+
+footer {
+    background-color: var(--deep-navy-100);
+    padding: 4rem 4rem;
+    border-top: 1px solid var(--deep-navy-400);
+    margin-top: 6rem;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 4rem 2rem;
+    }
+}
