@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import {
     ChevronRight,
     ChevronLeft,
@@ -145,6 +146,10 @@ const Brochure = () => {
 
     return (
         <div className="brochure-viewer">
+            <Helmet>
+                <title>Brochure Interactivo | SOLID SOLUTIONS</title>
+                <meta name="description" content="Presentación interactiva de SOLID SOLUTIONS: Democratizando la ingeniería de alto nivel." />
+            </Helmet>
             <div className="brochure-nav-hints">
                 <div className="progress-bar">
                     {slides.map((_, i) => (

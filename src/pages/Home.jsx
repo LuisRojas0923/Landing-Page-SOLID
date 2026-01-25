@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import {
     ArrowRight,
     ShieldCheck,
@@ -56,6 +57,10 @@ const Home = () => {
 
     return (
         <div className="home-container" style={{ color: 'var(--text-primary)' }}>
+            <Helmet>
+                <title>SOLID SOLUTIONS - Ingeniería de Precisión</title>
+                <meta name="description" content="Potenciamos su empresa con soluciones autónomas y arquitectura de datos avanzada." />
+            </Helmet>
             {/* Hero Section */}
             <section id="home" style={{
                 padding: 'clamp(6rem, 15vh, 10rem) 2rem 8rem',
