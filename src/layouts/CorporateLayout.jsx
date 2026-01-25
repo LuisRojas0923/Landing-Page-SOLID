@@ -19,6 +19,7 @@ const CorporateLayout = () => {
                     <Link to="/">Inicio</Link>
                     <Link to="/solutions">Soluciones</Link>
                     <Link to="/about">Quienes Somos</Link>
+                    <Link to="/brochure" style={{ color: 'var(--deep-navy-800)', fontWeight: '700' }}>Brochure</Link>
                     <Link to="/contact">Contacto</Link>
                     <Link to="/contact" className="btn-consultancy">
                         Agendar Diagnóstico
@@ -38,6 +39,7 @@ const CorporateLayout = () => {
                     <Link to="/" onClick={() => setIsMenuOpen(false)}>Inicio</Link>
                     <Link to="/solutions" onClick={() => setIsMenuOpen(false)}>Soluciones</Link>
                     <Link to="/about" onClick={() => setIsMenuOpen(false)}>Quienes Somos</Link>
+                    <Link to="/brochure" onClick={() => setIsMenuOpen(false)} style={{ color: 'var(--deep-navy-800)', fontWeight: '700' }}>Brochure</Link>
                     <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contacto</Link>
                     <Link to="/contact" className="btn-consultancy" onClick={() => setIsMenuOpen(false)}>
                         Agendar Diagnóstico

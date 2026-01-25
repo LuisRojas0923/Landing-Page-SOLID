@@ -1,0 +1,409 @@
+.brochure-viewer {
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-main);
+    color: var(--text-primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    width: 100%;
+}
+
+.slide-content {
+    max-width: 1200px;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Titles & Description */
+.slide-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.slide-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.slide-desc {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    max-width: 800px;
+}
+
+/* Vision Slide */
+.vision-icon {
+    margin-bottom: 2rem;
+}
+
+.vision-quote {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--deep-navy-400);
+    padding: 3rem;
+    border-radius: 24px;
+    max-width: 900px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.4;
+    font-style: italic;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Friction Grid */
+.friction-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.friction-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--deep-navy-400);
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.item-icon {
+    color: #ef4444;
+    margin-bottom: 1.5rem;
+}
+
+.item-text h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.item-text p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.friction-footer {
+    font-weight: 700;
+    color: var(--deep-navy-800);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Products Showcase */
+.product-showcase {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    width: 100%;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.product-mockup {
+    background: #1e1e1e;
+    border-radius: 12px;
+    border: 1px solid #333;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.mockup-header {
+    background: #2d2d2d;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.mockup-header .dots {
+    display: flex;
+    gap: 6px;
+}
+
+.mockup-header .dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #444;
+}
+
+.url-bar {
+    background: #1e1e1e;
+    flex: 1;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+    color: #888;
+}
+
+.mockup-content {
+    height: 250px;
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screenshot-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: #444;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.product-info {
+    text-align: left;
+}
+
+.product-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.25rem;
+}
+
+.product-info .tagline {
+    color: var(--deep-navy-800);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.product-info ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.product-info li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.service-card {
+    background: var(--deep-navy-100);
+    border: 1px solid var(--deep-navy-400);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.service-icon {
+    color: var(--deep-navy-800);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.service-card h3 {
+    margin-bottom: 0.75rem;
+}
+
+.service-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Tech List */
+.tech-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.5rem 2rem;
+    border-radius: 100px;
+    border: 1px solid var(--deep-navy-400);
+}
+
+.tech-bubble {
+    width: 50px;
+    height: 50px;
+    background: var(--deep-navy-800);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-info {
+    text-align: left;
+}
+
+.tech-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.1rem;
+}
+
+.tech-info p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Closing Slide */
+.closing-points {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    text-align: left;
+}
+
+.closing-point {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.closing-point svg {
+    color: var(--deep-navy-800);
+}
+
+.cta-button {
+    background: white;
+    color: black;
+    border: none;
+    padding: 1.5rem 4rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 10px 30px rgba(255,255,255,0.2);
+}
+
+/* Navigation Controls */
+.controls {
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.nav-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background: white;
+    color: black;
+}
+
+.nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.slide-counter {
+    font-weight: 700;
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
+
+.brochure-nav-hints {
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.progress-bar {
+    display: flex;
+    gap: 8px;
+}
+
+.progress-dot {
+    width: 40px;
+    height: 4px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.progress-dot.active {
+    background: var(--deep-navy-800);
+    width: 80px;
+}
+
+@media (max-width: 900px) {
+    .friction-grid { grid-template-columns: 1fr; }
+    .product-showcase { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .tech-list { grid-template-columns: 1fr; }
+    .slide-content { height: auto; padding: 4rem 1rem; }
+    .vision-quote { font-size: 1.2rem; padding: 1.5rem; }
+    .slide-title { font-size: 2rem; }
+}
