@@ -16,7 +16,10 @@ import {
     Bot,
     Terminal,
     Layers,
-    Target
+    Target,
+    EyeOff,
+    TrendingUp as TrendingUpIcon,
+    AlertCircle
 } from 'lucide-react';
 import './Brochure.css';
 
@@ -38,14 +41,15 @@ const slides = [
     {
         id: 'friction',
         title: "¿Qué detiene su escalabilidad hoy?",
-        description: "La fricción operativa impide el crecimiento. Detectamos estos síntomas de freno:",
+        description: "La fricción operativa es el impuesto oculto que impide el crecimiento. Detectamos estos síntomas críticos de freno:",
         points: [
-            { icon: <Users />, label: "Procesos Manuales", text: "Tareas repetitivas que consumen talento humano." },
-            { icon: <Database />, label: "Silos de Datos", text: "Excel desconectados que generan 'versiones de la verdad' contradictorias." },
-            { icon: <BarChart3 />, label: "Ceguera Gerencial", text: "Reportes tardíos que impiden tomar decisiones a tiempo." }
+            { icon: <Users />, label: "Fuga de Talento", text: "Procesos manuales y tareas repetitivas que anclan el potencial humano a labores mecánicas de bajo valor." },
+            { icon: <Database />, label: "Caos Informativo", text: "Silos de datos y hojas de Excel desconectados que generan 'versiones de la verdad' contradictorias." },
+            { icon: <EyeOff />, label: "Incapacidad de Reacción", text: "Ceguera gerencial por reportes tardíos. El negocio sucede más rápido que su capacidad de medirlo." }
         ],
-        footer: "Su información ya no es un obstáculo, es el motor de su rentabilidad.",
-        accent: "#ef4444"
+        quote: "Sin un núcleo digital sólido, cada nuevo cliente aumenta la fricción operativa, no la rentabilidad.",
+        footer: "SU INFORMACIÓN DEJA DE SER UN OBSTÁCULO, ES EL MOTOR DE SU RENTABILIDAD",
+        accent: "#3b82f6"
     },
     {
         id: 'products',
@@ -207,17 +211,23 @@ const Brochure = () => {
                         {/* Friction Slide */}
                         {slide.id === 'friction' && (
                             <div className="friction-slide">
-                                <h1 className="slide-title">{slide.title}</h1>
-                                <p className="slide-desc">{slide.description}</p>
+                                <h1 className="slide-title">
+                                    ¿Qué detiene su <span className="highlight-italic">escalabilidad</span> hoy?
+                                </h1>
+                                <p className="slide-intro">
+                                    {slide.description}
+                                </p>
+
                                 <div className="friction-grid">
                                     {slide.points.map((p, i) => (
                                         <motion.div
                                             key={i}
-                                            initial={{ x: -20, opacity: 0 }}
-                                            animate={{ x: 0, opacity: 1 }}
+                                            initial={{ y: 20, opacity: 0 }}
+                                            animate={{ y: 0, opacity: 1 }}
                                             transition={{ delay: i * 0.1 }}
-                                            className="friction-item"
+                                            className="friction-card"
                                         >
+                                            <div className="card-bg-icon">{p.icon}</div>
                                             <div className="item-icon">{p.icon}</div>
                                             <div className="item-text">
                                                 <h3>{p.label}</h3>
@@ -226,7 +236,22 @@ const Brochure = () => {
                                         </motion.div>
                                     ))}
                                 </div>
-                                <p className="friction-footer">{slide.footer}</p>
+
+                                <div className="friction-analysis-box">
+                                    <div className="analysis-quote-side">
+                                        <div className="analysis-tag">
+                                            <TrendingUpIcon size={14} /> ANÁLISIS DE EFICIENCIA TÉCNICA
+                                        </div>
+                                        <p className="analysis-quote">"{slide.quote}"</p>
+                                    </div>
+                                    <div className="analysis-divider"></div>
+                                    <div className="analysis-result-side">
+                                        <p className="result-label">SU INFORMACIÓN DEJA DE SER UN OBSTÁCULO</p>
+                                        <p className="result-value">
+                                            ES EL MOTOR DE SU RENTABILIDAD <ArrowRight size={24} />
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         )}
 
@@ -343,6 +368,12 @@ const Brochure = () => {
                 <button onClick={nextSlide} disabled={currentSlide === slides.length - 1} className="nav-btn">
                     Siguiente <ChevronRight />
                 </button>
+            </div>
+
+            {/* Strategic Branding Footer */}
+            <div className="brochure-footer-brand">
+                <div className="brand-dot"></div>
+                SOLID SOLUTIONS • PRESENTACIÓN ESTRATÉGICA 2024
             </div>
         </div>
     );
