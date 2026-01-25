@@ -43,6 +43,8 @@
     padding: 2rem;
     position: relative;
     width: 100%;
+    will-change: transform, opacity;
+    transform-style: preserve-3d;
 }
 
 .slide-content {

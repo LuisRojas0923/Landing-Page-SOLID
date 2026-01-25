@@ -131,18 +131,24 @@ const Brochure = () => {
 
     const variants = {
         enter: (direction) => ({
-            x: direction > 0 ? 1000 : -1000,
-            opacity: 0
+            x: direction > 0 ? '100%' : '-100%',
+            opacity: 0,
+            scale: 0.95,
+            filter: 'blur(10px)'
         }),
         center: {
             zIndex: 1,
             x: 0,
-            opacity: 1
+            opacity: 1,
+            scale: 1,
+            filter: 'blur(0px)'
         },
         exit: (direction) => ({
             zIndex: 0,
-            x: direction < 0 ? 1000 : -1000,
-            opacity: 0
+            x: direction < 0 ? '100%' : '-100%',
+            opacity: 0,
+            scale: 1.05,
+            filter: 'blur(10px)'
         })
     };
 
@@ -178,8 +184,10 @@ const Brochure = () => {
                     animate="center"
                     exit="exit"
                     transition={{
-                        x: { type: "spring", stiffness: 300, damping: 30 },
-                        opacity: { duration: 0.2 }
+                        x: { type: "spring", stiffness: 200, damping: 25 },
+                        opacity: { duration: 0.4 },
+                        scale: { duration: 0.4 },
+                        filter: { duration: 0.4 }
                     }}
                     className="slide-container"
                 >
