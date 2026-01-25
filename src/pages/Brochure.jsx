@@ -75,7 +75,7 @@ const slides = [
         title: "Servicios para eliminar la fricción",
         description: "Aplicamos ingeniería donde el software estándar no llega.",
         services: [
-            { icon: <Bot />, title: "RPA", desc: "Liberamos a su equipo de tareas repetitivas conectando sistemas que no hablan entre sí." },
+            { icon: <Bot />, title: "RPA", desc: "Liberamos a su equipo de tareas repetitivas conectando sistemas que no hablan entre sí.", interactive: true },
             { icon: <Layers />, title: "Ingeniería de Datos", desc: "Extracción, transformación y visualización avanzada para Business Intelligence." },
             { icon: <Terminal />, title: "Desarrollo a Medida", desc: "Soluciones de software robustas en Java y Python alineadas específicamente a su negocio." },
             { icon: <ShieldCheck />, title: "Consultoría", desc: "Mejora y diseño estratégico de flujos de trabajo antes de automatizar." }

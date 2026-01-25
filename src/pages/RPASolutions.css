@@ -1,0 +1,247 @@
+.rpa-solutions-page {
+    background: #020617;
+    color: white;
+    min-height: 100vh;
+    padding: 120px 20px 80px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.rpa-hero {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto 100px;
+}
+
+.rpa-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 160px;
+    /* More space between stories */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.showcase-item {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.showcase-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.showcase-text {
+    flex: 1;
+}
+
+.showcase-visual {
+    flex: 1.5;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 40px;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+}
+
+.technical-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #3b82f6;
+    font-family: monospace;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+}
+
+.rpa-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+.rpa-description {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+/* Literal Pipeline Styles */
+.pipeline-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 90%;
+    justify-content: center;
+}
+
+.connector {
+    flex: 1;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.05);
+    position: relative;
+    display: none;
+    /* Hide old straight connector */
+}
+
+.connector-svg-wrapper {
+    flex: 1;
+    height: 100px;
+    /* Vertical space for paths */
+    position: relative;
+}
+
+.connector-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.data-stream {
+    position: absolute;
+    top: -3px;
+    width: 20px;
+    height: 8px;
+    background: #3b82f6;
+    border-radius: 4px;
+    filter: blur(2px) drop-shadow(0 0 5px #3b82f6);
+}
+
+.source-box {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.source-box.excel {
+    border-color: rgba(22, 163, 74, 0.4);
+    color: #22c55e;
+}
+
+.source-box.db {
+    border-color: rgba(59, 130, 246, 0.4);
+    color: #60a5fa;
+}
+
+.source-box.big {
+    width: 140px;
+    height: 140px;
+    font-size: 1rem;
+}
+
+.bot-node {
+    width: 100px;
+    height: 100px;
+    background: rgba(59, 130, 246, 0.05);
+    border: 2px solid #3b82f6;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+}
+
+.bot-node.circle {
+    border-radius: 50%;
+}
+
+.result-box {
+    width: 120px;
+    height: 120px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid #3b82f6;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.result-box.erp-nucleus {
+    width: 160px;
+    height: 160px;
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.2), #020617);
+}
+
+.result-box.dashboard {
+    border-color: #60a5fa;
+    background: #0f172a;
+}
+
+@media (max-width: 900px) {
+    .rpa-solutions-page {
+        padding-top: 80px;
+    }
+
+    .rpa-grid {
+        gap: 80px;
+    }
+
+    .showcase-item,
+    .showcase-item:nth-child(even) {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .technical-tag {
+        justify-content: center;
+    }
+
+    .showcase-visual {
+        width: 100%;
+        height: min-content;
+        min-height: 300px;
+        padding: 40px 10px;
+    }
+
+    .pipeline-horizontal {
+        gap: 10px;
+        transform: scale(0.9);
+    }
+
+    .source-box,
+    .bot-node,
+    .result-box {
+        transform: scale(0.7);
+    }
+
+    .source-box.big,
+    .result-box.erp-nucleus {
+        width: 120px;
+        height: 120px;
+        transform: scale(0.8);
+    }
+
+    .connector-svg-wrapper {
+        height: 60px;
+        /* Reduced vertical space for mobile */
+    }
+
+    .rpa-title {
+        font-size: 2rem;
+    }
+}
