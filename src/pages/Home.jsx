@@ -368,6 +368,7 @@ const Home = () => {
 
             {/* FEATURED PRODUCT - Solid ERP */}
             <section style={{ padding: '8rem 2rem', background: 'linear-gradient(180deg, transparent, rgba(0, 32, 96, 0.05), transparent)' }}>
+                {/* ... existing Solid ERP content ... */}
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                     <div style={{
                         background: 'rgba(255, 255, 255, 0.02)',
@@ -427,9 +428,62 @@ const Home = () => {
                                 whileHover={{ scale: 1.1, rotate: -2 }}
                             />
                         </div>
-
-                        {/* Decorative Background Elements */}
                         <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '300px', height: '300px', background: 'radial-gradient(circle, var(--deep-navy-500) 0%, transparent 70%)', opacity: 0.1, zIndex: -1 }} />
+                    </div>
+                </div>
+            </section>
+
+            {/* NEW SECTION: PRODUCT IN ACTION (VIDEO) */}
+            <section style={{ padding: '4rem 2rem 8rem' }}>
+                <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                        <div style={{ color: 'var(--deep-navy-800)', fontWeight: '800', fontSize: '0.9rem', marginBottom: '1rem', letterSpacing: '0.1em' }}>PRODUCTO EN ACCIÓN</div>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '1.5rem' }}>Ecosistema <span style={{ color: 'var(--deep-navy-800)' }}>Solid Service Portal</span></h2>
+                        <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '800px', margin: '0 auto' }}>
+                            Visualice la simplicidad operativa. Centralice solicitudes, tickets y procesos internos en una interfaz diseñada para la velocidad.
+                        </p>
+                    </div>
+
+                    <div style={{
+                        position: 'relative',
+                        maxWidth: '1000px',
+                        margin: '0 auto',
+                        background: '#1e1e1e',
+                        borderRadius: '24px',
+                        border: '1px solid #333',
+                        boxShadow: '0 40px 80px rgba(0,0,0,0.5)',
+                        overflow: 'hidden'
+                    }}>
+                        {/* Browser Header Decor */}
+                        <div style={{ background: '#2d2d2d', padding: '0.75rem 1.5rem', display: 'flex', alignItems: 'center', gap: '2rem' }}>
+                            <div style={{ display: 'flex', gap: '8px' }}>
+                                <span style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ff5f56' }}></span>
+                                <span style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ffbd2e' }}></span>
+                                <span style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#27c93f' }}></span>
+                            </div>
+                            <div style={{ background: '#1e1e1e', flex: 1, height: '28px', borderRadius: '6px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', padding: '0 1rem', color: '#666' }}>
+                                solid_service_portal.solutions/dashboard
+                            </div>
+                        </div>
+
+                        {/* Video Element */}
+                        <div style={{ position: 'relative', paddingTop: '56.25%', background: '#000' }}>
+                            <video
+                                src="/videos/portal-demo.mp4"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                style={{
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0,
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: 'cover'
+                                }}
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -553,7 +607,7 @@ const Home = () => {
                     </button>
                     <div style={{ marginTop: '3rem' }}>
                         <a
-                            href="https://wa.me/573163227764?text=Hola,%20quisiera%20agendar%20un%20diagnóstico%20de%20automatización%20para%20mi%20empresa."
+                            href="https://wa.me/573172652487?text=Hola,%20quisiera%20agendar%20un%20diagnóstico%20de%20automatización%20para%20mi%20empresa."
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', textDecoration: 'none' }}

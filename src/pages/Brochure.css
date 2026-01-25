@@ -2,15 +2,51 @@
     width: 100vw;
     height: 100vh;
     background: #020617;
-    /* Dark slate background */
     color: var(--text-primary);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Enable scroll for long content */
     display: flex;
     flex-direction: column;
+    font-family: 'Inter', sans-serif;
+}
+
+.engineering-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.1;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #1e293b 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 0;
+}
+
+.ambient-glow-1 {
+    position: absolute;
+    top: -6rem;
+    left: -6rem;
+    width: 24rem;
+    height: 24rem;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+}
+
+.ambient-glow-2 {
+    position: absolute;
+    bottom: -6rem;
+    right: -6rem;
+    width: 24rem;
+    height: 24rem;
+    background: rgba(234, 88, 12, 0.05);
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
 }
 
 .brochure-viewer::before {
@@ -45,17 +81,21 @@
     width: 100%;
     will-change: transform, opacity;
     transform-style: preserve-3d;
+    min-height: min-content;
+    /* Allow container to grow if content is tall */
 }
 
 .slide-content {
     max-width: 1200px;
     width: 100%;
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 2rem 0;
+    /* Add vertical padding for mobile */
 }
 
 /* Titles & Description */
@@ -200,64 +240,33 @@
     width: 100%;
 }
 
-.analysis-quote-side {
-    flex: 1;
-    text-align: left;
-}
+@media (max-width: 768px) {
+    .friction-analysis-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
 
-.analysis-tag {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #60a5fa;
-    /* blue-400 */
-    font-family: monospace;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    margin-bottom: 0.75rem;
-}
+    .analysis-quote-side {
+        text-align: center !important;
+    }
 
-.analysis-quote {
-    font-size: 1.15rem;
-    color: #cbd5e1;
-    /* slate-300 */
-    font-style: italic;
-    line-height: 1.5;
-}
+    .analysis-tag {
+        justify-content: center;
+    }
 
-.analysis-divider {
-    width: 1px;
-    height: 60px;
-    background: #334155;
-    /* slate-700 */
-}
+    .analysis-divider {
+        width: 100% !important;
+        height: 1px !important;
+    }
 
-.analysis-result-side {
-    flex: 1;
-    text-align: right;
-}
+    .analysis-result-side {
+        text-align: center !important;
+    }
 
-.result-label {
-    color: #60a5fa;
-    /* blue-400 */
-    font-weight: 700;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.result-value {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 1rem;
-}
-
-.result-value svg {
-    color: #3b82f6;
+    .result-value {
+        justify-content: center !important;
+    }
 }
 
 /* Products Showcase */
@@ -312,11 +321,13 @@
 }
 
 .mockup-content {
-    height: 250px;
+    aspect-ratio: 16 / 9;
+    height: auto;
     background: #0a0a0a;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .screenshot-placeholder {
@@ -608,33 +619,138 @@
 }
 
 @media (max-width: 900px) {
-    .friction-grid {
-        grid-template-columns: 1fr;
+    .brochure-viewer {
+        overflow-y: auto;
     }
 
-    .product-showcase {
-        grid-template-columns: 1fr;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .tech-list {
-        grid-template-columns: 1fr;
+    .slide-container {
+        padding: 1rem;
+        padding-top: 5rem;
+        /* Space for progress bar */
+        padding-bottom: 8rem;
+        /* Space for controls */
+        align-items: flex-start;
+        /* Start from top on mobile */
     }
 
     .slide-content {
+        min-height: auto;
+        padding: 0;
         height: auto;
-        padding: 4rem 1rem;
+    }
+
+    .friction-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .product-showcase {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .tech-list {
+        grid-template-columns: 1fr !important;
     }
 
     .vision-quote {
-        font-size: 1.2rem;
-        padding: 1.5rem;
+        font-size: 1.35rem !important;
+        padding: 1.5rem !important;
     }
 
     .slide-title {
-        font-size: 2rem;
+        font-size: clamp(1.8rem, 8vw, 2.5rem) !important;
+        margin-top: 1rem;
     }
+
+    .slide-intro {
+        text-align: center;
+        border-left: none;
+        padding-left: 0;
+        font-size: 1.1rem;
+    }
+
+    .controls {
+        padding: 1rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .nav-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .brochure-footer-brand {
+        display: none;
+        /* Hide branding on small screens to save space */
+    }
+
+    .progress-dot {
+        width: 20px;
+    }
+
+    .progress-dot.active {
+        width: 40px;
+    }
+
+    .friction-card {
+        padding: 1.5rem;
+    }
+
+    .closing-point {
+        font-size: 1.1rem;
+    }
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(2, 6, 23, 0.8);
+    backdrop-filter: blur(12px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.modal-content {
+    background: #0f172a;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    padding: 3rem;
+    border-radius: 24px;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(90deg);
 }

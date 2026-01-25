@@ -4,30 +4,26 @@ import { Helmet } from 'react-helmet-async';
 import {
     ChevronRight,
     ChevronLeft,
-    ArrowRight,
-    LayoutDashboard,
-    Zap,
-    ShieldCheck,
-    Database,
-    TrendingUp,
-    Building2,
+    Target,
     Users,
-    TicketCheck,
+    Database,
+    EyeOff,
+    Target as TargetIcon,
+    ShieldCheck,
     Bot,
     Terminal,
     Layers,
-    Target,
-    EyeOff,
-    TrendingUp as TrendingUpIcon,
-    AlertCircle
+    Zap
 } from 'lucide-react';
 import './Brochure.css';
 
-const BarChart3 = ({ size = 24 }) => (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />
-    </svg>
-);
+// Slide Components
+import VisionSlide from '../components/Brochure/VisionSlide';
+import FrictionSlide from '../components/Brochure/FrictionSlide';
+import ProductsSlide from '../components/Brochure/ProductsSlide';
+import ServicesSlide from '../components/Brochure/ServicesSlide';
+import TechSlide from '../components/Brochure/TechSlide';
+import ClosingSlide from '../components/Brochure/ClosingSlide';
 
 const slides = [
     {
@@ -35,7 +31,7 @@ const slides = [
         title: "SOLID SOLUTIONS",
         subtitle: "Ingeniería de Precisión para Negocios en Escala.",
         quote: "Democratizar la ingeniería de alto nivel para empresas que buscan escala, eliminando la fricción técnica mediante automatización y software de precisión.",
-        icon: <Target size={48} />,
+        icon: <TargetIcon size={48} />,
         accent: "var(--deep-navy-800)"
     },
     {
@@ -60,14 +56,14 @@ const slides = [
                 name: "SOLID ERP",
                 tagline: "El Núcleo Operativo",
                 features: ["Finanzas & Reporting", "Logística en Tiempo Real", "CRM Integrado"],
-                image: "/projects/erp-placeholder.png", // Placeholder
+                image: "/projects/erp-placeholder.png",
                 isProduct: true
             },
             {
                 name: "SOLID SERVICE PORTAL",
                 tagline: "El Núcleo de Apoyo",
                 features: ["Gestión de Tickets TI", "Requisiciones RRHH", "Solicitudes Centralizadas"],
-                image: "/projects/portal-placeholder.png", // Placeholder
+                video: "/videos/portal-demo.mp4",
                 isProduct: true
             }
         ],
@@ -154,6 +150,25 @@ const Brochure = () => {
 
     const slide = slides[currentSlide];
 
+    const renderSlide = () => {
+        switch (slide.id) {
+            case 'vision':
+                return <VisionSlide slide={slide} />;
+            case 'friction':
+                return <FrictionSlide slide={slide} />;
+            case 'products':
+                return <ProductsSlide slide={slide} />;
+            case 'services':
+                return <ServicesSlide slide={slide} />;
+            case 'tech':
+                return <TechSlide slide={slide} />;
+            case 'closing':
+                return <ClosingSlide slide={slide} />;
+            default:
+                return null;
+        }
+    };
+
     return (
         <div className="brochure-viewer">
             <Helmet>
@@ -187,183 +202,12 @@ const Brochure = () => {
                         x: { type: "spring", stiffness: 200, damping: 25 },
                         opacity: { duration: 0.4 },
                         scale: { duration: 0.4 },
-                        filter: { duration: 0.4 }
+                        filter: { duration: 0.4, ease: "easeOut" } // Use duration instead of spring for filter
                     }}
                     className="slide-container"
                 >
                     <div className="slide-content">
-                        {/* Vision Slide */}
-                        {slide.id === 'vision' && (
-                            <div className="vision-slide">
-                                <motion.div
-                                    initial={{ scale: 0.8, opacity: 0 }}
-                                    animate={{ scale: 1, opacity: 1 }}
-                                    className="vision-icon"
-                                    style={{ color: slide.accent }}
-                                >
-                                    {slide.icon}
-                                </motion.div>
-                                <h1 className="slide-title">{slide.title}</h1>
-                                <h2 className="slide-subtitle">{slide.subtitle}</h2>
-                                <motion.div
-                                    initial={{ y: 20, opacity: 0 }}
-                                    animate={{ y: 0, opacity: 1 }}
-                                    transition={{ delay: 0.3 }}
-                                    className="vision-quote"
-                                >
-                                    <p>"{slide.quote}"</p>
-                                </motion.div>
-                            </div>
-                        )}
-
-                        {/* Friction Slide */}
-                        {slide.id === 'friction' && (
-                            <div className="friction-slide">
-                                <h1 className="slide-title">
-                                    ¿Qué detiene su <span className="highlight-italic">escalabilidad</span> hoy?
-                                </h1>
-                                <p className="slide-intro">
-                                    {slide.description}
-                                </p>
-
-                                <div className="friction-grid">
-                                    {slide.points.map((p, i) => (
-                                        <motion.div
-                                            key={i}
-                                            initial={{ y: 20, opacity: 0 }}
-                                            animate={{ y: 0, opacity: 1 }}
-                                            transition={{ delay: i * 0.1 }}
-                                            className="friction-card"
-                                        >
-                                            <div className="card-bg-icon">{p.icon}</div>
-                                            <div className="item-icon">{p.icon}</div>
-                                            <div className="item-text">
-                                                <h3>{p.label}</h3>
-                                                <p>{p.text}</p>
-                                            </div>
-                                        </motion.div>
-                                    ))}
-                                </div>
-
-                                <div className="friction-analysis-box">
-                                    <div className="analysis-quote-side">
-                                        <div className="analysis-tag">
-                                            <TrendingUpIcon size={14} /> ANÁLISIS DE EFICIENCIA TÉCNICA
-                                        </div>
-                                        <p className="analysis-quote">"{slide.quote}"</p>
-                                    </div>
-                                    <div className="analysis-divider"></div>
-                                    <div className="analysis-result-side">
-                                        <p className="result-label">SU INFORMACIÓN DEJA DE SER UN OBSTÁCULO</p>
-                                        <p className="result-value">
-                                            ES EL MOTOR DE SU RENTABILIDAD <ArrowRight size={24} />
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
-
-                        {/* Products Slide */}
-                        {slide.id === 'products' && (
-                            <div className="products-slide">
-                                <h1 className="slide-title">{slide.title}</h1>
-                                <div className="product-showcase">
-                                    {slide.products.map((p, i) => (
-                                        <div key={i} className="product-card">
-                                            <div className="product-mockup">
-                                                <div className="mockup-header">
-                                                    <div className="dots"><span></span><span></span><span></span></div>
-                                                    <div className="url-bar">{p.name.toLowerCase().replace(/ /g, '_')}.solutions</div>
-                                                </div>
-                                                <div className="mockup-content">
-                                                    {/* Screen Capture Placeholder */}
-                                                    <div className="screenshot-placeholder">
-                                                        <LayoutDashboard size={48} opacity={0.1} />
-                                                        <span>Captura de {p.name} aquí</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="product-info">
-                                                <h3>{p.name}</h3>
-                                                <span className="tagline">{p.tagline}</span>
-                                                <ul>
-                                                    {p.features.map((f, j) => <li key={j}><ChevronRight size={14} /> {f}</li>)}
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                                <motion.div
-                                    initial={{ opacity: 0, y: 10 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    className="integration-banner"
-                                >
-                                    <Zap size={18} /> {slide.integrationNote}
-                                </motion.div>
-                            </div>
-                        )}
-
-                        {/* Services Slide */}
-                        {slide.id === 'services' && (
-                            <div className="services-slide">
-                                <h1 className="slide-title">{slide.title}</h1>
-                                <div className="services-grid">
-                                    {slide.services.map((s, i) => (
-                                        <motion.div
-                                            key={i}
-                                            whileHover={{ y: -5 }}
-                                            className="service-card"
-                                        >
-                                            <div className="service-icon">{s.icon}</div>
-                                            <h3>{s.title}</h3>
-                                            <p>{s.desc}</p>
-                                        </motion.div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-
-                        {/* Tech Slide */}
-                        {slide.id === 'tech' && (
-                            <div className="tech-slide">
-                                <h1 className="slide-title">{slide.title}</h1>
-                                <div className="tech-list">
-                                    {slide.techStack.map((t, i) => (
-                                        <div key={i} className="tech-item">
-                                            <div className="tech-bubble">
-                                                <Zap size={20} />
-                                            </div>
-                                            <div className="tech-info">
-                                                <h3>{t.name}</h3>
-                                                <p>{t.detail}</p>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-
-                        {/* Closing Slide */}
-                        {slide.id === 'closing' && (
-                            <div className="closing-slide">
-                                <h1 className="slide-title">{slide.title}</h1>
-                                <div className="closing-points">
-                                    {slide.points.map((p, i) => (
-                                        <div key={i} className="closing-point">
-                                            <ShieldCheck size={24} />
-                                            <span>{p}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                                <motion.button
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    className="cta-button"
-                                >
-                                    {slide.cta} <ArrowRight />
-                                </motion.button>
-                            </div>
-                        )}
+                        {renderSlide()}
                     </div>
                 </motion.div>
             </AnimatePresence>
@@ -381,7 +225,7 @@ const Brochure = () => {
             {/* Strategic Branding Footer */}
             <div className="brochure-footer-brand">
                 <div className="brand-dot"></div>
-                SOLID SOLUTIONS • PRESENTACIÓN ESTRATÉGICA 2024
+                SOLID SOLUTIONS • PRESENTACIÓN ESTRATÉGICA 2026
             </div>
         </div>
     );

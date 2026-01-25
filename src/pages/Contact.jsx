@@ -49,7 +49,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase' }}>WhatsApp</p>
-                                        <p style={{ fontSize: '1.1rem' }}>+57 300 000 0000</p>
+                                        <p style={{ fontSize: '1.1rem' }}>+57 317 265 2487</p>
                                     </div>
                                 </div>
                                 <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
