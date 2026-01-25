@@ -1,10 +1,3 @@
-Excelente elección. Esa frase eleva inmediatamente el tono de la presentación: pasa de ser una propuesta técnica ("hacemos software") a una **propuesta estratégica de negocios** ("ayudamos a escalar").
-
-Al incorporar esta nueva visión, el RPA y el nuevo Portal de Servicios, la narrativa se vuelve mucho más robusta.
-
-Aquí te presento la estructura sugerida, integrando tus nuevos elementos con la información de las fuentes y las correcciones previas.
-
----
 
 ### Diapositiva 1: Portada y Visión (El Gancho)
 

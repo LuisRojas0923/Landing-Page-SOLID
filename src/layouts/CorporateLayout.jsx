@@ -11,7 +11,7 @@ const CorporateLayout = () => {
             <nav className="corporate-nav">
                 <Link to="/" className="logo">
                     <Building2 size={28} className="logo-icon" />
-                    <span>Solutions</span>
+                    <span>SOLID SOLUTIONS</span>
                 </Link>
 
                 {/* Desktop Links */}
@@ -56,7 +56,7 @@ const CorporateLayout = () => {
                     <div style={{ flex: '1', minWidth: '300px' }}>
                         <div className="logo" style={{ marginBottom: '1.5rem', fontSize: '1.25rem' }}>
                             <Building2 size={24} className="logo-icon" />
-                            <span>Solutions</span>
+                            <span>SOLID SOLUTIONS</span>
                         </div>
                         <p style={{ color: 'var(--text-secondary)', maxWidth: '400px', fontSize: '0.95rem' }}>
                             Ingeniería de procesos y automatización industrial avanzada. Transformamos la complejidad en eficiencia operativa.
@@ -67,7 +67,7 @@ const CorporateLayout = () => {
                             <Link to="/privacy">Privacidad</Link>
                             <Link to="/terms">Términos</Link>
                         </div>
-                        <p>&copy; {new Date().getFullYear()} Solutions Enterprise. Todos los derechos reservados.</p>
+                        <p>&copy; {new Date().getFullYear()} SOLID SOLUTIONS Enterprise. Todos los derechos reservados.</p>
                     </div>
                 </div>
             </footer>

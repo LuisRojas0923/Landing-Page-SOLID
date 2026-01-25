@@ -43,7 +43,7 @@ const slides = [
             { icon: <Database />, label: "Silos de Datos", text: "Excel desconectados que generan 'versiones de la verdad' contradictorias." },
             { icon: <BarChart3 />, label: "Ceguera Gerencial", text: "Reportes tardíos que impiden tomar decisiones a tiempo." }
         ],
-        footer: "Su empresa trabaja para el dato, no el dato para su empresa.",
+        footer: "Su información ya no es un obstáculo, es el motor de su rentabilidad.",
         accent: "#ef4444"
     },
     {
@@ -66,6 +66,7 @@ const slides = [
                 isProduct: true
             }
         ],
+        integrationNote: "Ecosistema Unificado: Solid Service Portal alimenta nativamente el núcleo de datos de SOLID ERP.",
         accent: "var(--deep-navy-800)"
     },
     {
@@ -73,10 +74,10 @@ const slides = [
         title: "Servicios para eliminar la fricción",
         description: "Aplicamos ingeniería donde el software estándar no llega.",
         services: [
-            { icon: <Bot />, title: "RPA", desc: "Automatización Robótica de Procesos." },
-            { icon: <Layers />, title: "Ingeniería de Datos", desc: "ETL, BI y visualización avanzada." },
-            { icon: <Terminal />, title: "Desarrollo a Medida", desc: "Sistemas robustos en Java y Python." },
-            { icon: <ShieldCheck />, title: "Consultoría", desc: "Mejora y diseño de flujos operativos." }
+            { icon: <Bot />, title: "RPA", desc: "Liberamos a su equipo de tareas repetitivas conectando sistemas que no hablan entre sí." },
+            { icon: <Layers />, title: "Ingeniería de Datos", desc: "Extracción, transformación y visualización avanzada para Business Intelligence." },
+            { icon: <Terminal />, title: "Desarrollo a Medida", desc: "Soluciones de software robustas en Java y Python alineadas específicamente a su negocio." },
+            { icon: <ShieldCheck />, title: "Consultoría", desc: "Mejora y diseño estratégico de flujos de trabajo antes de automatizar." }
         ],
         accent: "var(--deep-navy-500)"
     },
@@ -254,6 +255,13 @@ const Brochure = () => {
                                         </div>
                                     ))}
                                 </div>
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    className="integration-banner"
+                                >
+                                    <Zap size={18} /> {slide.integrationNote}
+                                </motion.div>
                             </div>
                         )}
 

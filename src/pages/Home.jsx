@@ -109,7 +109,7 @@ const Home = () => {
                         margin: '0 auto 4rem',
                         lineHeight: '1.6'
                     }}>
-                        Solutions elimina la fricción operativa. Conectamos sus sistemas, automatizamos sus procesos y preparamos sus datos para la era de la IA.
+                        SOLID SOLUTIONS elimina la fricción operativa. Conectamos sus sistemas, automatizamos sus procesos y preparamos sus datos para la era de la IA.
                     </p>
 
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
