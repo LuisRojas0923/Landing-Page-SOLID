@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -13,7 +14,8 @@ import {
     Bot,
     Terminal,
     Layers,
-    Zap
+    Zap,
+    Home
 } from 'lucide-react';
 import './Brochure.css';
 
@@ -175,6 +177,10 @@ const Brochure = () => {
                 <title>Brochure Interactivo | SOLID SOLUTIONS</title>
                 <meta name="description" content="Presentación interactiva de SOLID SOLUTIONS: Democratizando la ingeniería de alto nivel." />
             </Helmet>
+            <Link to="/" className="brochure-back-home" aria-label="Volver al inicio">
+                <Home size={16} />
+                <span>Inicio</span>
+            </Link>
             <div className="brochure-nav-hints">
                 <div className="progress-bar">
                     {slides.map((_, i) => (

@@ -32,26 +32,42 @@ import './Home.css';
 const Home = () => {
     const navigate = useNavigate();
 
-    const services = [
+    const verticals = [
         {
-            icon: <Search size={24} />,
-            title: "Inteligencia de Documentos (OCR)",
-            desc: "Convertimos documentos físicos en datos accionables: de facturas e incapacidades a registros digitales en segundos."
+            icon: <Workflow size={28} />,
+            number: '01',
+            title: 'Organizamos',
+            tagline: 'Orden antes de tecnología',
+            desc: 'Mapeamos sus procesos, eliminamos lo que no agrega valor y diseñamos flujos claros y replicables.',
+            items: [
+                { icon: <Search size={16} />, label: 'Auditoría de procesos' },
+                { icon: <FileSpreadsheet size={16} />, label: 'Estandarización de datos' },
+                { icon: <Layers size={16} />, label: 'Diagramas de flujo optimizados' },
+            ]
         },
         {
-            icon: <Code2 size={24} />,
-            title: "Software a Medida",
-            desc: "Ingeniería agnóstica: nos adaptamos a su necesidad con Java Swing para escritorio o backends robustos con FastAPI y React."
+            icon: <Code2 size={28} />,
+            number: '02',
+            title: 'Sistematizamos',
+            tagline: 'Software que conecta su operación',
+            desc: 'Construimos herramientas a medida que centralizan su información y conectan áreas que antes trabajaban aisladas.',
+            items: [
+                { icon: <Database size={16} />, label: 'Ingeniería de datos & BI' },
+                { icon: <Code2 size={16} />, label: 'Software a medida (Java, Python, React)' },
+                { icon: <BarChart3 size={16} />, label: 'Dashboards en tiempo real' },
+            ]
         },
         {
-            icon: <Cpu size={24} />,
-            title: "Automatización Industrial",
-            desc: "Orquestación de procesos mediante workflows inteligentes (n8n/Python) que eliminan el error humano."
-        },
-        {
-            icon: <BarChart3 size={24} />,
-            title: "Business Intelligence",
-            desc: "Dashboards de alta fidelidad para control de nómina, inventarios y finanzas en tiempo real."
+            icon: <Bot size={28} />,
+            number: '03',
+            title: 'Automatizamos',
+            tagline: 'Procesos que se ejecutan solos',
+            desc: 'Implementamos flujos de trabajo digitales que ejecutan tareas repetitivas sin intervención humana, con cero errores, 24/7.',
+            items: [
+                { icon: <Cpu size={16} />, label: 'RPA y workflows (n8n / Python)' },
+                { icon: <Search size={16} />, label: 'OCR e inteligencia documental' },
+                { icon: <Zap size={16} />, label: 'Integraciones y APIs automáticas' },
+            ]
         }
     ];
 
@@ -159,143 +175,221 @@ const Home = () => {
                 </motion.div>
             </section>
 
-            {/* TECH SHOWCASE SECTION - Mac Style Windows */}
+            {/* PIPELINE SECTION - Organizamos, Sistematizamos, Automatizamos */}
             <section id="demo" style={{ padding: '8rem 2rem', background: 'rgba(0, 13, 39, 0.4)' }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
-                        <h2 style={{ fontSize: '3rem', marginBottom: '1rem' }}>Capacidades en Acción</h2>
-                        <p style={{ color: 'var(--text-secondary)' }}>Una muestra visual de nuestra ingeniería aplicada.</p>
+                        <div style={{ color: 'var(--deep-navy-800)', fontWeight: '800', fontSize: '0.9rem', marginBottom: '1rem', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Nuestro Método</div>
+                        <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', marginBottom: '1rem', fontWeight: '800' }}>Así transformamos su operación</h2>
+                        <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>De la fricción a la autonomía, en tres pasos.</p>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '3rem' }}>
-
-                        {/* n8n Window */}
-                        <div className="mac-window">
-                            <div className="mac-header">
-                                <div className="mac-buttons">
-                                    <div className="mac-btn red"></div>
-                                    <div className="mac-btn yellow"></div>
-                                    <div className="mac-btn green"></div>
-                                </div>
-                                <div className="mac-title">workflow_engine.n8n</div>
-                            </div>
-                            <div className="workflow-canvas">
-                                {/* Simulated Nodes */}
-                                <motion.div
-                                    className="workflow-node"
-                                    style={{ top: '20%', left: '10%' }}
-                                    animate={{ y: [0, -5, 0] }}
-                                    transition={{ duration: 4, repeat: Infinity }}
-                                >
-                                    <div className="node-icon-wrapper"><Mail size={24} color="#002060" /></div>
-                                    <span style={{ fontSize: '0.7rem', opacity: 0.7 }}>EMAIL TRIGGER</span>
-                                </motion.div>
-
-                                <motion.div
-                                    className="workflow-node"
-                                    style={{ top: '50%', left: '40%' }}
-                                    animate={{ scale: [1, 1.05, 1] }}
-                                    transition={{ duration: 2, repeat: Infinity }}
-                                >
-                                    <div className="node-icon-wrapper" style={{ border: '2px solid var(--deep-navy-800)' }}><Bot size={24} color="#002060" /></div>
-                                    <span style={{ fontSize: '0.7rem', opacity: 0.7 }}>AI CLASSIFICATION</span>
-                                </motion.div>
-
-                                <motion.div
-                                    className="workflow-node"
-                                    style={{ top: '30%', left: '75%' }}
-                                >
-                                    <div className="node-icon-wrapper"><Database size={24} color="#002060" /></div>
-                                    <span style={{ fontSize: '0.7rem', opacity: 0.7 }}>ERP UPDATE</span>
-                                </motion.div>
-
-                                {/* Animated Particles */}
-                                <motion.div
-                                    className="particle"
-                                    animate={{
-                                        left: ['15%', '42%'],
-                                        top: ['35%', '55%'],
-                                        opacity: [0, 1, 0]
-                                    }}
-                                    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                                />
-                                <motion.div
-                                    className="particle"
-                                    animate={{
-                                        left: ['50%', '76%'],
-                                        top: ['55%', '43%'],
-                                        opacity: [0, 1, 0]
-                                    }}
-                                    transition={{ duration: 2, repeat: Infinity, ease: "linear", delay: 1 }}
-                                />
-                            </div>
-                            <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <div>
-                                    <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Automatización n8n</h4>
-                                    <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Orquestación de flujos multi-plataforma.</p>
-                                </div>
-                                <Zap size={20} color="var(--deep-navy-800)" />
-                            </div>
+                    <div className="pipeline-track">
+                        {/* Connector line with particles */}
+                        <div className="pipeline-connector">
+                            <motion.div
+                                className="pipeline-particle"
+                                animate={{ left: ['0%', '100%'], opacity: [0, 1, 1, 0] }}
+                                transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+                            />
+                            <motion.div
+                                className="pipeline-particle"
+                                animate={{ left: ['0%', '100%'], opacity: [0, 1, 1, 0] }}
+                                transition={{ duration: 3, repeat: Infinity, ease: 'linear', delay: 1.5 }}
+                            />
                         </div>
 
-                        {/* Code Window */}
-                        <div className="mac-window">
-                            <div className="mac-header">
-                                <div className="mac-buttons">
-                                    <div className="mac-btn red"></div>
-                                    <div className="mac-btn yellow"></div>
-                                    <div className="mac-btn green"></div>
+                        {/* PHASE 01 - Organizamos */}
+                        <motion.div
+                            className="pipeline-phase"
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: '-50px' }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            <div className="phase-header">
+                                <span className="phase-number">01</span>
+                                <div className="phase-icon-badge">
+                                    <Workflow size={22} />
                                 </div>
-                                <div className="mac-title">payroll_processor.py</div>
                             </div>
-                            <div className="terminal-content">
-                                <div className="terminal-line"><span style={{ color: '#c678dd' }}>import</span> pandas <span style={{ color: '#c678dd' }}>as</span> pd</div>
-                                <div className="terminal-line"><span style={{ color: '#c678dd' }}>from</span> solutions_engine <span style={{ color: '#c678dd' }}>import</span> calc_overtime</div>
-                                <div className="terminal-line">&nbsp;</div>
-                                <div className="terminal-line"><span style={{ color: '#e06c75' }}>def</span> <span style={{ color: '#61afef' }}>liquidar_novedades</span>(df):</div>
-                                <div className="terminal-line">&nbsp;&nbsp;&nbsp;&nbsp;df[<span style={{ color: '#98c379' }}>'recargos'</span>] = df.apply(calc_overtime)</div>
-                                <div className="terminal-line">&nbsp;&nbsp;&nbsp;&nbsp;<span style={{ color: '#c678dd' }}>return</span> df.merge_to_erp()</div>
-                                <div className="terminal-line">&nbsp;</div>
-                                <div className="terminal-line"><span style={{ color: '#5c6370' }}># Sistema procesando 4,500 registros...</span></div>
-                                <div className="terminal-line"><span style={{ color: '#98c379' }}>[SUCCESS]</span> Nómina procesada en 12.4s <span className="terminal-cursor"></span></div>
-                            </div>
-                            <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <div>
-                                    <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Python Scraping & RPA</h4>
-                                    <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Procesamiento masivo de alta precisión.</p>
-                                </div>
-                                <TerminalIcon size={20} color="var(--deep-navy-800)" />
-                            </div>
-                        </div>
+                            <h3 className="phase-title">Organizamos</h3>
+                            <p className="phase-desc">Mapeamos sus procesos, eliminamos operaciones que no agregan valor y diseñamos flujos eficientes.</p>
+                            <div className="phase-example">De caos operativo a flujos de alto valor</div>
 
-                        {/* Migration Window */}
-                        <div className="mac-window">
-                            <div className="mac-header">
-                                <div className="mac-buttons">
-                                    <div className="mac-btn red"></div>
-                                    <div className="mac-btn yellow"></div>
-                                    <div className="mac-btn green"></div>
+                            {/* Before / After Flowchart Visual */}
+                            <div className="mac-window phase-window">
+                                <div className="mac-header">
+                                    <div className="mac-buttons">
+                                        <div className="mac-btn red"></div>
+                                        <div className="mac-btn yellow"></div>
+                                        <div className="mac-btn green"></div>
+                                    </div>
+                                    <div className="mac-title">process_audit.flow</div>
                                 </div>
-                                <div className="mac-title">data_migration.sql</div>
-                            </div>
-                            <div style={{ height: '200px', borderRadius: '12px', overflow: 'hidden', position: 'relative' }}>
-                                <img
-                                    src="/projects/migration.png"
-                                    alt="Migration Visualization"
-                                    style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }}
-                                />
-                                <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.3)' }}>
-                                    <Database size={48} color="white" />
+                                <div className="flow-comparison">
+                                    {/* BEFORE - Messy flowchart */}
+                                    <div className="flow-side flow-before">
+                                        <span className="flow-label">ANTES</span>
+                                        <svg viewBox="0 0 160 120" className="flow-diagram">
+                                            {/* Tangled lines */}
+                                            <line x1="30" y1="20" x2="80" y2="50" className="flow-line-messy" />
+                                            <line x1="80" y1="50" x2="130" y2="25" className="flow-line-messy" />
+                                            <line x1="30" y1="20" x2="130" y2="95" className="flow-line-messy" />
+                                            <line x1="80" y1="50" x2="30" y2="95" className="flow-line-messy" />
+                                            <line x1="130" y1="25" x2="30" y2="95" className="flow-line-messy" />
+                                            <line x1="130" y1="25" x2="80" y2="95" className="flow-line-messy" />
+                                            <line x1="80" y1="50" x2="130" y2="95" className="flow-line-messy" />
+                                            <line x1="30" y1="20" x2="80" y2="95" className="flow-line-messy" />
+                                            {/* Nodes */}
+                                            <circle cx="30" cy="20" r="8" className="flow-node-messy" />
+                                            <circle cx="80" cy="50" r="8" className="flow-node-messy" />
+                                            <circle cx="130" cy="25" r="8" className="flow-node-messy" />
+                                            <circle cx="30" cy="95" r="8" className="flow-node-messy" />
+                                            <circle cx="80" cy="95" r="8" className="flow-node-messy" />
+                                            <circle cx="130" cy="95" r="8" className="flow-node-messy" />
+                                        </svg>
+                                        <span className="flow-count">6 pasos, 8 cruces</span>
+                                    </div>
+
+                                    {/* Arrow divider */}
+                                    <div className="flow-arrow">
+                                        <ArrowRight size={18} />
+                                    </div>
+
+                                    {/* AFTER - Clean flowchart */}
+                                    <div className="flow-side flow-after">
+                                        <span className="flow-label flow-label-ok">DESPUÉS</span>
+                                        <svg viewBox="0 0 160 120" className="flow-diagram">
+                                            {/* Clean sequential lines */}
+                                            <line x1="80" y1="22" x2="80" y2="48" className="flow-line-clean" />
+                                            <line x1="80" y1="68" x2="80" y2="90" className="flow-line-clean" />
+                                            {/* Clean nodes */}
+                                            <rect x="60" y="6" width="40" height="18" rx="5" className="flow-node-clean" />
+                                            <rect x="60" y="48" width="40" height="18" rx="5" className="flow-node-clean" />
+                                            <rect x="60" y="90" width="40" height="18" rx="5" className="flow-node-clean" />
+                                            {/* Check marks */}
+                                            <text x="80" y="19" textAnchor="middle" className="flow-check">&#10003;</text>
+                                            <text x="80" y="61" textAnchor="middle" className="flow-check">&#10003;</text>
+                                            <text x="80" y="103" textAnchor="middle" className="flow-check">&#10003;</text>
+                                        </svg>
+                                        <span className="flow-count flow-count-ok">3 pasos de alto valor</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <div>
-                                    <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Ingeniería de Datos</h4>
-                                    <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Migraciones críticas y ETL robusto.</p>
+                        </motion.div>
+
+                        {/* PHASE 02 - Sistematizamos */}
+                        <motion.div
+                            className="pipeline-phase"
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: '-50px' }}
+                            transition={{ duration: 0.6, delay: 0.15 }}
+                        >
+                            <div className="phase-header">
+                                <span className="phase-number">02</span>
+                                <div className="phase-icon-badge">
+                                    <Workflow size={22} />
                                 </div>
-                                <Layers size={20} color="var(--deep-navy-800)" />
                             </div>
-                        </div>
+                            <h3 className="phase-title">Sistematizamos</h3>
+                            <p className="phase-desc">Diseñamos procesos replicables y conectamos sistemas que antes operaban en silos aislados.</p>
+                            <div className="phase-example">De procesos aislados a flujos conectados</div>
+
+                            {/* Mini Mac Window - Code */}
+                            <div className="mac-window phase-window">
+                                <div className="mac-header">
+                                    <div className="mac-buttons">
+                                        <div className="mac-btn red"></div>
+                                        <div className="mac-btn yellow"></div>
+                                        <div className="mac-btn green"></div>
+                                    </div>
+                                    <div className="mac-title">process_engine.py</div>
+                                </div>
+                                <div className="terminal-content" style={{ fontSize: '0.78rem' }}>
+                                    <div className="terminal-line"><span style={{ color: '#c678dd' }}>import</span> pandas <span style={{ color: '#c678dd' }}>as</span> pd</div>
+                                    <div className="terminal-line"><span style={{ color: '#c678dd' }}>from</span> solid_engine <span style={{ color: '#c678dd' }}>import</span> Pipeline</div>
+                                    <div className="terminal-line">&nbsp;</div>
+                                    <div className="terminal-line"><span style={{ color: '#e06c75' }}>def</span> <span style={{ color: '#61afef' }}>liquidar_novedades</span>(df):</div>
+                                    <div className="terminal-line">&nbsp;&nbsp;df[<span style={{ color: '#98c379' }}>'recargos'</span>] = df.apply(calc)</div>
+                                    <div className="terminal-line">&nbsp;&nbsp;<span style={{ color: '#c678dd' }}>return</span> df.merge_to_erp()</div>
+                                    <div className="terminal-line">&nbsp;</div>
+                                    <div className="terminal-line"><span style={{ color: '#98c379' }}>[OK]</span> 4,500 registros en 12.4s <span className="terminal-cursor"></span></div>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        {/* PHASE 03 - Automatizamos */}
+                        <motion.div
+                            className="pipeline-phase"
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: '-50px' }}
+                            transition={{ duration: 0.6, delay: 0.3 }}
+                        >
+                            <div className="phase-header">
+                                <span className="phase-number">03</span>
+                                <div className="phase-icon-badge">
+                                    <Bot size={22} />
+                                </div>
+                            </div>
+                            <h3 className="phase-title">Automatizamos</h3>
+                            <p className="phase-desc">Implementamos workflows inteligentes que operan de forma autónoma, eliminando el error humano.</p>
+                            <div className="phase-example">De 87h manuales a 17h autónomas</div>
+
+                            {/* Mini Mac Window - n8n Workflow */}
+                            <div className="mac-window phase-window">
+                                <div className="mac-header">
+                                    <div className="mac-buttons">
+                                        <div className="mac-btn red"></div>
+                                        <div className="mac-btn yellow"></div>
+                                        <div className="mac-btn green"></div>
+                                    </div>
+                                    <div className="mac-title">workflow_engine.n8n</div>
+                                </div>
+                                <div className="workflow-canvas" style={{ height: '140px' }}>
+                                    <motion.div
+                                        className="workflow-node"
+                                        style={{ top: '25%', left: '8%' }}
+                                        animate={{ y: [0, -4, 0] }}
+                                        transition={{ duration: 3.5, repeat: Infinity }}
+                                    >
+                                        <div className="node-icon-wrapper"><Mail size={18} color="#002060" /></div>
+                                        <span style={{ fontSize: '0.6rem', opacity: 0.7 }}>TRIGGER</span>
+                                    </motion.div>
+
+                                    <motion.div
+                                        className="workflow-node"
+                                        style={{ top: '40%', left: '40%' }}
+                                        animate={{ scale: [1, 1.05, 1] }}
+                                        transition={{ duration: 2, repeat: Infinity }}
+                                    >
+                                        <div className="node-icon-wrapper" style={{ border: '2px solid var(--deep-navy-800)' }}><Bot size={18} color="#002060" /></div>
+                                        <span style={{ fontSize: '0.6rem', opacity: 0.7 }}>AI PROCESS</span>
+                                    </motion.div>
+
+                                    <motion.div
+                                        className="workflow-node"
+                                        style={{ top: '25%', left: '72%' }}
+                                    >
+                                        <div className="node-icon-wrapper"><Database size={18} color="#002060" /></div>
+                                        <span style={{ fontSize: '0.6rem', opacity: 0.7 }}>ERP</span>
+                                    </motion.div>
+
+                                    <motion.div
+                                        className="particle"
+                                        animate={{ left: ['14%', '42%'], top: ['40%', '50%'], opacity: [0, 1, 0] }}
+                                        transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+                                    />
+                                    <motion.div
+                                        className="particle"
+                                        animate={{ left: ['48%', '74%'], top: ['50%', '40%'], opacity: [0, 1, 0] }}
+                                        transition={{ duration: 2, repeat: Infinity, ease: 'linear', delay: 1 }}
+                                    />
+                                </div>
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
@@ -308,7 +402,7 @@ const Home = () => {
                             <div style={{ color: 'var(--deep-navy-800)', marginBottom: '1.5rem', fontSize: '0.9rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.2em' }}>Impacto Medible</div>
                             <h2 style={{ fontSize: '3rem', lineHeight: '1.1', marginBottom: '2rem' }}>Ingeniería que se paga sola.</h2>
                             <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '2.5rem' }}>
-                                En un caso reciente para una planta industrial, redujimos el tiempo de liquidación de novedades mensuales en un 80%, eliminando errores de digitación y liberando al equipo contable para tareas estratégicas.
+                                Podemos reducir hasta un 80% el tiempo que su equipo dedica a tareas operativas repetitivas, eliminando errores de digitación y liberando talento humano para lo que realmente importa: decisiones estratégicas.
                             </p>
 
                             <div className="stats-grid">
@@ -488,29 +582,43 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* SERVICES PREVIEW */}
+            {/* VERTICALS - Organizamos, Sistematizamos, Automatizamos */}
             <section id="services" style={{ padding: '8rem 2rem', background: 'rgba(0, 13, 39, 0.2)' }}>
-                <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
-                    <h2 style={{ fontSize: '2.5rem', marginBottom: '4rem' }}>Nuestras Verticales</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-                        {services.map((s, i) => (
+                <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                        <div style={{ color: 'var(--deep-navy-800)', fontWeight: '800', fontSize: '0.9rem', marginBottom: '1rem', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Lo Que Hacemos</div>
+                        <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', fontWeight: '800', marginBottom: '1rem' }}>Nuestras Verticales</h2>
+                        <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto', fontSize: '1.05rem' }}>Tres pilares que eliminan la fricción operativa de su empresa.</p>
+                    </div>
+                    <div className="verticals-grid">
+                        {verticals.map((v, i) => (
                             <motion.div
                                 key={i}
-                                whileHover={{ y: -10 }}
-                                style={{
-                                    padding: '3rem',
-                                    background: 'var(--deep-navy-100)',
-                                    borderRadius: '24px',
-                                    border: '1px solid var(--deep-navy-400)',
-                                    textAlign: 'left'
-                                }}
+                                className="vertical-card"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: '-40px' }}
+                                transition={{ duration: 0.5, delay: i * 0.1 }}
+                                whileHover={{ y: -8 }}
                             >
-                                <div style={{ color: 'var(--deep-navy-800)', marginBottom: '1.5rem' }}>{s.icon}</div>
-                                <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{s.title}</h3>
-                                <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>{s.desc}</p>
+                                <div className="vertical-card-top">
+                                    <span className="vertical-number">{v.number}</span>
+                                    <div className="vertical-icon">{v.icon}</div>
+                                </div>
+                                <h3 className="vertical-title">{v.title}</h3>
+                                <span className="vertical-tagline">{v.tagline}</span>
+                                <p className="vertical-desc">{v.desc}</p>
+                                <ul className="vertical-items">
+                                    {v.items.map((item, j) => (
+                                        <li key={j} className="vertical-item">
+                                            <span className="vertical-item-icon">{item.icon}</span>
+                                            {item.label}
+                                        </li>
+                                    ))}
+                                </ul>
                                 <button
                                     onClick={() => navigate('/solutions')}
-                                    style={{ background: 'none', border: 'none', color: 'var(--deep-navy-800)', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: '700' }}
+                                    className="vertical-cta"
                                 >
                                     Ver Detalles <ChevronRight size={16} />
                                 </button>
