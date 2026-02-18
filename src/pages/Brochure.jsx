@@ -75,12 +75,12 @@ const slides = [
     {
         id: 'services',
         title: "Servicios para eliminar la fricción",
-        description: "Aplicamos ingeniería donde el software estándar no llega.",
+        description: "Nuestra metodología aplicada: Organizamos, Sistematizamos y Automatizamos.",
         services: [
-            { icon: <Bot />, title: "RPA", desc: "Liberamos a su equipo de tareas repetitivas conectando sistemas que no hablan entre sí.", interactive: true },
-            { icon: <Layers />, title: "Ingeniería de Datos", desc: "Extracción, transformación y visualización avanzada para Business Intelligence." },
-            { icon: <Terminal />, title: "Desarrollo a Medida", desc: "Soluciones de software robustas en Java y Python alineadas específicamente a su negocio." },
-            { icon: <ShieldCheck />, title: "Consultoría", desc: "Mejora y diseño estratégico de flujos de trabajo antes de automatizar." }
+            { icon: <ShieldCheck />, phase: "01 · Organizamos", title: "Consultoría de Procesos", desc: "Mapeamos y rediseñamos sus flujos de trabajo, eliminando lo que no agrega valor antes de implementar tecnología.", link: "/solutions" },
+            { icon: <Layers />, phase: "02 · Sistematizamos", title: "Ingeniería de Datos", desc: "Unificamos su información dispersa en arquitecturas gobernables con dashboards y visualización avanzada.", link: "/solutions" },
+            { icon: <Terminal />, phase: "02 · Sistematizamos", title: "Desarrollo a Medida", desc: "Software robusto en Java y Python alineado a su negocio: conectamos áreas que antes operaban en silos.", link: "/solutions" },
+            { icon: <Bot />, phase: "03 · Automatizamos", title: "RPA & Workflows", desc: "Flujos digitales que ejecutan tareas repetitivas sin intervención humana, conectando sistemas que no hablan entre sí.", link: "/solutions/rpa" }
         ],
         accent: "var(--deep-navy-500)"
     },
@@ -228,11 +228,7 @@ const Brochure = () => {
                 </button>
             </div>
 
-            {/* Strategic Branding Footer */}
-            <div className="brochure-footer-brand">
-                <div className="brand-dot"></div>
-                SOLID SOLUTIONS • PRESENTACIÓN ESTRATÉGICA 2026
-            </div>
+            
         </div>
     );
 };

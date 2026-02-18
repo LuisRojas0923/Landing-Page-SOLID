@@ -567,7 +567,7 @@
 }
 
 .brochure-footer-brand {
-    position: absolute;
+    position: fixed;
     bottom: 2rem;
     left: 2rem;
     display: flex;
@@ -579,7 +579,7 @@
     letter-spacing: 0.2rem;
     font-size: 0.65rem;
     pointer-events: none;
-    z-index: 5;
+    z-index: 1005;
 }
 
 .brand-dot {

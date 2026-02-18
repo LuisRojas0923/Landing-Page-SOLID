@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link, NavLink, useLocation } from 'react-router-dom';
 import './CorporateLayout.css';
 import { Building2, Menu, X } from 'lucide-react';
 
@@ -19,11 +19,11 @@ const CorporateLayout = () => {
 
                 {/* Desktop Links */}
                 <div className="links desktop-only">
-                    <Link to="/">Inicio</Link>
-                    <Link to="/about">Quienes Somos</Link>
-                    <Link to="/solutions">Soluciones</Link>
-                    <Link to="/brochure" style={{ color: 'var(--deep-navy-800)', fontWeight: '700' }}>Brochure</Link>
-                    <Link to="/contact">Contacto</Link>
+                    <NavLink to="/" end className={({ isActive }) => isActive ? 'nav-active' : ''}>Inicio</NavLink>
+                    <NavLink to="/about" className={({ isActive }) => isActive ? 'nav-active' : ''}>Quienes Somos</NavLink>
+                    <NavLink to="/solutions" className={({ isActive }) => isActive ? 'nav-active' : ''}>Soluciones</NavLink>
+                    <NavLink to="/brochure" className={({ isActive }) => isActive ? 'nav-active nav-brochure' : 'nav-brochure'}>Brochure</NavLink>
+                    <NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-active' : ''}>Contacto</NavLink>
                     <Link to="/contact" className="btn-consultancy">
                         Agendar Diagnóstico
                     </Link>
@@ -39,11 +39,11 @@ const CorporateLayout = () => {
 
                 {/* Mobile Menu Overlay */}
                 <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
-                    <Link to="/" onClick={() => setIsMenuOpen(false)}>Inicio</Link>
-                    <Link to="/about" onClick={() => setIsMenuOpen(false)}>Quienes Somos</Link>
-                    <Link to="/solutions" onClick={() => setIsMenuOpen(false)}>Soluciones</Link>
-                    <Link to="/brochure" onClick={() => setIsMenuOpen(false)} style={{ color: 'var(--deep-navy-800)', fontWeight: '700' }}>Brochure</Link>
-                    <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contacto</Link>
+                    <NavLink to="/" end className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Inicio</NavLink>
+                    <NavLink to="/about" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Quienes Somos</NavLink>
+                    <NavLink to="/solutions" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Soluciones</NavLink>
+                    <NavLink to="/brochure" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Brochure</NavLink>
+                    <NavLink to="/contact" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Contacto</NavLink>
                     <Link to="/contact" className="btn-consultancy" onClick={() => setIsMenuOpen(false)}>
                         Agendar Diagnóstico
                     </Link>

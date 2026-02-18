@@ -70,6 +70,28 @@
     color: var(--text-primary);
 }
 
+/* Active link indicator */
+.links.desktop-only a.nav-active {
+    color: var(--text-primary);
+    position: relative;
+}
+
+.links.desktop-only a.nav-active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--deep-navy-800);
+    border-radius: 1px;
+}
+
+.links.desktop-only a.nav-brochure {
+    color: var(--deep-navy-800);
+    font-weight: 700;
+}
+
 /* Mobile Toggle */
 .mobile-toggle {
     display: none;
@@ -108,6 +130,24 @@
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 600;
+}
+
+.mobile-menu a.mobile-active {
+    color: var(--deep-navy-800);
+    position: relative;
+    padding-left: 1rem;
+}
+
+.mobile-menu a.mobile-active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    background: var(--deep-navy-800);
+    border-radius: 2px;
 }
 
 .btn-consultancy {
