@@ -1,0 +1,399 @@
+/* Sistema de diseño - Solo accesible por URL /sistema-de-diseno */
+
+.ds-page {
+    min-height: 100vh;
+    background: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+}
+
+.ds-header {
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--deep-navy-400);
+}
+
+.ds-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.ds-subtitle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.ds-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.ds-section {
+    margin-bottom: 4rem;
+}
+
+.ds-section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--deep-navy-800);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Colores */
+.ds-color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+}
+
+.ds-swatch {
+    border-radius: 12px;
+    padding: 1.25rem;
+    border: 1px solid var(--deep-navy-400);
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.ds-swatch-name {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.ds-swatch-hex {
+    font-size: 0.75rem;
+    color: var(--text-primary);
+    opacity: 0.9;
+}
+
+/* Tipografía */
+.ds-type-sample {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.ds-type-block {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--deep-navy-400);
+}
+
+.ds-type-block:last-child {
+    border-bottom: none;
+}
+
+.ds-type-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.ds-type-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--deep-navy-800);
+    min-width: 120px;
+    text-transform: uppercase;
+}
+
+.ds-type-text {
+    flex: 1;
+    line-height: 1.5;
+    min-width: 200px;
+}
+
+.ds-type-meta {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+    margin-left: 0;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Botones */
+.ds-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.ds-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-family: inherit;
+}
+
+.ds-btn-primary {
+    background: var(--deep-navy-800);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 32, 96, 0.4);
+}
+
+.ds-btn-primary:hover {
+    filter: brightness(1.1);
+}
+
+.ds-btn-outline {
+    background: transparent;
+    color: var(--deep-navy-800);
+    border: 1px solid var(--deep-navy-400);
+}
+
+.ds-btn-outline:hover {
+    border-color: var(--deep-navy-800);
+}
+
+.ds-btn-ghost {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+.ds-btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-consultancy {
+    background: linear-gradient(135deg, var(--deep-navy-500) 0%, var(--deep-navy-600) 100%);
+    color: white !important;
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 15px rgba(0, 32, 96, 0.4);
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Links */
+.ds-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.ds-link-nav {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.ds-link-nav:hover {
+    color: var(--text-primary);
+}
+
+.ds-link-active {
+    color: var(--text-primary);
+    position: relative;
+}
+
+.ds-link-active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--deep-navy-800);
+    border-radius: 1px;
+}
+
+.ds-link-brochure {
+    color: var(--deep-navy-800);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.ds-link-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--deep-navy-800);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* Cards */
+.ds-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.ds-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--deep-navy-400);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.ds-card-badge {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: var(--deep-navy-800);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.ds-card-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 32, 96, 0.2);
+    color: var(--deep-navy-800);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.ds-card-icon-sm {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+}
+
+.ds-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.ds-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.ds-card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--deep-navy-800);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.ds-card-label {
+    font-size: 0.8rem !important;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem !important;
+}
+
+.ds-card-box {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* Formularios */
+.ds-form-demo {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.ds-field label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+    text-transform: uppercase;
+}
+
+.ds-field input,
+.ds-field textarea {
+    width: 100%;
+    background: rgba(0, 13, 39, 0.5);
+    border: 1px solid var(--deep-navy-400);
+    border-radius: 12px;
+    padding: 1rem;
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+}
+
+.ds-field input::placeholder,
+.ds-field textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.ds-field textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.ds-btn-submit {
+    background: var(--deep-navy-800);
+    color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+/* Iconos */
+.ds-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.ds-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.ds-icon-item svg {
+    color: var(--deep-navy-800);
+}
+
+/* Footer sistema de diseño */
+.ds-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--deep-navy-400);
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .ds-main {
+        padding: 1rem;
+    }
+    .ds-color-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

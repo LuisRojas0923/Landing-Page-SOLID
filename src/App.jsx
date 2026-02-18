@@ -7,6 +7,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Brochure from './pages/Brochure';
 import RPASolutions from './pages/RPASolutions';
+import DesignSystem from './pages/DesignSystem';
 
 function ScrollToTop() {
     const { pathname } = useLocation();
@@ -21,6 +22,7 @@ function App() {
         <>
             <ScrollToTop />
             <Routes>
+                <Route path="/sistema-de-diseno" element={<DesignSystem />} />
                 <Route path="/" element={<CorporateLayout />}>
                     <Route index element={<Home />} />
                     <Route path="solutions" element={<Services />} />
