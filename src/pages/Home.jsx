@@ -124,13 +124,25 @@ const Home = () => {
                     </h1>
 
                     <p style={{
+                        fontSize: 'clamp(1.4rem, 3.5vw, 2rem)',
+                        color: 'white',
+                        fontWeight: '800',
+                        maxWidth: '1000px',
+                        margin: '0 auto 2rem',
+                        lineHeight: '1.4',
+                        whiteSpace: 'nowrap'
+                    }}>
+                        Organizamos, sistematizamos y automatizamos su operación.
+                    </p>
+
+                    <p style={{
                         fontSize: 'clamp(1rem, 3vw, 1.25rem)',
                         color: 'var(--text-secondary)',
-                        maxWidth: '750px',
+                        maxWidth: '1000px',
                         margin: '0 auto 4rem',
                         lineHeight: '1.6'
                     }}>
-                        SOLID SOLUTIONS elimina la fricción operativa. Conectamos sus sistemas, automatizamos sus procesos y preparamos sus datos para la era de la IA.
+                        En SOLID SOLUTIONS estructuramos su operación, diseñamos la arquitectura que conecta sus datos y automatizamos sus tareas críticas, eliminando la fricción operativa y preparando su empresa para crecer con tecnología e inteligencia artificial.
                     </p>
 
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
