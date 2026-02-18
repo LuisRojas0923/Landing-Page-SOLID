@@ -92,45 +92,33 @@ const Home = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
+                    style={{
+                        width: '100%',
+                        maxWidth: '1200px',
+                        padding: '0 clamp(1rem, 4vw, 2rem)',
+                        margin: '0 auto'
+                    }}
                 >
-                    <div style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '0.5rem',
-                        padding: '0.6rem 1.25rem',
-                        borderRadius: '100px',
-                        background: 'rgba(0, 32, 96, 0.3)',
-                        border: '1px solid var(--deep-navy-400)',
-                        color: 'var(--deep-navy-800)',
-                        fontSize: '0.9rem',
-                        fontWeight: '600',
-                        marginBottom: '2rem'
-                    }}>
-                        <Zap className="w-4 h-4 fill-current" />
-                        <span>Arquitectura de Datos e Ingeniería de Software</span>
-                    </div>
-
                     <h1 style={{
                         fontSize: 'clamp(2.5rem, 8vw, 5rem)',
                         fontWeight: '800',
                         lineHeight: '1.05',
                         marginBottom: '1.5rem',
-                        maxWidth: '1000px',
+                        maxWidth: '1200px',
                         margin: '0 auto 1.5rem',
                         letterSpacing: '-0.03em'
                     }}>
                         Potenciamos su empresa con <br />
-                        <span style={{ color: 'var(--deep-navy-800)' }}>soluciones autónomas.</span>
+                        <span style={{ color: 'var(--deep-navy-800)', display: 'block', marginTop: '0.5rem' }}>soluciones autónomas</span>
                     </h1>
 
-                    <p style={{
-                        fontSize: 'clamp(1.4rem, 3.5vw, 2rem)',
+                    <p className="hero-subtitle" style={{
+                        fontSize: 'clamp(1.2rem, 3.5vw, 2rem)',
                         color: 'white',
                         fontWeight: '800',
                         maxWidth: '1000px',
                         margin: '0 auto 2rem',
-                        lineHeight: '1.4',
-                        whiteSpace: 'nowrap'
+                        lineHeight: '1.4'
                     }}>
                         Organizamos, sistematizamos y automatizamos su operación.
                     </p>
@@ -140,12 +128,40 @@ const Home = () => {
                         color: 'var(--text-secondary)',
                         maxWidth: '1000px',
                         margin: '0 auto 4rem',
-                        lineHeight: '1.6'
+                        lineHeight: '1.6',
+                        fontStyle: 'italic',
+                        fontFamily: "'Roboto', sans-serif"
                     }}>
                         En SOLID SOLUTIONS estructuramos su operación, diseñamos la arquitectura que conecta sus datos y automatizamos sus tareas críticas, eliminando la fricción operativa y preparando su empresa para crecer con tecnología e inteligencia artificial.
                     </p>
 
-                    <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+                    <div style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        padding: 'clamp(0.5rem, 2vw, 0.6rem) clamp(1rem, 3vw, 1.25rem)',
+                        borderRadius: '100px',
+                        background: 'rgba(0, 32, 96, 0.3)',
+                        border: '1px solid var(--deep-navy-400)',
+                        color: 'var(--deep-navy-800)',
+                        fontSize: 'clamp(0.8rem, 2vw, 0.9rem)',
+                        fontWeight: '600',
+                        marginBottom: '2rem',
+                        flexWrap: 'wrap',
+                        justifyContent: 'center',
+                        maxWidth: '100%'
+                    }}>
+                        <Zap className="w-4 h-4 fill-current" />
+                        <span style={{ whiteSpace: 'nowrap' }}>Arquitectura de Datos e Ingeniería de Software</span>
+                    </div>
+
+                    <div style={{ 
+                        display: 'flex', 
+                        justifyContent: 'center', 
+                        gap: 'clamp(1rem, 3vw, 1.5rem)', 
+                        flexWrap: 'wrap',
+                        width: '100%'
+                    }}>
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -153,16 +169,20 @@ const Home = () => {
                             style={{
                                 backgroundColor: 'var(--deep-navy-500)',
                                 color: 'white',
-                                padding: '1.2rem 2.8rem',
+                                padding: 'clamp(1rem, 2.5vw, 1.2rem) clamp(2rem, 5vw, 2.8rem)',
                                 borderRadius: '12px',
-                                fontSize: '1.1rem',
+                                fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)',
                                 fontWeight: '700',
                                 border: 'none',
                                 display: 'flex',
                                 alignItems: 'center',
                                 gap: '0.75rem',
                                 boxShadow: '0 15px 35px rgba(0, 32, 96, 0.4)',
-                                cursor: 'pointer'
+                                cursor: 'pointer',
+                                whiteSpace: 'nowrap',
+                                width: '100%',
+                                maxWidth: '300px',
+                                justifyContent: 'center'
                             }}
                         >
                             Agendar Diagnóstico <ArrowRight size={20} />
@@ -173,12 +193,16 @@ const Home = () => {
                             style={{
                                 backgroundColor: 'transparent',
                                 color: 'white',
-                                padding: '1.2rem 2.8rem',
+                                padding: 'clamp(1rem, 2.5vw, 1.2rem) clamp(2rem, 5vw, 2.8rem)',
                                 borderRadius: '12px',
-                                fontSize: '1.1rem',
+                                fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)',
                                 fontWeight: '600',
                                 border: '1px solid var(--deep-navy-400)',
-                                cursor: 'pointer'
+                                cursor: 'pointer',
+                                whiteSpace: 'nowrap',
+                                width: '100%',
+                                maxWidth: '300px',
+                                justifyContent: 'center'
                             }}
                         >
                             Explorar Soluciones
@@ -193,7 +217,7 @@ const Home = () => {
                     <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
                         <div style={{ color: 'var(--deep-navy-800)', fontWeight: '800', fontSize: '0.9rem', marginBottom: '1rem', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Nuestro Método</div>
                         <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', marginBottom: '1rem', fontWeight: '800' }}>Así transformamos su operación</h2>
-                        <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>De la fricción a la autonomía, en tres pasos.</p>
+                        <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>De la fricción a la autonomía, en tres pasos.</p>
                     </div>
 
                     <div className="pipeline-track">
@@ -413,7 +437,7 @@ const Home = () => {
                         <div>
                             <div style={{ color: 'var(--deep-navy-800)', marginBottom: '1.5rem', fontSize: '0.9rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.2em' }}>Impacto Medible</div>
                             <h2 style={{ fontSize: '3rem', lineHeight: '1.1', marginBottom: '2rem' }}>Ingeniería que se paga sola.</h2>
-                            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '2.5rem' }}>
+                            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '2.5rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
                                 Podemos reducir hasta un 80% el tiempo que su equipo dedica a tareas operativas repetitivas, eliminando errores de digitación y liberando talento humano para lo que realmente importa: decisiones estratégicas.
                             </p>
 
@@ -464,7 +488,7 @@ const Home = () => {
                                     <span className="savings-bar-label">AHORA (AUTÓNOMO)</span>
                                 </div>
                             </div>
-                            <p style={{ textAlign: 'center', padding: '1.5rem', color: 'var(--text-secondary)', fontSize: '0.85rem', margin: '0' }}>
+                            <p style={{ textAlign: 'center', padding: '1.5rem', color: 'var(--text-secondary)', fontSize: '0.85rem', margin: '0', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
                                 Optimización del procesamiento mensual de novedades
                             </p>
                         </div>
@@ -491,7 +515,7 @@ const Home = () => {
                         <div style={{ flex: '1.2', minWidth: '300px' }}>
                             <div style={{ color: 'var(--deep-navy-800)', fontWeight: '800', fontSize: '0.9rem', marginBottom: '1rem', letterSpacing: '0.1em' }}>PRODUCTO DESTACADO</div>
                             <h2 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '1.5rem' }}>Ecosistema <span style={{ color: 'var(--deep-navy-800)' }}>Solid ERP</span></h2>
-                            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem' }}>
+                            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
                                 Nuestra plataforma de gestión empresarial diseñada para la alta complejidad. Construido sobre un <strong>Núcleo Unificado de Alto Rendimiento (Java Enterprise)</strong>, Solid ERP garantiza una estabilidad absoluta y una escalabilidad vertical masiva, centralizando finanzas, inventarios y nómina en un ecosistema robusto y seguro.
                             </p>
                             <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
@@ -501,7 +525,7 @@ const Home = () => {
                                     "Seguridad de Grado Bancario",
                                     "Integración Nativa con BI"
                                 ].map((item, i) => (
-                                    <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-secondary)', fontWeight: '600' }}>
+                                    <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-secondary)', fontWeight: '600', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
                                         <CheckCircle2 size={18} color="var(--deep-navy-800)" /> {item}
                                     </li>
                                 ))}
@@ -545,7 +569,7 @@ const Home = () => {
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                         <div style={{ color: 'var(--deep-navy-800)', fontWeight: '800', fontSize: '0.9rem', marginBottom: '1rem', letterSpacing: '0.1em' }}>PRODUCTO EN ACCIÓN</div>
                         <h2 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '1.5rem' }}>Ecosistema <span style={{ color: 'var(--deep-navy-800)' }}>Solid Service Portal</span></h2>
-                        <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '800px', margin: '0 auto' }}>
+                        <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '800px', margin: '0 auto', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
                             Visualice la simplicidad operativa. Centralice solicitudes, tickets y procesos internos en una interfaz diseñada para la velocidad.
                         </p>
                     </div>
@@ -600,7 +624,7 @@ const Home = () => {
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                         <div style={{ color: 'var(--deep-navy-800)', fontWeight: '800', fontSize: '0.9rem', marginBottom: '1rem', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Lo Que Hacemos</div>
                         <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', fontWeight: '800', marginBottom: '1rem' }}>Nuestras Verticales</h2>
-                        <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto', fontSize: '1.05rem' }}>Tres pilares que eliminan la fricción operativa de su empresa.</p>
+                        <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto', fontSize: '1.05rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>Tres pilares que eliminan la fricción operativa de su empresa.</p>
                     </div>
                     <div className="verticals-grid">
                         {verticals.map((v, i) => (
@@ -643,7 +667,7 @@ const Home = () => {
             {/* TECH STACK BAR */}
             <section style={{ padding: '4rem 2rem', background: 'rgba(0, 13, 39, 0.4)', borderTop: '1px solid var(--deep-navy-400)', borderBottom: '1px solid var(--deep-navy-400)' }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-                    <h2 style={{ marginBottom: '4rem', fontSize: '1.2rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.3em', textAlign: 'center', fontWeight: '800' }}>
+                    <h2 style={{ marginBottom: '4rem', fontSize: '1.2rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.3em', textAlign: 'center', fontWeight: '800', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
                         Stack Tecnológico de Alto Nivel
                     </h2>
                     <div style={{
@@ -694,7 +718,7 @@ const Home = () => {
                                         style={{ width: '100%', height: '100%', objectFit: 'contain', filter: tech.name.includes('Power') ? 'none' : 'drop-shadow(0 0 4px rgba(0,0,0,0.5))' }}
                                     />
                                 </div>
-                                <span style={{ fontSize: '0.7rem', fontWeight: '800', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.05em', textAlign: 'center' }}>
+                                <span style={{ fontSize: '0.7rem', fontWeight: '800', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.05em', textAlign: 'center', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
                                     {tech.name}
                                 </span>
                             </motion.div>
@@ -704,10 +728,20 @@ const Home = () => {
             </section>
 
             {/* FINAL CTA */}
-            <section id="contact" style={{ padding: '10rem 2rem', textAlign: 'center' }}>
-                <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: '3.5rem', marginBottom: '2rem', fontWeight: '800' }}>¿Listo para escalar su infraestructura?</h2>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', marginBottom: '4rem' }}>
+            <section id="contact" style={{ padding: 'clamp(4rem, 10vh, 10rem) clamp(1rem, 4vw, 2rem)', textAlign: 'center' }}>
+                <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 clamp(1rem, 4vw, 2rem)' }}>
+                    <h2 style={{ 
+                        fontSize: 'clamp(2rem, 6vw, 3.5rem)', 
+                        marginBottom: 'clamp(1.5rem, 3vw, 2rem)', 
+                        fontWeight: '800',
+                        lineHeight: '1.2'
+                    }}>¿Listo para escalar su infraestructura?</h2>
+                    <p style={{ 
+                        color: 'var(--text-secondary)', 
+                        fontSize: 'clamp(1rem, 2.5vw, 1.2rem)', 
+                        marginBottom: 'clamp(2rem, 5vw, 4rem)',
+                        lineHeight: '1.6'
+                    }}>
                         Agende una consultoría técnica gratuita y descubra el potencial de automatización de su negocio.
                     </p>
                     <button
@@ -715,24 +749,35 @@ const Home = () => {
                         style={{
                             backgroundColor: 'white',
                             color: 'var(--bg-main)',
-                            padding: '1.2rem 3rem',
+                            padding: 'clamp(1rem, 2.5vw, 1.2rem) clamp(2rem, 5vw, 3rem)',
                             borderRadius: '12px',
-                            fontSize: '1.1rem',
+                            fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)',
                             fontWeight: '700',
                             border: 'none',
-                            cursor: 'pointer'
+                            cursor: 'pointer',
+                            width: '100%',
+                            maxWidth: '350px'
                         }}
                     >
                         Solicitar Diagnóstico
                     </button>
-                    <div style={{ marginTop: '3rem' }}>
+                    <div style={{ marginTop: 'clamp(2rem, 4vw, 3rem)' }}>
                         <a
                             href="https://wa.me/573172652487?text=Hola,%20quisiera%20agendar%20un%20diagnóstico%20de%20automatización%20para%20mi%20empresa."
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', textDecoration: 'none' }}
+                            style={{ 
+                                color: 'var(--text-secondary)', 
+                                display: 'flex', 
+                                alignItems: 'center', 
+                                justifyContent: 'center', 
+                                gap: '0.5rem', 
+                                textDecoration: 'none',
+                                fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+                                flexWrap: 'wrap'
+                            }}
                         >
-                            <MessageSquare size={18} /> O hable con un experto vía WhatsApp
+                            <MessageSquare size={18} /> <span>O hable con un experto vía WhatsApp</span>
                         </a>
                     </div>
                 </div>

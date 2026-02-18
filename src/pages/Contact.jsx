@@ -23,7 +23,7 @@ const Contact = () => {
                     <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: '800', marginBottom: '1.5rem' }}>
                         Inicie su <span style={{ color: 'var(--deep-navy-800)' }}>Transformación</span>
                     </h1>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '1.25rem' }}>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '1.25rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
                         Estamos listos para diagnosticar sus procesos y proponer soluciones de alto impacto.
                     </p>
                 </motion.div>
@@ -39,7 +39,7 @@ const Contact = () => {
                                         <Mail size={24} />
                                     </div>
                                     <div>
-                                        <p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase' }}>Email</p>
+                                        <p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>Email</p>
                                         <p style={{ fontSize: '1.1rem' }}>contacto@solutions.com</p>
                                     </div>
                                 </div>
@@ -48,7 +48,7 @@ const Contact = () => {
                                         <MessageSquare size={24} />
                                     </div>
                                     <div>
-                                        <p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase' }}>WhatsApp</p>
+                                        <p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>WhatsApp</p>
                                         <p style={{ fontSize: '1.1rem' }}>+57 317 265 2487</p>
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@ const Contact = () => {
                                         <MapPin size={24} />
                                     </div>
                                     <div>
-                                        <p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase' }}>Ubicación</p>
+                                        <p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>Ubicación</p>
                                         <p style={{ fontSize: '1.1rem' }}>Cali, Colombia</p>
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@ const Contact = () => {
                                     border: '1px solid var(--deep-navy-400)'
                                 }}>
                                     <h4 style={{ fontSize: '1rem', fontWeight: '800', marginBottom: '1rem', color: 'var(--deep-navy-800)' }}>Compromiso Tecnológico</h4>
-                                    <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+                                    <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.6', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
                                         Nos adaptamos a su stack: Desarrollamos desde sistemas legacy en <strong>Java Swing</strong> hasta ecosistemas modernos con <strong>FastAPI</strong> y <strong>React</strong>.
                                     </p>
                                 </div>
@@ -87,7 +87,7 @@ const Contact = () => {
                     }}>
                         <form style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                <label style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>NOMBRE COMPLETO</label>
+                                <label style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>NOMBRE COMPLETO</label>
                                 <input type="text" style={{
                                     background: 'rgba(0, 13, 39, 0.5)',
                                     border: '1px solid var(--deep-navy-400)',
@@ -98,7 +98,7 @@ const Contact = () => {
                                 }} placeholder="John Doe" />
                             </div>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                <label style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>EMAIL CORPORATIVO</label>
+                                <label style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>EMAIL CORPORATIVO</label>
                                 <input type="email" style={{
                                     background: 'rgba(0, 13, 39, 0.5)',
                                     border: '1px solid var(--deep-navy-400)',
@@ -109,7 +109,7 @@ const Contact = () => {
                                 }} placeholder="john@empresa.com" />
                             </div>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                <label style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>MENSAJE / REQUISITOS</label>
+                                <label style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>MENSAJE / REQUISITOS</label>
                                 <textarea rows="4" style={{
                                     background: 'rgba(0, 13, 39, 0.5)',
                                     border: '1px solid var(--deep-navy-400)',

@@ -56,7 +56,7 @@ const About = () => {
                     <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: '800', marginBottom: '1.5rem' }}>
                         Quienes <span style={{ color: 'var(--deep-navy-800)' }}>Somos</span>
                     </h1>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto' }}>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
                         Más que una agencia de desarrollo, somos su brazo de ingeniería. Nos especializamos en resolver lo que otros consideran "imposible" mediante software robusto y automatización inteligente.
                     </p>
                 </motion.div>
@@ -82,7 +82,7 @@ const About = () => {
                                 {pillar.icon}
                             </div>
                             <h3 style={{ fontSize: '1.5rem', fontWeight: '800', marginBottom: '1rem' }}>{pillar.title}</h3>
-                            <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>{pillar.desc}</p>
+                            <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>{pillar.desc}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -90,7 +90,7 @@ const About = () => {
                 {/* METHODOLOGY SECTION */}
                 <div style={{ textAlign: 'center', marginBottom: '80px' }}>
                     <h2 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '1rem' }}>Nuestra Metodología de Ingeniería</h2>
-                    <p style={{ color: 'var(--text-secondary)' }}>El rigor técnico que acompaña cada línea de código.</p>
+                    <p style={{ color: 'var(--text-secondary)', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>El rigor técnico que acompaña cada línea de código.</p>
                 </div>
 
                 <div style={{ display: 'grid', gap: '6rem' }}>
@@ -123,7 +123,7 @@ const About = () => {
                                 <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', fontWeight: '800' }}>
                                     0{idx + 1}. {step.title}
                                 </h2>
-                                <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', lineHeight: '1.8', maxWidth: '500px', margin: idx % 2 === 0 ? '0' : '0 0 0 auto' }}>
+                                <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', lineHeight: '1.8', maxWidth: '500px', margin: idx % 2 === 0 ? '0' : '0 0 0 auto', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
                                     {step.desc}
                                 </p>
                             </div>

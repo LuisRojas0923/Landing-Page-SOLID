@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
     /* Deep Navy */
@@ -94,6 +94,16 @@ a {
 button {
     cursor: pointer;
     font-family: inherit;
+}
+
+/* Global style for text-secondary elements */
+[style*="text-secondary"],
+p[style*="text-secondary"],
+span[style*="text-secondary"],
+div[style*="text-secondary"],
+li[style*="text-secondary"] {
+    font-family: 'Roboto', sans-serif !important;
+    font-style: italic !important;
 }
 
 /* Scrollbar Style */
