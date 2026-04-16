@@ -407,7 +407,7 @@
     border-radius: 50%;
     box-shadow: 0 0 14px #4da3ff, 0 0 28px rgba(77, 163, 255, 0.5);
     z-index: 2;
-    animation: beamMove 4s linear infinite;
+    animation: beamMove 6s linear infinite;
 }
 
 @keyframes beamMove {
@@ -468,20 +468,19 @@
     color: rgba(90, 145, 255, 0.4);
 }
 
-/* ---- Illumination Animations (synced to 4s beam) ---- */
+/* ---- Illumination Animations (synced to 6s beam) ---- */
 /*
- * Beam: left 0%→100% of track in 4s linear.
+ * Beam: left 0%→100% of track in 6s linear.
  * Track: 80% container width, offset 10%.
  * Column centers on track: Col1≈8%, Col2=50%, Col3≈92%.
- * Sharp on/off: 1% transition = ~40ms (instant feel).
  */
 
-.method-number.illuminate-1 { animation: glow-num-1 4s linear infinite; }
-.method-icon-badge.illuminate-1 { animation: glow-ico-1 4s linear infinite; }
-.method-number.illuminate-2 { animation: glow-num-2 4s linear infinite; }
-.method-icon-badge.illuminate-2 { animation: glow-ico-2 4s linear infinite; }
-.method-number.illuminate-3 { animation: glow-num-3 4s linear infinite; }
-.method-icon-badge.illuminate-3 { animation: glow-ico-3 4s linear infinite; }
+.method-number.illuminate-1 { animation: glow-num-1 6s linear infinite; }
+.method-icon-badge.illuminate-1 { animation: glow-ico-1 6s linear infinite; }
+.method-number.illuminate-2 { animation: glow-num-2 6s linear infinite; }
+.method-icon-badge.illuminate-2 { animation: glow-ico-2 6s linear infinite; }
+.method-number.illuminate-3 { animation: glow-num-3 6s linear infinite; }
+.method-icon-badge.illuminate-3 { animation: glow-ico-3 6s linear infinite; }
 
 /* Step 1: beam center at 8% — ultra-smoothed illuminate 0%→18% */
 @keyframes glow-num-1 {
