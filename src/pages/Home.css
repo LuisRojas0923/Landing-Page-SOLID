@@ -134,7 +134,8 @@
     margin-bottom: 2rem;
 }
 
-.luxe-badge, .impact-badge {
+.luxe-badge,
+.impact-badge {
     background: rgba(0, 20, 60, 0.4);
     border: 1px solid rgba(96, 165, 250, 0.4);
     padding: 0.5rem 1.8rem;
@@ -411,8 +412,13 @@
 }
 
 @keyframes beamMove {
-    0%   { left: 0%; }
-    100% { left: 100%; }
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: 100%;
+    }
 }
 
 .method-grid {
@@ -475,47 +481,160 @@
  * Column centers on track: Col1≈8%, Col2=50%, Col3≈92%.
  */
 
-.method-number.illuminate-1 { animation: glow-num-1 6s linear infinite; }
-.method-icon-badge.illuminate-1 { animation: glow-ico-1 6s linear infinite; }
-.method-number.illuminate-2 { animation: glow-num-2 6s linear infinite; }
-.method-icon-badge.illuminate-2 { animation: glow-ico-2 6s linear infinite; }
-.method-number.illuminate-3 { animation: glow-num-3 6s linear infinite; }
-.method-icon-badge.illuminate-3 { animation: glow-ico-3 6s linear infinite; }
+.method-number.illuminate-1 {
+    animation: glow-num-1 6s linear infinite;
+}
+
+.method-icon-badge.illuminate-1 {
+    animation: glow-ico-1 6s linear infinite;
+}
+
+.method-number.illuminate-2 {
+    animation: glow-num-2 6s linear infinite;
+}
+
+.method-icon-badge.illuminate-2 {
+    animation: glow-ico-2 6s linear infinite;
+}
+
+.method-number.illuminate-3 {
+    animation: glow-num-3 6s linear infinite;
+}
+
+.method-icon-badge.illuminate-3 {
+    animation: glow-ico-3 6s linear infinite;
+}
 
 /* Step 1: beam center at 8% — ultra-smoothed illuminate 0%→18% */
 @keyframes glow-num-1 {
-    0%        { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
-    8%, 10%   { color: rgba(130, 195, 255, 0.9); text-shadow: 0 0 20px rgba(77, 163, 255, 0.7); }
-    18%, 100% { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
+    0% {
+        color: rgba(90, 145, 255, 0.15);
+        text-shadow: none;
+    }
+
+    8%,
+    10% {
+        color: rgba(130, 195, 255, 0.9);
+        text-shadow: 0 0 20px rgba(77, 163, 255, 0.7);
+    }
+
+    18%,
+    100% {
+        color: rgba(90, 145, 255, 0.15);
+        text-shadow: none;
+    }
 }
+
 @keyframes glow-ico-1 {
-    0%        { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
-    8%, 10%   { color: #5ab5ff; border-color: rgba(90, 200, 255, 0.8); box-shadow: 0 0 24px rgba(77, 163, 255, 0.5); }
-    18%, 100% { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
+    0% {
+        color: rgba(90, 145, 255, 0.4);
+        border-color: rgba(90, 145, 255, 0.3);
+        box-shadow: 0 0 12px rgba(7, 90, 255, 0.08);
+    }
+
+    8%,
+    10% {
+        color: #5ab5ff;
+        border-color: rgba(90, 200, 255, 0.8);
+        box-shadow: 0 0 24px rgba(77, 163, 255, 0.5);
+    }
+
+    18%,
+    100% {
+        color: rgba(90, 145, 255, 0.4);
+        border-color: rgba(90, 145, 255, 0.3);
+        box-shadow: 0 0 12px rgba(7, 90, 255, 0.08);
+    }
 }
 
 /* Step 2: beam center at 50% — ultra-smoothed illuminate 40%→60% */
 @keyframes glow-num-2 {
-    0%, 40%   { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
-    49%, 51%   { color: rgba(130, 195, 255, 0.9); text-shadow: 0 0 20px rgba(77, 163, 255, 0.7); }
-    60%, 100% { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
+
+    0%,
+    40% {
+        color: rgba(90, 145, 255, 0.15);
+        text-shadow: none;
+    }
+
+    49%,
+    51% {
+        color: rgba(130, 195, 255, 0.9);
+        text-shadow: 0 0 20px rgba(77, 163, 255, 0.7);
+    }
+
+    60%,
+    100% {
+        color: rgba(90, 145, 255, 0.15);
+        text-shadow: none;
+    }
 }
+
 @keyframes glow-ico-2 {
-    0%, 40%   { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
-    49%, 51%   { color: #5ab5ff; border-color: rgba(90, 200, 255, 0.8); box-shadow: 0 0 24px rgba(77, 163, 255, 0.5); }
-    60%, 100% { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
+
+    0%,
+    40% {
+        color: rgba(90, 145, 255, 0.4);
+        border-color: rgba(90, 145, 255, 0.3);
+        box-shadow: 0 0 12px rgba(7, 90, 255, 0.08);
+    }
+
+    49%,
+    51% {
+        color: #5ab5ff;
+        border-color: rgba(90, 200, 255, 0.8);
+        box-shadow: 0 0 24px rgba(77, 163, 255, 0.5);
+    }
+
+    60%,
+    100% {
+        color: rgba(90, 145, 255, 0.4);
+        border-color: rgba(90, 145, 255, 0.3);
+        box-shadow: 0 0 12px rgba(7, 90, 255, 0.08);
+    }
 }
 
 /* Step 3: beam center at 92% — ultra-smoothed illuminate 82%→100% */
 @keyframes glow-num-3 {
-    0%, 82%   { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
-    91%, 93%   { color: rgba(130, 195, 255, 0.9); text-shadow: 0 0 20px rgba(77, 163, 255, 0.7); }
-    100%      { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
+
+    0%,
+    82% {
+        color: rgba(90, 145, 255, 0.15);
+        text-shadow: none;
+    }
+
+    91%,
+    93% {
+        color: rgba(130, 195, 255, 0.9);
+        text-shadow: 0 0 20px rgba(77, 163, 255, 0.7);
+    }
+
+    100% {
+        color: rgba(90, 145, 255, 0.15);
+        text-shadow: none;
+    }
 }
+
 @keyframes glow-ico-3 {
-    0%, 82%   { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
-    91%, 93%   { color: #5ab5ff; border-color: rgba(90, 200, 255, 0.8); box-shadow: 0 0 24px rgba(77, 163, 255, 0.5); }
-    100%      { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
+
+    0%,
+    82% {
+        color: rgba(90, 145, 255, 0.4);
+        border-color: rgba(90, 145, 255, 0.3);
+        box-shadow: 0 0 12px rgba(7, 90, 255, 0.08);
+    }
+
+    91%,
+    93% {
+        color: #5ab5ff;
+        border-color: rgba(90, 200, 255, 0.8);
+        box-shadow: 0 0 24px rgba(77, 163, 255, 0.5);
+    }
+
+    100% {
+        color: rgba(90, 145, 255, 0.4);
+        border-color: rgba(90, 145, 255, 0.3);
+        box-shadow: 0 0 12px rgba(7, 90, 255, 0.08);
+    }
 }
 
 /* Content Styles — matching reference layout */
@@ -577,7 +696,7 @@
     flex-direction: column;
 }
 
-.phase-window > *:last-child {
+.phase-window>*:last-child {
     flex: 1;
     min-height: 0;
     overflow: hidden;
@@ -588,9 +707,11 @@
         grid-template-columns: 1fr;
         gap: 5rem;
     }
+
     .method-pipeline-track {
         display: none;
     }
+
     .phase-window {
         height: auto;
     }
@@ -772,8 +893,17 @@
 }
 
 @keyframes connectorPulse {
-    0%, 100% { left: 0; opacity: 0.3; }
-    50% { left: calc(100% - 5px); opacity: 1; }
+
+    0%,
+    100% {
+        left: 0;
+        opacity: 0.3;
+    }
+
+    50% {
+        left: calc(100% - 5px);
+        opacity: 1;
+    }
 }
 
 /* Pipeline responsive */

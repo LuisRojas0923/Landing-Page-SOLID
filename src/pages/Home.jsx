@@ -211,19 +211,19 @@ const Home = () => {
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
                         <div className="luxe-badge" style={{ marginBottom: '1.5rem' }}>Nuestro Método</div>
-                        <h2 style={{ 
-                            fontSize: '2.5rem', 
-                            fontWeight: '800', 
-                            lineHeight: '1.1', 
-                            marginBottom: '1.2rem', 
-                            maxWidth: '1200px', 
-                            margin: '0 auto 1.2rem', 
-                            letterSpacing: '-0.03em' 
+                        <h2 style={{
+                            fontSize: '2.5rem',
+                            fontWeight: '800',
+                            lineHeight: '1.1',
+                            marginBottom: '1.2rem',
+                            maxWidth: '1200px',
+                            margin: '0 auto 1.2rem',
+                            letterSpacing: '-0.03em'
                         }}>
                             Así transformamos su operación <br />
                             <span style={{ color: 'var(--deep-navy-800)', display: 'block', marginTop: '0.4rem' }}>Nuestras Verticales</span>
                         </h2>
-                        <p style={{ color: 'rgba(180, 210, 240, 0.75)', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>De la fricción a la autonomía, en tres pasos.</p>
+                        <p style={{ color: 'rgba(180, 210, 240, 0.75)', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>Tres pilares que eliminan la fricción operativa de su empresa. De la fricción a la autonomía, en tres pasos.</p>
                     </div>
 
                     <div className="method-pipeline-container">
@@ -243,7 +243,7 @@ const Home = () => {
                                 <h3 className="method-title">Organizamos</h3>
                                 <div className="method-pill">De caos operativo a flujos de alto valor</div>
                                 <p className="method-desc">Mapeamos sus procesos, eliminamos operaciones que no agregan valor y diseñamos flujos eficientes.</p>
-                                
+
                                 <div className="mac-window phase-window">
                                     <div className="mac-header">
                                         <div className="mac-buttons">
@@ -302,7 +302,7 @@ const Home = () => {
                                 <h3 className="method-title">Sistematizamos</h3>
                                 <div className="method-pill">De procesos aislados a flujos conectados</div>
                                 <p className="method-desc">Diseñamos procesos replicables y conectamos sistemas que antes operaban en silos aislados.</p>
-                                
+
                                 <div className="mac-window phase-window">
                                     <div className="mac-header">
                                         <div className="mac-buttons">
@@ -334,7 +334,7 @@ const Home = () => {
                                 <h3 className="method-title">Automatizamos</h3>
                                 <div className="method-pill">De tareas manuales a procesos 100% autónomos</div>
                                 <p className="method-desc">Implementamos workflows inteligentes que operan de forma autónoma, eliminando el error humano.</p>
-                                
+
                                 <div className="mac-window phase-window">
                                     <div className="mac-header">
                                         <div className="mac-buttons">
@@ -424,12 +424,12 @@ const Home = () => {
                     <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', fontWeight: '800', marginBottom: '1.5rem', color: '#ffffff' }}>
                         Ingeniería que se paga sola.
                     </h2>
-                    
-                    <p style={{ 
-                        color: 'var(--text-secondary)', 
-                        fontSize: '1.1rem', 
-                        maxWidth: '850px', 
-                        margin: '0 auto 5rem', 
+
+                    <p style={{
+                        color: 'var(--text-secondary)',
+                        fontSize: '1.1rem',
+                        maxWidth: '850px',
+                        margin: '0 auto 5rem',
                         lineHeight: '1.8',
                         fontFamily: "'Roboto', sans-serif"
                     }}>
@@ -438,19 +438,19 @@ const Home = () => {
 
                     <div className="results-pipeline-system">
                         <div className="results-pipeline-track">
-                             <div className="pipeline-label-container">
+                            <div className="pipeline-label-container">
                                 <span className="pipeline-label">CALIDAD</span>
                                 <span className="pipeline-label">CRECIMIENTO</span>
                                 <span className="pipeline-label">EFICIENCIA</span>
-                             </div>
+                            </div>
 
-                             <div className="pipeline-line">
-                                <motion.div 
+                            <div className="pipeline-line">
+                                <motion.div
                                     className="pipeline-glow-particle"
                                     animate={{ left: ['0%', '100%'], opacity: [0, 1, 1, 0] }}
                                     transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
                                 />
-                             </div>
+                            </div>
                         </div>
 
                         <div className="results-premium-grid">
