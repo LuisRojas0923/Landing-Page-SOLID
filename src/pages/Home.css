@@ -129,32 +129,141 @@
     z-index: 3;
 }
 
-/* Success Banner Grid */
-.stats-grid {
+/* Success Banner Grid - Premium Results System */
+.impact-badge-container {
+    margin-bottom: 2rem;
+}
+
+.luxe-badge, .impact-badge {
+    background: rgba(0, 20, 60, 0.4);
+    border: 1px solid rgba(96, 165, 250, 0.4);
+    padding: 0.5rem 1.8rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #60a5fa;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 8px rgba(96, 165, 250, 0.4);
+    box-shadow: 0 0 12px rgba(96, 165, 250, 0.1);
+    display: inline-block;
+}
+
+.results-pipeline-system {
+    margin-top: 5rem;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.results-pipeline-track {
+    width: 90%;
+    margin: 0 auto 4rem;
+    position: relative;
+}
+
+.pipeline-label-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 0 10%;
+}
+
+.pipeline-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--powder-blue-300);
+    letter-spacing: 0.15em;
+    position: relative;
+}
+
+.pipeline-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--deep-navy-400), var(--deep-navy-400), transparent);
+    position: relative;
+}
+
+.pipeline-glow-particle {
+    position: absolute;
+    top: -4px;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #fff, 0 0 30px var(--deep-navy-800);
+    z-index: 2;
+}
+
+.results-premium-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
-.stat-item {
+.stat-card-premium {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.stat-card-premium:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: var(--deep-navy-400);
+    transform: translateY(-5px);
+}
+
+.stat-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.stat-icon-wrapper.red {
+    color: #ff5f56;
+    border: 1px solid rgba(255, 95, 86, 0.2);
+    box-shadow: 0 0 15px rgba(255, 95, 86, 0.1);
+}
+
+.stat-icon-wrapper.amber {
+    color: #ffbd2e;
+    border: 1px solid rgba(255, 189, 46, 0.2);
+    box-shadow: 0 0 15px rgba(255, 189, 46, 0.1);
+}
+
+.stat-icon-wrapper.green {
+    color: #27c93f;
+    border: 1px solid rgba(39, 201, 63, 0.2);
+    box-shadow: 0 0 15px rgba(39, 201, 63, 0.1);
+}
+
+.stat-content {
     display: flex;
     flex-direction: column;
 }
 
-.stat-value {
-    font-size: 1.75rem;
+.stat-value-luxe {
+    font-size: 2.2rem;
     font-weight: 800;
-    color: var(--deep-navy-800);
+    color: #fff;
+    line-height: 1;
 }
 
-.stat-label {
-    font-size: 0.8rem;
+.stat-label-luxe {
+    font-size: 0.7rem;
+    font-weight: 700;
     color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-family: 'Roboto', sans-serif;
-    font-style: italic;
+    letter-spacing: 0.1em;
+    margin-top: 0.4rem;
 }
 
 /* Value Proposition Section */
@@ -269,124 +378,229 @@
 }
 
 /* =============================================
-   PIPELINE SECTION - 3 Phases
+   NUESTRO MÉTODO: PIPELINE HORIZONTAL 3 COLUMNAS
    ============================================= */
 
-.pipeline-track {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+.method-pipeline-container {
+    max-width: 1200px;
+    margin: 4rem auto 0;
     position: relative;
+    padding: 0 1rem;
 }
 
-/* Horizontal connector line */
-.pipeline-connector {
-    position: absolute;
-    top: 52px;
-    left: 10%;
-    right: 10%;
+.method-pipeline-track {
+    width: 80%;
     height: 2px;
-    background: linear-gradient(90deg, var(--deep-navy-400), var(--deep-navy-600), var(--deep-navy-400));
-    z-index: 0;
-    border-radius: 1px;
-}
-
-/* Animated particles on the connector */
-.pipeline-particle {
+    background: linear-gradient(90deg, transparent 0%, rgba(90, 145, 255, 0.4) 15%, rgba(90, 145, 255, 0.4) 85%, transparent 100%);
     position: absolute;
-    top: -3px;
-    width: 8px;
-    height: 8px;
-    background: var(--deep-navy-800);
-    border-radius: 50%;
-    box-shadow: 0 0 12px var(--deep-navy-800), 0 0 24px rgba(90, 145, 255, 0.3);
+    top: 60px;
+    left: 10%;
     z-index: 1;
 }
 
-/* Individual phase card */
-.pipeline-phase {
+.method-pipeline-track .pipeline-particle {
+    position: absolute;
+    top: -4px;
+    width: 10px;
+    height: 10px;
+    background: #4da3ff;
+    border-radius: 50%;
+    box-shadow: 0 0 14px #4da3ff, 0 0 28px rgba(77, 163, 255, 0.5);
+    z-index: 2;
+    animation: beamMove 4s linear infinite;
+}
+
+@keyframes beamMove {
+    0%   { left: 0%; }
+    100% { left: 100%; }
+}
+
+.method-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
     position: relative;
     z-index: 2;
+    align-items: start;
+}
+
+.method-column {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 0;
 }
 
-.phase-header {
+/* Stepper System */
+.method-stepper {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1.25rem;
+    gap: 32px;
+    margin-bottom: 2.5rem;
+    height: 120px;
+    justify-content: center;
 }
 
-.phase-number {
-    font-size: 3rem;
+.method-number {
+    font-size: 2.8rem;
     font-weight: 900;
-    color: var(--deep-navy-800);
+    color: rgba(90, 145, 255, 0.15);
     line-height: 1;
-    opacity: 0.25;
-    letter-spacing: -0.05em;
-    font-variant-numeric: tabular-nums;
+    font-family: 'Inter', sans-serif;
+    height: 44px;
+    display: flex;
+    align-items: center;
 }
 
-.phase-icon-badge {
-    width: 48px;
-    height: 48px;
+.method-icon-badge {
+    width: 44px;
+    height: 44px;
+    background: rgba(0, 10, 30, 0.85);
+    border: 1px solid rgba(90, 145, 255, 0.3);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 14px;
-    background: rgba(0, 32, 96, 0.15);
-    border: 1px solid var(--deep-navy-400);
-    color: var(--deep-navy-800);
-    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(7, 90, 255, 0.08);
+    z-index: 2;
+    color: rgba(90, 145, 255, 0.4);
 }
 
-.pipeline-phase:hover .phase-icon-badge {
-    background: rgba(0, 32, 96, 0.25);
-    border-color: var(--deep-navy-800);
-    box-shadow: 0 0 20px rgba(90, 145, 255, 0.15);
+/* ---- Illumination Animations (synced to 4s beam) ---- */
+/*
+ * Beam: left 0%→100% of track in 4s linear.
+ * Track: 80% container width, offset 10%.
+ * Column centers on track: Col1≈8%, Col2=50%, Col3≈92%.
+ * Sharp on/off: 1% transition = ~40ms (instant feel).
+ */
+
+.method-number.illuminate-1 { animation: glow-num-1 4s linear infinite; }
+.method-icon-badge.illuminate-1 { animation: glow-ico-1 4s linear infinite; }
+.method-number.illuminate-2 { animation: glow-num-2 4s linear infinite; }
+.method-icon-badge.illuminate-2 { animation: glow-ico-2 4s linear infinite; }
+.method-number.illuminate-3 { animation: glow-num-3 4s linear infinite; }
+.method-icon-badge.illuminate-3 { animation: glow-ico-3 4s linear infinite; }
+
+/* Step 1: beam center at 8% — illuminate 5%→12% */
+@keyframes glow-num-1 {
+    0%, 4%    { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
+    5%        { color: rgba(130, 195, 255, 0.9); text-shadow: 0 0 20px rgba(77, 163, 255, 0.7); }
+    12%       { color: rgba(130, 195, 255, 0.9); text-shadow: 0 0 20px rgba(77, 163, 255, 0.7); }
+    13%, 100% { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
+}
+@keyframes glow-ico-1 {
+    0%, 4%    { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
+    5%        { color: #5ab5ff; border-color: rgba(90, 200, 255, 0.8); box-shadow: 0 0 24px rgba(77, 163, 255, 0.5); }
+    12%       { color: #5ab5ff; border-color: rgba(90, 200, 255, 0.8); box-shadow: 0 0 24px rgba(77, 163, 255, 0.5); }
+    13%, 100% { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
 }
 
-.phase-title {
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin-bottom: 0.75rem;
+/* Step 2: beam center at 50% — illuminate 46%→54% */
+@keyframes glow-num-2 {
+    0%, 45%   { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
+    46%       { color: rgba(130, 195, 255, 0.9); text-shadow: 0 0 20px rgba(77, 163, 255, 0.7); }
+    54%       { color: rgba(130, 195, 255, 0.9); text-shadow: 0 0 20px rgba(77, 163, 255, 0.7); }
+    55%, 100% { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
+}
+@keyframes glow-ico-2 {
+    0%, 45%   { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
+    46%       { color: #5ab5ff; border-color: rgba(90, 200, 255, 0.8); box-shadow: 0 0 24px rgba(77, 163, 255, 0.5); }
+    54%       { color: #5ab5ff; border-color: rgba(90, 200, 255, 0.8); box-shadow: 0 0 24px rgba(77, 163, 255, 0.5); }
+    55%, 100% { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
+}
+
+/* Step 3: beam center at 92% — illuminate 88%→96% */
+@keyframes glow-num-3 {
+    0%, 87%   { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
+    88%       { color: rgba(130, 195, 255, 0.9); text-shadow: 0 0 20px rgba(77, 163, 255, 0.7); }
+    96%       { color: rgba(130, 195, 255, 0.9); text-shadow: 0 0 20px rgba(77, 163, 255, 0.7); }
+    97%, 100% { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
+}
+@keyframes glow-ico-3 {
+    0%, 87%   { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
+    88%       { color: #5ab5ff; border-color: rgba(90, 200, 255, 0.8); box-shadow: 0 0 24px rgba(77, 163, 255, 0.5); }
+    96%       { color: #5ab5ff; border-color: rgba(90, 200, 255, 0.8); box-shadow: 0 0 24px rgba(77, 163, 255, 0.5); }
+    97%, 100% { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
+}
+
+/* Content Styles — matching reference layout */
+.method-title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 0.6rem;
+    color: #fff;
     letter-spacing: -0.02em;
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.phase-desc {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    max-width: 320px;
-    margin-bottom: 1rem;
+.method-pill {
+    background: none;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #5b8def;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: none;
+    letter-spacing: 0;
+    height: 2.8rem;
+}
+
+.method-desc {
+    font-size: 1.1rem;
+    color: rgba(180, 210, 240, 0.75);
+    line-height: 1.7;
+    margin-bottom: 2rem;
     font-family: 'Roboto', sans-serif;
     font-style: italic;
+    max-width: 92%;
+    height: 5.5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.phase-example {
-    display: inline-flex;
-    align-items: center;
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: var(--deep-navy-800);
-    background: rgba(0, 32, 96, 0.1);
-    border: 1px solid rgba(0, 32, 96, 0.15);
-    padding: 0.4rem 1rem;
-    border-radius: 100px;
-    letter-spacing: 0.01em;
-    margin-bottom: 1.5rem;
-}
-
-/* Compact mac-window inside pipeline phases */
+/* Compact Visual Windows — equal height */
 .phase-window {
     width: 100%;
     padding: 1rem;
     border-radius: 12px;
+    background: rgba(0, 5, 20, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    height: 220px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.phase-window > *:last-child {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+    .method-grid {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+    .method-pipeline-track {
+        display: none;
+    }
+    .phase-window {
+        height: auto;
+    }
 }
 
 .phase-window .mac-header {
@@ -446,7 +660,7 @@
 
 .flow-diagram {
     width: 100%;
-    max-height: 100px;
+    max-height: 80px;
 }
 
 /* Messy lines and nodes */
@@ -490,12 +704,83 @@
     color: rgba(39, 201, 63, 0.8);
 }
 
+.flow-stat {
+    font-size: 0.6rem;
+    color: rgba(255, 95, 86, 0.7);
+    font-weight: 600;
+    margin-top: 0.2rem;
+}
+
+.flow-stat-ok {
+    color: rgba(39, 201, 63, 0.8);
+}
+
 .flow-arrow {
     color: var(--deep-navy-800);
     opacity: 0.5;
     flex-shrink: 0;
     display: flex;
     align-items: center;
+}
+
+/* Labeled Workflow Canvas (Window 3) */
+.workflow-canvas-labeled {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+}
+
+.workflow-node-labeled {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.workflow-node-icon {
+    width: 42px;
+    height: 42px;
+    background: rgba(0, 10, 30, 0.6);
+    border: 1px solid rgba(90, 145, 255, 0.3);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5ab5ff;
+}
+
+.workflow-node-label {
+    font-size: 0.55rem;
+    font-weight: 700;
+    color: rgba(180, 210, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.workflow-connector {
+    width: 24px;
+    height: 2px;
+    background: rgba(90, 145, 255, 0.2);
+    position: relative;
+    margin-bottom: 1.2rem;
+}
+
+.workflow-connector .particle {
+    width: 5px;
+    height: 5px;
+    background: #4da3ff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #4da3ff;
+    position: absolute;
+    top: -1.5px;
+    animation: connectorPulse 2s ease-in-out infinite;
+}
+
+@keyframes connectorPulse {
+    0%, 100% { left: 0; opacity: 0.3; }
+    50% { left: calc(100% - 5px); opacity: 1; }
 }
 
 /* Pipeline responsive */
