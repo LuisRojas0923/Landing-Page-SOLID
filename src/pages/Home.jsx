@@ -212,16 +212,16 @@ const Home = () => {
                     <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
                         <div className="luxe-badge" style={{ marginBottom: '1.5rem' }}>Nuestro Método</div>
                         <h2 style={{ 
-                            fontSize: 'clamp(2.5rem, 8vw, 5rem)', 
+                            fontSize: '2.5rem', 
                             fontWeight: '800', 
-                            lineHeight: '1.05', 
-                            marginBottom: '1.5rem', 
+                            lineHeight: '1.1', 
+                            marginBottom: '1.2rem', 
                             maxWidth: '1200px', 
-                            margin: '0 auto 1.5rem', 
+                            margin: '0 auto 1.2rem', 
                             letterSpacing: '-0.03em' 
                         }}>
                             Así transformamos su operación <br />
-                            <span style={{ color: 'var(--deep-navy-800)', display: 'block', marginTop: '0.5rem' }}>Nuestras Verticales</span>
+                            <span style={{ color: 'var(--deep-navy-800)', display: 'block', marginTop: '0.4rem' }}>Nuestras Verticales</span>
                         </h2>
                         <p style={{ color: 'rgba(180, 210, 240, 0.75)', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>De la fricción a la autonomía, en tres pasos.</p>
                     </div>
