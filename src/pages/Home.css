@@ -483,52 +483,40 @@
 .method-number.illuminate-3 { animation: glow-num-3 4s linear infinite; }
 .method-icon-badge.illuminate-3 { animation: glow-ico-3 4s linear infinite; }
 
-/* Step 1: beam center at 8% — smoothed illuminate 3%→13% */
+/* Step 1: beam center at 8% — ultra-smoothed illuminate 0%→18% */
 @keyframes glow-num-1 {
-    0%, 2%    { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
-    3%        { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
-    6%, 10%   { color: rgba(130, 195, 255, 0.9); text-shadow: 0 0 20px rgba(77, 163, 255, 0.7); }
-    13%       { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
-    14%, 100% { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
+    0%        { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
+    8%, 10%   { color: rgba(130, 195, 255, 0.9); text-shadow: 0 0 20px rgba(77, 163, 255, 0.7); }
+    18%, 100% { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
 }
 @keyframes glow-ico-1 {
-    0%, 2%    { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
-    3%        { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
-    6%, 10%   { color: #5ab5ff; border-color: rgba(90, 200, 255, 0.8); box-shadow: 0 0 24px rgba(77, 163, 255, 0.5); }
-    13%       { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
-    14%, 100% { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
+    0%        { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
+    8%, 10%   { color: #5ab5ff; border-color: rgba(90, 200, 255, 0.8); box-shadow: 0 0 24px rgba(77, 163, 255, 0.5); }
+    18%, 100% { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
 }
 
-/* Step 2: beam center at 50% — smoothed illuminate 45%→55% */
+/* Step 2: beam center at 50% — ultra-smoothed illuminate 40%→60% */
 @keyframes glow-num-2 {
-    0%, 44%   { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
-    45%       { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
-    48%, 52%   { color: rgba(130, 195, 255, 0.9); text-shadow: 0 0 20px rgba(77, 163, 255, 0.7); }
-    55%       { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
-    56%, 100% { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
+    0%, 40%   { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
+    49%, 51%   { color: rgba(130, 195, 255, 0.9); text-shadow: 0 0 20px rgba(77, 163, 255, 0.7); }
+    60%, 100% { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
 }
 @keyframes glow-ico-2 {
-    0%, 44%   { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
-    45%       { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
-    48%, 52%   { color: #5ab5ff; border-color: rgba(90, 200, 255, 0.8); box-shadow: 0 0 24px rgba(77, 163, 255, 0.5); }
-    55%       { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
-    56%, 100% { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
+    0%, 40%   { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
+    49%, 51%   { color: #5ab5ff; border-color: rgba(90, 200, 255, 0.8); box-shadow: 0 0 24px rgba(77, 163, 255, 0.5); }
+    60%, 100% { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
 }
 
-/* Step 3: beam center at 92% — smoothed illuminate 87%→97% */
+/* Step 3: beam center at 92% — ultra-smoothed illuminate 82%→100% */
 @keyframes glow-num-3 {
-    0%, 86%   { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
-    87%       { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
-    90%, 94%   { color: rgba(130, 195, 255, 0.9); text-shadow: 0 0 20px rgba(77, 163, 255, 0.7); }
-    97%       { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
-    98%, 100% { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
+    0%, 82%   { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
+    91%, 93%   { color: rgba(130, 195, 255, 0.9); text-shadow: 0 0 20px rgba(77, 163, 255, 0.7); }
+    100%      { color: rgba(90, 145, 255, 0.15); text-shadow: none; }
 }
 @keyframes glow-ico-3 {
-    0%, 86%   { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
-    87%       { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
-    90%, 94%   { color: #5ab5ff; border-color: rgba(90, 200, 255, 0.8); box-shadow: 0 0 24px rgba(77, 163, 255, 0.5); }
-    97%       { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
-    98%, 100% { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
+    0%, 82%   { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
+    91%, 93%   { color: #5ab5ff; border-color: rgba(90, 200, 255, 0.8); box-shadow: 0 0 24px rgba(77, 163, 255, 0.5); }
+    100%      { color: rgba(90, 145, 255, 0.4); border-color: rgba(90, 145, 255, 0.3); box-shadow: 0 0 12px rgba(7, 90, 255, 0.08); }
 }
 
 /* Content Styles — matching reference layout */
