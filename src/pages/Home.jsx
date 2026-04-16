@@ -212,7 +212,7 @@ const Home = () => {
                     <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
                         <div className="luxe-badge" style={{ marginBottom: '1.5rem' }}>Nuestro Método</div>
                         <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', marginBottom: '0.5rem', fontWeight: '800' }}>Así transformamos su operación</h2>
-                        <div style={{ color: '#5b8def', fontSize: '1.3rem', fontWeight: '700', marginBottom: '1.5rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Nuestras Verticales</div>
+                        <div style={{ color: '#5b8def', fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: '700', marginBottom: '1.5rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Nuestras Verticales</div>
                         <p style={{ color: 'rgba(180, 210, 240, 0.75)', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>De la fricción a la autonomía, en tres pasos.</p>
                     </div>
 
