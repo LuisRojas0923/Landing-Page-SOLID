@@ -222,7 +222,7 @@ const Home = () => {
                         }}>
                             Así transformamos su operación
                         </h2>
-                        <p style={{ color: 'rgba(180, 210, 240, 0.75)', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>Tres pilares que eliminan la fricción operativa de su empresa.</p>
+                        <p style={{ color: 'rgba(180, 210, 240, 0.75)', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>Tres pasos que eliminan la fricción operativa de su empresa.</p>
                     </div>
 
                     <div className="method-pipeline-container">
