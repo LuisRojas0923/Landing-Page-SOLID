@@ -257,6 +257,12 @@ const Home = () => {
                                         </div>
                                         <div className="mac-title">process_audit.flow</div>
                                     </div>
+                                    <div className="vertical-card-top" style={{ padding: '0.5rem', marginBottom: '0.5rem' }}>
+                                        <span className="vertical-number">01</span>
+                                        <div className="vertical-icon">
+                                            <Workflow size={28} />
+                                        </div>
+                                    </div>
                                     <div className="flow-comparison">
                                         <div className="flow-side">
                                             <span className="flow-label">ANTES</span>
@@ -327,6 +333,12 @@ const Home = () => {
                                         </div>
                                         <div className="mac-title">process_engine.py</div>
                                     </div>
+                                    <div className="vertical-card-top" style={{ padding: '0.5rem', marginBottom: '0.5rem' }}>
+                                        <span className="vertical-number">02</span>
+                                        <div className="vertical-icon">
+                                            <Code2 size={28} />
+                                        </div>
+                                    </div>
                                     <div className="terminal-content" style={{ fontSize: '0.78rem', textAlign: 'center', padding: '0.8rem 1rem' }}>
                                         <div className="terminal-line"><span style={{ color: '#c678dd' }}>import</span> pandas <span style={{ color: '#c678dd' }}>as</span> pd</div>
                                         <div className="terminal-line"><span style={{ color: '#c678dd' }}>from</span> solid_engine <span style={{ color: '#c678dd' }}>import</span> Pipeline</div>
@@ -369,6 +381,12 @@ const Home = () => {
                                             <div className="mac-btn green" />
                                         </div>
                                         <div className="mac-title">workflow_engine.n8n</div>
+                                    </div>
+                                    <div className="vertical-card-top" style={{ padding: '0.5rem', marginBottom: '0.5rem' }}>
+                                        <span className="vertical-number">03</span>
+                                        <div className="vertical-icon">
+                                            <Bot size={28} />
+                                        </div>
                                     </div>
                                     <div className="workflow-canvas-labeled">
                                         <div className="workflow-node-labeled">
