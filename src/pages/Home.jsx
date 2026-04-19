@@ -209,7 +209,7 @@ const Home = () => {
 
             <section id="demo" style={{ padding: '8rem 2rem', background: 'rgba(0, 13, 39, 0.4)' }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-                    <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
                         <div className="luxe-badge" style={{ marginBottom: '1.5rem' }}>Nuestro Método</div>
                         <h2 style={{
                             fontSize: '2.5rem',
@@ -222,7 +222,7 @@ const Home = () => {
                         }}>
                             Así transformamos su operación
                         </h2>
-                        <p style={{ color: 'rgba(180, 210, 240, 0.75)', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>Tres pilares que eliminan la fricción operativa de su empresa. De la fricción a la autonomía, en tres pasos.</p>
+                        <p style={{ color: 'rgba(180, 210, 240, 0.75)', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>Tres pilares que eliminan la fricción operativa de su empresa.</p>
                     </div>
 
                     <div className="method-pipeline-container">
@@ -232,6 +232,7 @@ const Home = () => {
                         
                         <div className="pipeline-global-subtitle">
                             <span style={{ color: 'var(--deep-navy-800)', display: 'block', fontSize: '1.4rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '1px' }}>Nuestras Verticales</span>
+                            <span style={{ color: 'rgba(180, 210, 240, 0.65)', display: 'block', marginTop: '1.2rem', fontSize: '1.15rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>De la fricción a la autonomía, en tres pasos.</span>
                         </div>
 
                         <div className="method-grid">

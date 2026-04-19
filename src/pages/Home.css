@@ -640,7 +640,7 @@
 /* Global subtitle under the track */
 .pipeline-global-subtitle {
     position: absolute;
-    top: 160px; /* Provides 100px of symmetrical gap distance from the 60px line */
+    top: 135px; /* Provides 100px of symmetrical gap distance from the 60px line */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -665,7 +665,7 @@
     font-weight: 900;
     margin-bottom: 0.6rem;
     color: #fff;
-    margin-top: 4rem; /* Make room for the absolute subtitle on Desktop */
+    margin-top: 6.8rem; /* Make significantly more room for the absolute subtitle on Desktop */
 }
 
 @media (max-width: 1024px) {
@@ -1062,7 +1062,7 @@
 
 /* Compensate spacing when there is no method-title above the tagline */
 .method-stepper + .vertical-tagline {
-    margin-top: 3.5rem; 
+    margin-top: 6.3rem; 
 }
 
 @media (max-width: 1024px) {
