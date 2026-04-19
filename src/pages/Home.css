@@ -384,7 +384,7 @@
 
 .method-pipeline-container {
     max-width: 1200px;
-    margin: 4rem auto 0;
+    margin: 0 auto;
     position: relative;
     padding: 0 1rem;
 }
@@ -637,12 +637,42 @@
     }
 }
 
+/* Global subtitle under the track */
+.pipeline-global-subtitle {
+    position: absolute;
+    top: 160px; /* Provides 100px of symmetrical gap distance from the 60px line */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+@media (max-width: 1024px) {
+    .pipeline-global-subtitle {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-top: -2rem;
+        margin-bottom: 3rem;
+    }
+}
+
 /* Content Styles — matching reference layout */
 .method-title {
     font-size: 1.8rem;
     font-weight: 900;
     margin-bottom: 0.6rem;
     color: #fff;
+    margin-top: 4rem; /* Make room for the absolute subtitle on Desktop */
+}
+
+@media (max-width: 1024px) {
+    .method-title {
+        margin-top: 0;
+    }
+}
     letter-spacing: -0.02em;
     height: 2.4rem;
     display: flex;
@@ -1028,6 +1058,17 @@
     text-transform: uppercase;
     letter-spacing: 0.06em;
     margin-bottom: 1rem;
+}
+
+/* Compensate spacing when there is no method-title above the tagline */
+.method-stepper + .vertical-tagline {
+    margin-top: 3.5rem; 
+}
+
+@media (max-width: 1024px) {
+    .method-stepper + .vertical-tagline {
+        margin-top: 0;
+    }
 }
 
 .vertical-desc {
