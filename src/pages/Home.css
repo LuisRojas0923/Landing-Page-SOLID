@@ -722,7 +722,7 @@
     width: 100%;
     padding: 1rem;
     border-radius: 12px;
-    background: rgba(0, 5, 20, 0.6);
+    background: linear-gradient(160deg, var(--deep-navy-100), rgba(0, 13, 39, 0.6));
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     overflow: hidden;
