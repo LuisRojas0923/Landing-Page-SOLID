@@ -292,6 +292,17 @@ const Home = () => {
                                             <span className="flow-stat flow-stat-ok">3 pasos de alto valor</span>
                                         </div>
                                     </div>
+                                    <ul className="vertical-items window-inner-list">
+                                        {verticals[0].items.map((item, j) => (
+                                            <li key={j} className="vertical-item">
+                                                <span className="vertical-item-icon">{item.icon}</span>
+                                                {item.label}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <button className="vertical-cta" style={{ paddingLeft: '0.5rem', paddingBottom: '1rem', marginTop: '-0.5rem' }} onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+                                        Ver Detalles <ChevronRight size={16} />
+                                    </button>
                                 </div>
                             </motion.div>
 
@@ -324,6 +335,17 @@ const Home = () => {
                                         <div className="terminal-line">&nbsp;&nbsp;df[<span style={{ color: '#98c379' }}>'recargos'</span>] = df.apply(calc)</div>
                                         <div className="terminal-line">&nbsp;&nbsp;<span style={{ color: '#c678dd' }}>return</span> df.merge_to_erp()</div>
                                     </div>
+                                    <ul className="vertical-items window-inner-list">
+                                        {verticals[1].items.map((item, j) => (
+                                            <li key={j} className="vertical-item">
+                                                <span className="vertical-item-icon">{item.icon}</span>
+                                                {item.label}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <button className="vertical-cta" style={{ paddingLeft: '0.5rem', paddingBottom: '1rem', marginTop: '-0.5rem' }} onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+                                        Ver Detalles <ChevronRight size={16} />
+                                    </button>
                                 </div>
                             </motion.div>
 
@@ -368,6 +390,17 @@ const Home = () => {
                                             <span className="workflow-node-label">ERP</span>
                                         </div>
                                     </div>
+                                    <ul className="vertical-items window-inner-list">
+                                        {verticals[2].items.map((item, j) => (
+                                            <li key={j} className="vertical-item">
+                                                <span className="vertical-item-icon">{item.icon}</span>
+                                                {item.label}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <button className="vertical-cta" style={{ paddingLeft: '0.5rem', paddingBottom: '1rem', marginTop: '-0.5rem' }} onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+                                        Ver Detalles <ChevronRight size={16} />
+                                    </button>
                                 </div>
                             </motion.div>
                         </div>

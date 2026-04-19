@@ -50,15 +50,21 @@
     color: var(--powder-blue-400);
 }
 
-/* Terminal Styles */
+/* Terminal Window Content (Column 2) */
 .terminal-content {
-    background: rgba(0, 6, 19, 0.8);
+    background: rgba(0, 6, 19, 0.6);
     border-radius: 8px;
+    border: 1px solid var(--deep-navy-400);
     padding: 1rem;
+    text-align: left;
+    height: 155px; /* Ensures identical shared size */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: auto;
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
     font-size: 0.85rem;
     line-height: 1.5;
-    border: 1px solid var(--deep-navy-400);
     position: relative;
 }
 
@@ -720,16 +726,49 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    height: 220px;
+    height: 100%; /* the column stretches, and this ensures it stretches to match */
+    min-height: 220px;
     margin-top: auto;
     display: flex;
     flex-direction: column;
+    position: relative;
+    transition: all 1.0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.phase-window::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--deep-navy-800), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.phase-window:hover {
+    border-color: var(--deep-navy-800);
+    box-shadow: 0 20px 40px rgba(7, 90, 255, 0.15);
+    transform: translateY(-8px);
+}
+
+.phase-window:hover::before {
+    opacity: 1;
 }
 
 .phase-window>*:last-child {
-    flex: 1;
-    min-height: 0;
+    flex: 0 0 auto;
     overflow: hidden;
+}
+
+ul.window-inner-list {
+    margin: 2.5rem 0.5rem 1.5rem;
+}
+
+.window-inner-list .vertical-item {
+    font-size: 0.85rem;
+    line-height: 1.4;
 }
 
 @media (max-width: 1024px) {
@@ -774,8 +813,10 @@
 .flow-comparison {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     padding: 0.75rem;
+    height: 155px; /* Ensures identical shared size */
     background: rgba(0, 6, 19, 0.6);
     border-radius: 8px;
     border: 1px solid var(--deep-navy-400);
@@ -873,7 +914,11 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 1rem 0.5rem;
+    padding: 1rem 0;
+    height: 155px; /* Ensures identical shared size */
+    background: rgba(0, 6, 19, 0.6);
+    border-radius: 8px;
+    border: 1px solid var(--deep-navy-400);
 }
 
 .workflow-node-labeled {
