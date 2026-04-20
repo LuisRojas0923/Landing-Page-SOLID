@@ -132,7 +132,7 @@ const Home = () => {
                         fontStyle: 'italic',
                         fontFamily: "'Roboto', sans-serif"
                     }}>
-                        En SOLID SOLUTIONS estructuramos su operación, diseñamos la arquitectura que conecta sus datos y automatizamos sus tareas críticas, eliminando la fricción operativa y preparando su empresa para crecer con tecnología e inteligencia artificial.
+                        En <span className="method-title" style={{ fontSize: 'inherit', display: 'inline', margin: 0 }}>Solid</span> <span className="vertical-tagline" style={{ fontSize: 'inherit', display: 'inline', color: 'var(--deep-navy-800)', fontWeight: 800 }}>Solutions</span> estructuramos su operación, diseñamos la arquitectura que conecta sus datos y automatizamos sus tareas críticas, eliminando la fricción operativa y preparando su empresa para crecer con tecnología e inteligencia artificial.
                     </p>
 
                     <div className="luxe-badge" style={{
@@ -158,51 +158,37 @@ const Home = () => {
                         flexWrap: 'wrap',
                         width: '100%'
                     }}>
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
+                        <motion.div
+                            className="mac-window cta-window"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            whileHover={{ y: -8 }}
+                            transition={{ duration: 1.0, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.2 }}
                             onClick={() => navigate('/contact')}
-                            style={{
-                                backgroundColor: 'var(--deep-navy-500)',
-                                color: 'white',
-                                padding: 'clamp(1rem, 2.5vw, 1.2rem) clamp(2rem, 5vw, 2.8rem)',
-                                borderRadius: '12px',
-                                fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)',
-                                fontWeight: '700',
-                                border: 'none',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '0.75rem',
-                                boxShadow: '0 15px 35px rgba(0, 32, 96, 0.4)',
-                                cursor: 'pointer',
-                                whiteSpace: 'nowrap',
-                                width: '100%',
-                                maxWidth: '300px',
-                                justifyContent: 'center'
-                            }}
                         >
-                            Agendar Diagnóstico <ArrowRight size={20} />
-                        </motion.button>
-                        <motion.button
-                            whileHover={{ background: 'rgba(255,255,255,0.05)' }}
+
+                            <button
+                                className="vertical-cta"
+                                style={{ paddingLeft: '0.5rem', fontSize: '1.25rem' }}
+                            >
+                                Agenda tu Diagnóstico <ChevronRight size={20} />
+                            </button>
+                        </motion.div>
+                        <motion.div
+                            className="mac-window cta-window cta-window-alt"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            whileHover={{ y: -8 }}
+                            transition={{ duration: 1.0, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.3 }}
                             onClick={() => navigate('/solutions')}
-                            style={{
-                                backgroundColor: 'transparent',
-                                color: 'white',
-                                padding: 'clamp(1rem, 2.5vw, 1.2rem) clamp(2rem, 5vw, 2.8rem)',
-                                borderRadius: '12px',
-                                fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)',
-                                fontWeight: '600',
-                                border: '1px solid var(--deep-navy-400)',
-                                cursor: 'pointer',
-                                whiteSpace: 'nowrap',
-                                width: '100%',
-                                maxWidth: '300px',
-                                justifyContent: 'center'
-                            }}
                         >
-                            Explorar Soluciones
-                        </motion.button>
+                            <button
+                                className="vertical-cta"
+                                style={{ paddingLeft: '0.5rem', fontSize: '1.25rem', color: '#fff' }}
+                            >
+                                Explorar Soluciones <ChevronRight size={20} />
+                            </button>
+                        </motion.div>
                     </div>
                 </motion.div>
             </section>

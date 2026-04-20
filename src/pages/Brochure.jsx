@@ -104,7 +104,7 @@ const slides = [
             "Automatización Real: Desde RPA hasta ERP propio.",
             "Sin fricción: Lenguaje claro para gerencia."
         ],
-        cta: "Agendar Diagnóstico",
+        cta: "Agenda tu Diagnóstico",
         accent: "var(--deep-navy-800)"
     }
 ];

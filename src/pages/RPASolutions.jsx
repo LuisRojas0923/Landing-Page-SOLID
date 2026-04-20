@@ -227,7 +227,7 @@ const RPASolutions = () => {
                         gap: '1rem'
                     }}
                 >
-                    Agendar Diagnóstico RPA <ArrowRight size={20} />
+                    Agenda tu Diagnóstico RPA <ArrowRight size={20} />
                 </motion.button>
             </section>
         </div>

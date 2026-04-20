@@ -25,7 +25,7 @@ const CorporateLayout = () => {
                     <NavLink to="/brochure" className={({ isActive }) => isActive ? 'nav-active nav-brochure' : 'nav-brochure'}>Brochure</NavLink>
                     <NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-active' : ''}>Contacto</NavLink>
                     <Link to="/contact" className="btn-consultancy">
-                        Agendar Diagnóstico
+                        Agenda tu Diagnóstico
                     </Link>
                 </div>
 
@@ -45,7 +45,7 @@ const CorporateLayout = () => {
                     <NavLink to="/brochure" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Brochure</NavLink>
                     <NavLink to="/contact" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Contacto</NavLink>
                     <Link to="/contact" className="btn-consultancy" onClick={() => setIsMenuOpen(false)}>
-                        Agendar Diagnóstico
+                        Agenda tu Diagnóstico
                     </Link>
                 </div>
             </nav>

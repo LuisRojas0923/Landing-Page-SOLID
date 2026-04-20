@@ -89,7 +89,7 @@ const DesignSystem = () => {
                 <section className="ds-section">
                     <h2 className="ds-section-title">Botones</h2>
                     <div className="ds-buttons">
-                        <a href="#btns" className="btn-consultancy">Agendar Diagnóstico</a>
+                        <a href="#btns" className="btn-consultancy">Agenda tu Diagnóstico</a>
                         <button type="button" className="ds-btn ds-btn-primary">Primario (deep-navy-800)</button>
                         <button type="button" className="ds-btn ds-btn-outline">Outline</button>
                         <button type="button" className="ds-btn ds-btn-ghost">Ghost</button>
