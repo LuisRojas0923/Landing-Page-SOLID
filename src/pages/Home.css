@@ -669,7 +669,7 @@
     font-size: 1.8rem;
     font-weight: 900;
     margin-bottom: 0.6rem;
-    color: var(--deep-navy-800);
+    color: #fff;
     margin-top: 1.5rem; /* Reduced from 2rem to balance the layout */
 }
 
@@ -1098,7 +1098,7 @@ ul.window-inner-list {
 .vertical-tagline {
     font-size: 1.15rem;
     font-weight: 800;
-    color: #fff;
+    color: var(--deep-navy-800);
     text-transform: none;
     letter-spacing: -0.03em;
     margin-bottom: 1rem;
