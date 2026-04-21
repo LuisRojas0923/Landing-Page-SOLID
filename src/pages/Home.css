@@ -1428,17 +1428,17 @@ ul.window-inner-list {
 }
 
 .stat-card-premium {
-    background: var(--deep-navy-100) !important;
-    border: 1px solid var(--deep-navy-400) !important;
+    background: linear-gradient(160deg, var(--deep-navy-100), rgba(0, 13, 39, 0.6));
+    border: 1px solid rgba(90, 145, 255, 0.15);
     border-radius: 20px;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem;
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    gap: 2rem;
     position: relative;
     overflow: hidden;
-    text-align: left;
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
 }
 
 .stat-card-premium::before {
@@ -1447,32 +1447,37 @@ ul.window-inner-list {
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, var(--deep-navy-800), transparent);
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--deep-navy-600), transparent);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .stat-card-premium:hover {
-    border-color: rgba(90, 200, 255, 0.8) !important;
-    transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(7, 90, 255, 0.25) !important;
-    background: rgba(0, 32, 96, 0.12) !important;
+    transform: translateY(-8px);
+    border-color: rgba(90, 145, 255, 0.3) !important;
+    box-shadow: 0 30px 60px rgba(7, 90, 255, 0.12) !important;
+    background: linear-gradient(160deg, var(--deep-navy-100), rgba(0, 13, 39, 0.7)) !important;
     cursor: pointer;
 }
 
 .stat-card-premium:hover::before {
-    opacity: 1;
-    background: linear-gradient(90deg, transparent, #5ab5ff, transparent);
+    opacity: 0.6;
+    background: linear-gradient(90deg, transparent, var(--deep-navy-600), transparent);
 }
 
 .stat-label-luxe {
     transition: color 0.4s ease;
 }
 
-.stat-card-premium.active .stat-label-luxe.red { color: #ff5f56; }
-.stat-card-premium.active .stat-label-luxe.amber { color: #ffbd2e; }
-.stat-card-premium.active .stat-label-luxe.green { color: #27c93f; }
+.stat-label-luxe.red { color: #ff5f56; }
+.stat-label-luxe.amber { color: #ffbd2e; }
+.stat-label-luxe.green { color: #27c93f; }
+
+.stat-card-premium:hover .stat-label-luxe {
+    opacity: 1;
+    filter: brightness(1.2);
+}
 
 @media (max-width: 900px) {
     .results-premium-grid {
