@@ -198,7 +198,7 @@ const Home = () => {
             <section id="results" style={{ padding: '8rem 2rem', background: 'var(--deep-navy-200)' }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
                     <div className="impact-badge-container">
-                        <span className="impact-badge">IMPACTO MEDIBLE</span>
+                        <span className="impact-badge">Impacto Medible</span>
                     </div>
 
                     <h2 style={{
@@ -211,9 +211,21 @@ const Home = () => {
                         Ingeniería que se paga sola.
                     </h2>
 
+                    <p style={{
+                        color: 'var(--deep-navy-800)',
+                        fontSize: '2rem',
+                        fontWeight: '800',
+                        letterSpacing: '-0.03em',
+                        marginBottom: '2rem',
+                        lineHeight: '1.2',
+                        whiteSpace: 'nowrap'
+                    }}>
+                        Más productividad, menor costo operativo.
+                    </p>
+
                     <p className="method-desc" style={{
                         maxWidth: '1000px',
-                        margin: '0 auto 5rem',
+                        margin: '0 auto 4rem',
                         fontSize: '1.25rem',
                         opacity: 0.9,
                         color: 'rgba(180, 210, 240, 0.75)'
@@ -230,11 +242,11 @@ const Home = () => {
                                     transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
                                     onUpdate={(latest) => {
                                         const x = parseFloat(latest.left);
-                                        // Refined thresholds for smaller 160px capsules (approx 13.3% width)
-                                        // Triggers exactly when beam hits the new glass border
+                                        // Bubbles: Calidad (1st), Eficiencia (2nd), Crecimiento (3rd)
+                                        // Cards: Error (Red), Productividad (Amber), Costos (Green)
                                         if (x >= 10 && x <= 23.2) setActiveImpact('calidad');
-                                        else if (x >= 43.4 && x <= 56.6) setActiveImpact('crecimiento');
-                                        else if (x >= 76.7 && x <= 89.9) setActiveImpact('eficiencia');
+                                        else if (x >= 43.4 && x <= 56.6) setActiveImpact('eficiencia');
+                                        else if (x >= 76.7 && x <= 89.9) setActiveImpact('crecimiento');
                                         else setActiveImpact(null);
                                     }}
                                 />
@@ -242,11 +254,11 @@ const Home = () => {
                                 <div className={`glass-capsule ${activeImpact === 'calidad' ? 'active' : ''}`}>
                                     <span className="pill-item-label">CALIDAD</span>
                                 </div>
-                                <div className={`glass-capsule ${activeImpact === 'crecimiento' ? 'active' : ''}`}>
-                                    <span className="pill-item-label">CRECIMIENTO</span>
-                                </div>
                                 <div className={`glass-capsule ${activeImpact === 'eficiencia' ? 'active' : ''}`}>
                                     <span className="pill-item-label">EFICIENCIA</span>
+                                </div>
+                                <div className={`glass-capsule ${activeImpact === 'crecimiento' ? 'active' : ''}`}>
+                                    <span className="pill-item-label">CRECIMIENTO</span>
                                 </div>
                             </div>
                         </div>

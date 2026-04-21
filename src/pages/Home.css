@@ -1365,7 +1365,7 @@ ul.window-inner-list {
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(90, 145, 255, 0.4), transparent);
     position: relative;
-    margin: 6rem 0 8rem;
+    margin: 6rem 0 3rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
