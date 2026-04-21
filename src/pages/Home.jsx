@@ -193,6 +193,81 @@ const Home = () => {
                 </motion.div>
             </section>
 
+            {/* RESULTS SECTION - Versión Premium exacta a la imagen */}
+            <section id="results" style={{ padding: '8rem 2rem', background: 'var(--deep-navy-200)' }}>
+                <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
+                    <div className="impact-badge-container">
+                        <span className="impact-badge">IMPACTO MEDIBLE</span>
+                    </div>
+
+                    <h2 style={{
+                        fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
+                        fontWeight: '800',
+                        marginBottom: '1.5rem',
+                        letterSpacing: '-0.02em',
+                        lineHeight: 1.1
+                    }}>
+                        Ingeniería que se paga sola.
+                    </h2>
+
+                    <p style={{
+                        color: 'var(--deep-navy-800)',
+                        fontSize: '1.15rem',
+                        maxWidth: '600px',
+                        margin: '0 auto 5rem',
+                        lineHeight: '1.8',
+                        fontWeight: '800',
+                        letterSpacing: '-0.03em'
+                    }}>
+                        Optimizamos el rendimiento corporativo automatizando procesos repetitivos, minimizando el error humano y aumentando su productividad, para que su talento se enfoque en iniciativas de alto valor estratégico al tiempo que reduce costos operativos.
+                    </p>
+
+                    <div className="impact-showcase-luxe">
+                        <div className="impact-pill-nav">
+                            <span className="pill-item">CALIDAD</span>
+                            <span className="pill-item active">CRECIMIENTO</span>
+                            <span className="pill-item">EFICIENCIA</span>
+                        </div>
+
+                        <div className="impact-main-visual">
+                            <div className="pipeline-premium-horizontal">
+                                <motion.div
+                                    className="pipeline-flow-beam"
+                                    animate={{ left: ['-10%', '110%'] }}
+                                    transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+                                />
+                            </div>
+                        </div>
+
+                        <div className="results-premium-grid">
+                            <motion.div className="stat-card-premium">
+                                <div className="stat-icon-wrapper red"><ShieldCheck size={24} /></div>
+                                <div className="stat-content">
+                                    <div className="stat-value-luxe">0%</div>
+                                    <div className="stat-label-luxe">ERROR HUMANO</div>
+                                </div>
+                            </motion.div>
+
+                            <motion.div className="stat-card-premium">
+                                <div className="stat-icon-wrapper amber"><Zap size={24} /></div>
+                                <div className="stat-content">
+                                    <div className="stat-value-luxe">x10</div>
+                                    <div className="stat-label-luxe">PRODUCTIVIDAD</div>
+                                </div>
+                            </motion.div>
+
+                            <motion.div className="stat-card-premium">
+                                <div className="stat-icon-wrapper green"><Clock size={24} /></div>
+                                <div className="stat-content">
+                                    <div className="stat-value-luxe">-80%</div>
+                                    <div className="stat-label-luxe">COSTOS OPERATIVOS</div>
+                                </div>
+                            </motion.div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section id="demo" style={{ padding: '8rem 2rem', background: 'rgba(0, 13, 39, 0.4)' }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
@@ -243,11 +318,7 @@ const Home = () => {
 
                                 <div className="mac-window phase-window">
                                     <div className="mac-header">
-                                        <div className="mac-buttons">
-                                            <div className="mac-btn red" />
-                                            <div className="mac-btn yellow" />
-                                            <div className="mac-btn green" />
-                                        </div>
+
                                         <div className="mac-title">process_audit.flow</div>
                                     </div>
                                     <div className="vertical-card-top" style={{ padding: '0.5rem', marginBottom: '0.5rem' }}>
@@ -299,7 +370,7 @@ const Home = () => {
                                             </li>
                                         ))}
                                     </ul>
-                                    <button className="vertical-cta" style={{ paddingLeft: '0.5rem', paddingBottom: '1rem', marginTop: '-0.5rem' }} onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+                                    <button className="vertical-cta" style={{ paddingLeft: '0.5rem', paddingBottom: '1rem', marginTop: '-0.5rem' }} onClick={() => navigate('/solutions')}>
                                         Ver Detalles <ChevronRight size={16} />
                                     </button>
                                 </div>
@@ -317,41 +388,37 @@ const Home = () => {
                                 <span className="vertical-tagline">Software que conecta su operación</span>
                                 <p className="method-desc">Desarrollamos herramientas a medida que centralizan la información y conectan áreas que antes operaban de forma aislada.</p>
 
-                                    <div className="mac-window phase-window">
-                                        <div className="mac-header">
-                                            <div className="mac-buttons">
-                                                <div className="mac-btn red" />
-                                                <div className="mac-btn yellow" />
-                                                <div className="mac-btn green" />
-                                            </div>
-                                            <div className="mac-title">process_engine.py</div>
-                                        </div>
-                                        <div className="vertical-card-top" style={{ padding: '0.5rem', marginBottom: '0.5rem' }}>
-                                            <span className="vertical-number">02</span>
-                                            <div className="vertical-icon">
-                                                <Code2 size={28} />
-                                            </div>
-                                        </div>
-                                        <div className="terminal-content" style={{ fontSize: '0.78rem', textAlign: 'center', padding: '0.8rem 1rem' }}>
-                                            <div className="terminal-line"><span style={{ color: '#c678dd' }}>import</span> pandas <span style={{ color: '#c678dd' }}>as</span> pd</div>
-                                            <div className="terminal-line"><span style={{ color: '#c678dd' }}>from</span> solid_engine <span style={{ color: '#c678dd' }}>import</span> Pipeline</div>
-                                            <div className="terminal-line">&nbsp;</div>
-                                            <div className="terminal-line"><span style={{ color: '#e06c75' }}>def</span> <span style={{ color: '#61afef' }}>liquidar_novedades</span>(df):</div>
-                                            <div className="terminal-line">&nbsp;&nbsp;df[<span style={{ color: '#98c379' }}>'recargos'</span>] = df.apply(calc)</div>
-                                            <div className="terminal-line">&nbsp;&nbsp;<span style={{ color: '#c678dd' }}>return</span> df.merge_to_erp()</div>
-                                        </div>
-                                        <ul className="vertical-items window-inner-list">
-                                            {verticals[1].items.map((item, j) => (
-                                                <li key={j} className="vertical-item">
-                                                    <span className="vertical-item-icon">{item.icon}</span>
-                                                    {item.label}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                        <button className="vertical-cta" style={{ paddingLeft: '0.5rem', paddingBottom: '1rem', marginTop: '-0.5rem' }} onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
-                                            Ver Detalles <ChevronRight size={16} />
-                                        </button>
+                                <div className="mac-window phase-window">
+                                    <div className="mac-header">
+
+                                        <div className="mac-title">process_engine.py</div>
                                     </div>
+                                    <div className="vertical-card-top" style={{ padding: '0.5rem', marginBottom: '0.5rem' }}>
+                                        <span className="vertical-number">02</span>
+                                        <div className="vertical-icon">
+                                            <Code2 size={28} />
+                                        </div>
+                                    </div>
+                                    <div className="terminal-content" style={{ fontSize: '0.78rem', textAlign: 'center', padding: '0.8rem 1rem' }}>
+                                        <div className="terminal-line"><span style={{ color: '#c678dd' }}>import</span> pandas <span style={{ color: '#c678dd' }}>as</span> pd</div>
+                                        <div className="terminal-line"><span style={{ color: '#c678dd' }}>from</span> solid_engine <span style={{ color: '#c678dd' }}>import</span> Pipeline</div>
+                                        <div className="terminal-line">&nbsp;</div>
+                                        <div className="terminal-line"><span style={{ color: '#e06c75' }}>def</span> <span style={{ color: '#61afef' }}>liquidar_novedades</span>(df):</div>
+                                        <div className="terminal-line">&nbsp;&nbsp;df[<span style={{ color: '#98c379' }}>'recargos'</span>] = df.apply(calc)</div>
+                                        <div className="terminal-line">&nbsp;&nbsp;<span style={{ color: '#c678dd' }}>return</span> df.merge_to_erp()</div>
+                                    </div>
+                                    <ul className="vertical-items window-inner-list">
+                                        {verticals[1].items.map((item, j) => (
+                                            <li key={j} className="vertical-item">
+                                                <span className="vertical-item-icon">{item.icon}</span>
+                                                {item.label}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <button className="vertical-cta" style={{ paddingLeft: '0.5rem', paddingBottom: '1rem', marginTop: '-0.5rem' }} onClick={() => navigate('/solutions')}>
+                                        Ver Detalles <ChevronRight size={16} />
+                                    </button>
+                                </div>
                             </motion.div>
 
                             {/* PASO 03: Automatizamos */}
@@ -368,11 +435,7 @@ const Home = () => {
 
                                 <div className="mac-window phase-window">
                                     <div className="mac-header">
-                                        <div className="mac-buttons">
-                                            <div className="mac-btn red" />
-                                            <div className="mac-btn yellow" />
-                                            <div className="mac-btn green" />
-                                        </div>
+
                                         <div className="mac-title">workflow_engine.n8n</div>
                                     </div>
                                     <div className="vertical-card-top" style={{ padding: '0.5rem', marginBottom: '0.5rem' }}>
@@ -409,7 +472,7 @@ const Home = () => {
                                             </li>
                                         ))}
                                     </ul>
-                                    <button className="vertical-cta" style={{ paddingLeft: '0.5rem', paddingBottom: '1rem', marginTop: '-0.5rem' }} onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+                                    <button className="vertical-cta" style={{ paddingLeft: '0.5rem', paddingBottom: '1rem', marginTop: '-0.5rem' }} onClick={() => navigate('/solutions')}>
                                         Ver Detalles <ChevronRight size={16} />
                                     </button>
                                 </div>
@@ -419,117 +482,10 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* VERTICALS SECTION */}
-            <section id="services" style={{ padding: '8rem 2rem', background: 'rgba(0, 13, 39, 0.2)' }}>
-                <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                        <div className="luxe-badge" style={{ marginBottom: '1.5rem' }}>Lo Que Hacemos</div>
-                        <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', fontWeight: '800', marginBottom: '1rem' }}>Nuestras Verticales</h2>
-                        <p style={{ color: 'var(--deep-navy-800)', maxWidth: '600px', margin: '0 auto', fontSize: '1.15rem', fontWeight: '800', letterSpacing: '-0.03em' }}>Tres pilares que eliminan la fricción operativa de su empresa.</p>
-                    </div>
-                    <div className="verticals-grid">
-                        {verticals.map((v, i) => (
-                            <motion.div
-                                key={i}
-                                className="vertical-card"
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: '-40px' }}
-                                transition={{ duration: 0.5, delay: i * 0.1 }}
-                                whileHover={{ y: -8 }}
-                            >
-                                <div className="vertical-card-top">
-                                    <span className="vertical-number">{v.number}</span>
-                                    <div className="vertical-icon">{v.icon}</div>
-                                </div>
-                                <h3 className="vertical-title">{v.title}</h3>
-                                <span className="vertical-tagline">{v.tagline}</span>
-                                <p className="vertical-desc">{v.desc}</p>
-                                <ul className="vertical-items">
-                                    {v.items.map((item, j) => (
-                                        <li key={j} className="vertical-item">
-                                            <span className="vertical-item-icon">{item.icon}</span>
-                                            {item.label}
-                                        </li>
-                                    ))}
-                                </ul>
-                                <button onClick={() => navigate('/solutions')} className="vertical-cta">
-                                    Ver Detalles <ChevronRight size={16} />
-                                </button>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+
 
             {/* RESULTS SECTION - Versión Premium exacta a la imagen */}
-            <section id="results" style={{ padding: '8rem 2rem', background: 'var(--deep-navy-200)' }}>
-                <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
-                    <div className="impact-badge-container">
-                        <span className="impact-badge">IMPACTO MEDIBLE</span>
-                    </div>
 
-                    <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', fontWeight: '800', marginBottom: '1.5rem', color: '#ffffff' }}>
-                        Ingeniería que se paga sola.
-                    </h2>
-
-                    <p style={{
-                        color: 'var(--deep-navy-800)',
-                        fontSize: '1.15rem',
-                        maxWidth: '600px',
-                        margin: '0 auto 5rem',
-                        lineHeight: '1.8',
-                        fontWeight: '800',
-                        letterSpacing: '-0.03em'
-                    }}>
-                        Optimizamos el rendimiento corporativo automatizando procesos repetitivos, minimizando el error humano y aumentando su productividad, para que su talento se enfoque en iniciativas de alto valor estratégico al tiempo que reduce costos operativos.
-                    </p>
-
-                    <div className="results-pipeline-system">
-                        <div className="results-pipeline-track">
-                            <div className="pipeline-label-container">
-                                <span className="pipeline-label">CALIDAD</span>
-                                <span className="pipeline-label">CRECIMIENTO</span>
-                                <span className="pipeline-label">EFICIENCIA</span>
-                            </div>
-
-                            <div className="pipeline-line">
-                                <motion.div
-                                    className="pipeline-glow-particle"
-                                    animate={{ left: ['0%', '100%'], opacity: [0, 1, 1, 0] }}
-                                    transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                                />
-                            </div>
-                        </div>
-
-                        <div className="results-premium-grid">
-                            <motion.div className="stat-card-premium">
-                                <div className="stat-icon-wrapper red"><ShieldCheck size={24} /></div>
-                                <div className="stat-content">
-                                    <div className="stat-value-luxe">0%</div>
-                                    <div className="stat-label-luxe">ERROR HUMANO</div>
-                                </div>
-                            </motion.div>
-
-                            <motion.div className="stat-card-premium">
-                                <div className="stat-icon-wrapper amber"><Zap size={24} /></div>
-                                <div className="stat-content">
-                                    <div className="stat-value-luxe">x10</div>
-                                    <div className="stat-label-luxe">PRODUCTIVIDAD</div>
-                                </div>
-                            </motion.div>
-
-                            <motion.div className="stat-card-premium">
-                                <div className="stat-icon-wrapper green"><Clock size={24} /></div>
-                                <div className="stat-content">
-                                    <div className="stat-value-luxe">-80%</div>
-                                    <div className="stat-label-luxe">COSTOS OPERATIVOS</div>
-                                </div>
-                            </motion.div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* FEATURED PRODUCT - Solid ERP */}
             <section style={{ padding: '8rem 2rem', background: 'linear-gradient(180deg, transparent, rgba(0, 32, 96, 0.05), transparent)' }}>
