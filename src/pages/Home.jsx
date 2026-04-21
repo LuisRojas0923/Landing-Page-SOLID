@@ -222,7 +222,7 @@ const Home = () => {
                                 <div className="method-stepper">
                                     <span className="method-number illuminate-1">01</span>
                                     <div className="method-icon-badge illuminate-1">
-                                        <Workflow size={20} color="currentColor" />
+                                        <Workflow size={16} color="currentColor" />
                                     </div>
                                 </div>
                                 <h3 className="method-title">Organizamos</h3>
@@ -297,7 +297,7 @@ const Home = () => {
                             <motion.div className="method-column" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
                                 <div className="method-stepper">
                                     <div className="method-icon-badge illuminate-2">
-                                        <Code2 size={20} color="currentColor" />
+                                        <Code2 size={16} color="currentColor" />
                                     </div>
                                     <span className="method-number illuminate-2">02</span>
                                 </div>
@@ -347,7 +347,7 @@ const Home = () => {
                                 <div className="method-stepper">
                                     <span className="method-number illuminate-3">03</span>
                                     <div className="method-icon-badge illuminate-3">
-                                        <Bot size={20} color="currentColor" />
+                                        <Bot size={16} color="currentColor" />
                                     </div>
                                 </div>
                                 <h3 className="method-title">Automatizamos</h3>
