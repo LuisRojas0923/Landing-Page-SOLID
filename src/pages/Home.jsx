@@ -31,6 +31,7 @@ import './Home.css';
 
 const Home = () => {
     const navigate = useNavigate();
+    const [activeImpact, setActiveImpact] = React.useState(null);
 
     const verticals = [
         {
@@ -210,32 +211,43 @@ const Home = () => {
                         Ingeniería que se paga sola.
                     </h2>
 
-                    <p style={{
-                        color: 'var(--deep-navy-800)',
-                        fontSize: '1.15rem',
-                        maxWidth: '600px',
+                    <p className="method-desc" style={{
+                        maxWidth: '1000px',
                         margin: '0 auto 5rem',
-                        lineHeight: '1.8',
-                        fontWeight: '800',
-                        letterSpacing: '-0.03em'
+                        fontSize: '1.25rem',
+                        opacity: 0.9,
+                        color: 'rgba(180, 210, 240, 0.75)'
                     }}>
                         Optimizamos el rendimiento corporativo automatizando procesos repetitivos, minimizando el error humano y aumentando su productividad, para que su talento se enfoque en iniciativas de alto valor estratégico al tiempo que reduce costos operativos.
                     </p>
 
                     <div className="impact-showcase-luxe">
-                        <div className="impact-pill-nav">
-                            <span className="pill-item">CALIDAD</span>
-                            <span className="pill-item active">CRECIMIENTO</span>
-                            <span className="pill-item">EFICIENCIA</span>
-                        </div>
-
                         <div className="impact-main-visual">
                             <div className="pipeline-premium-horizontal">
                                 <motion.div
                                     className="pipeline-flow-beam"
-                                    animate={{ left: ['-10%', '110%'] }}
-                                    transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+                                    animate={{ left: ['0%', '100%'] }}
+                                    transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
+                                    onUpdate={(latest) => {
+                                        const x = parseFloat(latest.left);
+                                        // Refined thresholds for smaller 160px capsules (approx 13.3% width)
+                                        // Triggers exactly when beam hits the new glass border
+                                        if (x >= 10 && x <= 23.2) setActiveImpact('calidad');
+                                        else if (x >= 43.4 && x <= 56.6) setActiveImpact('crecimiento');
+                                        else if (x >= 76.7 && x <= 89.9) setActiveImpact('eficiencia');
+                                        else setActiveImpact(null);
+                                    }}
                                 />
+
+                                <div className={`glass-capsule ${activeImpact === 'calidad' ? 'active' : ''}`}>
+                                    <span className="pill-item-label">CALIDAD</span>
+                                </div>
+                                <div className={`glass-capsule ${activeImpact === 'crecimiento' ? 'active' : ''}`}>
+                                    <span className="pill-item-label">CRECIMIENTO</span>
+                                </div>
+                                <div className={`glass-capsule ${activeImpact === 'eficiencia' ? 'active' : ''}`}>
+                                    <span className="pill-item-label">EFICIENCIA</span>
+                                </div>
                             </div>
                         </div>
 
@@ -244,7 +256,7 @@ const Home = () => {
                                 <div className="stat-icon-wrapper red"><ShieldCheck size={24} /></div>
                                 <div className="stat-content">
                                     <div className="stat-value-luxe">0%</div>
-                                    <div className="stat-label-luxe">ERROR HUMANO</div>
+                                    <div className="stat-label-luxe red">ERROR HUMANO</div>
                                 </div>
                             </motion.div>
 
@@ -252,7 +264,7 @@ const Home = () => {
                                 <div className="stat-icon-wrapper amber"><Zap size={24} /></div>
                                 <div className="stat-content">
                                     <div className="stat-value-luxe">x10</div>
-                                    <div className="stat-label-luxe">PRODUCTIVIDAD</div>
+                                    <div className="stat-label-luxe amber">PRODUCTIVIDAD</div>
                                 </div>
                             </motion.div>
 
@@ -260,7 +272,7 @@ const Home = () => {
                                 <div className="stat-icon-wrapper green"><Clock size={24} /></div>
                                 <div className="stat-content">
                                     <div className="stat-value-luxe">-80%</div>
-                                    <div className="stat-label-luxe">COSTOS OPERATIVOS</div>
+                                    <div className="stat-label-luxe green">COSTOS OPERATIVOS</div>
                                 </div>
                             </motion.div>
                         </div>
