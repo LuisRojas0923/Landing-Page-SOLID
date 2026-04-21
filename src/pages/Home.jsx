@@ -23,6 +23,7 @@ import {
     Terminal as TerminalIcon,
     MessageSquare,
     TrendingUp,
+    TrendingDown,
     Search,
     Code2,
     Layers
@@ -267,7 +268,10 @@ const Home = () => {
                             <motion.div className="stat-card-premium">
                                 <div className="stat-icon-wrapper red"><ShieldCheck size={24} /></div>
                                 <div className="stat-content">
-                                    <div className="stat-value-luxe">0%</div>
+                                    <div className="stat-value-luxe" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                                        <TrendingDown size={34} strokeWidth={3} />
+                                        <span>%</span>
+                                    </div>
                                     <div className="stat-label-luxe red">ERROR HUMANO</div>
                                 </div>
                             </motion.div>
@@ -275,7 +279,10 @@ const Home = () => {
                             <motion.div className="stat-card-premium">
                                 <div className="stat-icon-wrapper amber"><Zap size={24} /></div>
                                 <div className="stat-content">
-                                    <div className="stat-value-luxe">x10</div>
+                                    <div className="stat-value-luxe" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                                        <TrendingUp size={34} strokeWidth={3} />
+                                        <span>x</span>
+                                    </div>
                                     <div className="stat-label-luxe amber">PRODUCTIVIDAD</div>
                                 </div>
                             </motion.div>
@@ -283,7 +290,10 @@ const Home = () => {
                             <motion.div className="stat-card-premium">
                                 <div className="stat-icon-wrapper green"><Clock size={24} /></div>
                                 <div className="stat-content">
-                                    <div className="stat-value-luxe">-80%</div>
+                                    <div className="stat-value-luxe" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                                        <TrendingDown size={34} strokeWidth={3} />
+                                        <span>$</span>
+                                    </div>
                                     <div className="stat-label-luxe green">COSTOS OPERATIVOS</div>
                                 </div>
                             </motion.div>
