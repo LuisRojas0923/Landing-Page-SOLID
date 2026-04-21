@@ -221,7 +221,7 @@ const Home = () => {
                         lineHeight: '1.2',
                         whiteSpace: 'nowrap'
                     }}>
-                        Más productividad, menor costo operativo.
+                        Menor costo operativo, mayor rentabilidad.
                     </p>
 
                     <p className="method-desc" style={{
@@ -231,7 +231,7 @@ const Home = () => {
                         opacity: 0.9,
                         color: 'rgba(180, 210, 240, 0.75)'
                     }}>
-                        Optimizamos el rendimiento corporativo automatizando procesos repetitivos, minimizando el error humano y aumentando su productividad, para que su talento se enfoque en iniciativas de alto valor estratégico al tiempo que reduce costos operativos.
+                        Optimizamos el rendimiento corporativo automatizando procesos repetitivos para minimizar el error humano, reducir costos operativos y aumentar la productividad, de modo que su talento se enfoque en iniciativas estratégicas de alto valor que impulsen la rentabilidad.
                     </p>
 
                     <div className="impact-showcase-luxe">
@@ -256,7 +256,7 @@ const Home = () => {
                                     <span className="pill-item-label">CALIDAD</span>
                                 </div>
                                 <div className={`glass-capsule ${activeImpact === 'eficiencia' ? 'active' : ''}`}>
-                                    <span className="pill-item-label">EFICIENCIA</span>
+                                    <span className="pill-item-label">PRODUCTIVIDAD</span>
                                 </div>
                                 <div className={`glass-capsule ${activeImpact === 'crecimiento' ? 'active' : ''}`}>
                                     <span className="pill-item-label">CRECIMIENTO</span>
@@ -283,7 +283,7 @@ const Home = () => {
                                         <TrendingUp size={34} strokeWidth={3} />
                                         <span>x</span>
                                     </div>
-                                    <div className="stat-label-luxe amber">PRODUCTIVIDAD</div>
+                                    <div className="stat-label-luxe amber">EFICIENCIA</div>
                                 </div>
                             </motion.div>
 
