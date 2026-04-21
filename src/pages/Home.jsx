@@ -270,9 +270,9 @@ const Home = () => {
                                 <div className="stat-content">
                                     <div className="stat-value-luxe" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
                                         <TrendingDown size={34} strokeWidth={3} />
-                                        <span>%</span>
+                                        <span>$</span>
                                     </div>
-                                    <div className="stat-label-luxe red">ERROR HUMANO</div>
+                                    <div className="stat-label-luxe red">COSTOS OPERATIVOS</div>
                                 </div>
                             </motion.div>
 
@@ -288,13 +288,13 @@ const Home = () => {
                             </motion.div>
 
                             <motion.div className="stat-card-premium">
-                                <div className="stat-icon-wrapper green"><Clock size={24} /></div>
+                                <div className="stat-icon-wrapper green"><TrendingUp size={24} /></div>
                                 <div className="stat-content">
                                     <div className="stat-value-luxe" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
-                                        <TrendingDown size={34} strokeWidth={3} />
+                                        <TrendingUp size={34} strokeWidth={3} />
                                         <span>$</span>
                                     </div>
-                                    <div className="stat-label-luxe green">COSTOS OPERATIVOS</div>
+                                    <div className="stat-label-luxe green">RENTABILIDAD</div>
                                 </div>
                             </motion.div>
                         </div>
