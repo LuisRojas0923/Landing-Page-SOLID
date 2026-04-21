@@ -198,17 +198,29 @@ const Home = () => {
                     <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
                         <div className="luxe-badge" style={{ marginBottom: '1.5rem' }}>Nuestro Método</div>
                         <h2 style={{
-                            fontSize: '3.5rem',
+                            fontSize: 'clamp(1.5rem, 5vw, 3.5rem)',
                             fontWeight: '800',
                             lineHeight: '1.1',
-                            marginBottom: '1.2rem',
+                            marginBottom: '1rem',
                             maxWidth: '1200px',
-                            margin: '0 auto 1.2rem',
-                            letterSpacing: '-0.03em'
+                            margin: '0 auto 1rem',
+                            letterSpacing: '-0.03em',
+                            whiteSpace: 'nowrap'
                         }}>
                             Así transformamos su operación
                         </h2>
-                        <p style={{ color: 'rgba(180, 210, 240, 0.75)', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>Tres pasos que eliminan la fricción operativa de su empresa.</p>
+                        <p style={{
+                            color: 'var(--deep-navy-800)',
+                            maxWidth: 'none',
+                            margin: '0 auto',
+                            fontSize: '2rem',
+                            fontWeight: '800',
+                            letterSpacing: '-0.03em',
+                            textAlign: 'center',
+                            whiteSpace: 'nowrap'
+                        }}>
+                            Tres pasos que eliminan la fricción operativa de su empresa.
+                        </p>
                     </div>
 
                     <div className="method-pipeline-container">
@@ -227,7 +239,7 @@ const Home = () => {
                                 </div>
                                 <h3 className="method-title">Organizamos</h3>
                                 <span className="vertical-tagline">Orden antes de tecnología</span>
-                                <p className="method-desc">Mapeamos sus procesos, eliminamos operaciones que no agregan valor y diseñamos flujos eficientes.</p>
+                                <p className="method-desc">Ordenamos su operación, eliminamos reprocesos y definimos flujos eficientes y replicables</p>
 
                                 <div className="mac-window phase-window">
                                     <div className="mac-header">
@@ -303,43 +315,43 @@ const Home = () => {
                                 </div>
                                 <h3 className="method-title">Sistematizamos</h3>
                                 <span className="vertical-tagline">Software que conecta su operación</span>
-                                <p className="method-desc">Diseñamos procesos replicables y conectamos sistemas que antes operaban en silos aislados.</p>
+                                <p className="method-desc">Desarrollamos herramientas a medida que centralizan la información y conectan áreas que antes operaban de forma aislada.</p>
 
-                                <div className="mac-window phase-window">
-                                    <div className="mac-header">
-                                        <div className="mac-buttons">
-                                            <div className="mac-btn red" />
-                                            <div className="mac-btn yellow" />
-                                            <div className="mac-btn green" />
+                                    <div className="mac-window phase-window">
+                                        <div className="mac-header">
+                                            <div className="mac-buttons">
+                                                <div className="mac-btn red" />
+                                                <div className="mac-btn yellow" />
+                                                <div className="mac-btn green" />
+                                            </div>
+                                            <div className="mac-title">process_engine.py</div>
                                         </div>
-                                        <div className="mac-title">process_engine.py</div>
-                                    </div>
-                                    <div className="vertical-card-top" style={{ padding: '0.5rem', marginBottom: '0.5rem' }}>
-                                        <span className="vertical-number">02</span>
-                                        <div className="vertical-icon">
-                                            <Code2 size={28} />
+                                        <div className="vertical-card-top" style={{ padding: '0.5rem', marginBottom: '0.5rem' }}>
+                                            <span className="vertical-number">02</span>
+                                            <div className="vertical-icon">
+                                                <Code2 size={28} />
+                                            </div>
                                         </div>
+                                        <div className="terminal-content" style={{ fontSize: '0.78rem', textAlign: 'center', padding: '0.8rem 1rem' }}>
+                                            <div className="terminal-line"><span style={{ color: '#c678dd' }}>import</span> pandas <span style={{ color: '#c678dd' }}>as</span> pd</div>
+                                            <div className="terminal-line"><span style={{ color: '#c678dd' }}>from</span> solid_engine <span style={{ color: '#c678dd' }}>import</span> Pipeline</div>
+                                            <div className="terminal-line">&nbsp;</div>
+                                            <div className="terminal-line"><span style={{ color: '#e06c75' }}>def</span> <span style={{ color: '#61afef' }}>liquidar_novedades</span>(df):</div>
+                                            <div className="terminal-line">&nbsp;&nbsp;df[<span style={{ color: '#98c379' }}>'recargos'</span>] = df.apply(calc)</div>
+                                            <div className="terminal-line">&nbsp;&nbsp;<span style={{ color: '#c678dd' }}>return</span> df.merge_to_erp()</div>
+                                        </div>
+                                        <ul className="vertical-items window-inner-list">
+                                            {verticals[1].items.map((item, j) => (
+                                                <li key={j} className="vertical-item">
+                                                    <span className="vertical-item-icon">{item.icon}</span>
+                                                    {item.label}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        <button className="vertical-cta" style={{ paddingLeft: '0.5rem', paddingBottom: '1rem', marginTop: '-0.5rem' }} onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+                                            Ver Detalles <ChevronRight size={16} />
+                                        </button>
                                     </div>
-                                    <div className="terminal-content" style={{ fontSize: '0.78rem', textAlign: 'center', padding: '0.8rem 1rem' }}>
-                                        <div className="terminal-line"><span style={{ color: '#c678dd' }}>import</span> pandas <span style={{ color: '#c678dd' }}>as</span> pd</div>
-                                        <div className="terminal-line"><span style={{ color: '#c678dd' }}>from</span> solid_engine <span style={{ color: '#c678dd' }}>import</span> Pipeline</div>
-                                        <div className="terminal-line">&nbsp;</div>
-                                        <div className="terminal-line"><span style={{ color: '#e06c75' }}>def</span> <span style={{ color: '#61afef' }}>liquidar_novedades</span>(df):</div>
-                                        <div className="terminal-line">&nbsp;&nbsp;df[<span style={{ color: '#98c379' }}>'recargos'</span>] = df.apply(calc)</div>
-                                        <div className="terminal-line">&nbsp;&nbsp;<span style={{ color: '#c678dd' }}>return</span> df.merge_to_erp()</div>
-                                    </div>
-                                    <ul className="vertical-items window-inner-list">
-                                        {verticals[1].items.map((item, j) => (
-                                            <li key={j} className="vertical-item">
-                                                <span className="vertical-item-icon">{item.icon}</span>
-                                                {item.label}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <button className="vertical-cta" style={{ paddingLeft: '0.5rem', paddingBottom: '1rem', marginTop: '-0.5rem' }} onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
-                                        Ver Detalles <ChevronRight size={16} />
-                                    </button>
-                                </div>
                             </motion.div>
 
                             {/* PASO 03: Automatizamos */}
@@ -352,7 +364,7 @@ const Home = () => {
                                 </div>
                                 <h3 className="method-title">Automatizamos</h3>
                                 <span className="vertical-tagline">Procesos que se ejecutan solos</span>
-                                <p className="method-desc">Implementamos workflows inteligentes que operan de forma autónoma, eliminando el error humano.</p>
+                                <p className="method-desc">Implementamos flujos de trabajo inteligentes que automatizan tareas clave, reducen el error humano y liberan tiempo operativo.</p>
 
                                 <div className="mac-window phase-window">
                                     <div className="mac-header">
@@ -413,7 +425,7 @@ const Home = () => {
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                         <div className="luxe-badge" style={{ marginBottom: '1.5rem' }}>Lo Que Hacemos</div>
                         <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', fontWeight: '800', marginBottom: '1rem' }}>Nuestras Verticales</h2>
-                        <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto', fontSize: '1.05rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>Tres pilares que eliminan la fricción operativa de su empresa.</p>
+                        <p style={{ color: 'var(--deep-navy-800)', maxWidth: '600px', margin: '0 auto', fontSize: '1.15rem', fontWeight: '800', letterSpacing: '-0.03em' }}>Tres pilares que eliminan la fricción operativa de su empresa.</p>
                     </div>
                     <div className="verticals-grid">
                         {verticals.map((v, i) => (
@@ -462,12 +474,13 @@ const Home = () => {
                     </h2>
 
                     <p style={{
-                        color: 'var(--text-secondary)',
-                        fontSize: '1.1rem',
-                        maxWidth: '850px',
+                        color: 'var(--deep-navy-800)',
+                        fontSize: '1.15rem',
+                        maxWidth: '600px',
                         margin: '0 auto 5rem',
                         lineHeight: '1.8',
-                        fontFamily: "'Roboto', sans-serif"
+                        fontWeight: '800',
+                        letterSpacing: '-0.03em'
                     }}>
                         Optimizamos el rendimiento corporativo automatizando procesos repetitivos, minimizando el error humano y aumentando su productividad, para que su talento se enfoque en iniciativas de alto valor estratégico al tiempo que reduce costos operativos.
                     </p>

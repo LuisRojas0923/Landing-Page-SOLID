@@ -703,17 +703,16 @@
 }
 
 .method-desc {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: rgba(180, 210, 240, 0.75);
-    line-height: 1.7;
+    line-height: 1.6;
     margin-bottom: 2rem;
     font-family: 'Roboto', sans-serif;
     font-style: italic;
-    max-width: 92%;
-    height: 5.5rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    max-width: 38ch;
+    margin: 0 auto 2rem;
+    text-align: center;
+    min-height: 5rem;
 }
 
 /* Compact Visual Windows — equal height */
