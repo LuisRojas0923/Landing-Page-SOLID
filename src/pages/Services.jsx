@@ -12,10 +12,16 @@ import {
     ChevronRight,
     Search,
     Layers,
-    Code2
+    Code2,
+    CheckCircle2,
+    ExternalLink
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+
 
 const Services = () => {
+    const navigate = useNavigate();
+
     const categories = [
         {
             title: "Software a Medida",
@@ -150,6 +156,69 @@ const Services = () => {
                     ))}
                 </motion.div>
 
+                {/* FEATURED PRODUCT - Solid ERP (Moved from Home) */}
+                <section style={{ padding: '8rem 0', marginTop: '4rem', background: 'linear-gradient(180deg, transparent, rgba(0, 32, 96, 0.05), transparent)' }}>
+                    <div style={{
+                        background: 'rgba(255, 255, 255, 0.02)',
+                        borderRadius: '40px',
+                        border: '1px solid var(--deep-navy-400)',
+                        padding: '4rem',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '4rem',
+                        flexWrap: 'wrap-reverse',
+                        position: 'relative',
+                        overflow: 'hidden'
+                    }}>
+                        <div style={{ flex: '1.2', minWidth: '300px' }}>
+                            <div style={{ color: 'var(--deep-navy-800)', fontWeight: '800', fontSize: '0.9rem', marginBottom: '1rem', letterSpacing: '0.1em' }}>PRODUCTO DESTACADO</div>
+                            <h2 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '1.5rem' }}>Ecosistema <span style={{ color: 'var(--deep-navy-800)' }}>Solid ERP</span></h2>
+                            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
+                                Nuestra plataforma de gestión empresarial diseñada para la alta complejidad. Construido sobre un <strong>Núcleo Unificado de Alto Rendimiento (Java Enterprise)</strong>, Solid ERP garantiza una estabilidad absoluta y una escalabilidad vertical masiva, centralizando finanzas, inventarios y nómina en un ecosistema robusto y seguro.
+                            </p>
+                            <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
+                                {["Arquitectura en la Nube", "Módulos Configurables", "Seguridad de Grado Bancario", "Integración Nativa con BI"].map((item, i) => (
+                                    <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-secondary)', fontWeight: '600', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
+                                        <CheckCircle2 size={18} color="var(--deep-navy-800)" /> {item}
+                                    </li>
+                                ))}
+                            </ul>
+                            <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => navigate('/contact')} style={{ backgroundColor: 'var(--deep-navy-800)', color: 'white', padding: '1rem 2rem', borderRadius: '12px', fontWeight: '700', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                Solicitar Demo <ExternalLink size={18} />
+                            </motion.button>
+                        </div>
+                        <div style={{ flex: '1', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'rgba(255,255,255,0.03)', padding: '3rem', borderRadius: '32px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                            <motion.img src="/projects/logotipo.png" alt="Solid ERP Logo" style={{ width: '100%', maxWidth: '350px', filter: 'drop-shadow(0 0 20px rgba(0, 32, 96, 0.2))' }} whileHover={{ scale: 1.1, rotate: -2 }} />
+                        </div>
+                    </div>
+                </section>
+
+                {/* PRODUCT IN ACTION (VIDEO) (Moved from Home) */}
+                <section style={{ padding: '8rem 0' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                        <div style={{ color: 'var(--deep-navy-800)', fontWeight: '800', fontSize: '0.9rem', marginBottom: '1rem', letterSpacing: '0.1em' }}>PRODUCTO EN ACCIÓN</div>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '1.5rem' }}>Ecosistema <span style={{ color: 'var(--deep-navy-800)' }}>Solid Service Portal</span></h2>
+                        <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '800px', margin: '0 auto', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>Visualice la simplicidad operativa. Centralice solicitudes, tickets y procesos internos en una interfaz diseñada para la velocidad.</p>
+                    </div>
+
+                    <div style={{ position: 'relative', maxWidth: '1000px', margin: '0 auto', background: '#1e1e1e', borderRadius: '24px', border: '1px solid #333', boxShadow: '0 40px 80px rgba(0,0,0,0.5)', overflow: 'hidden' }}>
+                        <div style={{ background: '#2d2d2d', padding: '0.75rem 1.5rem', display: 'flex', alignItems: 'center', gap: '2rem' }}>
+                            <div style={{ display: 'flex', gap: '8px' }}>
+                                <span style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ff5f56' }}></span>
+                                <span style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ffbd2e' }}></span>
+                                <span style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#27c93f' }}></span>
+                            </div>
+                            <div style={{ background: '#1e1e1e', flex: 1, height: '28px', borderRadius: '6px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', padding: '0 1rem', color: '#666' }}>
+                                solid_service_portal.solutions/dashboard
+                            </div>
+                        </div>
+
+                        <div style={{ position: 'relative', paddingTop: '56.25%', background: '#000' }}>
+                            <video src="/videos/portal-demo.mp4" autoPlay loop muted playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                        </div>
+                    </div>
+                </section>
+
                 {/* Tech Bar */}
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -162,18 +231,17 @@ const Services = () => {
                         textAlign: 'center'
                     }}
                 >
-                    <h2 style={{ marginBottom: '3rem', fontSize: '1.5rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.2em' }}>Stack Tecnológico de Élite</h2>
+                <div className="impact-badge-container" style={{ textAlign: 'center', marginBottom: '3rem', display: 'flex', justifyContent: 'center' }}>
+                    <span className="impact-badge" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', padding: '0.6rem 2.5rem', margin: '0 auto', width: 'fit-content' }}>
+                        <Zap size={18} /> Stack Tecnológico de Élite
+                    </span>
+                </div>
                     <div style={{
                         display: 'flex',
-                        flexWrap: 'wrap',
                         justifyContent: 'center',
-                        gap: 'clamp(2rem, 5vw, 3rem)',
+                        gap: 'clamp(1rem, 3vw, 2.5rem)',
                         alignItems: 'center',
-                        background: 'rgba(255, 255, 255, 0.03)',
-                        padding: '3rem',
-                        borderRadius: '32px',
-                        backdropFilter: 'blur(10px)',
-                        border: '1px solid rgba(255, 255, 255, 0.05)'
+                        padding: '1rem'
                     }}>
                         {[
                             { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB', color: '3776AB' },
@@ -190,20 +258,14 @@ const Services = () => {
                             <motion.div
                                 key={i}
                                 whileHover={{ scale: 1.15, y: -8 }}
-                                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', width: '110px' }}
+                                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', width: '90px' }}
                             >
                                 <div style={{
                                     width: '64px',
                                     height: '64px',
                                     display: 'flex',
                                     alignItems: 'center',
-                                    justifyContent: 'center',
-                                    background: 'rgba(255, 255, 255, 0.05)',
-                                    borderRadius: '20px',
-                                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                                    padding: '14px',
-                                    boxShadow: `0 0 20px rgba(0, 0, 0, 0.2), 0 0 10px #${tech.color}33`,
-                                    transition: 'all 0.3s ease'
+                                    justifyContent: 'center'
                                 }}>
                                     <img
                                         src={tech.icon}
@@ -211,7 +273,16 @@ const Services = () => {
                                         style={{ width: '100%', height: '100%', objectFit: 'contain', filter: tech.name.includes('Power') ? 'none' : 'drop-shadow(0 0 4px rgba(0,0,0,0.5))' }}
                                     />
                                 </div>
-                                <span style={{ fontSize: '0.7rem', fontWeight: '800', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.05em', textAlign: 'center' }}>
+                                <span style={{ 
+                                    fontSize: '0.7rem', 
+                                    fontWeight: '800', 
+                                    color: 'var(--text-secondary)', 
+                                    textTransform: 'uppercase', 
+                                    letterSpacing: '0.05em', 
+                                    textAlign: 'center',
+                                    display: 'block',
+                                    width: '100%'
+                                }}>
                                     {tech.name}
                                 </span>
                             </motion.div>

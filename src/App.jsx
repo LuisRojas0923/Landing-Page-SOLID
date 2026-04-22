@@ -6,6 +6,7 @@ import Services from './pages/Services';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Brochure from './pages/Brochure';
+import Method from './pages/Method';
 import RPASolutions from './pages/RPASolutions';
 import DesignSystem from './pages/DesignSystem';
 
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/sistema-de-diseno" element={<DesignSystem />} />
                 <Route path="/" element={<CorporateLayout />}>
                     <Route index element={<Home />} />
+                    <Route path="method" element={<Method />} />
                     <Route path="solutions" element={<Services />} />
                     <Route path="about" element={<About />} />
                     <Route path="contact" element={<Contact />} />

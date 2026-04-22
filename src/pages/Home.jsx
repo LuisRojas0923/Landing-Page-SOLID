@@ -31,9 +31,6 @@ import {
 import './Home.css';
 
 const Home = () => {
-    const navigate = useNavigate();
-    const [activeImpact, setActiveImpact] = React.useState(null);
-
     const verticals = [
         {
             icon: <Workflow size={28} />,
@@ -52,7 +49,7 @@ const Home = () => {
             number: '02',
             title: 'Sistematizamos',
             tagline: 'Software que conecta su operación',
-            desc: 'Construimos herramientas a medida que centralizan su información y conectan áreas que antes trabajaban aisladas.',
+            desc: 'Construimos herramientas a medida que centralizan su información and conectan áreas que antes trabajaban aisladas.',
             items: [
                 { icon: <Database size={16} />, label: 'Ingeniería de datos & BI' },
                 { icon: <Code2 size={16} />, label: 'Software a medida (Java, Python, React)' },
@@ -72,6 +69,11 @@ const Home = () => {
             ]
         }
     ];
+
+    const navigate = useNavigate();
+    const [activeImpact, setActiveImpact] = React.useState(null);
+
+
 
     return (
         <div className="home-container" style={{ color: 'var(--text-primary)' }}>
@@ -209,7 +211,7 @@ const Home = () => {
                         letterSpacing: '-0.02em',
                         lineHeight: 1.1
                     }}>
-                        Ingeniería que se paga sola.
+                        Ingeniería que se paga sola
                     </h2>
 
                     <p style={{
@@ -221,7 +223,7 @@ const Home = () => {
                         lineHeight: '1.2',
                         whiteSpace: 'nowrap'
                     }}>
-                        Menor costo operativo, mayor rentabilidad.
+                        Menor costo operativo, mayor rentabilidad
                     </p>
 
                     <p className="method-desc" style={{
@@ -301,8 +303,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
-            <section id="demo" style={{ padding: '8rem 2rem', background: 'rgba(0, 13, 39, 0.4)' }}>
+            <section id="method" style={{ padding: '8rem 2rem', background: 'rgba(0, 13, 39, 0.4)' }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
                         <div className="luxe-badge" style={{ marginBottom: '1.5rem' }}>Nuestro Método</div>
@@ -328,7 +329,7 @@ const Home = () => {
                             textAlign: 'center',
                             whiteSpace: 'nowrap'
                         }}>
-                            Tres pasos que eliminan la fricción operativa de su empresa.
+                            Tres pasos que eliminan la fricción operativa de su empresa
                         </p>
                     </div>
 
@@ -348,7 +349,7 @@ const Home = () => {
                                 </div>
                                 <h3 className="method-title">Organizamos</h3>
                                 <span className="vertical-tagline">Orden antes de tecnología</span>
-                                <p className="method-desc">Ordenamos su operación, eliminamos reprocesos y definimos flujos eficientes y replicables</p>
+
 
                                 <div className="mac-window phase-window">
                                     <div className="mac-header">
@@ -396,15 +397,8 @@ const Home = () => {
                                             <span className="flow-stat flow-stat-ok">3 pasos de alto valor</span>
                                         </div>
                                     </div>
-                                    <ul className="vertical-items window-inner-list">
-                                        {verticals[0].items.map((item, j) => (
-                                            <li key={j} className="vertical-item">
-                                                <span className="vertical-item-icon">{item.icon}</span>
-                                                {item.label}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <button className="vertical-cta" style={{ paddingLeft: '0.5rem', paddingBottom: '1rem', marginTop: '-0.5rem' }} onClick={() => navigate('/solutions')}>
+
+                                    <button className="vertical-cta" onClick={() => navigate('/solutions')}>
                                         Ver Detalles <ChevronRight size={16} />
                                     </button>
                                 </div>
@@ -420,7 +414,7 @@ const Home = () => {
                                 </div>
                                 <h3 className="method-title">Sistematizamos</h3>
                                 <span className="vertical-tagline">Software que conecta su operación</span>
-                                <p className="method-desc">Desarrollamos herramientas a medida que centralizan la información y conectan áreas que antes operaban de forma aislada.</p>
+
 
                                 <div className="mac-window phase-window">
                                     <div className="mac-header">
@@ -441,15 +435,8 @@ const Home = () => {
                                         <div className="terminal-line">&nbsp;&nbsp;df[<span style={{ color: '#98c379' }}>'recargos'</span>] = df.apply(calc)</div>
                                         <div className="terminal-line">&nbsp;&nbsp;<span style={{ color: '#c678dd' }}>return</span> df.merge_to_erp()</div>
                                     </div>
-                                    <ul className="vertical-items window-inner-list">
-                                        {verticals[1].items.map((item, j) => (
-                                            <li key={j} className="vertical-item">
-                                                <span className="vertical-item-icon">{item.icon}</span>
-                                                {item.label}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <button className="vertical-cta" style={{ paddingLeft: '0.5rem', paddingBottom: '1rem', marginTop: '-0.5rem' }} onClick={() => navigate('/solutions')}>
+
+                                    <button className="vertical-cta" onClick={() => navigate('/solutions')}>
                                         Ver Detalles <ChevronRight size={16} />
                                     </button>
                                 </div>
@@ -465,7 +452,7 @@ const Home = () => {
                                 </div>
                                 <h3 className="method-title">Automatizamos</h3>
                                 <span className="vertical-tagline">Procesos que se ejecutan solos</span>
-                                <p className="method-desc">Implementamos flujos de trabajo inteligentes que automatizan tareas clave, reducen el error humano y liberan tiempo operativo.</p>
+
 
                                 <div className="mac-window phase-window">
                                     <div className="mac-header">
@@ -498,15 +485,8 @@ const Home = () => {
                                             <span className="workflow-node-label">ERP</span>
                                         </div>
                                     </div>
-                                    <ul className="vertical-items window-inner-list">
-                                        {verticals[2].items.map((item, j) => (
-                                            <li key={j} className="vertical-item">
-                                                <span className="vertical-item-icon">{item.icon}</span>
-                                                {item.label}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <button className="vertical-cta" style={{ paddingLeft: '0.5rem', paddingBottom: '1rem', marginTop: '-0.5rem' }} onClick={() => navigate('/solutions')}>
+
+                                    <button className="vertical-cta" onClick={() => navigate('/solutions')}>
                                         Ver Detalles <ChevronRight size={16} />
                                     </button>
                                 </div>
@@ -517,94 +497,24 @@ const Home = () => {
             </section>
 
 
-
             {/* RESULTS SECTION - Versión Premium exacta a la imagen */}
 
 
-            {/* FEATURED PRODUCT - Solid ERP */}
-            <section style={{ padding: '8rem 2rem', background: 'linear-gradient(180deg, transparent, rgba(0, 32, 96, 0.05), transparent)' }}>
-                <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-                    <div style={{
-                        background: 'rgba(255, 255, 255, 0.02)',
-                        borderRadius: '40px',
-                        border: '1px solid var(--deep-navy-400)',
-                        padding: '4rem',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '4rem',
-                        flexWrap: 'wrap-reverse',
-                        position: 'relative',
-                        overflow: 'hidden'
-                    }}>
-                        <div style={{ flex: '1.2', minWidth: '300px' }}>
-                            <div style={{ color: 'var(--deep-navy-800)', fontWeight: '800', fontSize: '0.9rem', marginBottom: '1rem', letterSpacing: '0.1em' }}>PRODUCTO DESTACADO</div>
-                            <h2 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '1.5rem' }}>Ecosistema <span style={{ color: 'var(--deep-navy-800)' }}>Solid ERP</span></h2>
-                            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
-                                Nuestra plataforma de gestión empresarial diseñada para la alta complejidad. Construido sobre un <strong>Núcleo Unificado de Alto Rendimiento (Java Enterprise)</strong>, Solid ERP garantiza una estabilidad absoluta y una escalabilidad vertical masiva, centralizando finanzas, inventarios y nómina en un ecosistema robusto y seguro.
-                            </p>
-                            <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
-                                {["Arquitectura en la Nube", "Módulos Configurables", "Seguridad de Grado Bancario", "Integración Nativa con BI"].map((item, i) => (
-                                    <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-secondary)', fontWeight: '600', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
-                                        <CheckCircle2 size={18} color="var(--deep-navy-800)" /> {item}
-                                    </li>
-                                ))}
-                            </ul>
-                            <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => navigate('/contact')} style={{ backgroundColor: 'var(--deep-navy-800)', color: 'white', padding: '1rem 2rem', borderRadius: '12px', fontWeight: '700', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                Solicitar Demo <ExternalLink size={18} />
-                            </motion.button>
-                        </div>
-                        <div style={{ flex: '1', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'rgba(255,255,255,0.03)', padding: '3rem', borderRadius: '32px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                            <motion.img src="/projects/logotipo.png" alt="Solid ERP Logo" style={{ width: '100%', maxWidth: '350px', filter: 'drop-shadow(0 0 20px rgba(0, 32, 96, 0.2))' }} whileHover={{ scale: 1.1, rotate: -2 }} />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* PRODUCT IN ACTION (VIDEO) */}
-            <section style={{ padding: '4rem 2rem 8rem' }}>
-                <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-                    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                        <div style={{ color: 'var(--deep-navy-800)', fontWeight: '800', fontSize: '0.9rem', marginBottom: '1rem', letterSpacing: '0.1em' }}>PRODUCTO EN ACCIÓN</div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '1.5rem' }}>Ecosistema <span style={{ color: 'var(--deep-navy-800)' }}>Solid Service Portal</span></h2>
-                        <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '800px', margin: '0 auto', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>Visualice la simplicidad operativa. Centralice solicitudes, tickets y procesos internos en una interfaz diseñada para la velocidad.</p>
-                    </div>
-
-                    <div style={{ position: 'relative', maxWidth: '1000px', margin: '0 auto', background: '#1e1e1e', borderRadius: '24px', border: '1px solid #333', boxShadow: '0 40px 80px rgba(0,0,0,0.5)', overflow: 'hidden' }}>
-                        <div style={{ background: '#2d2d2d', padding: '0.75rem 1.5rem', display: 'flex', alignItems: 'center', gap: '2rem' }}>
-                            <div style={{ display: 'flex', gap: '8px' }}>
-                                <span style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ff5f56' }}></span>
-                                <span style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ffbd2e' }}></span>
-                                <span style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#27c93f' }}></span>
-                            </div>
-                            <div style={{ background: '#1e1e1e', flex: 1, height: '28px', borderRadius: '6px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', padding: '0 1rem', color: '#666' }}>
-                                solid_service_portal.solutions/dashboard
-                            </div>
-                        </div>
-
-                        <div style={{ position: 'relative', paddingTop: '56.25%', background: '#000' }}>
-                            <video src="/videos/portal-demo.mp4" autoPlay loop muted playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* TECH STACK BAR */}
             <section style={{ padding: '4rem 2rem', background: 'rgba(0, 13, 39, 0.4)', borderTop: '1px solid var(--deep-navy-400)', borderBottom: '1px solid var(--deep-navy-400)' }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-                    <h2 style={{ marginBottom: '4rem', fontSize: '1.2rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.3em', textAlign: 'center', fontWeight: '800', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
-                        Stack Tecnológico de Alto Nivel
-                    </h2>
+                    <div className="impact-badge-container" style={{ textAlign: 'center', marginBottom: '3rem', display: 'flex', justifyContent: 'center' }}>
+                        <span className="impact-badge" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', padding: '0.6rem 2.5rem', margin: '0 auto', width: 'fit-content' }}>
+                            <Zap size={18} /> Stack Tecnológico de Alto Nivel
+                        </span>
+                    </div>
                     <div className="tech-stack-container" style={{
                         display: 'flex',
-                        flexWrap: 'wrap',
                         justifyContent: 'center',
-                        gap: 'clamp(2rem, 5vw, 3rem)',
+                        gap: 'clamp(1rem, 3vw, 2.5rem)',
                         alignItems: 'center',
-                        background: 'rgba(255, 255, 255, 0.03)',
-                        padding: '3rem',
-                        borderRadius: '32px',
-                        backdropFilter: 'blur(10px)',
-                        border: '1px solid rgba(255, 255, 255, 0.05)'
+                        padding: '1rem'
                     }}>
                         {[
                             { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB', color: '3776AB' },
@@ -618,11 +528,27 @@ const Home = () => {
                             { name: 'Power Query', icon: 'https://img.icons8.com/color/96/microsoft-excel-2019--v1.png', color: '217346' },
                             { name: 'n8n', icon: 'https://cdn.simpleicons.org/n8n/FF6D5A', color: 'FF6D5A' }
                         ].map((tech, i) => (
-                            <motion.div key={i} whileHover={{ scale: 1.15, y: -8 }} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', width: '110px' }}>
-                                <div className="tech-icon-box">
+                            <motion.div key={i} whileHover={{ scale: 1.15, y: -8 }} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', width: '90px' }}>
+                                <div style={{ 
+                                    width: '64px', 
+                                    height: '64px', 
+                                    display: 'flex', 
+                                    alignItems: 'center', 
+                                    justifyContent: 'center', 
+                                    marginBottom: '0.5rem'
+                                }}>
                                     <img src={tech.icon} alt={tech.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                                 </div>
-                                <span className="tech-name">{tech.name}</span>
+                                <span style={{ 
+                                    fontSize: '0.7rem', 
+                                    fontWeight: '800', 
+                                    color: 'var(--text-secondary)', 
+                                    textTransform: 'uppercase', 
+                                    letterSpacing: '0.05em', 
+                                    textAlign: 'center',
+                                    display: 'block',
+                                    width: '100%'
+                                }}>{tech.name}</span>
                             </motion.div>
                         ))}
                     </div>
@@ -631,8 +557,10 @@ const Home = () => {
 
             {/* FINAL CTA */}
             <section id="contact" style={{ padding: 'clamp(4rem, 10vh, 10rem) clamp(1rem, 4vw, 2rem)', textAlign: 'center' }}>
-                <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: 'clamp(2rem, 6vw, 3.5rem)', marginBottom: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: '800' }}>¿Listo para escalar su infraestructura?</h2>
+                <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+                    <h2 className="cta-title-nowrap" style={{ fontSize: 'clamp(1.8rem, 6vw, 3.5rem)', marginBottom: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: '800' }}>
+                        ¿Listo para escalar su <span style={{ color: 'var(--deep-navy-800)' }}>infraestructura?</span>
+                    </h2>
                     <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1rem, 2.5vw, 1.2rem)', marginBottom: 'clamp(2rem, 5vw, 4rem)', lineHeight: '1.6' }}>
                         Agende una consultoría técnica gratuita y descubra el potencial de automatización de su negocio.
                     </p>
