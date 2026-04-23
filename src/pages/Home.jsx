@@ -103,6 +103,22 @@ const Home = () => {
                         margin: '0 auto'
                     }}
                 >
+                    <div className="luxe-badge" style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        padding: '0.6rem 2rem',
+                        marginTop: '0',
+                        marginBottom: '2rem',
+                        flexWrap: 'wrap',
+                        justifyContent: 'center',
+                        maxWidth: '100%',
+                        textTransform: 'none'
+                    }}>
+                        <Zap size={16} />
+                        <span>Arquitectura de Datos e Ingeniería de Software</span>
+                    </div>
+
                     <h1 style={{
                         fontSize: 'clamp(2.5rem, 8vw, 5rem)',
                         fontWeight: '800',
@@ -138,22 +154,6 @@ const Home = () => {
                     }}>
                         En <span className="method-title" style={{ fontSize: 'inherit', display: 'inline', margin: 0 }}>Solid</span> <span className="vertical-tagline" style={{ fontSize: 'inherit', display: 'inline', color: 'var(--deep-navy-800)', fontWeight: 800 }}>Solutions</span> estructuramos su operación, diseñamos la arquitectura que conecta sus datos y automatizamos sus tareas críticas, eliminando la fricción operativa y preparando su empresa para crecer con tecnología e inteligencia artificial.
                     </p>
-
-                    <div className="luxe-badge" style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '0.5rem',
-                        padding: '0.6rem 2rem',
-                        marginTop: '0',
-                        marginBottom: '3rem',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        maxWidth: '100%',
-                        textTransform: 'none'
-                    }}>
-                        <Zap size={16} />
-                        <span>Arquitectura de Datos e Ingeniería de Software</span>
-                    </div>
 
                     <div style={{
                         display: 'flex',
@@ -502,26 +502,6 @@ const Home = () => {
 
 
 
-            {/* FINAL CTA */}
-            <section id="contact" style={{ padding: 'clamp(4rem, 10vh, 10rem) clamp(1rem, 4vw, 2rem)', textAlign: 'center' }}>
-                <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-                    <h2 className="cta-title-nowrap" style={{ fontSize: 'clamp(1.8rem, 6vw, 3.5rem)', marginBottom: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: '800' }}>
-                        ¿Listo para escalar su <span style={{ color: 'var(--deep-navy-800)' }}>infraestructura?</span>
-                    </h2>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1rem, 2.5vw, 1.2rem)', marginBottom: 'clamp(2rem, 5vw, 4rem)', lineHeight: '1.6' }}>
-                        Agende una consultoría técnica gratuita y descubra el potencial de automatización de su negocio.
-                    </p>
-                    <button onClick={() => navigate('/contact')} style={{ backgroundColor: 'white', color: 'var(--bg-main)', padding: 'clamp(1rem, 2.5vw, 1.2rem) clamp(2rem, 5vw, 3rem)', borderRadius: '12px', fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', fontWeight: '700', border: 'none', cursor: 'pointer', width: '100%', maxWidth: '350px' }}>
-                        Solicitar Diagnóstico
-                    </button>
-                    <div style={{ marginTop: 'clamp(2rem, 4vw, 3rem)' }}>
-                        <a href="https://wa.me/573172652487" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', textDecoration: 'none' }}>
-                            <MessageSquare size={18} /> <span>O hable con un experto vía WhatsApp</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
             {/* TECH STACK BAR */}
             <section style={{ padding: '2.5rem 1rem', background: 'rgba(0, 13, 39, 0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ maxWidth: '1100px', margin: '0 auto', width: '100%' }}>
@@ -572,6 +552,26 @@ const Home = () => {
                                 }}>{tech.name}</span>
                             </motion.div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* FINAL CTA */}
+            <section id="contact" style={{ padding: 'clamp(4rem, 10vh, 10rem) clamp(1rem, 4vw, 2rem)', textAlign: 'center' }}>
+                <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+                    <h2 className="cta-title-nowrap" style={{ fontSize: 'clamp(1.8rem, 6vw, 3.5rem)', marginBottom: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: '800' }}>
+                        ¿Listo para escalar su <span style={{ color: 'var(--deep-navy-800)' }}>infraestructura?</span>
+                    </h2>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1rem, 2.5vw, 1.2rem)', marginBottom: 'clamp(2rem, 5vw, 4rem)', lineHeight: '1.6' }}>
+                        Agende una consultoría técnica gratuita y descubra el potencial de automatización de su negocio.
+                    </p>
+                    <button onClick={() => navigate('/contact')} style={{ backgroundColor: 'white', color: 'var(--bg-main)', padding: 'clamp(1rem, 2.5vw, 1.2rem) clamp(2rem, 5vw, 3rem)', borderRadius: '12px', fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', fontWeight: '700', border: 'none', cursor: 'pointer', width: '100%', maxWidth: '350px' }}>
+                        Solicitar Diagnóstico
+                    </button>
+                    <div style={{ marginTop: 'clamp(2rem, 4vw, 3rem)' }}>
+                        <a href="https://wa.me/573172652487" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', textDecoration: 'none' }}>
+                            <MessageSquare size={18} /> <span>O hable con un experto vía WhatsApp</span>
+                        </a>
                     </div>
                 </div>
             </section>
