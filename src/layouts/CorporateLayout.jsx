@@ -11,7 +11,7 @@ const CorporateLayout = () => {
         <div className="corporate-layout">
             <nav className="corporate-nav">
                 <Link to="/" className="logo-container" aria-label="SOLID SOLUTIONS - Inicio">
-                    <Logo />
+                    <Logo variant="short" />
                 </Link>
 
                 {/* Desktop Links */}

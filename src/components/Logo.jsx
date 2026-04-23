@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Logo = ({ size = 'normal', color = 'white' }) => {
+const Logo = ({ size = 'normal', color = 'white', variant = 'full' }) => {
     const isSmall = size === 'small';
     const isLarge = size === 'large';
+    const isShort = variant === 'short';
     
     const fontSize = isLarge ? '2.2rem' : (isSmall ? '1.1rem' : '1.4rem');
     const barWidth = isLarge ? 8 : (isSmall ? 4 : 5);
@@ -18,7 +19,7 @@ const Logo = ({ size = 'normal', color = 'white' }) => {
             cursor: 'pointer',
             userSelect: 'none'
         }}>
-            {/* Texto: Solid-Solutions */}
+            {/* Texto: Solid / Solid-Solutions */}
             <div style={{ 
                 color: color,
                 fontSize: fontSize,
@@ -31,8 +32,12 @@ const Logo = ({ size = 'normal', color = 'white' }) => {
                 lineHeight: 1
             }}>
                 <span>Solid</span>
-                <span style={{ color: color, margin: '0 0.1em' }}>-</span>
-                <span>Solutions</span>
+                {!isShort && (
+                    <>
+                        <span style={{ color: color, margin: '0 0.1em' }}>-</span>
+                        <span>Solutions</span>
+                    </>
+                )}
             </div>
 
             {/* Gráfico de Barras (A la derecha) */}
