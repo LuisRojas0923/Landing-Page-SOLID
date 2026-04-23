@@ -272,14 +272,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section id="method" style={{ 
-                padding: '4rem 2rem', 
-                background: 'rgba(0, 13, 39, 0.4)',
-                minHeight: '100vh',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-            }}>
+            <section id="method" style={{ padding: '8rem 2rem', background: 'rgba(0, 13, 39, 0.4)' }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
                         <div className="luxe-badge" style={{ marginBottom: '1.5rem' }}>Nuestro Método</div>
@@ -374,7 +367,7 @@ const Home = () => {
                                         </div>
                                     </div>
 
-                                    <button className="vertical-cta" onClick={() => navigate('/solutions')}>
+                                    <button className="vertical-cta" onClick={() => navigate('/method')}>
                                         Ver Detalles <ChevronRight size={16} />
                                     </button>
                                 </div>
@@ -412,7 +405,7 @@ const Home = () => {
                                         <div className="terminal-line">&nbsp;&nbsp;<span style={{ color: '#c678dd' }}>return</span> df.merge_to_erp()</div>
                                     </div>
 
-                                    <button className="vertical-cta" onClick={() => navigate('/solutions')}>
+                                    <button className="vertical-cta" onClick={() => navigate('/method')}>
                                         Ver Detalles <ChevronRight size={16} />
                                     </button>
                                 </div>
@@ -462,7 +455,7 @@ const Home = () => {
                                         </div>
                                     </div>
 
-                                    <button className="vertical-cta" onClick={() => navigate('/solutions')}>
+                                    <button className="vertical-cta" onClick={() => navigate('/method')}>
                                         Ver Detalles <ChevronRight size={16} />
                                     </button>
                                 </div>
