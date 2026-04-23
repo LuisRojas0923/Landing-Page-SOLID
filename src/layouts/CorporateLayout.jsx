@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Outlet, Link, NavLink, useLocation } from 'react-router-dom';
 import './CorporateLayout.css';
-import { Building2, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Logo from '../components/Logo';
 
 const CorporateLayout = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,12 +10,8 @@ const CorporateLayout = () => {
     return (
         <div className="corporate-layout">
             <nav className="corporate-nav">
-                <Link to="/" className="logo" aria-label="SOLID SOLUTIONS - Inicio">
-                    <img
-                        src="/projects/logotipo.png"
-                        alt="SOLID SOLUTIONS"
-                        className="logo-img"
-                    />
+                <Link to="/" className="logo-container" aria-label="SOLID SOLUTIONS - Inicio">
+                    <Logo />
                 </Link>
 
                 {/* Desktop Links */}
@@ -72,19 +69,10 @@ const CorporateLayout = () => {
             }}>
                 <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '2rem' }}>
                     <div style={{ flex: '1', minWidth: '300px' }}>
-                        <div className="logo" style={{ 
-                            marginBottom: '1.5rem', 
-                            fontSize: '1.4rem', 
-                            fontWeight: '800', 
-                            fontStyle: 'italic', 
-                            display: 'flex', 
-                            alignItems: 'center', 
-                            gap: '0.4rem',
-                            letterSpacing: '-0.02em'
-                        }}>
-                            <Building2 size={24} className="logo-icon" style={{ color: '#fff' }} />
-                            <span style={{ color: '#fff' }}>Solid</span>
-                            <span style={{ color: '#60a5fa' }}>Solutions</span>
+                        <div style={{ marginBottom: '1.5rem' }}>
+                            <Link to="/" style={{ textDecoration: 'none' }}>
+                                <Logo size="large" />
+                            </Link>
                         </div>
                         <p style={{ 
                             color: 'var(--text-secondary)', 
