@@ -56,23 +56,45 @@ const CorporateLayout = () => {
                 <Outlet />
             </main>
 
-            <footer>
-                <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '2rem' }}>
+            <footer style={{ 
+                padding: '2.5rem 1rem 1.5rem', 
+                background: 'rgba(0, 3, 10, 0.95)', 
+                borderTop: '1px solid rgba(0, 122, 255, 0.2)'
+            }}>
+                <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '2rem' }}>
                     <div style={{ flex: '1', minWidth: '300px' }}>
-                        <div className="logo" style={{ marginBottom: '1.5rem', fontSize: '1.25rem' }}>
-                            <Building2 size={24} className="logo-icon" />
-                            <span>SOLID SOLUTIONS</span>
+                        <div className="logo" style={{ 
+                            marginBottom: '1.5rem', 
+                            fontSize: '1.4rem', 
+                            fontWeight: '800', 
+                            fontStyle: 'italic', 
+                            display: 'flex', 
+                            alignItems: 'center', 
+                            gap: '0.4rem',
+                            letterSpacing: '-0.02em'
+                        }}>
+                            <Building2 size={24} className="logo-icon" style={{ color: '#fff' }} />
+                            <span style={{ color: '#fff' }}>Solid</span>
+                            <span style={{ color: '#60a5fa' }}>Solutions</span>
                         </div>
-                        <p style={{ color: 'var(--text-secondary)', maxWidth: '400px', fontSize: '0.95rem' }}>
+                        <p style={{ 
+                            color: 'var(--text-secondary)', 
+                            maxWidth: '400px', 
+                            fontSize: '1.05rem',
+                            fontFamily: "'Roboto', sans-serif",
+                            fontStyle: 'italic',
+                            lineHeight: '1.6',
+                            opacity: 0.8
+                        }}>
                             Ingeniería de procesos y automatización industrial avanzada. Transformamos la complejidad en eficiencia operativa.
                         </p>
                     </div>
                     <div style={{ textAlign: 'right', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                        <div style={{ marginBottom: '1rem', display: 'flex', gap: '2rem', justifyContent: 'flex-end' }}>
-                            <Link to="/privacy">Privacidad</Link>
-                            <Link to="/terms">Términos</Link>
+                        <div style={{ marginBottom: '1.5rem', display: 'flex', gap: '2rem', justifyContent: 'flex-end', fontWeight: '600' }}>
+                            <Link to="/privacy" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>Privacidad</Link>
+                            <Link to="/terms" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>Términos</Link>
                         </div>
-                        <p>&copy; {new Date().getFullYear()} SOLID SOLUTIONS Enterprise. Todos los derechos reservados.</p>
+                        <p style={{ fontStyle: 'italic', opacity: 0.7 }}>&copy; {new Date().getFullYear()} SOLID SOLUTIONS Enterprise. Todos los derechos reservados.</p>
                     </div>
                 </div>
             </footer>

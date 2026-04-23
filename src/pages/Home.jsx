@@ -501,59 +501,6 @@ const Home = () => {
 
 
 
-            {/* TECH STACK BAR */}
-            <section style={{ padding: '4rem 2rem', background: 'rgba(0, 13, 39, 0.4)', borderTop: '1px solid var(--deep-navy-400)', borderBottom: '1px solid var(--deep-navy-400)' }}>
-                <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-                    <div className="impact-badge-container" style={{ textAlign: 'center', marginBottom: '3rem', display: 'flex', justifyContent: 'center' }}>
-                        <span className="impact-badge" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', padding: '0.6rem 2.5rem', margin: '0 auto', width: 'fit-content' }}>
-                            <Zap size={18} /> Stack Tecnológico de Alto Nivel
-                        </span>
-                    </div>
-                    <div className="tech-stack-container" style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        gap: 'clamp(1rem, 3vw, 2.5rem)',
-                        alignItems: 'center',
-                        padding: '1rem'
-                    }}>
-                        {[
-                            { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB', color: '3776AB' },
-                            { name: 'PostgreSQL', icon: 'https://cdn.simpleicons.org/postgresql/4169E1', color: '4169E1' },
-                            { name: 'React', icon: 'https://cdn.simpleicons.org/react/61DAFB', color: '61DAFB' },
-                            { name: 'Flutter', icon: 'https://cdn.simpleicons.org/flutter/02569B', color: '02569B' },
-                            { name: 'Java', icon: 'https://cdn.simpleicons.org/openjdk/f89820', color: 'f89820' },
-                            { name: 'Gemini', icon: 'https://cdn.simpleicons.org/googlegemini/8E75C2', color: '8E75C2' },
-                            { name: 'Docker', icon: 'https://cdn.simpleicons.org/docker/2496ED', color: '2496ED' },
-                            { name: 'Power BI', icon: 'https://img.icons8.com/color/96/power-bi.png', color: 'F2C811' },
-                            { name: 'Power Query', icon: 'https://img.icons8.com/color/96/microsoft-excel-2019--v1.png', color: '217346' },
-                            { name: 'n8n', icon: 'https://cdn.simpleicons.org/n8n/FF6D5A', color: 'FF6D5A' }
-                        ].map((tech, i) => (
-                            <motion.div key={i} whileHover={{ scale: 1.15, y: -8 }} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', width: '90px' }}>
-                                <div style={{ 
-                                    width: '64px', 
-                                    height: '64px', 
-                                    display: 'flex', 
-                                    alignItems: 'center', 
-                                    justifyContent: 'center', 
-                                    marginBottom: '0.5rem'
-                                }}>
-                                    <img src={tech.icon} alt={tech.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-                                </div>
-                                <span style={{ 
-                                    fontSize: '0.7rem', 
-                                    fontWeight: '800', 
-                                    color: 'var(--text-secondary)', 
-                                    textTransform: 'uppercase', 
-                                    letterSpacing: '0.05em', 
-                                    textAlign: 'center',
-                                    display: 'block',
-                                    width: '100%'
-                                }}>{tech.name}</span>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* FINAL CTA */}
             <section id="contact" style={{ padding: 'clamp(4rem, 10vh, 10rem) clamp(1rem, 4vw, 2rem)', textAlign: 'center' }}>
@@ -571,6 +518,60 @@ const Home = () => {
                         <a href="https://wa.me/573172652487" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', textDecoration: 'none' }}>
                             <MessageSquare size={18} /> <span>O hable con un experto vía WhatsApp</span>
                         </a>
+                    </div>
+                </div>
+            </section>
+
+            {/* TECH STACK BAR */}
+            <section style={{ padding: '2.5rem 1rem', background: 'rgba(0, 13, 39, 0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ maxWidth: '1100px', margin: '0 auto', width: '100%' }}>
+                    <div className="impact-badge-container" style={{ textAlign: 'center', marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+                        <span className="impact-badge" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', padding: '0.6rem 2.5rem', margin: '0 auto', width: 'fit-content' }}>
+                            <Zap size={18} /> Stack Tecnológico de Alto Nivel
+                        </span>
+                    </div>
+                    <div className="tech-stack-container" style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        gap: 'clamp(0.5rem, 2vw, 2rem)',
+                        alignItems: 'center',
+                        padding: '0'
+                    }}>
+                        {[
+                            { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB', color: '3776AB' },
+                            { name: 'PostgreSQL', icon: 'https://cdn.simpleicons.org/postgresql/4169E1', color: '4169E1' },
+                            { name: 'React', icon: 'https://cdn.simpleicons.org/react/61DAFB', color: '61DAFB' },
+                            { name: 'Flutter', icon: 'https://cdn.simpleicons.org/flutter/02569B', color: '02569B' },
+                            { name: 'Java', icon: 'https://cdn.simpleicons.org/openjdk/f89820', color: 'f89820' },
+                            { name: 'Gemini', icon: 'https://cdn.simpleicons.org/googlegemini/8E75C2', color: '8E75C2' },
+                            { name: 'Docker', icon: 'https://cdn.simpleicons.org/docker/2496ED', color: '2496ED' },
+                            { name: 'Power BI', icon: 'https://img.icons8.com/color/96/power-bi.png', color: 'F2C811' },
+                            { name: 'Power Query', icon: 'https://img.icons8.com/color/96/microsoft-excel-2019--v1.png', color: '217346' },
+                            { name: 'n8n', icon: 'https://cdn.simpleicons.org/n8n/FF6D5A', color: 'FF6D5A' }
+                        ].map((tech, i) => (
+                            <motion.div key={i} whileHover={{ scale: 1.1, y: -4 }} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', width: '70px' }}>
+                                <div style={{
+                                    width: '40px',
+                                    height: '40px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    marginBottom: '0.25rem'
+                                }}>
+                                    <img src={tech.icon} alt={tech.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                                </div>
+                                <span style={{
+                                    fontSize: '0.6rem',
+                                    fontWeight: '800',
+                                    color: 'var(--text-secondary)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.05em',
+                                    textAlign: 'center',
+                                    display: 'block',
+                                    width: '100%'
+                                }}>{tech.name}</span>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>
