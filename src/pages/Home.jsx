@@ -83,11 +83,11 @@ const Home = () => {
             </Helmet>
             {/* Hero Section */}
             <section id="home" style={{
-                padding: 'clamp(6rem, 15vh, 10rem) 2rem 8rem',
+                padding: '2rem 2rem 8rem',
                 textAlign: 'center',
                 position: 'relative',
                 background: 'radial-gradient(circle at 50% -20%, var(--deep-navy-500) 0%, transparent 60%)',
-                minHeight: '85vh',
+                minHeight: '100vh',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
@@ -122,14 +122,14 @@ const Home = () => {
                     <h1 style={{
                         fontSize: 'clamp(2.5rem, 8vw, 5rem)',
                         fontWeight: '800',
-                        lineHeight: '1.05',
-                        marginBottom: '1.5rem',
+                        lineHeight: '1.2',
+                        marginBottom: '2rem',
                         maxWidth: '1200px',
-                        margin: '0 auto 1.5rem',
+                        margin: '0 auto 2rem',
                         letterSpacing: '-0.03em'
                     }}>
                         Potenciamos su empresa con <br />
-                        <span style={{ color: 'var(--deep-navy-800)', display: 'block', marginTop: '0.5rem' }}>soluciones autónomas</span>
+                        <span style={{ color: 'var(--deep-navy-800)', display: 'block', marginTop: '0.75rem' }}>soluciones autónomas</span>
                     </h1>
 
                     <p className="hero-subtitle" style={{
@@ -137,8 +137,8 @@ const Home = () => {
                         color: 'white',
                         fontWeight: '800',
                         maxWidth: '1000px',
-                        margin: '0 auto 2rem',
-                        lineHeight: '1.4'
+                        margin: '0 auto 2.5rem',
+                        lineHeight: '1.5'
                     }}>
                         Organizamos, sistematizamos y automatizamos su operación.
                     </p>
@@ -148,57 +148,26 @@ const Home = () => {
                         color: 'var(--text-secondary)',
                         maxWidth: '1000px',
                         margin: '0 auto 3rem',
-                        lineHeight: '1.6',
+                        lineHeight: '1.8',
                         fontStyle: 'italic',
                         fontFamily: "'Roboto', sans-serif"
                     }}>
                         En <span className="method-title" style={{ fontSize: 'inherit', display: 'inline', margin: 0 }}>Solid</span> <span className="vertical-tagline" style={{ fontSize: 'inherit', display: 'inline', color: 'var(--deep-navy-800)', fontWeight: 800 }}>Solutions</span> estructuramos su operación, diseñamos la arquitectura que conecta sus datos y automatizamos sus tareas críticas, eliminando la fricción operativa y preparando su empresa para crecer con tecnología e inteligencia artificial.
                     </p>
 
-                    <div style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        gap: 'clamp(1rem, 3vw, 1.5rem)',
-                        flexWrap: 'wrap',
-                        width: '100%'
-                    }}>
-                        <motion.div
-                            className="mac-window cta-window"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            whileHover={{ y: -8 }}
-                            transition={{ duration: 1.0, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.2 }}
-                            onClick={() => navigate('/contact')}
-                        >
-
-                            <button
-                                className="vertical-cta"
-                                style={{ paddingLeft: '0.5rem', fontSize: '1.25rem' }}
-                            >
-                                Agenda tu Diagnóstico <ChevronRight size={20} />
-                            </button>
-                        </motion.div>
-                        <motion.div
-                            className="mac-window cta-window cta-window-alt"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            whileHover={{ y: -8 }}
-                            transition={{ duration: 1.0, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.3 }}
-                            onClick={() => navigate('/solutions')}
-                        >
-                            <button
-                                className="vertical-cta"
-                                style={{ paddingLeft: '0.5rem', fontSize: '1.25rem', color: '#fff' }}
-                            >
-                                Explorar Soluciones <ChevronRight size={20} />
-                            </button>
-                        </motion.div>
-                    </div>
+                    {/* Buttons removed from here and moved to Diagnóstico */}
                 </motion.div>
             </section>
 
             {/* RESULTS SECTION - Versión Premium exacta a la imagen */}
-            <section id="results" style={{ padding: '8rem 2rem', background: 'var(--deep-navy-200)' }}>
+            <section id="impact" style={{ 
+                padding: '4rem 2rem', 
+                background: 'var(--deep-navy-200)',
+                minHeight: '100vh',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
                     <div className="impact-badge-container">
                         <span className="impact-badge">Impacto Medible</span>
@@ -303,7 +272,14 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section id="method" style={{ padding: '8rem 2rem', background: 'rgba(0, 13, 39, 0.4)' }}>
+            <section id="method" style={{ 
+                padding: '4rem 2rem', 
+                background: 'rgba(0, 13, 39, 0.4)',
+                minHeight: '100vh',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
                         <div className="luxe-badge" style={{ marginBottom: '1.5rem' }}>Nuestro Método</div>
@@ -503,7 +479,14 @@ const Home = () => {
 
 
             {/* TECH STACK BAR */}
-            <section style={{ padding: '2.5rem 1rem', background: 'rgba(0, 13, 39, 0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <section id="tech-stack" style={{ 
+                padding: '4rem 1rem', 
+                background: 'rgba(0, 13, 39, 0.4)', 
+                minHeight: '100vh',
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center' 
+            }}>
                 <div style={{ maxWidth: '1100px', margin: '0 auto', width: '100%' }}>
                     <div className="impact-badge-container" style={{ textAlign: 'center', marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
                         <span className="impact-badge" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', padding: '0.6rem 2.5rem', margin: '0 auto', width: 'fit-content' }}>
@@ -557,17 +540,67 @@ const Home = () => {
             </section>
 
             {/* FINAL CTA */}
-            <section id="contact" style={{ padding: 'clamp(4rem, 10vh, 10rem) clamp(1rem, 4vw, 2rem)', textAlign: 'center' }}>
+            <section id="diagnostico" style={{ 
+                padding: '2rem', 
+                textAlign: 'center',
+                minHeight: '75vh',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}>
                 <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+                    <div className="impact-badge-container" style={{ textAlign: 'center', marginBottom: '2rem', display: 'flex', justifyContent: 'center' }}>
+                        <span className="impact-badge" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', padding: '0.6rem 2.5rem', margin: '0 auto', width: 'fit-content' }}>
+                            Diagnóstico
+                        </span>
+                    </div>
                     <h2 className="cta-title-nowrap" style={{ fontSize: 'clamp(1.8rem, 6vw, 3.5rem)', marginBottom: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: '800' }}>
                         ¿Listo para escalar su <span style={{ color: 'var(--deep-navy-800)' }}>infraestructura?</span>
                     </h2>
                     <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1rem, 2.5vw, 1.2rem)', marginBottom: 'clamp(2rem, 5vw, 4rem)', lineHeight: '1.6' }}>
                         Agende una consultoría técnica gratuita y descubra el potencial de automatización de su negocio.
                     </p>
-                    <button onClick={() => navigate('/contact')} style={{ backgroundColor: 'white', color: 'var(--bg-main)', padding: 'clamp(1rem, 2.5vw, 1.2rem) clamp(2rem, 5vw, 3rem)', borderRadius: '12px', fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', fontWeight: '700', border: 'none', cursor: 'pointer', width: '100%', maxWidth: '350px' }}>
-                        Solicitar Diagnóstico
-                    </button>
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        gap: 'clamp(1rem, 3vw, 1.5rem)',
+                        flexWrap: 'wrap',
+                        width: '100%',
+                        marginTop: '2rem'
+                    }}>
+                        <motion.div
+                            className="mac-window cta-window"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            whileHover={{ y: -8 }}
+                            transition={{ duration: 1.0, ease: [0.175, 0.885, 0.32, 1.275] }}
+                            onClick={() => navigate('/contact')}
+                        >
+                            <button
+                                className="vertical-cta"
+                                style={{ paddingLeft: '0.5rem', fontSize: '1.25rem' }}
+                            >
+                                Agenda tu Diagnóstico <ChevronRight size={20} />
+                            </button>
+                        </motion.div>
+                        <motion.div
+                            className="mac-window cta-window cta-window-alt"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            whileHover={{ y: -8 }}
+                            transition={{ duration: 1.0, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.1 }}
+                            onClick={() => navigate('/solutions')}
+                        >
+                            <button
+                                className="vertical-cta"
+                                style={{ paddingLeft: '0.5rem', fontSize: '1.25rem', color: '#fff' }}
+                            >
+                                Explorar Soluciones <ChevronRight size={20} />
+                            </button>
+                        </motion.div>
+                    </div>
                     <div style={{ marginTop: 'clamp(2rem, 4vw, 3rem)' }}>
                         <a href="https://wa.me/573172652487" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', textDecoration: 'none' }}>
                             <MessageSquare size={18} /> <span>O hable con un experto vía WhatsApp</span>

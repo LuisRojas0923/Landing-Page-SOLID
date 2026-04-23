@@ -19,7 +19,16 @@ const CorporateLayout = () => {
 
                 {/* Desktop Links */}
                 <div className="links desktop-only">
-                    <NavLink to="/" end className={({ isActive }) => isActive ? 'nav-active' : ''}>Inicio</NavLink>
+                    <div className="nav-item-has-dropdown">
+                        <NavLink to="/" end className={({ isActive }) => isActive ? 'nav-active' : ''}>Inicio</NavLink>
+                        <div className="nav-dropdown">
+                            <a href="/#home" onClick={() => setIsMenuOpen(false)}>Arquitectura de Datos e Ingeniería de Software</a>
+                            <a href="/#impact" onClick={() => setIsMenuOpen(false)}>Impacto Medible</a>
+                            <a href="/#method" onClick={() => setIsMenuOpen(false)}>Nuestro Método</a>
+                            <a href="/#tech-stack" onClick={() => setIsMenuOpen(false)}>Stack Tecnológico de Alto Nivel</a>
+                            <a href="/#diagnostico" onClick={() => setIsMenuOpen(false)}>Diagnóstico</a>
+                        </div>
+                    </div>
                     <NavLink to="/about" className={({ isActive }) => isActive ? 'nav-active' : ''}>Quienes Somos</NavLink>
                     <NavLink to="/method" className={({ isActive }) => isActive ? 'nav-active' : ''}>Nuestro Método</NavLink>
                     <NavLink to="/solutions" className={({ isActive }) => isActive ? 'nav-active' : ''}>Soluciones</NavLink>
