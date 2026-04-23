@@ -6,13 +6,160 @@ import {
     Workflow,
     Code2,
     Bot,
-    ArrowRight,
-    ChevronRight,
-    Mail,
+    Search,
+    Zap,
+    Server,
+    TrendingUp,
     Database,
-    Search
+    FileText,
+    Layout,
+    Cloud,
+    BarChart3,
+    Rocket,
+    Table,
+    ArrowRight,
+    Mail
 } from 'lucide-react';
-import './Home.css'; // Reusing styles
+import './Home.css';
+
+const ProcessDiagram = ({ stepIdx }) => {
+    const diagrams = [
+        [
+            { icon: <FileText size={28} />, label: 'Desorden', color: '#ef4444' },
+            { icon: <Search size={40} />, label: 'Auditoría', color: 'var(--deep-navy-800)' },
+            { icon: <Layout size={28} />, label: 'Estructura', color: '#10b981' }
+        ],
+        [
+            { icon: <Database size={28} />, label: 'Datos', color: '#f59e0b' },
+            { icon: <Code2 size={40} />, label: 'Sistemas', color: 'var(--deep-navy-800)' },
+            { icon: <Cloud size={28} />, label: 'Nube', color: '#8b5cf6' }
+        ],
+        [
+            { icon: <Table size={28} />, label: 'Excel', color: '#10b981' },
+            { icon: <Bot size={40} />, label: 'Bot', color: 'var(--deep-navy-800)' },
+            { icon: <FileText size={28} />, label: 'Reportes', color: '#60a5fa' }
+        ],
+        [
+            { icon: <BarChart3 size={28} />, label: 'Métricas', color: 'var(--deep-navy-800)' },
+            { icon: <Zap size={40} />, label: 'IA', color: '#f59e0b' },
+            { icon: <Rocket size={28} />, label: 'Escala', color: '#ec4899' }
+        ]
+    ];
+
+    const current = diagrams[stepIdx] || diagrams[0];
+
+    return (
+        <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '100%',
+            height: '100%',
+            gap: '0.2rem',
+            perspective: '1000px',
+            paddingBottom: '2rem' // Espacio para las etiquetas absolutas
+        }}>
+            {/* Source Box */}
+            <motion.div
+                whileHover={{ scale: 1.05, filter: 'brightness(1.2)' }}
+                style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', cursor: 'default' }}
+            >
+                <div style={{
+                    width: '74px', height: '74px', borderRadius: '20px',
+                    background: 'rgba(10, 20, 40, 0.6)', border: `1px solid ${current[0].color}44`,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', color: current[0].color,
+                    boxShadow: `0 0 15px ${current[0].color}11`
+                }}>{current[0].icon}</div>
+                <span style={{
+                    position: 'absolute', top: '85px', fontSize: '0.7rem', fontWeight: '800',
+                    color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.1em',
+                    whiteSpace: 'nowrap'
+                }}>{current[0].label}</span>
+            </motion.div>
+
+            {/* Connector 1 */}
+            <div style={{ width: '90px', height: '74px', position: 'relative' }}>
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none" style={{ width: '100%', height: '100%', overflow: 'visible' }}>
+                    <path d="M 0 50 Q 50 0, 100 50" fill="none" stroke="rgba(255, 255, 255, 0.05)" strokeWidth="1.5" />
+                    <path d="M 0 50 Q 50 0, 100 50" fill="none" stroke="rgba(59, 130, 246, 0.1)" strokeWidth="3" strokeDasharray="4,6" />
+                    <motion.path
+                        d="M 0 50 Q 50 0, 100 50" fill="none" stroke="#3b82f6" strokeWidth="3" strokeLinecap="round"
+                        initial={{ pathLength: 0.1, opacity: 0, pathOffset: 0 }}
+                        animate={{ opacity: [0, 1, 0], pathOffset: [0, 1] }}
+                        transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
+                    />
+                </svg>
+            </div>
+
+            {/* Central Node (Bot) */}
+            <motion.div
+                animate={{
+                    translateY: [-3, 3, -3],
+                    filter: ['drop-shadow(0 0 10px #3b82f622)', 'drop-shadow(0 0 25px #3b82f666)', 'drop-shadow(0 0 10px #3b82f622)']
+                }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                whileHover={{ scale: 1.1, rotateY: 10 }}
+                style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', zIndex: 10 }}
+            >
+                <div style={{
+                    width: '96px', height: '96px', borderRadius: '28px',
+                    background: 'rgba(59, 130, 246, 0.1)', border: '2px solid #3b82f6',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#3b82f6',
+                    boxShadow: 'inset 0 0 20px rgba(59, 130, 246, 0.2)',
+                    position: 'relative', overflow: 'hidden'
+                }}>
+                    <motion.div
+                        animate={{ x: ['-100%', '200%'] }}
+                        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                        style={{
+                            position: 'absolute', top: 0, left: 0, width: '50%', height: '100%',
+                            background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent)',
+                            transform: 'skewX(-20deg)'
+                        }}
+                    />
+                    {current[1].icon}
+                </div>
+                <span style={{
+                    position: 'absolute', top: '110px', fontSize: '0.8rem', fontWeight: '900',
+                    color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '0.15em',
+                    textShadow: '0 0 10px #3b82f644', whiteSpace: 'nowrap'
+                }}>{current[1].label}</span>
+            </motion.div>
+
+            {/* Connector 2 */}
+            <div style={{ width: '90px', height: '74px', position: 'relative' }}>
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none" style={{ width: '100%', height: '100%', overflow: 'visible' }}>
+                    <path d="M 0 50 Q 50 100, 100 50" fill="none" stroke="rgba(255, 255, 255, 0.05)" strokeWidth="1.5" />
+                    <path d="M 0 50 Q 50 100, 100 50" fill="none" stroke="rgba(59, 130, 246, 0.1)" strokeWidth="3" strokeDasharray="4,6" />
+                    <motion.path
+                        d="M 0 50 Q 50 100, 100 50" fill="none" stroke="#3b82f6" strokeWidth="3" strokeLinecap="round"
+                        initial={{ pathLength: 0.1, opacity: 0, pathOffset: 0 }}
+                        animate={{ opacity: [0, 1, 0], pathOffset: [0, 1] }}
+                        transition={{ duration: 2.5, repeat: Infinity, ease: "linear", delay: 1.25 }}
+                    />
+                </svg>
+            </div>
+
+            {/* Result Box */}
+            <motion.div
+                whileHover={{ scale: 1.05, filter: 'brightness(1.2)' }}
+                style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', cursor: 'default' }}
+            >
+                <div style={{
+                    width: '74px', height: '74px', borderRadius: '20px',
+                    background: 'rgba(10, 20, 40, 0.6)', border: `1px solid ${current[2].color}44`,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', color: current[2].color,
+                    boxShadow: `0 0 15px ${current[2].color}11`
+                }}>{current[2].icon}</div>
+                <span style={{
+                    position: 'absolute', top: '85px', fontSize: '0.7rem', fontWeight: '800',
+                    color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.1em',
+                    whiteSpace: 'nowrap'
+                }}>{current[2].label}</span>
+            </motion.div>
+        </div>
+    );
+};
 
 const Method = () => {
     const navigate = useNavigate();
@@ -56,6 +203,48 @@ const Method = () => {
         }
     ];
 
+    const stepsDetailed = [
+        {
+            title: "Organizamos",
+            tagline: "Orden antes de tecnología",
+            desc: "Ordenamos su operación, eliminamos reprocesos y definimos flujos eficientes y replicables",
+            icon: <Search size={32} />,
+            items: [
+                { icon: <Search size={16} />, label: 'Auditoría de procesos' },
+                { icon: <Search size={16} />, label: 'Estandarización de datos' },
+                { icon: <Search size={16} />, label: 'Diagramas de flujo optimizados' },
+            ]
+        },
+        {
+            title: "Sistematizamos",
+            tagline: "Software que conecta su operación",
+            desc: "Desarrollamos herramientas a medida que centralizan la información y conectan áreas que antes operaban de forma aislada.",
+            icon: <Code2 size={32} />,
+            items: [
+                { icon: <Database size={16} />, label: 'Ingeniería de datos & BI' },
+                { icon: <Code2 size={16} />, label: 'Software a medida (Java, Python, React)' },
+                { icon: <ArrowRight size={16} />, label: 'Dashboards en tiempo real' },
+            ]
+        },
+        {
+            title: "Automatizamos",
+            tagline: "Procesos que se ejecutan solos",
+            desc: "Implementamos flujos de trabajo inteligentes que automatizan tareas clave, reducen el error humano y liberan tiempo operativo.",
+            icon: <Bot size={32} />,
+            items: [
+                { icon: <Bot size={16} />, label: 'RPA y workflows (n8n / Python)' },
+                { icon: <Search size={16} />, label: 'OCR e inteligencia documental' },
+                { icon: <ArrowRight size={16} />, label: 'Integraciones y APIs automáticas' },
+            ]
+        },
+        {
+            title: "Optimización Continua",
+            tagline: "Evolución basada en datos",
+            desc: "Escalamos la solución basándonos en datos reales y feedback de la operación.",
+            icon: <TrendingUp size={32} />
+        }
+    ];
+
     return (
         <div className="method-page" style={{ color: 'var(--text-primary)', paddingTop: '8rem' }}>
             <Helmet>
@@ -63,204 +252,115 @@ const Method = () => {
                 <meta name="description" content="Descubra cómo transformamos su operación en tres pasos: Organizamos, Sistematizamos y Automatizamos." />
             </Helmet>
 
-            <section id="method" style={{ padding: '4rem 2rem 8rem', background: 'transparent' }}>
+
+
+            {/* Nueva sección de Metodología Detallada */}
+            <section style={{ padding: '4rem 2rem 8rem', background: 'transparent' }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-                    <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-                        <div className="luxe-badge" style={{ marginBottom: '1.5rem' }}>Nuestro Método</div>
-                        <h2 style={{
-                            fontSize: 'clamp(1.5rem, 5vw, 3.5rem)',
-                            fontWeight: '800',
-                            lineHeight: '1.1',
-                            marginBottom: '1rem',
-                            maxWidth: '1200px',
-                            margin: '0 auto 1rem',
-                            letterSpacing: '-0.03em',
-                            whiteSpace: 'nowrap'
-                        }}>
-                            Así transformamos su operación
+                    <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+                        <h2 style={{ fontSize: '3.5rem', fontWeight: '800', marginBottom: '1rem', letterSpacing: '-0.02em' }}>
+                            Nuestra <span style={{ color: 'var(--deep-navy-800)' }}>Metodología</span>
                         </h2>
-                        <p style={{
-                            color: 'var(--deep-navy-800)',
-                            maxWidth: 'none',
-                            margin: '0 auto',
-                            fontSize: '2rem',
-                            fontWeight: '800',
-                            letterSpacing: '-0.03em',
-                            textAlign: 'center',
-                            whiteSpace: 'nowrap'
-                        }}>
-                            Tres pasos que eliminan la fricción operativa de su empresa
+                        <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
+                            Transformamos el caos operativo en flujos eficientes, sistemas escalables y procesos que se ejecutan solos.
                         </p>
                     </div>
 
-                    <div className="method-pipeline-container">
-                        <div className="method-pipeline-track">
-                            <div className="pipeline-particle" />
-                        </div>
+                    <div style={{ display: 'grid', gap: '6rem' }}>
+                        {stepsDetailed.map((step, idx) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                whileHover={{ y: -5 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.6, type: 'spring', stiffness: 100 }}
+                                style={{
+                                    display: 'flex',
+                                    gap: '4rem',
+                                    alignItems: 'center',
+                                    flexDirection: idx % 2 === 0 ? 'row' : 'row-reverse',
+                                    textAlign: idx % 2 === 0 ? 'left' : 'right'
+                                }}
+                            >
+                                <div style={{ flex: 1 }}>
 
-                        <div className="method-grid">
-                            {/* PASO 01: Organizamos */}
-                            <motion.div className="method-column" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-                                <div className="method-stepper">
-                                    <span className="method-number illuminate-1">01</span>
-                                    <div className="method-icon-badge illuminate-1">
-                                        <Workflow size={16} color="currentColor" />
-                                    </div>
+                                    <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', fontWeight: '800', textAlign: 'left' }}>
+                                        0{idx + 1}. {step.title}
+                                    </h2>
+                                    <p style={{
+                                        color: 'var(--deep-navy-800)',
+                                        fontSize: '1.4rem',
+                                        fontWeight: '600',
+                                        marginBottom: '0.2rem',
+                                        letterSpacing: '-0.02em',
+                                        textAlign: 'left'
+                                    }}>
+                                        {step.tagline}
+                                    </p>
+                                    <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', lineHeight: '1.8', maxWidth: '500px', margin: '0', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic', marginBottom: '2rem', textAlign: 'left' }}>
+                                        {step.desc}
+                                    </p>
+
+                                    {step.items && (
+                                        <ul style={{
+                                            listStyle: 'none',
+                                            padding: 0,
+                                            margin: '0',
+                                            maxWidth: '500px'
+                                        }}>
+                                            {step.items.map((item, i) => (
+                                                <li key={i} style={{
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'flex-start',
+                                                    flexDirection: 'row',
+                                                    gap: '1rem',
+                                                    color: 'var(--text-primary)',
+                                                    fontSize: '1.1rem',
+                                                    marginBottom: '0.8rem',
+                                                    fontFamily: "'Roboto', sans-serif",
+                                                    fontWeight: '500',
+                                                    textAlign: 'left'
+                                                }}>
+                                                    <span style={{ color: 'var(--deep-navy-800)', display: 'flex' }}>{item.icon}</span>
+                                                    {item.label}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
                                 </div>
-                                <h3 className="method-title">Organizamos</h3>
-                                <span className="vertical-tagline">Orden antes de tecnología</span>
-                                <p className="method-desc">Ordenamos su operación, eliminamos reprocesos y definimos flujos eficientes y replicables</p>
-
-                                <div className="mac-window phase-window">
-                                    <div className="mac-header">
-                                        <div className="mac-title">process_audit.flow</div>
+                                <div style={{
+                                    flex: 1,
+                                    height: '350px',
+                                    background: 'rgba(0, 5, 15, 0.4)',
+                                    borderRadius: '32px',
+                                    border: '1px solid rgba(255, 255, 255, 0.05)',
+                                    position: 'relative',
+                                    overflow: 'hidden',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    boxShadow: 'inset 0 0 40px rgba(0,0,0,0.5)'
+                                }}>
+                                    <ProcessDiagram stepIdx={idx} />
+                                    {/* Fondo decorativo con número */}
+                                    <div style={{
+                                        position: 'absolute',
+                                        top: '50%',
+                                        left: '50%',
+                                        transform: 'translate(-50%, -50%)',
+                                        fontSize: '12rem',
+                                        fontWeight: '900',
+                                        color: 'rgba(255, 255, 255, 0.02)',
+                                        userSelect: 'none',
+                                        zIndex: 1
+                                    }}>
+                                        {idx + 1}
                                     </div>
-                                    <div className="vertical-card-top" style={{ padding: '0.5rem', marginBottom: '0.5rem' }}>
-                                        <span className="vertical-number">01</span>
-                                        <div className="vertical-icon">
-                                            <Workflow size={28} />
-                                        </div>
-                                    </div>
-                                    <div className="flow-comparison">
-                                        <div className="flow-side">
-                                            <span className="flow-label">ANTES</span>
-                                            <svg viewBox="0 0 160 100" className="flow-diagram">
-                                                <line x1="20" y1="15" x2="80" y2="50" className="flow-line-messy" />
-                                                <line x1="80" y1="50" x2="140" y2="20" className="flow-line-messy" />
-                                                <line x1="30" y1="75" x2="80" y2="50" className="flow-line-messy" />
-                                                <line x1="80" y1="50" x2="130" y2="80" className="flow-line-messy" />
-                                                <line x1="20" y1="15" x2="60" y2="80" className="flow-line-messy" />
-                                                <line x1="140" y1="20" x2="100" y2="75" className="flow-line-messy" />
-                                                <circle cx="20" cy="15" r="6" className="flow-node-messy" />
-                                                <circle cx="80" cy="50" r="6" className="flow-node-messy" />
-                                                <circle cx="140" cy="20" r="6" className="flow-node-messy" />
-                                                <circle cx="30" cy="75" r="6" className="flow-node-messy" />
-                                                <circle cx="130" cy="80" r="6" className="flow-node-messy" />
-                                                <circle cx="60" cy="80" r="6" className="flow-node-messy" />
-                                                <circle cx="100" cy="75" r="6" className="flow-node-messy" />
-                                            </svg>
-                                            <span className="flow-stat">6 pasos, 8 cruces</span>
-                                        </div>
-                                        <div className="flow-arrow"><ArrowRight size={14} /></div>
-                                        <div className="flow-side">
-                                            <span className="flow-label flow-label-ok">DESPUÉS</span>
-                                            <svg viewBox="0 0 160 100" className="flow-diagram">
-                                                <line x1="80" y1="15" x2="80" y2="85" className="flow-line-clean" />
-                                                <rect x="62" y="8" width="36" height="16" rx="4" className="flow-node-clean" />
-                                                <text x="80" y="19" textAnchor="middle" fill="#27c93f" fontSize="9">✓</text>
-                                                <rect x="62" y="38" width="36" height="16" rx="4" className="flow-node-clean" />
-                                                <text x="80" y="49" textAnchor="middle" fill="#27c93f" fontSize="9">✓</text>
-                                                <rect x="62" y="68" width="36" height="16" rx="4" className="flow-node-clean" />
-                                                <text x="80" y="79" textAnchor="middle" fill="#27c93f" fontSize="9">✓</text>
-                                            </svg>
-                                            <span className="flow-stat flow-stat-ok">3 pasos de alto valor</span>
-                                        </div>
-                                    </div>
-                                    <ul className="vertical-items window-inner-list">
-                                        {verticals[0].items.map((item, j) => (
-                                            <li key={j} className="vertical-item">
-                                                <span className="vertical-item-icon">{item.icon}</span>
-                                                {item.label}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </motion.div>
-
-                            {/* PASO 02: Sistematizamos */}
-                            <motion.div className="method-column" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-                                <div className="method-stepper">
-                                    <div className="method-icon-badge illuminate-2">
-                                        <Code2 size={16} color="currentColor" />
-                                    </div>
-                                    <span className="method-number illuminate-2">02</span>
-                                </div>
-                                <h3 className="method-title">Sistematizamos</h3>
-                                <span className="vertical-tagline">Software que conecta su operación</span>
-                                <p className="method-desc">Desarrollamos herramientas a medida que centralizan la información y conectan áreas que antes operaban de forma aislada.</p>
-
-                                <div className="mac-window phase-window">
-                                    <div className="mac-header">
-                                        <div className="mac-title">process_engine.py</div>
-                                    </div>
-                                    <div className="vertical-card-top" style={{ padding: '0.5rem', marginBottom: '0.5rem' }}>
-                                        <span className="vertical-number">02</span>
-                                        <div className="vertical-icon">
-                                            <Code2 size={28} />
-                                        </div>
-                                    </div>
-                                    <div className="terminal-content" style={{ fontSize: '0.78rem', textAlign: 'center', padding: '0.8rem 1rem' }}>
-                                        <div className="terminal-line"><span style={{ color: '#c678dd' }}>import</span> pandas <span style={{ color: '#c678dd' }}>as</span> pd</div>
-                                        <div className="terminal-line"><span style={{ color: '#c678dd' }}>from</span> solid_engine <span style={{ color: '#c678dd' }}>import</span> Pipeline</div>
-                                        <div className="terminal-line">&nbsp;</div>
-                                        <div className="terminal-line"><span style={{ color: '#e06c75' }}>def</span> <span style={{ color: '#61afef' }}>liquidar_novedades</span>(df):</div>
-                                        <div className="terminal-line">&nbsp;&nbsp;df[<span style={{ color: '#98c379' }}>'recargos'</span>] = df.apply(calc)</div>
-                                        <div className="terminal-line">&nbsp;&nbsp;<span style={{ color: '#c678dd' }}>return</span> df.merge_to_erp()</div>
-                                    </div>
-                                    <ul className="vertical-items window-inner-list">
-                                        {verticals[1].items.map((item, j) => (
-                                            <li key={j} className="vertical-item">
-                                                <span className="vertical-item-icon">{item.icon}</span>
-                                                {item.label}
-                                            </li>
-                                        ))}
-                                    </ul>
                                 </div>
                             </motion.div>
-
-                            {/* PASO 03: Automatizamos */}
-                            <motion.div className="method-column" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-                                <div className="method-stepper">
-                                    <span className="method-number illuminate-3">03</span>
-                                    <div className="method-icon-badge illuminate-3">
-                                        <Bot size={16} color="currentColor" />
-                                    </div>
-                                </div>
-                                <h3 className="method-title">Automatizamos</h3>
-                                <span className="vertical-tagline">Procesos que se ejecutan solos</span>
-                                <p className="method-desc">Implementamos flujos de trabajo inteligentes que automatizan tareas clave, reducen el error humano y liberan tiempo operativo.</p>
-
-                                <div className="mac-window phase-window">
-                                    <div className="mac-header">
-                                        <div className="mac-title">workflow_engine.n8n</div>
-                                    </div>
-                                    <div className="vertical-card-top" style={{ padding: '0.5rem', marginBottom: '0.5rem' }}>
-                                        <span className="vertical-number">03</span>
-                                        <div className="vertical-icon">
-                                            <Bot size={28} />
-                                        </div>
-                                    </div>
-                                    <div className="workflow-canvas-labeled">
-                                        <div className="workflow-node-labeled">
-                                            <div className="workflow-node-icon"><Mail size={18} /></div>
-                                            <span className="workflow-node-label">TRIGGER</span>
-                                        </div>
-                                        <div className="workflow-connector">
-                                            <div className="particle" />
-                                        </div>
-                                        <div className="workflow-node-labeled">
-                                            <div className="workflow-node-icon"><Bot size={18} /></div>
-                                            <span className="workflow-node-label">AI PROCESS</span>
-                                        </div>
-                                        <div className="workflow-connector">
-                                            <div className="particle" />
-                                        </div>
-                                        <div className="workflow-node-labeled">
-                                            <div className="workflow-node-icon"><Database size={18} /></div>
-                                            <span className="workflow-node-label">ERP</span>
-                                        </div>
-                                    </div>
-                                    <ul className="vertical-items window-inner-list">
-                                        {verticals[2].items.map((item, j) => (
-                                            <li key={j} className="vertical-item">
-                                                <span className="vertical-item-icon">{item.icon}</span>
-                                                {item.label}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </motion.div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
