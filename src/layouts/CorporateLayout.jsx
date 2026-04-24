@@ -39,7 +39,7 @@ const CorporateLayout = () => {
         <div className="corporate-layout">
             <nav className="corporate-nav">
                 <Link to="/" className="logo-container" aria-label="SOLID SOLUTIONS - Inicio">
-                    <Logo variant="icon" />
+                    <Logo />
                 </Link>
 
                 {/* Desktop Links */}

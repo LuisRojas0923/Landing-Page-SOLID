@@ -16,7 +16,7 @@ const About = () => {
         },
         {
             title: "Nuestro ADN",
-            desc: "Practicamos una ingeniería agnóstica a la tecnología. Si el reto requiere Java Desktop, FastAPI o React, elegimos la mejor arquitectura para maximizar el retorno de inversión.",
+            desc: "No vendemos tecnologías; diseñamos soluciones. Analizamos cada necesidad del negocio y seleccionamos la arquitectura más adecuada para resolver cada reto con eficiencia, generar resultados concretos y maximizar el retorno de inversión.",
             icon: <Lightbulb size={32} />
         }
     ];
