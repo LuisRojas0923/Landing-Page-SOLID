@@ -366,10 +366,6 @@ const Home = () => {
                                             <span className="flow-stat flow-stat-ok">3 pasos de alto valor</span>
                                         </div>
                                     </div>
-
-                                    <button className="vertical-cta" onClick={() => navigate('/method')}>
-                                        Ver Detalles <ChevronRight size={16} />
-                                    </button>
                                 </div>
                             </motion.div>
 
@@ -404,10 +400,6 @@ const Home = () => {
                                         <div className="terminal-line">&nbsp;&nbsp;df[<span style={{ color: '#98c379' }}>'recargos'</span>] = df.apply(calc)</div>
                                         <div className="terminal-line">&nbsp;&nbsp;<span style={{ color: '#c678dd' }}>return</span> df.merge_to_erp()</div>
                                     </div>
-
-                                    <button className="vertical-cta" onClick={() => navigate('/method')}>
-                                        Ver Detalles <ChevronRight size={16} />
-                                    </button>
                                 </div>
                             </motion.div>
 
@@ -454,8 +446,9 @@ const Home = () => {
                                             <span className="workflow-node-label">ERP</span>
                                         </div>
                                     </div>
-
-                                    <button className="vertical-cta" onClick={() => navigate('/method')}>
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}>
+                                    <button className="vertical-cta" onClick={() => navigate('/method')} style={{ marginTop: '1.5rem' }}>
                                         Ver Detalles <ChevronRight size={16} />
                                     </button>
                                 </div>

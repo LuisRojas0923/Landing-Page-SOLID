@@ -225,6 +225,77 @@ const Services = () => {
                     </div>
                 </section>
 
+                {/* NUESTRO MÉTODO SECTION (Added for deep linking) */}
+                <section id="method" style={{ padding: '8rem 2rem', background: 'rgba(0, 13, 39, 0.2)', borderRadius: '40px', marginBottom: '4rem' }}>
+                    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                        <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+                            <div style={{ 
+                                background: 'rgba(0, 20, 60, 0.4)',
+                                border: '1px solid rgba(96, 165, 250, 0.4)',
+                                padding: '0.5rem 1.8rem',
+                                borderRadius: '100px',
+                                fontSize: '0.8rem',
+                                fontWeight: 700,
+                                color: '#60a5fa',
+                                display: 'inline-block',
+                                marginBottom: '1.5rem'
+                            }}>Nuestro Método</div>
+                            <h2 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '1rem' }}>Así transformamos su operación</h2>
+                            <p style={{ color: 'var(--deep-navy-800)', fontSize: '1.5rem', fontWeight: '700' }}>Tres pasos que eliminan la fricción operativa</p>
+                        </div>
+
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                            {[
+                                { title: 'Organizamos', step: 'method-step-0', icon: <Workflow size={28} /> },
+                                { title: 'Sistematizamos', step: 'method-step-1', icon: <Code2 size={28} /> },
+                                { title: 'Automatizamos', step: 'method-step-2', icon: <Bot size={28} /> }
+                            ].map((item, i) => (
+                                <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                    <motion.div 
+                                        whileHover={{ y: -10 }}
+                                        style={{
+                                            background: 'rgba(0, 13, 39, 0.4)',
+                                            padding: '3rem',
+                                            borderRadius: '24px',
+                                            border: '1px solid var(--deep-navy-400)',
+                                            textAlign: 'center',
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            alignItems: 'center',
+                                            gap: '1.5rem',
+                                            width: '100%'
+                                        }}
+                                    >
+                                        <div style={{ color: 'var(--deep-navy-800)' }}>{item.icon}</div>
+                                        <h3 style={{ fontSize: '1.5rem', fontWeight: '700' }}>{item.title}</h3>
+                                    </motion.div>
+                                    {i === 2 && (
+                                        <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}>
+                                            <button 
+                                                onClick={() => navigate('/method')}
+                                                style={{
+                                                    background: 'none',
+                                                    border: 'none',
+                                                    color: 'var(--deep-navy-800)',
+                                                    fontWeight: '700',
+                                                    cursor: 'pointer',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    gap: '0.5rem',
+                                                    fontSize: '1rem',
+                                                    marginTop: '1.5rem'
+                                                }}
+                                            >
+                                                Ver Detalles <ChevronRight size={16} />
+                                            </button>
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 {/* Tech Bar */}
                 <section style={{
                     marginTop: '100px',

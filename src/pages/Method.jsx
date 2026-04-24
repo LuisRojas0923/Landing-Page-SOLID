@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
     Workflow,
@@ -163,6 +163,18 @@ const ProcessDiagram = ({ stepIdx }) => {
 
 const Method = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.state && location.state.scrollTo) {
+            const element = document.getElementById(location.state.scrollTo);
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+            }
+        }
+    }, [location]);
 
     const verticals = [
         {
@@ -246,7 +258,7 @@ const Method = () => {
     ];
 
     return (
-        <div className="method-page" style={{ color: 'var(--text-primary)', paddingTop: '8rem' }}>
+        <div className="method-page" style={{ color: 'var(--text-primary)', paddingTop: '4rem' }}>
             <Helmet>
                 <title>Nuestro Método - SOLID SOLUTIONS</title>
                 <meta name="description" content="Descubra cómo transformamos su operación en tres pasos: Organizamos, Sistematizamos y Automatizamos." />
@@ -255,9 +267,9 @@ const Method = () => {
 
 
             {/* Nueva sección de Metodología Detallada */}
-            <section style={{ padding: '4rem 2rem 8rem', background: 'transparent' }}>
+            <section style={{ padding: '2rem 2rem 8rem', background: 'transparent' }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-                    <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '40px' }}>
                         <h2 style={{ fontSize: '3.5rem', fontWeight: '800', marginBottom: '1rem', letterSpacing: '-0.02em' }}>
                             Nuestra <span style={{ color: 'var(--deep-navy-800)' }}>Metodología</span>
                         </h2>
@@ -270,6 +282,7 @@ const Method = () => {
                         {stepsDetailed.map((step, idx) => (
                             <motion.div
                                 key={idx}
+                                id={`method-step-${idx}`}
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 whileHover={{ y: -5 }}
@@ -280,7 +293,8 @@ const Method = () => {
                                     gap: '4rem',
                                     alignItems: 'center',
                                     flexDirection: idx % 2 === 0 ? 'row' : 'row-reverse',
-                                    textAlign: idx % 2 === 0 ? 'left' : 'right'
+                                    textAlign: idx % 2 === 0 ? 'left' : 'right',
+                                    scrollMarginTop: '100px'
                                 }}
                             >
                                 <div style={{ flex: 1 }}>
