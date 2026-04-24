@@ -61,7 +61,7 @@ const About = () => {
                                 {pillar.icon}
                             </div>
                             <h3 style={{ fontSize: '1.5rem', fontWeight: '800', marginBottom: '1rem' }}>{pillar.title}</h3>
-                            <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>{pillar.desc}</p>
+                            <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic', textAlign: 'left' }}>{pillar.desc}</p>
                         </motion.div>
                     ))}
                 </div>

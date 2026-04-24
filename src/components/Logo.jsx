@@ -6,6 +6,7 @@ const Logo = ({ size = 'normal', color = 'white', variant = 'full' }) => {
     const isLarge = size === 'large';
     const isShort = variant === 'short';
     const isERP = variant === 'erp';
+    const isPortal = variant === 'portal';
     const isIconOnly = variant === 'icon';
     
     const fontSize = isLarge ? '2.2rem' : (isSmall ? '1.1rem' : '1.4rem');
@@ -38,7 +39,7 @@ const Logo = ({ size = 'normal', color = 'white', variant = 'full' }) => {
                     {!isShort && (
                         <>
                             <span style={{ color: color, margin: '0 0.1em' }}>-</span>
-                            <span>{isERP ? 'ERP' : 'Solutions'}</span>
+                            <span>{isERP ? 'ERP' : (isPortal ? 'Portal de Servicios' : 'Solutions')}</span>
                         </>
                     )}
                 </div>
