@@ -166,7 +166,7 @@ const Services = () => {
                 </motion.div>
 
                 {/* FEATURED PRODUCT - Solid ERP (Moved from Home) */}
-                <section style={{ padding: '4rem 0' }}>
+                <section style={{ padding: '12rem 0 4rem 0' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                         <div style={{
                             background: 'rgba(0, 20, 60, 0.4)',
@@ -194,7 +194,7 @@ const Services = () => {
                     }}>
                         <div style={{ flex: '1.2', minWidth: '300px' }}>
                             <div style={{ marginBottom: '1.5rem' }}>
-                                <Logo variant="erp" size="normal" />
+                                <Logo variant="erp" size="normal" animated={true} />
                             </div>
                             <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
                                 Nuestra plataforma de gestión empresarial diseñada para la alta complejidad. Construido sobre un <strong>Núcleo Unificado de Alto Rendimiento (Java Enterprise)</strong>, Solid ERP garantiza una estabilidad absoluta y una escalabilidad vertical masiva, centralizando finanzas, inventarios y nómina en un ecosistema robusto y seguro.
@@ -208,17 +208,34 @@ const Services = () => {
                             </ul>
                         </div>
                         <div style={{ flex: '1', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                            {/* ERP Software Preview Card */}
-                            <div style={{ 
-                                width: '100%', 
-                                background: '#1e1e1e', 
-                                borderRadius: '20px', 
-                                border: '1px solid #333', 
-                                boxShadow: '0 30px 60px rgba(0,0,0,0.4)', 
-                                overflow: 'hidden',
-                                marginBottom: '2.5rem',
-                                position: 'relative'
-                            }}>
+                            {/* ERP Software Preview Card with Animations */}
+                            <motion.div 
+                                initial={{ y: 20, opacity: 0 }}
+                                whileInView={{ y: 0, opacity: 1 }}
+                                viewport={{ once: true }}
+                                animate={{ 
+                                    y: [0, -10, 0],
+                                }}
+                                transition={{ 
+                                    y: {
+                                        duration: 4,
+                                        repeat: Infinity,
+                                        ease: "easeInOut"
+                                    },
+                                    duration: 0.8
+                                }}
+                                style={{ 
+                                    width: '100%', 
+                                    background: '#1e1e1e', 
+                                    borderRadius: '20px', 
+                                    border: '1px solid #333', 
+                                    boxShadow: '0 30px 60px rgba(0,0,0,0.4)', 
+                                    overflow: 'hidden',
+                                    marginBottom: '2.5rem',
+                                    position: 'relative',
+                                    perspective: '1000px'
+                                }}
+                            >
                                 <div style={{ background: '#2d2d2d', padding: '0.6rem 1.2rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                                     <div style={{ display: 'flex', gap: '6px' }}>
                                         <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#ff5f56' }}></span>
@@ -227,10 +244,20 @@ const Services = () => {
                                     </div>
                                     <div style={{ fontSize: '0.6rem', color: '#888', fontWeight: '600', letterSpacing: '0.05em' }}>SOLID ERP - CONTROL PANEL</div>
                                 </div>
-                                <div style={{ position: 'relative', paddingTop: '60%', background: '#f0f0f0' }}>
-                                    <img 
+                                <div style={{ position: 'relative', paddingTop: '60%', background: '#f0f0f0', overflow: 'hidden' }}>
+                                    <motion.img 
                                         src="/images/erp-screenshot.png" 
                                         alt="Solid ERP Interface" 
+                                        animate={{ 
+                                            scale: [1, 1.1, 1],
+                                            x: [0, -10, 0],
+                                            y: [0, -5, 0]
+                                        }}
+                                        transition={{ 
+                                            duration: 10, 
+                                            repeat: Infinity, 
+                                            ease: "linear" 
+                                        }}
                                         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} 
                                     />
                                     {/* Logo Overlay to replace original header */}
@@ -247,10 +274,33 @@ const Services = () => {
                                         borderBottom: '1px solid rgba(255,255,255,0.1)',
                                         zIndex: 2
                                     }}>
-                                        <Logo variant="erp" size="small" />
+                                        <Logo variant="erp" size="small" animated={true} />
                                     </div>
+                                    {/* Scanning Light Effect - Enhanced */}
+                                    <motion.div
+                                        animate={{ 
+                                            left: ['-100%', '200%'],
+                                            opacity: [0.3, 0.6, 0.3]
+                                        }}
+                                        transition={{ 
+                                            duration: 4, 
+                                            repeat: Infinity, 
+                                            repeatDelay: 1,
+                                            ease: "easeInOut"
+                                        }}
+                                        style={{
+                                            position: 'absolute',
+                                            top: 0,
+                                            width: '60%',
+                                            height: '100%',
+                                            background: 'linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.15), transparent)',
+                                            zIndex: 1,
+                                            filter: 'blur(20px)',
+                                            transform: 'skewX(-25deg)'
+                                        }}
+                                    />
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </section>
@@ -267,7 +317,7 @@ const Services = () => {
                     }}>
                         <div style={{ flex: '1.2', minWidth: '300px' }}>
                             <div style={{ marginBottom: '1.5rem' }}>
-                                <Logo variant="portal" size="normal" />
+                                <Logo variant="portal" size="normal" animated={true} />
                             </div>
                             <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem', textAlign: 'left', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
                                 Visualice la simplicidad operativa. Centralice solicitudes, tickets y procesos internos en una interfaz diseñada para la velocidad.
@@ -279,9 +329,6 @@ const Services = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => navigate('/contact')} style={{ backgroundColor: 'var(--deep-navy-800)', color: 'white', padding: '1rem 2rem', borderRadius: '12px', fontWeight: '700', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                Solicitar Demo <ExternalLink size={18} />
-                            </motion.button>
                         </div>
 
                         <div style={{ flex: '1', minWidth: '300px', position: 'relative', background: '#1e1e1e', borderRadius: '24px', border: '1px solid #333', boxShadow: '0 40px 80px rgba(0,0,0,0.5)', overflow: 'hidden' }}>
@@ -298,8 +345,49 @@ const Services = () => {
 
                             <div style={{ position: 'relative', paddingTop: '56.25%', background: '#000' }}>
                                 <video src="/videos/portal-demo.mp4" autoPlay loop muted playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+                                {/* Logo Overlay for Portal */}
+                                <div style={{ 
+                                    position: 'absolute', 
+                                    top: 0, 
+                                    left: 0, 
+                                    width: '100%', 
+                                    height: '14%', 
+                                    background: 'rgba(0, 26, 61, 0.9)', 
+                                    display: 'flex', 
+                                    alignItems: 'center', 
+                                    padding: '0 1.5rem',
+                                    borderBottom: '1px solid rgba(255,255,255,0.1)',
+                                    zIndex: 2
+                                }}>
+                                    <Logo variant="portal" size="small" animated={true} />
+                                </div>
                             </div>
                         </div>
+                    </div>
+
+                    {/* Centered Demo Button below columns */}
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10rem', width: '100%' }}>
+                        <motion.button 
+                            whileHover={{ scale: 1.05 }} 
+                            whileTap={{ scale: 0.95 }} 
+                            onClick={() => navigate('/contact')} 
+                            style={{ 
+                                backgroundColor: 'var(--deep-navy-800)', 
+                                color: 'white', 
+                                padding: '1.2rem 3rem', 
+                                borderRadius: '14px', 
+                                fontSize: '1.1rem',
+                                fontWeight: '700', 
+                                border: 'none', 
+                                cursor: 'pointer', 
+                                display: 'flex', 
+                                alignItems: 'center', 
+                                gap: '0.8rem',
+                                boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3)'
+                            }}
+                        >
+                            Solicitar Demo <ExternalLink size={20} />
+                        </motion.button>
                     </div>
                 </section>
 

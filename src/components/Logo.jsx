@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Logo = ({ size = 'normal', color = 'white', variant = 'full' }) => {
+const Logo = ({ size = 'normal', color = 'white', variant = 'full', animated = false }) => {
     const isSmall = size === 'small';
     const isLarge = size === 'large';
     const isShort = variant === 'short';
@@ -61,8 +61,16 @@ const Logo = ({ size = 'normal', color = 'white', variant = 'full' }) => {
                     <motion.div
                         key={i}
                         initial={{ height: 0 }}
-                        animate={{ height: `${bar.h * 100}%` }}
-                        transition={{ 
+                        animate={animated ? { 
+                            height: [`${bar.h * 50}%`, `${bar.h * 100}%`, `${bar.h * 50}%`]
+                        } : {
+                            height: `${bar.h * 100}%`
+                        }}
+                        transition={animated ? { 
+                            duration: 1.5 + i * 0.2, 
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                        } : {
                             duration: 0.8, 
                             delay: i * 0.15,
                             type: 'spring',
