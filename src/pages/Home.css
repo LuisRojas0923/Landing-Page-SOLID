@@ -979,6 +979,11 @@ ul.window-inner-list {
     }
 }
 
+/* Ajuste global para navegación por anclas */
+section[id] {
+    scroll-margin-top: 120px;
+}
+
 /* Pipeline responsive */
 @media (max-width: 900px) {
     .pipeline-track {

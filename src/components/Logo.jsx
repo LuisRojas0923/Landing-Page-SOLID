@@ -5,6 +5,8 @@ const Logo = ({ size = 'normal', color = 'white', variant = 'full' }) => {
     const isSmall = size === 'small';
     const isLarge = size === 'large';
     const isShort = variant === 'short';
+    const isERP = variant === 'erp';
+    const isIconOnly = variant === 'icon';
     
     const fontSize = isLarge ? '2.2rem' : (isSmall ? '1.1rem' : '1.4rem');
     const barWidth = isLarge ? 8 : (isSmall ? 4 : 5);
@@ -15,32 +17,34 @@ const Logo = ({ size = 'normal', color = 'white', variant = 'full' }) => {
         <div style={{ 
             display: 'flex', 
             alignItems: 'center', 
-            gap: containerGap,
+            gap: isIconOnly ? '0' : containerGap,
             cursor: 'pointer',
             userSelect: 'none'
         }}>
-            {/* Texto: Solid / Solid-Solutions */}
-            <div style={{ 
-                color: color,
-                fontSize: fontSize,
-                fontWeight: '800',
-                fontStyle: 'italic',
-                fontFamily: "'Inter', sans-serif",
-                letterSpacing: '-0.01em',
-                display: 'flex',
-                alignItems: 'center',
-                lineHeight: 1
-            }}>
-                <span>Solid</span>
-                {!isShort && (
-                    <>
-                        <span style={{ color: color, margin: '0 0.1em' }}>-</span>
-                        <span>Solutions</span>
-                    </>
-                )}
-            </div>
+            {/* Texto: Solid / Solid-Solutions / Solid-ERP (Oculto si es icon) */}
+            {!isIconOnly && (
+                <div style={{ 
+                    color: color,
+                    fontSize: fontSize,
+                    fontWeight: '800',
+                    fontStyle: 'italic',
+                    fontFamily: "'Inter', sans-serif",
+                    letterSpacing: '-0.01em',
+                    display: 'flex',
+                    alignItems: 'center',
+                    lineHeight: 1
+                }}>
+                    <span>Solid</span>
+                    {!isShort && (
+                        <>
+                            <span style={{ color: color, margin: '0 0.1em' }}>-</span>
+                            <span>{isERP ? 'ERP' : 'Solutions'}</span>
+                        </>
+                    )}
+                </div>
+            )}
 
-            {/* Gráfico de Barras (A la derecha) */}
+            {/* Gráfico de Barras */}
             <div style={{ 
                 display: 'flex', 
                 alignItems: 'flex-end', 

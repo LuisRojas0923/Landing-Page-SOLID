@@ -17,6 +17,7 @@ import {
     ExternalLink
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import Logo from '../components/Logo';
 
 
 const Services = () => {
@@ -188,7 +189,12 @@ const Services = () => {
                             </motion.button>
                         </div>
                         <div style={{ flex: '1', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'rgba(255,255,255,0.03)', padding: '3rem', borderRadius: '32px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                            <motion.img src="/projects/logotipo.png" alt="Solid ERP Logo" style={{ width: '100%', maxWidth: '350px', filter: 'drop-shadow(0 0 20px rgba(0, 32, 96, 0.2))' }} whileHover={{ scale: 1.1, rotate: -2 }} />
+                            <motion.div 
+                                style={{ width: '100%', display: 'flex', justifyContent: 'center' }}
+                                whileHover={{ scale: 1.05 }}
+                            >
+                                <Logo variant="erp" size="large" />
+                            </motion.div>
                         </div>
                     </div>
                 </section>
@@ -222,11 +228,12 @@ const Services = () => {
                 {/* Tech Bar */}
                 <section style={{
                     marginTop: '100px',
-                    padding: '2.5rem 1rem',
-                    background: 'rgba(0, 13, 39, 0.4)'
+                    padding: '8rem 1rem',
+                    background: 'rgba(0, 13, 39, 0.4)',
+                    minHeight: '100vh'
                 }}>
                     <div style={{ maxWidth: '1100px', margin: '0 auto', width: '100%' }}>
-                        <div className="impact-badge-container" style={{ textAlign: 'center', marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+                        <div className="impact-badge-container" style={{ textAlign: 'center', marginBottom: '8rem', display: 'flex', justifyContent: 'center' }}>
                             <span className="impact-badge" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', padding: '0.6rem 2.5rem', margin: '0 auto', width: 'fit-content' }}>
                                 <Zap size={18} /> Stack Tecnológico de Élite
                             </span>
@@ -254,11 +261,11 @@ const Services = () => {
                                 <motion.div
                                     key={i}
                                     whileHover={{ scale: 1.1, y: -4 }}
-                                    style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', width: '70px' }}
+                                    style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', width: '100px' }}
                                 >
                                     <div style={{
-                                        width: '40px',
-                                        height: '40px',
+                                        width: '60px',
+                                        height: '60px',
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center'
@@ -270,11 +277,11 @@ const Services = () => {
                                         />
                                     </div>
                                     <span style={{
-                                        fontSize: '0.6rem',
+                                        fontSize: '0.75rem',
                                         fontWeight: '800',
                                         color: 'var(--text-secondary)',
                                         textTransform: 'uppercase',
-                                        letterSpacing: '0.05em',
+                                        letterSpacing: '0.08em',
                                         textAlign: 'center',
                                         display: 'block',
                                         width: '100%'

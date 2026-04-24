@@ -161,7 +161,7 @@ const Home = () => {
 
             {/* RESULTS SECTION - Versión Premium exacta a la imagen */}
             <section id="impact" style={{ 
-                padding: '4rem 2rem', 
+                padding: '8rem 2rem', 
                 background: 'var(--deep-navy-200)',
                 minHeight: '100vh',
                 display: 'flex',
@@ -272,7 +272,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section id="method" style={{ padding: '8rem 2rem', background: 'rgba(0, 13, 39, 0.4)' }}>
+            <section id="method" style={{ padding: '8rem 2rem', background: 'rgba(0, 13, 39, 0.4)', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
                         <div className="luxe-badge" style={{ marginBottom: '1.5rem' }}>Nuestro Método</div>
@@ -473,15 +473,15 @@ const Home = () => {
 
             {/* TECH STACK BAR */}
             <section id="tech-stack" style={{ 
-                padding: '4rem 1rem', 
+                padding: '8rem 1rem', 
                 background: 'rgba(0, 13, 39, 0.4)', 
                 minHeight: '100vh',
                 display: 'flex', 
                 alignItems: 'center', 
-                justifyContent: 'center' 
+                justifyContent: 'center'
             }}>
                 <div style={{ maxWidth: '1100px', margin: '0 auto', width: '100%' }}>
-                    <div className="impact-badge-container" style={{ textAlign: 'center', marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+                    <div className="impact-badge-container" style={{ textAlign: 'center', marginBottom: '8rem', display: 'flex', justifyContent: 'center' }}>
                         <span className="impact-badge" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', padding: '0.6rem 2.5rem', margin: '0 auto', width: 'fit-content' }}>
                             <Zap size={18} /> Stack Tecnológico de Alto Nivel
                         </span>
@@ -505,10 +505,10 @@ const Home = () => {
                             { name: 'Power Query', icon: 'https://img.icons8.com/color/96/microsoft-excel-2019--v1.png', color: '217346' },
                             { name: 'n8n', icon: 'https://cdn.simpleicons.org/n8n/FF6D5A', color: 'FF6D5A' }
                         ].map((tech, i) => (
-                            <motion.div key={i} whileHover={{ scale: 1.1, y: -4 }} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', width: '70px' }}>
+                            <motion.div key={i} whileHover={{ scale: 1.1, y: -4 }} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', width: '100px' }}>
                                 <div style={{
-                                    width: '40px',
-                                    height: '40px',
+                                    width: '60px',
+                                    height: '60px',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
@@ -517,11 +517,11 @@ const Home = () => {
                                     <img src={tech.icon} alt={tech.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                                 </div>
                                 <span style={{
-                                    fontSize: '0.6rem',
+                                    fontSize: '0.75rem',
                                     fontWeight: '800',
                                     color: 'var(--text-secondary)',
                                     textTransform: 'uppercase',
-                                    letterSpacing: '0.05em',
+                                    letterSpacing: '0.08em',
                                     textAlign: 'center',
                                     display: 'block',
                                     width: '100%'
@@ -534,9 +534,9 @@ const Home = () => {
 
             {/* FINAL CTA */}
             <section id="diagnostico" style={{ 
-                padding: '2rem', 
+                padding: '4rem 2rem', 
                 textAlign: 'center',
-                minHeight: '75vh',
+                minHeight: '70vh',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
@@ -594,7 +594,7 @@ const Home = () => {
                             </button>
                         </motion.div>
                     </div>
-                    <div style={{ marginTop: 'clamp(2rem, 4vw, 3rem)' }}>
+                    <div style={{ marginTop: '1.5rem' }}>
                         <a href="https://wa.me/573172652487" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', textDecoration: 'none' }}>
                             <MessageSquare size={18} /> <span>O hable con un experto vía WhatsApp</span>
                         </a>

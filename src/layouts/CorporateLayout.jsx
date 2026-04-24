@@ -1,17 +1,45 @@
 import React, { useState } from 'react';
-import { Outlet, Link, NavLink, useLocation } from 'react-router-dom';
+import { Outlet, Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import './CorporateLayout.css';
 import { Menu, X } from 'lucide-react';
 import Logo from '../components/Logo';
 
 const CorporateLayout = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const scrollToSection = (sectionId) => {
+        setIsMenuOpen(false);
+        
+        const performScroll = (id) => {
+            if (id === 'diagnostico') {
+                // Forzamos el scroll al final absoluto para asegurar Diagnóstico + Footer
+                window.scrollTo({
+                    top: document.documentElement.scrollHeight,
+                    behavior: 'smooth'
+                });
+            } else {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        };
+
+        if (location.pathname !== '/') {
+            navigate('/');
+            setTimeout(() => performScroll(sectionId), 300);
+        } else {
+            performScroll(sectionId);
+        }
+    };
 
     return (
         <div className="corporate-layout">
             <nav className="corporate-nav">
                 <Link to="/" className="logo-container" aria-label="SOLID SOLUTIONS - Inicio">
-                    <Logo variant="short" />
+                    <Logo variant="icon" />
                 </Link>
 
                 {/* Desktop Links */}
@@ -19,11 +47,11 @@ const CorporateLayout = () => {
                     <div className="nav-item-has-dropdown">
                         <NavLink to="/" end className={({ isActive }) => isActive ? 'nav-active' : ''}>Inicio</NavLink>
                         <div className="nav-dropdown">
-                            <a href="/#home" onClick={() => setIsMenuOpen(false)}>Arquitectura de Datos e Ingeniería de Software</a>
-                            <a href="/#impact" onClick={() => setIsMenuOpen(false)}>Impacto Medible</a>
-                            <a href="/#method" onClick={() => setIsMenuOpen(false)}>Nuestro Método</a>
-                            <a href="/#tech-stack" onClick={() => setIsMenuOpen(false)}>Stack Tecnológico de Alto Nivel</a>
-                            <a href="/#diagnostico" onClick={() => setIsMenuOpen(false)}>Diagnóstico</a>
+                            <button onClick={() => scrollToSection('home')} className="dropdown-link">Arquitectura de Datos e Ingeniería de Software</button>
+                            <button onClick={() => scrollToSection('impact')} className="dropdown-link">Impacto Medible</button>
+                            <button onClick={() => scrollToSection('method')} className="dropdown-link">Nuestro Método</button>
+                            <button onClick={() => scrollToSection('tech-stack')} className="dropdown-link">Stack Tecnológico de Alto Nivel</button>
+                            <button onClick={() => scrollToSection('diagnostico')} className="dropdown-link">Diagnóstico</button>
                         </div>
                     </div>
                     <NavLink to="/about" className={({ isActive }) => isActive ? 'nav-active' : ''}>Quienes Somos</NavLink>
@@ -47,8 +75,9 @@ const CorporateLayout = () => {
                 {/* Mobile Menu Overlay */}
                 <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
                     <NavLink to="/" end className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Inicio</NavLink>
+                    <button onClick={() => scrollToSection('impact')} className="mobile-link">Impacto Medible</button>
+                    <button onClick={() => scrollToSection('method')} className="mobile-link">Nuestro Método</button>
                     <NavLink to="/about" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Quienes Somos</NavLink>
-                    <NavLink to="/method" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Nuestro Método</NavLink>
                     <NavLink to="/solutions" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Soluciones</NavLink>
                     <NavLink to="/brochure" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Brochure</NavLink>
                     <NavLink to="/contact" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Contacto</NavLink>
