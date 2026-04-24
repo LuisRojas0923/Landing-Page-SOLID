@@ -49,7 +49,7 @@ const Home = () => {
             number: '02',
             title: 'Sistematizamos',
             tagline: 'Software que conecta su operación',
-            desc: 'Construimos herramientas a medida que centralizan su información and conectan áreas que antes trabajaban aisladas.',
+            desc: 'Construimos herramientas a medida que centralizan su información y conectan áreas que antes trabajaban aisladas.',
             items: [
                 { icon: <Database size={16} />, label: 'Ingeniería de datos & BI' },
                 { icon: <Code2 size={16} />, label: 'Software a medida (Java, Python, React)' },

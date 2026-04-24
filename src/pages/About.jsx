@@ -6,17 +6,17 @@ const About = () => {
     const pillars = [
         {
             title: "Misión",
-            desc: "Democratizar la ingeniería de alto nivel para empresas que buscan escala, eliminando la fricción técnica mediante automatización y software de precisión.",
+            desc: "Democratizar la ingeniería de alto nivel para empresas que buscan escalar, reduciendo la fricción operativa mediante automatización y software de precisión.",
             icon: <Rocket size={32} />
         },
         {
             title: "Visión",
-            desc: "Ser el referente regional en arquitectura de datos y software a medida, transformando la complejidad operativa en activos estratégicos.",
+            desc: "Ser el referente regional en arquitectura de datos y desarrollo de software a medida, convirtiendo la complejidad operativa en valor estratégico.",
             icon: <Target size={32} />
         },
         {
             title: "Nuestro ADN",
-            desc: "Ingeniería agnóstica a la tecnología: si el problema requiere Java Desktop, FastAPI o React, nos adaptamos para entregar el máximo ROI.",
+            desc: "Practicamos una ingeniería agnóstica a la tecnología. Si el reto requiere Java Desktop, FastAPI o React, elegimos la mejor arquitectura para maximizar el retorno de inversión.",
             icon: <Lightbulb size={32} />
         }
     ];
@@ -33,10 +33,10 @@ const About = () => {
                     style={{ textAlign: 'center', marginBottom: '100px' }}
                 >
                     <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: '800', marginBottom: '1.5rem' }}>
-                        Quienes <span style={{ color: 'var(--deep-navy-800)' }}>Somos</span>
+                        Quiénes <span style={{ color: 'var(--deep-navy-800)' }}>Somos</span>
                     </h1>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
-                        Más que una agencia de desarrollo, somos su brazo de ingeniería. Nos especializamos en resolver lo que otros consideran "imposible" mediante software robusto y automatización inteligente.
+                        Más que una agencia de desarrollo, somos un aliado de ingeniería. Diseñamos soluciones de software y automatización inteligente para resolver retos complejos con solidez, precisión y enfoque en resultados.
                     </p>
                 </motion.div>
 
