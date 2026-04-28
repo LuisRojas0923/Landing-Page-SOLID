@@ -56,7 +56,13 @@ const CorporateLayout = () => {
                     </div>
                     <NavLink to="/about" className={({ isActive }) => isActive ? 'nav-active' : ''}>Quiénes Somos</NavLink>
                     <NavLink to="/method" className={({ isActive }) => isActive ? 'nav-active' : ''}>Nuestro Método</NavLink>
-                    <NavLink to="/solutions" className={({ isActive }) => isActive ? 'nav-active' : ''}>Soluciones</NavLink>
+                    <div className="nav-item-has-dropdown">
+                        <NavLink to="/solutions" className={({ isActive }) => isActive || location.pathname === '/pymes' ? 'nav-active' : ''}>Soluciones</NavLink>
+                        <div className="nav-dropdown">
+                            <Link to="/solutions" className="dropdown-link">Corporativo</Link>
+                            <Link to="/pymes" className="dropdown-link">PYMES</Link>
+                        </div>
+                    </div>
                     <NavLink to="/brochure" className={({ isActive }) => isActive ? 'nav-active nav-brochure' : 'nav-brochure'}>Brochure</NavLink>
                     <NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-active' : ''}>Contacto</NavLink>
                     <Link to="/contact" className="btn-consultancy">
@@ -78,7 +84,11 @@ const CorporateLayout = () => {
                     <button onClick={() => scrollToSection('impact')} className="mobile-link">Impacto Medible</button>
                     <button onClick={() => scrollToSection('method')} className="mobile-link">Nuestro Método</button>
                     <NavLink to="/about" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Quiénes Somos</NavLink>
-                    <NavLink to="/solutions" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Soluciones</NavLink>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', margin: '1rem 0' }}>
+                        <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: '700' }}>Soluciones</span>
+                        <NavLink to="/solutions" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Corporativo</NavLink>
+                        <NavLink to="/pymes" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>PYMES</NavLink>
+                    </div>
                     <NavLink to="/brochure" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Brochure</NavLink>
                     <NavLink to="/contact" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Contacto</NavLink>
                     <Link to="/contact" className="btn-consultancy" onClick={() => setIsMenuOpen(false)}>

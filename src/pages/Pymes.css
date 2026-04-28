@@ -1,0 +1,178 @@
+/* PYMES Page - Light & Friendly Theme */
+.pymes-page {
+    background-color: #ffffff;
+    color: #1e293b; /* Slate 800 */
+    min-height: 100vh;
+    padding-top: 100px;
+    font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+.pymes-hero {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.pymes-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.pymes-hero h1 span {
+    color: #2563eb;
+}
+
+.pymes-hero p {
+    font-size: 1.15rem;
+    color: #475569;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+}
+
+.pymes-cta {
+    background: #2563eb;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 99px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+}
+
+.pymes-cta:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+}
+
+.pymes-section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pymes-section-alt {
+    background-color: #f8fafc;
+    border-top: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.pymes-section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 3rem;
+}
+
+.pymes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.pymes-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.pymes-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #bfdbfe;
+}
+
+.pymes-card-icon {
+    width: 48px;
+    height: 48px;
+    background: #eff6ff;
+    color: #2563eb;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.pymes-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.pymes-card p {
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* Pain points comparison */
+.pymes-vs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.vs-col {
+    padding: 2rem;
+}
+
+.vs-bad {
+    background: #fff1f2;
+}
+
+.vs-bad h3 {
+    color: #e11d48;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.vs-good {
+    background: #ecfdf5;
+}
+
+.vs-good h3 {
+    color: #059669;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.vs-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    color: #334155;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .pymes-vs-grid {
+        grid-template-columns: 1fr;
+    }
+}
