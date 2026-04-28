@@ -265,7 +265,6 @@ footer {
     background-color: var(--deep-navy-100);
     padding: 4rem 4rem;
     border-top: 1px solid var(--deep-navy-400);
-    margin-top: 3rem;
 }
 
 @media (max-width: 768px) {

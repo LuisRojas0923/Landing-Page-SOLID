@@ -104,7 +104,8 @@ const CorporateLayout = () => {
             <footer style={{ 
                 padding: '2.5rem 1rem 1.5rem', 
                 background: 'rgba(0, 3, 10, 0.95)', 
-                borderTop: '1px solid rgba(0, 122, 255, 0.2)'
+                borderTop: '1px solid rgba(0, 122, 255, 0.2)',
+                marginTop: 0
             }}>
                 <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '2rem' }}>
                     <div style={{ flex: '1', minWidth: '300px' }}>
