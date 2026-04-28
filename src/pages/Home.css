@@ -1515,3 +1515,59 @@ section[id] {
         display: none;
     }
 }
+
+/* PREMIUM CTA BUTTONS */
+.btn-premium-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 3rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: #5a91ff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-premium-primary:hover {
+    background: #4a84f5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(90, 145, 255, 0.4);
+}
+
+.btn-premium-ghost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 3rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.btn-premium-ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-premium-primary .btn-icon,
+.btn-premium-ghost .btn-icon {
+    transition: transform 0.3s ease;
+}
+
+.btn-premium-primary:hover .btn-icon,
+.btn-premium-ghost:hover .btn-icon {
+    transform: translateX(4px);
+}

@@ -544,7 +544,7 @@ const Home = () => {
                         ¿Listo para escalar su <span style={{ color: 'var(--deep-navy-800)' }}>infraestructura?</span>
                     </h2>
                     <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1rem, 2.5vw, 1.2rem)', marginBottom: 'clamp(2rem, 5vw, 4rem)', lineHeight: '1.6' }}>
-                        Agende una consultoría técnica gratuita y descubra el potencial de automatización de su negocio.
+                        Agende una consultoría técnica y descubra todo el potencial de automatización de su negocio.
                     </p>
                     <div style={{
                         display: 'flex',
@@ -555,41 +555,33 @@ const Home = () => {
                         marginTop: '2rem'
                     }}>
                         <motion.div
-                            className="mac-window cta-window"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            whileHover={{ y: -8 }}
-                            transition={{ duration: 1.0, ease: [0.175, 0.885, 0.32, 1.275] }}
+                            whileHover={{ y: -5 }}
+                            transition={{ duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}
                             onClick={() => navigate('/contact')}
                         >
-                            <button
-                                className="vertical-cta"
-                                style={{ paddingLeft: '0.5rem', fontSize: '1.25rem' }}
-                            >
-                                Agenda tu Diagnóstico <ChevronRight size={20} />
+                            <button className="btn-premium-primary">
+                                Agenda tu Diagnóstico <ChevronRight className="btn-icon" size={20} />
                             </button>
                         </motion.div>
                         <motion.div
-                            className="mac-window cta-window cta-window-alt"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            whileHover={{ y: -8 }}
-                            transition={{ duration: 1.0, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.1 }}
+                            whileHover={{ y: -5 }}
+                            transition={{ duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.1 }}
                             onClick={() => navigate('/solutions')}
                         >
-                            <button
-                                className="vertical-cta"
-                                style={{ paddingLeft: '0.5rem', fontSize: '1.25rem', color: '#fff' }}
-                            >
-                                Explorar Soluciones <ChevronRight size={20} />
+                            <button className="btn-premium-ghost">
+                                Explorar Soluciones <ChevronRight className="btn-icon" size={20} />
                             </button>
                         </motion.div>
                     </div>
                     <div style={{ marginTop: '1.5rem' }}>
                         <a href="https://wa.me/573172652487" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', textDecoration: 'none' }}>
-                            <MessageSquare size={18} /> <span>O hable con un experto vía WhatsApp</span>
+                            <MessageSquare size={18} /> <span>O hable con un experto vía <span style={{ color: '#25D366', fontWeight: '600' }}>WhatsApp</span></span>
                         </a>
                     </div>
                 </div>

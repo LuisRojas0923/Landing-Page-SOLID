@@ -171,14 +171,26 @@
 }
 
 .btn-consultancy {
-    background: linear-gradient(135deg, var(--deep-navy-500) 0%, var(--deep-navy-600) 100%);
+    background: #5a91ff;
     color: white !important;
     padding: 0.75rem 1.75rem;
-    border-radius: 8px;
-    font-weight: 600 !important;
-    box-shadow: 0 4px 15px rgba(0, 32, 96, 0.4);
+    border-radius: 12px;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 15px rgba(90, 145, 255, 0.2);
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    border: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-consultancy:hover {
+    background: #4a84f5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(90, 145, 255, 0.4);
 }
 
 /* Links */

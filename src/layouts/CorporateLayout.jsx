@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Outlet, Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import './CorporateLayout.css';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronRight } from 'lucide-react';
 import Logo from '../components/Logo';
 
 const CorporateLayout = () => {
@@ -60,7 +60,7 @@ const CorporateLayout = () => {
                     <NavLink to="/brochure" className={({ isActive }) => isActive ? 'nav-active nav-brochure' : 'nav-brochure'}>Brochure</NavLink>
                     <NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-active' : ''}>Contacto</NavLink>
                     <Link to="/contact" className="btn-consultancy">
-                        Agenda tu Diagnóstico
+                        Agenda tu Diagnóstico <ChevronRight className="btn-icon" size={18} />
                     </Link>
                 </div>
 
@@ -82,7 +82,7 @@ const CorporateLayout = () => {
                     <NavLink to="/brochure" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Brochure</NavLink>
                     <NavLink to="/contact" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Contacto</NavLink>
                     <Link to="/contact" className="btn-consultancy" onClick={() => setIsMenuOpen(false)}>
-                        Agenda tu Diagnóstico
+                        Agenda tu Diagnóstico <ChevronRight className="btn-icon" size={18} />
                     </Link>
                 </div>
             </nav>
