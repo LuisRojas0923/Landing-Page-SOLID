@@ -59,8 +59,8 @@ const CorporateLayout = () => {
                     <div className="nav-item-has-dropdown">
                         <NavLink to="/solutions" className={({ isActive }) => isActive || location.pathname === '/pymes' ? 'nav-active' : ''}>Soluciones</NavLink>
                         <div className="nav-dropdown">
-                            <Link to="/solutions" className="dropdown-link">Corporativo</Link>
-                            <Link to="/pymes" className="dropdown-link">PYMES</Link>
+                            <Link to="/solutions" className="dropdown-link" onClick={() => window.scrollTo(0, 0)}>Corporativo</Link>
+                            <Link to="/pymes" className="dropdown-link" onClick={() => window.scrollTo(0, 0)}>PYMES</Link>
                         </div>
                     </div>
                     <NavLink to="/brochure" className={({ isActive }) => isActive ? 'nav-active nav-brochure' : 'nav-brochure'}>Brochure</NavLink>
@@ -86,8 +86,8 @@ const CorporateLayout = () => {
                     <NavLink to="/about" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Quiénes Somos</NavLink>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', margin: '1rem 0' }}>
                         <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: '700' }}>Soluciones</span>
-                        <NavLink to="/solutions" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Corporativo</NavLink>
-                        <NavLink to="/pymes" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>PYMES</NavLink>
+                        <NavLink to="/solutions" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => { setIsMenuOpen(false); window.scrollTo(0, 0); }}>Corporativo</NavLink>
+                        <NavLink to="/pymes" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => { setIsMenuOpen(false); window.scrollTo(0, 0); }}>PYMES</NavLink>
                     </div>
                     <NavLink to="/brochure" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Brochure</NavLink>
                     <NavLink to="/contact" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Contacto</NavLink>
