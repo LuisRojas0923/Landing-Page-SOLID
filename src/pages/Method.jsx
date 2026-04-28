@@ -181,7 +181,7 @@ const Method = () => {
             icon: <Workflow size={28} />,
             number: '01',
             title: 'Organizamos',
-            tagline: 'Orden antes de tecnología',
+            tagline: 'Primero el orden, luego la tecnología',
             desc: 'Mapeamos sus procesos, eliminamos lo que no agrega valor y diseñamos flujos claros y replicables.',
             items: [
                 { icon: <Search size={16} />, label: 'Auditoría de procesos' },
@@ -205,7 +205,7 @@ const Method = () => {
             icon: <Bot size={28} />,
             number: '03',
             title: 'Automatizamos',
-            tagline: 'Procesos que se ejecutan solos',
+            tagline: 'Procesos altamente automatizados',
             desc: 'Implementamos flujos de trabajo digitales que ejecutan tareas repetitivas sin intervención humana, con cero errores, 24/7.',
             items: [
                 { icon: <Bot size={16} />, label: 'RPA y workflows (n8n / Python)' }, // Fixed icon reference
@@ -218,8 +218,8 @@ const Method = () => {
     const stepsDetailed = [
         {
             title: "Organizamos",
-            tagline: "Orden antes de tecnología",
-            desc: "Ordenamos su operación, eliminamos reprocesos y definimos flujos eficientes y replicables",
+            tagline: "Primero el orden, luego la tecnología",
+            desc: "Ordenamos la operación, eliminamos reprocesos y definimos flujos claros, eficientes y replicables.",
             icon: <Search size={32} />,
             items: [
                 { icon: <Search size={16} />, label: 'Auditoría de procesos' },
@@ -240,8 +240,8 @@ const Method = () => {
         },
         {
             title: "Automatizamos",
-            tagline: "Procesos que se ejecutan solos",
-            desc: "Implementamos flujos de trabajo inteligentes que automatizan tareas clave, reducen el error humano y liberan tiempo operativo.",
+            tagline: "Procesos altamente automatizados",
+            desc: "Implementamos flujos de trabajo inteligentes que automatizan tareas clave, reducen el error humano y liberan capacidad operativa.",
             icon: <Bot size={32} />,
             items: [
                 { icon: <Bot size={16} />, label: 'RPA y workflows (n8n / Python)' },
@@ -252,8 +252,13 @@ const Method = () => {
         {
             title: "Optimización Continua",
             tagline: "Evolución basada en datos",
-            desc: "Escalamos la solución basándonos en datos reales y feedback de la operación.",
-            icon: <TrendingUp size={32} />
+            desc: "Medimos el desempeño de la solución, identificamos oportunidades de mejora y escalamos con base en datos reales y retroalimentación operativa.",
+            icon: <TrendingUp size={32} />,
+            items: [
+                { icon: <BarChart3 size={16} />, label: 'Métricas de desempeño' },
+                { icon: <TrendingUp size={16} />, label: 'Mejora continua' },
+                { icon: <Rocket size={16} />, label: 'Escalabilidad e iteración' }
+            ]
         }
     ];
 
@@ -274,7 +279,7 @@ const Method = () => {
                             Nuestra <span style={{ color: 'var(--deep-navy-800)' }}>Metodología</span>
                         </h2>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
-                            Transformamos el caos operativo en flujos eficientes, sistemas escalables y procesos que se ejecutan solos.
+                            Transformamos el caos operativo en flujos eficientes, sistemas escalables y procesos automatizados que generan control, velocidad y trazabilidad.
                         </p>
                     </div>
 
