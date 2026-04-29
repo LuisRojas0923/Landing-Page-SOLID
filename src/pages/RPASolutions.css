@@ -1,6 +1,6 @@
 .rpa-solutions-page {
-    background: #020617;
-    color: white;
+    background: var(--bg-main);
+    color: var(--text-primary);
     min-height: 100vh;
     padding: 120px 20px 80px;
     position: relative;
@@ -38,8 +38,8 @@
 
 .showcase-visual {
     flex: 1.5;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(59, 130, 246, 0.1);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 40px;
     height: 450px;
     position: relative;
@@ -70,7 +70,7 @@
 
 .rpa-description {
     font-size: 1.2rem;
-    color: #94a3b8;
+    color: var(--text-muted);
     line-height: 1.8;
     margin-bottom: 2rem;
 }
@@ -87,7 +87,7 @@
 .connector {
     flex: 1;
     height: 2px;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--border-color);
     position: relative;
     display: none;
     /* Hide old straight connector */
@@ -119,8 +119,8 @@
 .source-box {
     width: 100px;
     height: 100px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -128,7 +128,7 @@
     justify-content: center;
     gap: 10px;
     font-size: 0.8rem;
-    color: #94a3b8;
+    color: var(--text-muted);
     font-weight: 600;
 }
 
@@ -183,12 +183,12 @@
 .result-box.erp-nucleus {
     width: 160px;
     height: 160px;
-    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.2), #020617);
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.2), var(--bg-main));
 }
 
 .result-box.dashboard {
     border-color: #60a5fa;
-    background: #0f172a;
+    background: var(--bg-card);
 }
 
 @media (max-width: 900px) {

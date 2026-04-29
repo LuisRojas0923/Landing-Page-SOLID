@@ -1,17 +1,18 @@
 /* Mac-style Window Container */
 .mac-window {
-    background: var(--deep-navy-100);
-    border: 1px solid var(--deep-navy-400);
-    border-radius: 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--card-radius);
     padding: 1.5rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--card-shadow);
     position: relative;
     overflow: hidden;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .mac-window:hover {
-    border-color: var(--deep-navy-800);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .mac-header {
@@ -52,7 +53,7 @@
 
 /* Terminal Window Content (Column 2) */
 .terminal-content {
-    background: rgba(0, 6, 19, 0.6);
+    background: var(--terminal-bg);
     border-radius: 8px;
     border: 1px solid var(--deep-navy-400);
     padding: 1rem;
@@ -91,7 +92,7 @@
 /* Workflow Visualization */
 .workflow-canvas {
     height: 280px;
-    background: rgba(0, 13, 39, 0.5);
+    background: var(--bg-card-alt);
     border-radius: 12px;
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -142,16 +143,14 @@
 
 .luxe-badge,
 .impact-badge {
-    background: rgba(0, 20, 60, 0.4);
-    border: 1px solid rgba(96, 165, 250, 0.4);
+    background: var(--badge-bg);
+    border: 1px solid var(--badge-text);
     padding: 0.5rem 1.8rem;
     border-radius: 100px;
     font-size: 0.8rem;
     font-weight: 700;
-    color: #60a5fa;
+    color: var(--badge-text);
     letter-spacing: 0.05em;
-    text-shadow: 0 0 8px rgba(96, 165, 250, 0.4);
-    box-shadow: 0 0 12px rgba(96, 165, 250, 0.1);
     display: inline-block;
 }
 
@@ -184,7 +183,7 @@
 
 .pipeline-line {
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--deep-navy-400), var(--deep-navy-400), transparent);
+    background: var(--pipeline-track-bg);
     position: relative;
 }
 
@@ -193,9 +192,9 @@
     top: -4px;
     width: 8px;
     height: 8px;
-    background: #fff;
+    background: var(--accent);
     border-radius: 50%;
-    box-shadow: 0 0 15px #fff, 0 0 30px var(--deep-navy-800);
+    box-shadow: 0 0 15px var(--accent);
     z-index: 2;
 }
 
@@ -210,18 +209,17 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
     text-align: left;
     transition: all 0.3s ease;
 }
 
 .stat-card-premium:hover {
-    background: rgba(255, 255, 255, 0.04);
-    border-color: var(--deep-navy-400);
     transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .stat-icon-wrapper {
@@ -231,25 +229,25 @@
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--icon-bg);
 }
 
 .stat-icon-wrapper.red {
-    color: #ff5f56;
-    border: 1px solid rgba(255, 95, 86, 0.2);
-    box-shadow: 0 0 15px rgba(255, 95, 86, 0.1);
+    color: var(--icon-red);
+    background: var(--icon-red-bg);
+    border: 1px solid rgba(244, 63, 94, 0.1);
 }
 
 .stat-icon-wrapper.amber {
-    color: #ffbd2e;
-    border: 1px solid rgba(255, 189, 46, 0.2);
-    box-shadow: 0 0 15px rgba(255, 189, 46, 0.1);
+    color: var(--icon-amber);
+    background: var(--icon-amber-bg);
+    border: 1px solid rgba(245, 158, 11, 0.1);
 }
 
 .stat-icon-wrapper.green {
-    color: #27c93f;
-    border: 1px solid rgba(39, 201, 63, 0.2);
-    box-shadow: 0 0 15px rgba(39, 201, 63, 0.1);
+    color: var(--icon-green);
+    background: var(--icon-green-bg);
+    border: 1px solid rgba(16, 185, 129, 0.1);
 }
 
 .stat-content {
@@ -260,7 +258,7 @@
 .stat-value-luxe {
     font-size: 2.2rem;
     font-weight: 800;
-    color: #fff;
+    color: var(--text-primary);
     line-height: 1;
 }
 
@@ -281,10 +279,11 @@
 }
 
 .value-card {
-    background: linear-gradient(135deg, rgba(0, 32, 96, 0.1) 0%, rgba(0, 13, 39, 0.4) 100%);
-    border: 1px solid var(--deep-navy-400);
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
     padding: 3rem;
-    border-radius: 24px;
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
     height: 100%;
 }
 
@@ -307,19 +306,19 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1px;
-    background: var(--deep-navy-400);
-    border: 1px solid var(--deep-navy-400);
-    border-radius: 20px;
+    background: var(--table-border);
+    border: 1px solid var(--table-border);
+    border-radius: var(--card-radius);
     overflow: hidden;
 }
 
 .problem-cell {
-    background: var(--deep-navy-200);
+    background: var(--table-cell-bg);
     padding: 2rem;
 }
 
 .problem-header {
-    background: var(--deep-navy-300);
+    background: var(--table-header-bg);
     padding: 1.5rem 2rem;
     font-weight: 800;
     text-transform: uppercase;
@@ -397,7 +396,7 @@
 .method-pipeline-track {
     width: 80%;
     height: 2px;
-    background: linear-gradient(90deg, transparent 0%, rgba(90, 145, 255, 0.4) 15%, rgba(90, 145, 255, 0.4) 85%, transparent 100%);
+    background: var(--pipeline-track-bg);
     position: absolute;
     top: 34px;
     left: 10%;
@@ -457,7 +456,7 @@
 .method-number {
     font-size: 1.8rem;
     font-weight: 900;
-    color: rgba(90, 145, 255, 0.15);
+    color: var(--step-number-text);
     line-height: 1;
     font-family: 'Inter', sans-serif;
     height: 30px;
@@ -468,7 +467,7 @@
 .method-icon-badge {
     width: 30px;
     height: 30px;
-    background: rgba(0, 10, 30, 0.85);
+    background: var(--bg-card-alt);
     border: 1px solid rgba(90, 145, 255, 0.3);
     border-radius: 8px;
     display: flex;
@@ -520,7 +519,7 @@
     8%,
     10% {
         color: rgba(130, 195, 255, 0.9);
-        text-shadow: 0 0 20px rgba(77, 163, 255, 0.7);
+        text-shadow: var(--glow-shadow);
     }
 
     18%,
@@ -564,7 +563,7 @@
     49%,
     51% {
         color: rgba(130, 195, 255, 0.9);
-        text-shadow: 0 0 20px rgba(77, 163, 255, 0.7);
+        text-shadow: var(--glow-shadow);
     }
 
     60%,
@@ -610,7 +609,7 @@
     91%,
     93% {
         color: rgba(130, 195, 255, 0.9);
-        text-shadow: 0 0 20px rgba(77, 163, 255, 0.7);
+        text-shadow: var(--glow-shadow);
     }
 
     100% {
@@ -669,7 +668,7 @@
     font-size: 1.8rem;
     font-weight: 900;
     margin-bottom: 0.5rem;
-    color: #fff;
+    color: var(--text-primary);
     margin-top: 0.5rem; /* Minimal margin */
 }
 
@@ -719,10 +718,10 @@
 .phase-window {
     width: 100%;
     padding: 1rem;
-    border-radius: 12px;
-    background: linear-gradient(160deg, var(--deep-navy-100), rgba(0, 13, 39, 0.6));
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: var(--card-radius);
+    background: var(--window-bg);
+    border: 1px solid var(--window-border);
+    box-shadow: var(--card-shadow);
     overflow: hidden;
     height: 100%; /* the column stretches, and this ensures it stretches to match */
     min-height: 220px;
@@ -815,7 +814,7 @@ ul.window-inner-list {
     gap: 0.5rem;
     padding: 0.75rem;
     height: 155px; /* Ensures identical shared size */
-    background: rgba(0, 6, 19, 0.6);
+    background: var(--terminal-bg);
     border-radius: 8px;
     border: 1px solid var(--deep-navy-400);
 }
@@ -914,7 +913,7 @@ ul.window-inner-list {
     gap: 0.5rem;
     padding: 1rem 0;
     height: 155px; /* Ensures identical shared size */
-    background: rgba(0, 6, 19, 0.6);
+    background: var(--terminal-bg);
     border-radius: 8px;
     border: 1px solid var(--deep-navy-400);
 }
@@ -1031,7 +1030,7 @@ section[id] {
 }
 
 .vertical-card {
-    background: linear-gradient(160deg, var(--deep-navy-100), rgba(0, 13, 39, 0.6));
+    background: var(--card-bg);
     border: 1px solid var(--deep-navy-400);
     border-radius: 24px;
     padding: 2.5rem 2rem;
@@ -1282,7 +1281,7 @@ section[id] {
     max-width: 340px;
     padding: 1rem 1.25rem;
     border-radius: 16px;
-    background: linear-gradient(160deg, var(--deep-navy-100), rgba(0, 13, 39, 0.6));
+    background: var(--card-bg);
     border: 1px solid rgba(90, 145, 255, 0.15);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
     position: relative;
@@ -1403,10 +1402,10 @@ section[id] {
 }
 
 .glass-capsule {
-    background: rgba(0, 13, 39, 0.6);
+    background: var(--glass-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(90, 145, 255, 0.2);
+    border: 1px solid var(--glass-border);
     padding: 0.6rem 0.8rem;
     min-width: 160px;
     display: flex;
@@ -1419,18 +1418,16 @@ section[id] {
 }
 
 .glass-capsule.active {
-    background: rgba(90, 145, 255, 0.15);
-    border-color: rgba(90, 200, 255, 0.7);
-    box-shadow: 
-        0 0 20px rgba(77, 163, 255, 0.3),
-        inset 0 0 10px rgba(77, 163, 255, 0.1);
+    background: var(--capsule-active-bg);
+    border-color: var(--capsule-active-border);
+    box-shadow: var(--capsule-active-glow);
     transform: scale(1.04);
 }
 
 .pill-item-label {
     font-size: 0.85rem;
     font-weight: 800;
-    color: rgba(180, 210, 240, 0.6);
+    color: var(--pill-label);
     letter-spacing: 0.15em;
     transition: all 1.2s cubic-bezier(0.33, 1, 0.68, 1);
 }
@@ -1448,8 +1445,8 @@ section[id] {
 }
 
 .stat-card-premium {
-    background: linear-gradient(160deg, var(--deep-navy-100), rgba(0, 13, 39, 0.6));
-    border: 1px solid rgba(90, 145, 255, 0.15);
+    background: var(--window-bg);
+    border: 1px solid var(--window-border);
     border-radius: 20px;
     padding: 2.5rem;
     display: flex;
@@ -1458,7 +1455,7 @@ section[id] {
     position: relative;
     overflow: hidden;
     transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
 }
 
 .stat-card-premium::before {
@@ -1473,15 +1470,17 @@ section[id] {
     transition: opacity 0.3s ease;
 }
 
-.stat-card-premium:hover {
+.stat-card-premium:hover,
+.stat-card-premium.highlighted {
     transform: translateY(-8px);
-    border-color: rgba(90, 145, 255, 0.3) !important;
+    border-color: var(--accent) !important;
     box-shadow: 0 30px 60px rgba(7, 90, 255, 0.12) !important;
-    background: linear-gradient(160deg, var(--deep-navy-100), rgba(0, 13, 39, 0.7)) !important;
+    background: var(--card-hover-bg) !important;
     cursor: pointer;
 }
 
-.stat-card-premium:hover::before {
+.stat-card-premium:hover::before,
+.stat-card-premium.highlighted::before {
     opacity: 0.6;
     background: linear-gradient(90deg, transparent, var(--deep-navy-600), transparent);
 }

@@ -27,15 +27,157 @@
     --dust-grey-100: #2a2a2a;
     --dust-grey-500: #d0d0d0;
 
-    /* Application Colors (Dark Theme) */
+    /* Application Colors (Dark Theme - Default) */
     --bg-main: var(--deep-navy-200);
+    --bg-alt: var(--deep-navy-300);
     --bg-card: var(--deep-navy-300);
+    --bg-card-alt: #0a1128;
+    --bg-card-header: #0d1b3e;
     --text-primary: #ffffff;
     --text-secondary: var(--powder-blue-500);
+    --text-muted: rgba(255, 255, 255, 0.5); /* Mejorado contraste de muted */
+    --border-color: var(--deep-navy-400);
+    --border-light: rgba(0, 122, 255, 0.2);
+    --border-card: rgba(255, 255, 255, 0.08);
+    
     --accent: var(--deep-navy-500);
     --accent-glow: var(--deep-navy-600);
+    
+    --nav-bg: rgba(0, 13, 39, 0.85);
+    --footer-bg: rgba(0, 3, 10, 0.95);
+    --dropdown-bg: rgba(0, 13, 39, 0.95);
+    --hover-bg: rgba(0, 122, 255, 0.1);
 
     --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+    
+    --home-hero-bg: radial-gradient(circle at 50% -20%, var(--accent-glow) 0%, transparent 60%), var(--bg-main);
+    --home-section-bg: var(--bg-main);
+    --bg-grid-pattern: linear-gradient(rgba(0, 32, 96, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 32, 96, 0.05) 1px, transparent 1px);
+
+    /* Fixed Dark UI (for Nav & Footer) */
+    --fixed-nav-bg: rgba(0, 13, 39, 0.9);
+    --fixed-footer-bg: #000613;
+    --fixed-text-primary: #ffffff;
+    --fixed-text-secondary: #b4c6e7;
+    --fixed-border: rgba(255, 255, 255, 0.1);
+    --fixed-bg-card: #00133a;
+
+    /* Semantic UI Components */
+    --badge-bg: rgba(0, 20, 60, 0.4);
+    --badge-text: #60a5fa;
+    --step-number-text: rgba(90, 145, 255, 0.15);
+    --pipeline-track-bg: linear-gradient(90deg, transparent 0%, rgba(90, 145, 255, 0.4) 15%, rgba(90, 145, 255, 0.4) 85%, transparent 100%);
+    --window-bg: linear-gradient(160deg, var(--deep-navy-100), rgba(0, 13, 39, 0.6));
+    --window-border: rgba(255, 255, 255, 0.1);
+    
+    --accent-text: var(--deep-navy-800);
+    --glow-shadow: 0 0 20px rgba(77, 163, 255, 0.7);
+    --card-bg: linear-gradient(135deg, rgba(0, 32, 96, 0.1) 0%, rgba(0, 13, 39, 0.4) 100%);
+    --card-border: var(--deep-navy-400);
+    --table-header-bg: var(--deep-navy-300);
+    --table-cell-bg: var(--deep-navy-200);
+    --table-border: var(--deep-navy-400);
+    --card-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    --card-radius: 24px;
+    --icon-bg: rgba(0, 0, 0, 0.3);
+    --icon-red: #ff5f56;
+    --icon-red-bg: rgba(255, 95, 86, 0.1);
+    --icon-amber: #ffbd2e;
+    --icon-amber-bg: rgba(255, 189, 46, 0.1);
+    --icon-green: #27c93f;
+    --icon-green-bg: rgba(39, 201, 63, 0.1);
+    --glass-bg: rgba(0, 13, 39, 0.6);
+    --glass-border: rgba(90, 145, 255, 0.2);
+    --pill-label: rgba(180, 210, 240, 0.6);
+    --capsule-active-bg: rgba(90, 145, 255, 0.15);
+    --capsule-active-border: rgba(90, 200, 255, 0.7);
+    --capsule-active-glow: 0 0 20px rgba(77, 163, 255, 0.3);
+
+    /* Animation & Terminal Backgrounds */
+    --card-hover-bg: linear-gradient(160deg, var(--deep-navy-100), rgba(0, 13, 39, 0.7));
+    --terminal-bg: rgba(0, 6, 19, 0.6);
+}
+
+/* Light Theme Variables */
+[data-theme="light"] {
+    --bg-main: #ffffff;
+    --bg-alt: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-card-alt: #f1f5f9;
+    --bg-card-header: #e2e8f0;
+    --text-primary: var(--deep-navy-500); /* Ajustado a Navy más perceptible */
+    --text-secondary: #334155; /* Oscurecido Slate 700 para más legibilidad */
+    --text-muted: #64748b; /* Oscurecido Slate 500 para contraste */
+    --border-color: #cbd5e1;
+    --border-light: #e2e8f0;
+    --border-card: #cbd5e1;
+    
+    --accent: #2563eb;
+    --accent-glow: rgba(37, 99, 235, 0.15);
+    
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --footer-bg: #f8fafc;
+    --dropdown-bg: #ffffff;
+    --hover-bg: rgba(37, 99, 235, 0.1);
+    
+    --home-hero-bg: #ffffff;
+    --home-section-bg: #ffffff;
+    --bg-grid-pattern: none;
+
+    /* Light UI Components */
+    --badge-bg: #f8fafc;
+    --badge-text: #1d4ed8;
+    --step-number-text: rgba(37, 99, 235, 0.08);
+    --pipeline-track-bg: linear-gradient(90deg, transparent 0%, rgba(37, 99, 235, 0.15) 15%, rgba(37, 99, 235, 0.15) 85%, transparent 100%);
+    --window-bg: #ffffff;
+    --window-border: #e2e8f0;
+    
+    --accent-text: var(--deep-navy-800); /* Mantener el azul original solicitado por el usuario */
+    --glow-shadow: none;
+    --card-bg: #ffffff;
+    --card-border: #e2e8f0;
+    --table-header-bg: #f1f5f9;
+    --table-cell-bg: #ffffff;
+    --table-border: #e2e8f0;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --card-radius: 24px;
+    --icon-bg: #eff6ff;
+    --icon-red: #f43f5e;
+    --icon-red-bg: #fff1f2;
+    --icon-amber: #f59e0b;
+    --icon-amber-bg: #fffbeb;
+    --icon-green: #10b981;
+    --icon-green-bg: #ecfdf5;
+    --glass-bg: #f8fafc;
+    --glass-border: #e2e8f0;
+    --pill-label: #64748b;
+    --capsule-active-bg: rgba(37, 99, 235, 0.1);
+    --capsule-active-border: rgba(37, 99, 235, 0.4);
+    --capsule-active-glow: none;
+
+    /* Animation & Terminal Backgrounds (Light Mode) */
+    --card-hover-bg: rgba(90, 145, 255, 0.05);
+    --terminal-bg: #f8fafc;
+}
+
+[data-theme="light"] {
+    /* Resets específicos para legibilidad en modo claro */
+    --glow-shadow: none;
+}
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] .accent-text-glow {
+    text-shadow: none !important;
+}
+
+[data-theme="light"] .mac-window,
+[data-theme="light"] .stat-card-premium,
+[data-theme="light"] .value-card,
+[data-theme="light"] .problem-cell,
+[data-theme="light"] .problem-header {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
 }
 
 * {
@@ -65,9 +207,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image:
-        linear-gradient(rgba(0, 32, 96, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 32, 96, 0.05) 1px, transparent 1px);
+    background-image: var(--bg-grid-pattern);
     background-size: 50px 50px;
     z-index: -1;
     pointer-events: none;
@@ -82,7 +222,7 @@ h1,
 h2,
 h3,
 h4 {
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -0.02em;
 }
 
@@ -112,14 +252,14 @@ li[style*="text-secondary"] {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--deep-navy-100);
+    background: var(--bg-alt);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--deep-navy-400);
+    background: var(--border-color);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--deep-navy-500);
+    background: var(--accent);
 }

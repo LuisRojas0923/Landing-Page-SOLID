@@ -86,7 +86,7 @@ const Home = () => {
                 padding: '2rem 2rem 8rem',
                 textAlign: 'center',
                 position: 'relative',
-                background: 'radial-gradient(circle at 50% -20%, var(--deep-navy-500) 0%, transparent 60%)',
+                background: 'var(--home-hero-bg)',
                 minHeight: '100vh',
                 display: 'flex',
                 alignItems: 'center',
@@ -129,12 +129,12 @@ const Home = () => {
                         letterSpacing: '-0.03em'
                     }}>
                         Potenciamos su empresa con <br />
-                        <span style={{ color: 'var(--deep-navy-800)', display: 'block', marginTop: '0.75rem' }}>soluciones autónomas</span>
+                        <span style={{ color: 'var(--accent-text)', display: 'block', marginTop: '0.75rem' }}>soluciones autónomas</span>
                     </h1>
 
                     <p className="hero-subtitle" style={{
                         fontSize: 'clamp(1.2rem, 3.5vw, 2rem)',
-                        color: 'white',
+                        color: 'var(--text-primary)',
                         fontWeight: '800',
                         maxWidth: '1000px',
                         margin: '0 auto 2.5rem',
@@ -152,7 +152,7 @@ const Home = () => {
                         fontStyle: 'italic',
                         fontFamily: "'Roboto', sans-serif"
                     }}>
-                        En <span className="method-title" style={{ fontSize: 'inherit', display: 'inline', margin: 0 }}>Solid</span> <span className="vertical-tagline" style={{ fontSize: 'inherit', display: 'inline', color: 'var(--deep-navy-800)', fontWeight: 800 }}>Solutions</span> estructuramos su operación, diseñamos la arquitectura que conecta sus datos y automatizamos sus tareas críticas, eliminando la fricción operativa y preparando su empresa para crecer con tecnología e inteligencia artificial.
+                        En <span className="method-title" style={{ fontSize: 'inherit', display: 'inline', margin: 0 }}>Solid</span> <span className="vertical-tagline" style={{ fontSize: 'inherit', display: 'inline', color: 'var(--accent-text)', fontWeight: 800 }}>Solutions</span> estructuramos su operación, diseñamos la arquitectura que conecta sus datos y automatizamos sus tareas críticas, eliminando la fricción operativa y preparando su empresa para crecer con tecnología e inteligencia artificial.
                     </p>
 
                     {/* Buttons removed from here and moved to Diagnóstico */}
@@ -160,9 +160,9 @@ const Home = () => {
             </section>
 
             {/* RESULTS SECTION - Versión Premium exacta a la imagen */}
-            <section id="impact" style={{ 
-                padding: '8rem 2rem', 
-                background: 'var(--deep-navy-200)',
+            <section id="impact" style={{
+                padding: '8rem 2rem',
+                background: 'var(--bg-main)',
                 minHeight: '100vh',
                 display: 'flex',
                 alignItems: 'center',
@@ -184,7 +184,7 @@ const Home = () => {
                     </h2>
 
                     <p style={{
-                        color: 'var(--deep-navy-800)',
+                        color: 'var(--accent-text)',
                         fontSize: '2rem',
                         fontWeight: '800',
                         letterSpacing: '-0.03em',
@@ -199,8 +199,7 @@ const Home = () => {
                         maxWidth: '1000px',
                         margin: '0 auto 4rem',
                         fontSize: '1.25rem',
-                        opacity: 0.9,
-                        color: 'rgba(180, 210, 240, 0.75)'
+                        color: 'var(--text-secondary)'
                     }}>
                         Optimizamos el rendimiento corporativo automatizando procesos repetitivos para minimizar el error humano, reducir costos operativos y aumentar la productividad, de modo que su talento se enfoque en iniciativas estratégicas de alto valor que impulsen la rentabilidad.
                     </p>
@@ -236,7 +235,7 @@ const Home = () => {
                         </div>
 
                         <div className="results-premium-grid">
-                            <motion.div className="stat-card-premium">
+                            <motion.div className={`stat-card-premium ${activeImpact === 'calidad' ? 'highlighted' : ''}`}>
                                 <div className="stat-icon-wrapper red"><ShieldCheck size={24} /></div>
                                 <div className="stat-content">
                                     <div className="stat-value-luxe" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -247,7 +246,7 @@ const Home = () => {
                                 </div>
                             </motion.div>
 
-                            <motion.div className="stat-card-premium">
+                            <motion.div className={`stat-card-premium ${activeImpact === 'eficiencia' ? 'highlighted' : ''}`}>
                                 <div className="stat-icon-wrapper amber"><Zap size={24} /></div>
                                 <div className="stat-content">
                                     <div className="stat-value-luxe" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -258,7 +257,7 @@ const Home = () => {
                                 </div>
                             </motion.div>
 
-                            <motion.div className="stat-card-premium">
+                            <motion.div className={`stat-card-premium ${activeImpact === 'crecimiento' ? 'highlighted' : ''}`}>
                                 <div className="stat-icon-wrapper green"><TrendingUp size={24} /></div>
                                 <div className="stat-content">
                                     <div className="stat-value-luxe" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
@@ -272,7 +271,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section id="method" style={{ padding: '8rem 2rem', background: 'rgba(0, 13, 39, 0.4)', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+            <section id="method" style={{ padding: '8rem 2rem', background: 'var(--home-section-bg)', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
                         <div className="luxe-badge" style={{ marginBottom: '1.5rem' }}>Nuestro Método</div>
@@ -289,7 +288,7 @@ const Home = () => {
                             Así transformamos su operación
                         </h2>
                         <p style={{
-                            color: 'var(--deep-navy-800)',
+                            color: 'var(--accent-text)',
                             maxWidth: 'none',
                             margin: '0 auto',
                             fontSize: '2rem',
@@ -465,12 +464,12 @@ const Home = () => {
 
 
             {/* TECH STACK BAR */}
-            <section id="tech-stack" style={{ 
-                padding: '8rem 1rem', 
-                background: 'rgba(0, 13, 39, 0.4)', 
+            <section id="tech-stack" style={{
+                padding: '8rem 1rem',
+                background: 'var(--home-section-bg)',
                 minHeight: '100vh',
-                display: 'flex', 
-                alignItems: 'center', 
+                display: 'flex',
+                alignItems: 'center',
                 justifyContent: 'center'
             }}>
                 <div style={{ maxWidth: '1100px', margin: '0 auto', width: '100%' }}>
@@ -526,8 +525,8 @@ const Home = () => {
             </section>
 
             {/* FINAL CTA */}
-            <section id="diagnostico" style={{ 
-                padding: '4rem 2rem', 
+            <section id="diagnostico" style={{
+                padding: '4rem 2rem',
                 textAlign: 'center',
                 minHeight: '70vh',
                 display: 'flex',
@@ -541,7 +540,7 @@ const Home = () => {
                         </span>
                     </div>
                     <h2 className="cta-title-nowrap" style={{ fontSize: 'clamp(1.8rem, 6vw, 3.5rem)', marginBottom: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: '800' }}>
-                        ¿Listo para escalar su <span style={{ color: 'var(--deep-navy-800)' }}>infraestructura?</span>
+                        ¿Listo para escalar su <span style={{ color: 'var(--accent-text)' }}>infraestructura?</span>
                     </h2>
                     <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(1rem, 2.5vw, 1.2rem)', marginBottom: 'clamp(2rem, 5vw, 4rem)', lineHeight: '1.6' }}>
                         Agende una consultoría técnica y descubra todo el potencial de automatización de su negocio.

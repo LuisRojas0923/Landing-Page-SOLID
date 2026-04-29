@@ -73,7 +73,7 @@ const RPASolutions = () => {
                 <h1 style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', fontWeight: '900', marginBottom: '1.5rem', lineHeight: '1.1' }}>
                     RPA: El Motor de <span className="highlight-italic">Precisión</span>
                 </h1>
-                <p style={{ fontSize: '1.25rem', color: '#94a3b8', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
+                <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
                     Visualice cómo transformamos el caos de procesos manuales en flujos de datos estructurados y estratégicos. Una herramienta diseñada para la consultoría de alto nivel.
                 </p>
             </motion.div>
@@ -201,7 +201,7 @@ const RPASolutions = () => {
                                 transition={{ duration: 2, repeat: Infinity }}
                             >
                                 <Database size={40} color="#3b82f6" />
-                                <span style={{ fontWeight: '900', color: 'white', marginTop: '10px' }}>SOLID ERP</span>
+                                <span style={{ fontWeight: '900', color: 'var(--text-primary)', marginTop: '10px' }}>SOLID ERP</span>
                             </motion.div>
                         </div>
                     </div>
@@ -214,8 +214,8 @@ const RPASolutions = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     style={{
-                        background: 'white',
-                        color: '#020617',
+                        background: 'var(--text-primary)',
+                        color: 'var(--bg-main)',
                         padding: '1.2rem 3rem',
                         borderRadius: '12px',
                         fontSize: '1.1rem',

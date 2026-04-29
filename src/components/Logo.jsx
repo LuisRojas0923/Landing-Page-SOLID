@@ -54,7 +54,7 @@ const Logo = ({ size = 'normal', color = 'white', variant = 'full', animated = f
                 paddingBottom: '2px'
             }}>
                 {[
-                    { h: 0.4, c: '#ffffff', glow: false },
+                    { h: 0.4, c: 'var(--text-primary)', glow: false },
                     { h: 0.7, c: 'var(--powder-blue-400)', glow: false },
                     { h: 1.0, c: 'var(--deep-navy-800)', glow: true }
                 ].map((bar, i) => (

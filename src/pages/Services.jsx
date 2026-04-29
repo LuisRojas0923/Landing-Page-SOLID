@@ -125,10 +125,10 @@ const Services = () => {
                             variants={itemVariants}
                             whileHover={{ y: -10 }}
                             style={{
-                                background: 'rgba(255, 255, 255, 0.02)',
+                                background: 'var(--bg-card)',
                                 padding: '2rem',
                                 borderRadius: '24px',
-                                border: '1px solid var(--deep-navy-400)',
+                                border: '1px solid var(--border-color)',
                                 position: 'relative',
                                 overflow: 'hidden',
                                 textAlign: 'left'
@@ -169,17 +169,17 @@ const Services = () => {
                 <section style={{ padding: '12rem 0 4rem 0' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                         <div style={{
-                            background: 'rgba(0, 20, 60, 0.4)',
-                            border: '1px solid rgba(96, 165, 250, 0.4)',
+                            background: 'var(--bg-card-alt)',
+                            border: '1px solid var(--border-light)',
                             padding: '0.5rem 1.8rem',
                             borderRadius: '100px',
                             fontSize: '0.8rem',
                             fontWeight: 700,
-                            color: '#60a5fa',
+                            color: 'var(--badge-text)',
                             display: 'inline-block',
                             marginBottom: '1.5rem',
                             letterSpacing: '0.05em',
-                            textShadow: '0 0 8px rgba(96, 165, 250, 0.4)',
+                            textShadow: 'var(--glow-shadow)',
                             boxShadow: '0 0 12px rgba(96, 165, 250, 0.1)'
                         }}>PRODUCTOS EN ACCIÓN</div>
                         <h2 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '1rem' }}>Ecosistema <span style={{ color: 'var(--deep-navy-800)' }}>Solid</span></h2>
@@ -209,14 +209,14 @@ const Services = () => {
                         </div>
                         <div style={{ flex: '1', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                             {/* ERP Software Preview Card with Animations */}
-                            <motion.div 
+                            <motion.div
                                 initial={{ y: 20, opacity: 0 }}
                                 whileInView={{ y: 0, opacity: 1 }}
                                 viewport={{ once: true }}
-                                animate={{ 
+                                animate={{
                                     y: [0, -10, 0],
                                 }}
-                                transition={{ 
+                                transition={{
                                     y: {
                                         duration: 4,
                                         repeat: Infinity,
@@ -224,19 +224,19 @@ const Services = () => {
                                     },
                                     duration: 0.8
                                 }}
-                                style={{ 
-                                    width: '100%', 
-                                    background: '#1e1e1e', 
-                                    borderRadius: '20px', 
-                                    border: '1px solid #333', 
-                                    boxShadow: '0 30px 60px rgba(0,0,0,0.4)', 
+                                style={{
+                                    width: '100%',
+                                    background: 'var(--bg-card)',
+                                    borderRadius: '20px',
+                                    border: '1px solid var(--border-color)',
+                                    boxShadow: '0 30px 60px rgba(0,0,0,0.4)',
                                     overflow: 'hidden',
                                     marginBottom: '2.5rem',
                                     position: 'relative',
                                     perspective: '1000px'
                                 }}
                             >
-                                <div style={{ background: '#2d2d2d', padding: '0.6rem 1.2rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                                <div style={{ background: 'var(--bg-card-header)', padding: '0.6rem 1.2rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                                     <div style={{ display: 'flex', gap: '6px' }}>
                                         <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#ff5f56' }}></span>
                                         <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#ffbd2e' }}></span>
@@ -244,47 +244,47 @@ const Services = () => {
                                     </div>
                                     <div style={{ fontSize: '0.6rem', color: '#888', fontWeight: '600', letterSpacing: '0.05em' }}>SOLID ERP - CONTROL PANEL</div>
                                 </div>
-                                <div style={{ position: 'relative', paddingTop: '60%', background: '#f0f0f0', overflow: 'hidden' }}>
-                                    <motion.img 
-                                        src="/images/erp-screenshot.png" 
-                                        alt="Solid ERP Interface" 
-                                        animate={{ 
+                                <div style={{ position: 'relative', paddingTop: '60%', background: 'var(--bg-alt)', overflow: 'hidden' }}>
+                                    <motion.img
+                                        src="/images/erp-screenshot.png"
+                                        alt="Solid ERP Interface"
+                                        animate={{
                                             scale: [1, 1.1, 1],
                                             x: [0, -10, 0],
                                             y: [0, -5, 0]
                                         }}
-                                        transition={{ 
-                                            duration: 10, 
-                                            repeat: Infinity, 
-                                            ease: "linear" 
+                                        transition={{
+                                            duration: 10,
+                                            repeat: Infinity,
+                                            ease: "linear"
                                         }}
-                                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} 
+                                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
                                     {/* Logo Overlay to replace original header */}
-                                    <div style={{ 
-                                        position: 'absolute', 
-                                        top: 0, 
-                                        left: 0, 
-                                        width: '100%', 
-                                        height: '14%', 
-                                        background: '#001a3d', 
-                                        display: 'flex', 
-                                        alignItems: 'center', 
+                                    <div style={{
+                                        position: 'absolute',
+                                        top: 0,
+                                        left: 0,
+                                        width: '100%',
+                                        height: '14%',
+                                        background: 'var(--bg-main)',
+                                        display: 'flex',
+                                        alignItems: 'center',
                                         padding: '0 1.5rem',
-                                        borderBottom: '1px solid rgba(255,255,255,0.1)',
+                                        borderBottom: '1px solid var(--border-card)',
                                         zIndex: 2
                                     }}>
                                         <Logo variant="erp" size="small" animated={true} />
                                     </div>
                                     {/* Scanning Light Effect - Enhanced */}
                                     <motion.div
-                                        animate={{ 
+                                        animate={{
                                             left: ['-100%', '200%'],
                                             opacity: [0.3, 0.6, 0.3]
                                         }}
-                                        transition={{ 
-                                            duration: 4, 
-                                            repeat: Infinity, 
+                                        transition={{
+                                            duration: 4,
+                                            repeat: Infinity,
                                             repeatDelay: 1,
                                             ease: "easeInOut"
                                         }}
@@ -331,14 +331,14 @@ const Services = () => {
                             </ul>
                         </div>
 
-                        <div style={{ flex: '1', minWidth: '300px', position: 'relative', background: '#1e1e1e', borderRadius: '24px', border: '1px solid #333', boxShadow: '0 40px 80px rgba(0,0,0,0.5)', overflow: 'hidden' }}>
-                            <div style={{ background: '#2d2d2d', padding: '0.75rem 1.5rem', display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+                        <div style={{ flex: '1', minWidth: '300px', position: 'relative', background: 'var(--bg-card)', borderRadius: '24px', border: '1px solid var(--border-color)', boxShadow: '0 40px 80px rgba(0,0,0,0.5)', overflow: 'hidden' }}>
+                            <div style={{ background: 'var(--bg-card-header)', padding: '0.75rem 1.5rem', display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
                                 <div style={{ display: 'flex', gap: '8px' }}>
                                     <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#ff5f56' }}></span>
                                     <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#ffbd2e' }}></span>
                                     <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#27c93f' }}></span>
                                 </div>
-                                <div style={{ background: '#1e1e1e', flex: 1, height: '24px', borderRadius: '6px', fontSize: '0.65rem', display: 'flex', alignItems: 'center', padding: '0 0.75rem', color: '#666' }}>
+                                <div style={{ background: 'var(--bg-card)', flex: 1, height: '24px', borderRadius: '6px', fontSize: '0.65rem', display: 'flex', alignItems: 'center', padding: '0 0.75rem', color: 'var(--text-secondary)' }}>
                                     solid_service_portal.solutions/dashboard
                                 </div>
                             </div>
@@ -346,17 +346,17 @@ const Services = () => {
                             <div style={{ position: 'relative', paddingTop: '56.25%', background: '#000' }}>
                                 <video src="/videos/portal-demo.mp4" autoPlay loop muted playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
                                 {/* Logo Overlay for Portal */}
-                                <div style={{ 
-                                    position: 'absolute', 
-                                    top: 0, 
-                                    left: 0, 
-                                    width: '100%', 
-                                    height: '14%', 
-                                    background: 'rgba(0, 26, 61, 0.9)', 
-                                    display: 'flex', 
-                                    alignItems: 'center', 
+                                <div style={{
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0,
+                                    width: '100%',
+                                    height: '14%',
+                                    background: 'var(--bg-main)',
+                                    display: 'flex',
+                                    alignItems: 'center',
                                     padding: '0 1.5rem',
-                                    borderBottom: '1px solid rgba(255,255,255,0.1)',
+                                    borderBottom: '1px solid var(--border-card)',
                                     zIndex: 2
                                 }}>
                                     <Logo variant="portal" size="small" animated={true} />
@@ -367,21 +367,21 @@ const Services = () => {
 
                     {/* Centered Demo Button below columns */}
                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10rem', width: '100%' }}>
-                        <motion.button 
-                            whileHover={{ scale: 1.05 }} 
-                            whileTap={{ scale: 0.95 }} 
-                            onClick={() => navigate('/contact')} 
-                            style={{ 
-                                backgroundColor: 'var(--deep-navy-800)', 
-                                color: 'white', 
-                                padding: '1.2rem 3rem', 
-                                borderRadius: '14px', 
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            onClick={() => navigate('/contact')}
+                            style={{
+                                backgroundColor: 'var(--accent)',
+                                color: '#ffffff',
+                                padding: '1.2rem 3rem',
+                                borderRadius: '14px',
                                 fontSize: '1.1rem',
-                                fontWeight: '700', 
-                                border: 'none', 
-                                cursor: 'pointer', 
-                                display: 'flex', 
-                                alignItems: 'center', 
+                                fontWeight: '700',
+                                border: 'none',
+                                cursor: 'pointer',
+                                display: 'flex',
+                                alignItems: 'center',
                                 gap: '0.8rem',
                                 boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3)'
                             }}
