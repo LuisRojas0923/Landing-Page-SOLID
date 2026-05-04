@@ -76,43 +76,43 @@ const Contact = () => {
  
                     {/* Contact Form Placeholder with Premium Style */}
                     <div style={{
-                        background: 'rgba(255, 255, 255, 0.02)',
+                        background: 'var(--bg-card)',
                         padding: '2rem',
                         borderRadius: '24px',
-                        border: '1px solid var(--deep-navy-800)',
-                        boxShadow: '0 20px 40px rgba(0,0,0,0.3)'
+                        border: '1px solid var(--card-border)',
+                        boxShadow: 'var(--card-shadow)'
                     }}>
                         <form style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
                                 <label style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>NOMBRE COMPLETO</label>
                                 <input type="text" style={{
-                                    background: 'rgba(0, 13, 39, 0.5)',
-                                    border: '1px solid var(--deep-navy-800)',
+                                    background: 'var(--bg-card-alt)',
+                                    border: '1px solid var(--card-border)',
                                     borderRadius: '10px',
                                     padding: '0.75rem',
-                                    color: 'white',
+                                    color: 'var(--text-primary)',
                                     outline: 'none'
                                 }} placeholder="John Doe" />
                             </div>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
                                 <label style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>EMAIL CORPORATIVO</label>
                                 <input type="email" style={{
-                                    background: 'rgba(0, 13, 39, 0.5)',
-                                    border: '1px solid var(--deep-navy-800)',
+                                    background: 'var(--bg-card-alt)',
+                                    border: '1px solid var(--card-border)',
                                     borderRadius: '10px',
                                     padding: '0.75rem',
-                                    color: 'white',
+                                    color: 'var(--text-primary)',
                                     outline: 'none'
                                 }} placeholder="john@empresa.com" />
                             </div>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
                                 <label style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>MENSAJE / REQUISITOS</label>
                                 <textarea rows="3" style={{
-                                    background: 'rgba(0, 13, 39, 0.5)',
-                                    border: '1px solid var(--deep-navy-800)',
+                                    background: 'var(--bg-card-alt)',
+                                    border: '1px solid var(--card-border)',
                                     borderRadius: '10px',
                                     padding: '0.75rem',
-                                    color: 'white',
+                                    color: 'var(--text-primary)',
                                     outline: 'none',
                                     resize: 'none'
                                 }} placeholder="¿Cómo podemos ayudarle?"></textarea>

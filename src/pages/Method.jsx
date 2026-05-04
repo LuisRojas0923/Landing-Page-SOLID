@@ -66,9 +66,9 @@ const ProcessDiagram = ({ stepIdx }) => {
             >
                 <div style={{
                     width: '74px', height: '74px', borderRadius: '20px',
-                    background: 'rgba(10, 20, 40, 0.6)', border: `1px solid ${current[0].color}44`,
+                    background: 'var(--bg-card-header)', border: `1px solid ${current[0].color}66`,
                     display: 'flex', alignItems: 'center', justifyContent: 'center', color: current[0].color,
-                    boxShadow: `0 0 15px ${current[0].color}11`
+                    boxShadow: `0 0 15px ${current[0].color}22`
                 }}>{current[0].icon}</div>
                 <span style={{
                     position: 'absolute', top: '85px', fontSize: '0.7rem', fontWeight: '800',
@@ -147,9 +147,9 @@ const ProcessDiagram = ({ stepIdx }) => {
             >
                 <div style={{
                     width: '74px', height: '74px', borderRadius: '20px',
-                    background: 'rgba(10, 20, 40, 0.6)', border: `1px solid ${current[2].color}44`,
+                    background: 'var(--bg-card-header)', border: `1px solid ${current[2].color}66`,
                     display: 'flex', alignItems: 'center', justifyContent: 'center', color: current[2].color,
-                    boxShadow: `0 0 15px ${current[2].color}11`
+                    boxShadow: `0 0 15px ${current[2].color}22`
                 }}>{current[2].icon}</div>
                 <span style={{
                     position: 'absolute', top: '85px', fontSize: '0.7rem', fontWeight: '800',
@@ -352,31 +352,17 @@ const Method = () => {
                                 <div style={{
                                     flex: 1,
                                     height: '350px',
-                                    background: 'rgba(0, 5, 15, 0.4)',
+                                    background: 'var(--glass-bg)',
                                     borderRadius: '32px',
-                                    border: '1px solid rgba(255, 255, 255, 0.05)',
+                                    border: '1px solid var(--workflow-border)',
                                     position: 'relative',
                                     overflow: 'hidden',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
-                                    boxShadow: 'inset 0 0 40px rgba(0,0,0,0.5)'
+                                    boxShadow: 'var(--card-shadow)'
                                 }}>
                                     <ProcessDiagram stepIdx={idx} />
-                                    {/* Fondo decorativo con número */}
-                                    <div style={{
-                                        position: 'absolute',
-                                        top: '50%',
-                                        left: '50%',
-                                        transform: 'translate(-50%, -50%)',
-                                        fontSize: '12rem',
-                                        fontWeight: '900',
-                                        color: 'rgba(255, 255, 255, 0.02)',
-                                        userSelect: 'none',
-                                        zIndex: 1
-                                    }}>
-                                        {idx + 1}
-                                    </div>
                                 </div>
                             </motion.div>
                         ))}

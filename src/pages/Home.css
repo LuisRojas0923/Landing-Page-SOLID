@@ -55,7 +55,7 @@
 .terminal-content {
     background: var(--terminal-bg);
     border-radius: 8px;
-    border: 1px solid var(--deep-navy-400);
+    border: 1px solid var(--terminal-border);
     padding: 1rem;
     text-align: left;
     height: 155px; /* Ensures identical shared size */
@@ -95,7 +95,7 @@
     background: var(--bg-card-alt);
     border-radius: 12px;
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--workflow-border);
     overflow: hidden;
 }
 
@@ -468,7 +468,7 @@
     width: 30px;
     height: 30px;
     background: var(--bg-card-alt);
-    border: 1px solid rgba(90, 145, 255, 0.3);
+    border: 1px solid var(--icon-badge-border);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -816,7 +816,7 @@ ul.window-inner-list {
     height: 155px; /* Ensures identical shared size */
     background: var(--terminal-bg);
     border-radius: 8px;
-    border: 1px solid var(--deep-navy-400);
+    border: 1px solid var(--terminal-border);
 }
 
 .flow-side {
@@ -915,7 +915,7 @@ ul.window-inner-list {
     height: 155px; /* Ensures identical shared size */
     background: var(--terminal-bg);
     border-radius: 8px;
-    border: 1px solid var(--deep-navy-400);
+    border: 1px solid var(--terminal-border);
 }
 
 .workflow-node-labeled {
@@ -929,7 +929,7 @@ ul.window-inner-list {
     width: 42px;
     height: 42px;
     background: rgba(0, 10, 30, 0.6);
-    border: 1px solid rgba(90, 145, 255, 0.3);
+    border: 1px solid var(--icon-badge-border);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -1031,7 +1031,7 @@ section[id] {
 
 .vertical-card {
     background: var(--card-bg);
-    border: 1px solid var(--deep-navy-400);
+    border: 1px solid var(--card-border);
     border-radius: 24px;
     padding: 2.5rem 2rem;
     text-align: left;
@@ -1087,7 +1087,7 @@ section[id] {
     justify-content: center;
     border-radius: 14px;
     background: rgba(0, 32, 96, 0.15);
-    border: 1px solid var(--deep-navy-400);
+    border: 1px solid var(--card-border);
     color: var(--deep-navy-800);
 }
 

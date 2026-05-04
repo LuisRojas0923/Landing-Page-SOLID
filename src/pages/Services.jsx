@@ -90,7 +90,7 @@ const Services = () => {
     };
 
     return (
-        <div style={{ backgroundColor: 'transparent', minHeight: '100vh', padding: '100px 20px 40px' }}>
+        <div style={{ backgroundColor: 'transparent', minHeight: '100vh', padding: '40px 20px 40px' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                 <motion.header
                     initial={{ opacity: 0, y: -20 }}

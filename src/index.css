@@ -44,6 +44,7 @@
     --accent: var(--deep-navy-500);
     --accent-glow: rgba(0, 60, 180, 0.25);
     --page-glow: radial-gradient(circle at 50% -20%, var(--accent-glow) 0%, transparent 70%);
+    --bg-main-layer: linear-gradient(var(--bg-main), var(--bg-main));
 
     --nav-bg: rgba(0, 13, 39, 0.85);
     --footer-bg: rgba(0, 3, 10, 0.95);
@@ -76,8 +77,9 @@
     --glow-shadow: 0 0 20px rgba(77, 163, 255, 0.7);
     --card-bg: linear-gradient(135deg, rgba(0, 32, 96, 0.1) 0%, rgba(0, 13, 39, 0.4) 100%);
     --card-border: var(--deep-navy-400);
-    --table-header-bg: var(--deep-navy-300);
-    --table-cell-bg: var(--deep-navy-200);
+    --terminal-border: var(--deep-navy-400);
+    --workflow-border: rgba(255, 255, 255, 0.05);
+    --icon-badge-border: rgba(90, 145, 255, 0.3);
     --table-border: var(--deep-navy-400);
     --card-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
     --card-radius: 24px;
@@ -127,7 +129,9 @@
 
     --home-hero-bg: #ffffff;
     --home-section-bg: #ffffff;
+    --page-glow: none;
     --bg-grid-pattern: none;
+    --bg-main-layer: linear-gradient(#ffffff, #ffffff);
 
     /* Light UI Components */
     --badge-bg: #f8fafc;
@@ -135,16 +139,17 @@
     --step-number-text: rgba(37, 99, 235, 0.08);
     --pipeline-track-bg: linear-gradient(90deg, transparent 0%, rgba(37, 99, 235, 0.15) 15%, rgba(37, 99, 235, 0.15) 85%, transparent 100%);
     --window-bg: #ffffff;
-    --window-border: #e2e8f0;
+    --window-border: var(--deep-navy-800);
 
     --accent-text: var(--deep-navy-800);
     /* Mantener el azul original solicitado por el usuario */
     --glow-shadow: none;
     --card-bg: #ffffff;
-    --card-border: #e2e8f0;
-    --table-header-bg: #f1f5f9;
-    --table-cell-bg: #ffffff;
-    --table-border: #e2e8f0;
+    --card-border: var(--deep-navy-800);
+    --terminal-border: var(--deep-navy-800);
+    --workflow-border: var(--deep-navy-800);
+    --icon-badge-border: var(--deep-navy-800);
+    --table-border: var(--deep-navy-800);
     --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     --card-radius: 24px;
     --icon-bg: #eff6ff;
@@ -194,6 +199,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-y: scroll; /* Previene el salto del layout al cambiar de página */
 }
 
 body {
@@ -213,7 +219,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: var(--page-glow), var(--bg-grid-pattern), linear-gradient(var(--bg-main), var(--bg-main));
+    background-image: var(--page-glow), var(--bg-grid-pattern), var(--bg-main-layer);
     background-size: 100% 100%, 50px 50px, 100% 100%;
     z-index: -1;
     pointer-events: none;

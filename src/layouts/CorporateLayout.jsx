@@ -11,9 +11,13 @@ const CorporateLayout = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        document.documentElement.setAttribute('data-theme', theme);
+        if (location.pathname === '/pymes') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+            document.documentElement.setAttribute('data-theme', theme);
+        }
         localStorage.setItem('theme', theme);
-    }, [theme]);
+    }, [theme, location.pathname]);
 
     const toggleTheme = () => {
         setTheme(prev => prev === 'dark' ? 'light' : 'dark');
@@ -77,7 +81,17 @@ const CorporateLayout = () => {
                     <NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-active' : ''}>Contacto</NavLink>
                     <button 
                         onClick={toggleTheme} 
-                        style={{ background: 'none', border: 'none', color: 'var(--text-primary)', cursor: 'pointer', padding: '0.5rem', display: 'flex', alignItems: 'center', marginLeft: '1rem' }}
+                        style={{ 
+                            background: 'none', 
+                            border: 'none', 
+                            color: 'var(--text-primary)', 
+                            cursor: 'pointer', 
+                            padding: '0.5rem', 
+                            display: 'flex', 
+                            alignItems: 'center', 
+                            marginLeft: '1rem',
+                            visibility: location.pathname === '/pymes' ? 'hidden' : 'visible'
+                        }}
                         aria-label="Alternar tema"
                     >
                         {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
@@ -110,7 +124,19 @@ const CorporateLayout = () => {
                     <NavLink to="/contact" className={({ isActive }) => isActive ? 'mobile-active' : ''} onClick={() => setIsMenuOpen(false)}>Contacto</NavLink>
                     <button 
                         onClick={toggleTheme} 
-                        style={{ background: 'none', border: 'none', color: 'var(--text-primary)', cursor: 'pointer', padding: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '1.2rem', margin: '1rem 0' }}
+                        style={{ 
+                            background: 'none', 
+                            border: 'none', 
+                            color: 'var(--text-primary)', 
+                            cursor: 'pointer', 
+                            padding: '1rem', 
+                            display: 'flex', 
+                            alignItems: 'center', 
+                            gap: '0.5rem', 
+                            fontSize: '1.2rem', 
+                            margin: '1rem 0',
+                            visibility: location.pathname === '/pymes' ? 'hidden' : 'visible'
+                        }}
                     >
                         {theme === 'dark' ? <><Sun size={24} /> Modo Claro</> : <><Moon size={24} /> Modo Oscuro</>}
                     </button>
@@ -124,13 +150,7 @@ const CorporateLayout = () => {
                 <Outlet />
             </main>
 
-            <footer style={{
-                padding: '1.5rem 2rem',
-                background: 'var(--fixed-nav-bg)',
-                backdropFilter: 'blur(12px)',
-                borderTop: '1px solid var(--fixed-border)',
-                marginTop: 0
-            }}>
+            <footer>
                 <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '2rem', padding: '0 20px' }}>
                     <div style={{ flex: '1', minWidth: '300px' }}>
                         <div style={{ marginBottom: '0.5rem' }}>

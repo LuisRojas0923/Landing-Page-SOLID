@@ -1,9 +1,9 @@
 /* PYMES Page - Light & Friendly Theme */
 .pymes-page {
-    background-color: transparent;
+    background-color: #ffffff;
     color: var(--text-primary); /* Slate 800 */
     min-height: 100vh;
-    padding-top: 100px;
+    padding-top: 20px;
     font-family: 'Inter', 'Roboto', sans-serif;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .pymes-hero h1 span {
-    color: #2563eb;
+    color: var(--deep-navy-800);
 }
 
 .pymes-hero p {
@@ -35,7 +35,7 @@
 }
 
 .pymes-cta {
-    background: #2563eb;
+    background: var(--deep-navy-800);
     color: white;
     padding: 1rem 2.5rem;
     border-radius: 99px;
@@ -47,13 +47,13 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 60, 180, 0.2);
 }
 
 .pymes-cta:hover {
-    background: #1d4ed8;
+    background: var(--deep-navy-600);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 60, 180, 0.3);
 }
 
 .pymes-section {
@@ -101,7 +101,7 @@
     width: 60px;
     height: 60px;
     background: #eff6ff;
-    color: #2563eb;
+    color: var(--deep-navy-800);
     border-radius: 12px;
     display: flex;
     align-items: center;
