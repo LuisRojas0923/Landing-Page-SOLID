@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Lightbulb, TrendingUp, ShieldCheck, Zap, Server, Search, Users, Rocket, Award } from 'lucide-react';
+import { Target, Lightbulb, Rocket } from 'lucide-react';
 
 const About = () => {
     const pillars = [
@@ -21,27 +21,31 @@ const About = () => {
         }
     ];
 
-
-
     return (
-        <div style={{ backgroundColor: 'var(--bg-main)', minHeight: '100vh', padding: '120px 20px 80px' }}>
-            <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ 
+            backgroundColor: 'transparent', 
+            flex: 1,
+            display: 'flex',
+            alignItems: 'center',
+            padding: '40px 20px' 
+        }}>
+            <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
                 {/* HERO ABOUT */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    style={{ textAlign: 'center', marginBottom: '100px' }}
+                    style={{ textAlign: 'center', marginBottom: '40px' }}
                 >
-                    <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: '800', marginBottom: '1.5rem' }}>
+                    <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', fontWeight: '800', marginBottom: '1rem' }}>
                         Quiénes <span style={{ color: 'var(--deep-navy-800)' }}>Somos</span>
                     </h1>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '800px', margin: '0 auto', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
                         Más que una agencia de desarrollo, somos un aliado de ingeniería. Diseñamos soluciones de software y automatización inteligente para resolver retos complejos con solidez, precisión y enfoque en resultados.
                     </p>
                 </motion.div>
-
+ 
                 {/* PILLARS GRID */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '120px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
                     {pillars.map((pillar, idx) => (
                         <motion.div
                             key={idx}
@@ -51,22 +55,20 @@ const About = () => {
                             transition={{ delay: idx * 0.1 }}
                             style={{
                                 background: 'rgba(255, 255, 255, 0.02)',
-                                padding: '3rem',
-                                borderRadius: '32px',
-                                border: '1px solid var(--deep-navy-400)',
+                                padding: '2rem',
+                                borderRadius: '24px',
+                                border: '1px solid var(--deep-navy-800)',
                                 textAlign: 'center'
                             }}
                         >
-                            <div style={{ color: 'var(--deep-navy-800)', marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+                            <div style={{ color: 'var(--deep-navy-800)', marginBottom: '1.25rem', display: 'flex', justifyContent: 'center' }}>
                                 {pillar.icon}
                             </div>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: '800', marginBottom: '1rem' }}>{pillar.title}</h3>
-                            <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic', textAlign: 'center' }}>{pillar.desc}</p>
+                            <h3 style={{ fontSize: '1.25rem', fontWeight: '800', marginBottom: '0.75rem' }}>{pillar.title}</h3>
+                            <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.5', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic', textAlign: 'center' }}>{pillar.desc}</p>
                         </motion.div>
                     ))}
                 </div>
-
-
             </div>
         </div>
     );

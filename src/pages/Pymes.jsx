@@ -95,28 +95,28 @@ const Pymes = () => {
                     No necesita hacer grandes inversiones iniciales. Nuestro modelo le permite incorporar tecnología paso a paso, pagándose a sí misma con el ahorro que genera.
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem' }}>
-                    <div style={{ padding: '1.5rem', background: '#ffffff', borderRadius: '12px', border: '1px solid #e2e8f0', width: '250px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
+                    <div style={{ padding: '1.5rem', background: 'var(--bg-card)', borderRadius: '12px', border: '1px solid var(--border-color)', width: '250px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
                         <div style={{ fontSize: '2rem', fontWeight: '900', color: '#bfdbfe', marginBottom: '0.5rem' }}>1</div>
-                        <h4 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', color: '#1e293b' }}>Diagnóstico</h4>
-                        <p style={{ fontSize: '0.9rem', color: '#64748b' }}>Identificamos el cuello de botella crítico.</p>
+                        <h4 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>Diagnóstico</h4>
+                        <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Identificamos el cuello de botella crítico.</p>
                     </div>
-                    <div style={{ padding: '1.5rem', background: '#ffffff', borderRadius: '12px', border: '1px solid #e2e8f0', width: '250px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
+                    <div style={{ padding: '1.5rem', background: 'var(--bg-card)', borderRadius: '12px', border: '1px solid var(--border-color)', width: '250px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
                         <div style={{ fontSize: '2rem', fontWeight: '900', color: '#bfdbfe', marginBottom: '0.5rem' }}>2</div>
-                        <h4 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', color: '#1e293b' }}>Quick Win</h4>
-                        <p style={{ fontSize: '0.9rem', color: '#64748b' }}>Implementamos una solución rápida y visible.</p>
+                        <h4 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>Quick Win</h4>
+                        <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Implementamos una solución rápida y visible.</p>
                     </div>
-                    <div style={{ padding: '1.5rem', background: '#ffffff', borderRadius: '12px', border: '1px solid #e2e8f0', width: '250px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
+                    <div style={{ padding: '1.5rem', background: 'var(--bg-card)', borderRadius: '12px', border: '1px solid var(--border-color)', width: '250px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
                         <div style={{ fontSize: '2rem', fontWeight: '900', color: '#bfdbfe', marginBottom: '0.5rem' }}>3</div>
-                        <h4 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', color: '#1e293b' }}>Escalabilidad</h4>
-                        <p style={{ fontSize: '0.9rem', color: '#64748b' }}>Agregamos módulos a medida que crece.</p>
+                        <h4 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>Escalabilidad</h4>
+                        <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Agregamos módulos a medida que crece.</p>
                     </div>
                 </div>
             </section>
 
             {/* CALL TO ACTION BOTTOM */}
             <section className="pymes-section pymes-section-alt" style={{ textAlign: 'center', paddingBottom: '6rem' }}>
-                <h2 style={{ fontSize: '2rem', fontWeight: '800', color: '#0f172a', marginBottom: '1rem' }}>Hablemos de su negocio</h2>
-                <p style={{ color: '#475569', marginBottom: '2rem' }}>Una breve sesión para descubrir cómo podemos ayudarle a ser más eficiente.</p>
+                <h2 style={{ fontSize: '2rem', fontWeight: '800', color: 'var(--text-primary)', marginBottom: '1rem' }}>Hablemos de su negocio</h2>
+                <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Una breve sesión para descubrir cómo podemos ayudarle a ser más eficiente.</p>
                 <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                     <button className="pymes-cta" onClick={() => navigate('/contact')}>
                         Agenda tu Diagnóstico <ChevronRight size={20} />

@@ -1,7 +1,7 @@
 .brochure-viewer {
     width: 100vw;
     height: 100vh;
-    background: #020617;
+    background: transparent;
     color: var(--text-primary);
     position: fixed;
     top: 0;

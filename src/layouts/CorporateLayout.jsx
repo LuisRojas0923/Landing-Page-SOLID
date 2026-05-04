@@ -125,32 +125,33 @@ const CorporateLayout = () => {
             </main>
 
             <footer style={{
-                padding: '2.5rem 1rem 1.5rem',
-                background: 'var(--footer-bg)',
-                borderTop: '1px solid var(--border-color)',
+                padding: '1.5rem 2rem',
+                background: 'var(--fixed-nav-bg)',
+                backdropFilter: 'blur(12px)',
+                borderTop: '1px solid var(--fixed-border)',
                 marginTop: 0
             }}>
-                <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '2rem' }}>
+                <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '2rem', padding: '0 20px' }}>
                     <div style={{ flex: '1', minWidth: '300px' }}>
-                        <div style={{ marginBottom: '1.5rem' }}>
+                        <div style={{ marginBottom: '0.5rem' }}>
                             <Link to="/" style={{ textDecoration: 'none' }}>
-                                <Logo size="large" color="var(--text-primary)" />
+                                <Logo color="var(--text-primary)" />
                             </Link>
                         </div>
                         <p style={{
                             color: 'var(--text-secondary)',
                             maxWidth: '400px',
-                            fontSize: '1.05rem',
+                            fontSize: '0.9rem',
                             fontFamily: "'Roboto', sans-serif",
                             fontStyle: 'italic',
-                            lineHeight: '1.6',
+                            lineHeight: '1.4',
                             opacity: 0.8
                         }}>
                             Ingeniería de procesos y automatización industrial avanzada. Transformamos la complejidad en eficiencia operativa.
                         </p>
                     </div>
-                    <div style={{ textAlign: 'right', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                        <div style={{ marginBottom: '1.5rem', display: 'flex', gap: '2rem', justifyContent: 'flex-end', fontWeight: '600' }}>
+                    <div style={{ textAlign: 'right', color: 'var(--text-secondary)', fontSize: '0.8rem' }}>
+                        <div style={{ marginBottom: '0.75rem', display: 'flex', gap: '1.5rem', justifyContent: 'flex-end', fontWeight: '600' }}>
                             <Link to="/privacy" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>Privacidad</Link>
                             <Link to="/terms" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>Términos</Link>
                         </div>

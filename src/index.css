@@ -28,28 +28,30 @@
     --dust-grey-500: #d0d0d0;
 
     /* Application Colors (Dark Theme - Default) */
-    --bg-main: var(--deep-navy-200);
-    --bg-alt: var(--deep-navy-300);
-    --bg-card: var(--deep-navy-300);
-    --bg-card-alt: #0a1128;
-    --bg-card-header: #0d1b3e;
+    --bg-main: #020e29;
+    --bg-alt: #07183d;
+    --bg-card: #0b2252;
+    --bg-card-alt: #04122b;
+    --bg-card-header: #091c45;
     --text-primary: #ffffff;
     --text-secondary: var(--powder-blue-500);
-    --text-muted: rgba(255, 255, 255, 0.5); /* Mejorado contraste de muted */
+    --text-muted: rgba(255, 255, 255, 0.5);
+    /* Mejorado contraste de muted */
     --border-color: var(--deep-navy-400);
     --border-light: rgba(0, 122, 255, 0.2);
     --border-card: rgba(255, 255, 255, 0.08);
-    
+
     --accent: var(--deep-navy-500);
-    --accent-glow: var(--deep-navy-600);
-    
+    --accent-glow: rgba(0, 60, 180, 0.25);
+    --page-glow: radial-gradient(circle at 50% -20%, var(--accent-glow) 0%, transparent 70%);
+
     --nav-bg: rgba(0, 13, 39, 0.85);
     --footer-bg: rgba(0, 3, 10, 0.95);
     --dropdown-bg: rgba(0, 13, 39, 0.95);
     --hover-bg: rgba(0, 122, 255, 0.1);
 
     --font-main: 'Inter', system-ui, -apple-system, sans-serif;
-    
+
     --home-hero-bg: radial-gradient(circle at 50% -20%, var(--accent-glow) 0%, transparent 60%), var(--bg-main);
     --home-section-bg: var(--bg-main);
     --bg-grid-pattern: linear-gradient(rgba(0, 32, 96, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 32, 96, 0.05) 1px, transparent 1px);
@@ -69,7 +71,7 @@
     --pipeline-track-bg: linear-gradient(90deg, transparent 0%, rgba(90, 145, 255, 0.4) 15%, rgba(90, 145, 255, 0.4) 85%, transparent 100%);
     --window-bg: linear-gradient(160deg, var(--deep-navy-100), rgba(0, 13, 39, 0.6));
     --window-border: rgba(255, 255, 255, 0.1);
-    
+
     --accent-text: var(--deep-navy-800);
     --glow-shadow: 0 0 20px rgba(77, 163, 255, 0.7);
     --card-bg: linear-gradient(135deg, rgba(0, 32, 96, 0.1) 0%, rgba(0, 13, 39, 0.4) 100%);
@@ -105,21 +107,24 @@
     --bg-card: #ffffff;
     --bg-card-alt: #f1f5f9;
     --bg-card-header: #e2e8f0;
-    --text-primary: var(--deep-navy-500); /* Ajustado a Navy más perceptible */
-    --text-secondary: #334155; /* Oscurecido Slate 700 para más legibilidad */
-    --text-muted: #64748b; /* Oscurecido Slate 500 para contraste */
+    --text-primary: var(--deep-navy-500);
+    /* Ajustado a Navy más perceptible */
+    --text-secondary: #334155;
+    /* Oscurecido Slate 700 para más legibilidad */
+    --text-muted: #64748b;
+    /* Oscurecido Slate 500 para contraste */
     --border-color: #cbd5e1;
     --border-light: #e2e8f0;
     --border-card: #cbd5e1;
-    
+
     --accent: #2563eb;
     --accent-glow: rgba(37, 99, 235, 0.15);
-    
+
     --nav-bg: rgba(255, 255, 255, 0.95);
     --footer-bg: #f8fafc;
     --dropdown-bg: #ffffff;
     --hover-bg: rgba(37, 99, 235, 0.1);
-    
+
     --home-hero-bg: #ffffff;
     --home-section-bg: #ffffff;
     --bg-grid-pattern: none;
@@ -131,8 +136,9 @@
     --pipeline-track-bg: linear-gradient(90deg, transparent 0%, rgba(37, 99, 235, 0.15) 15%, rgba(37, 99, 235, 0.15) 85%, transparent 100%);
     --window-bg: #ffffff;
     --window-border: #e2e8f0;
-    
-    --accent-text: var(--deep-navy-800); /* Mantener el azul original solicitado por el usuario */
+
+    --accent-text: var(--deep-navy-800);
+    /* Mantener el azul original solicitado por el usuario */
     --glow-shadow: none;
     --card-bg: #ffffff;
     --card-border: #e2e8f0;
@@ -193,7 +199,7 @@ html {
 body {
     min-height: 100vh;
     font-family: var(--font-main);
-    background-color: var(--bg-main);
+    background-color: transparent;
     color: var(--text-primary);
     position: relative;
     overflow-x: hidden;
@@ -207,8 +213,8 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: var(--bg-grid-pattern);
-    background-size: 50px 50px;
+    background-image: var(--page-glow), var(--bg-grid-pattern), linear-gradient(var(--bg-main), var(--bg-main));
+    background-size: 100% 100%, 50px 50px, 100% 100%;
     z-index: -1;
     pointer-events: none;
 }

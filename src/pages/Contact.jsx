@@ -13,108 +13,105 @@ import {
 
 const Contact = () => {
     return (
-        <div style={{ backgroundColor: 'var(--bg-main)', minHeight: '100vh', padding: '120px 20px 80px' }}>
-            <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+        <div style={{ 
+            backgroundColor: 'transparent', 
+            flex: 1,
+            display: 'flex',
+            alignItems: 'center',
+            padding: '40px 20px' 
+        }}>
+            <div style={{ maxWidth: '1000px', margin: '0 auto', width: '100%' }}>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    style={{ textAlign: 'center', marginBottom: '80px' }}
+                    style={{ textAlign: 'center', marginBottom: '40px' }}
                 >
-                    <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: '800', marginBottom: '1.5rem' }}>
+                    <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', fontWeight: '800', marginBottom: '1rem' }}>
                         Inicie su <span style={{ color: 'var(--deep-navy-800)' }}>Transformación</span>
                     </h1>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '1.25rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
                         Estamos listos para diagnosticar sus procesos y proponer soluciones de alto impacto.
                     </p>
                 </motion.div>
-
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem' }}>
+ 
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem' }}>
                     {/* Contact Info */}
-                    <div style={{ spaceY: '3rem' }}>
-                        <div style={{ marginBottom: '3rem' }}>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem', fontWeight: '700' }}>Canales Directos</h3>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-                                <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-                                    <div style={{ padding: '1rem', background: 'rgba(0, 32, 96, 0.2)', borderRadius: '12px', color: 'var(--deep-navy-800)' }}>
-                                        <Mail size={24} />
+                    <div style={{ spaceY: '2rem' }}>
+                        <div style={{ marginBottom: '2rem' }}>
+                            <h3 style={{ fontSize: '1.25rem', marginBottom: '1.5rem', fontWeight: '700' }}>Canales Directos</h3>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                                <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                                    <div style={{ padding: '0.75rem', background: 'rgba(0, 32, 96, 0.2)', borderRadius: '10px', color: 'var(--deep-navy-800)' }}>
+                                        <Mail size={20} />
                                     </div>
                                     <div>
-                                        <p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>Email</p>
-                                        <p style={{ fontSize: '1.1rem' }}>contacto@solutions.com</p>
+                                        <p style={{ color: 'var(--text-secondary)', fontSize: '0.7rem', textTransform: 'uppercase', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>Email</p>
+                                        <p style={{ fontSize: '1rem' }}>contacto@solutions.com</p>
                                     </div>
                                 </div>
-                                <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-                                    <div style={{ padding: '1rem', background: 'rgba(39, 201, 63, 0.1)', borderRadius: '12px', color: '#27c93f' }}>
-                                        <MessageSquare size={24} />
+                                <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                                    <div style={{ padding: '0.75rem', background: 'rgba(39, 201, 63, 0.1)', borderRadius: '10px', color: '#27c93f' }}>
+                                        <MessageSquare size={20} />
                                     </div>
                                     <div>
-                                        <p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>WhatsApp</p>
-                                        <p style={{ fontSize: '1.1rem' }}>+57 317 265 2487</p>
-                                    </div>
-                                </div>
-                                <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-                                    <div style={{ padding: '1rem', background: 'rgba(0, 60, 180, 0.1)', borderRadius: '12px', color: 'var(--deep-navy-800)' }}>
-                                        <MapPin size={24} />
-                                    </div>
-                                    <div>
-                                        <p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', textTransform: 'uppercase', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>Ubicación</p>
-                                        <p style={{ fontSize: '1.1rem' }}>Cali, Colombia</p>
+                                        <p style={{ color: 'var(--text-secondary)', fontSize: '0.7rem', textTransform: 'uppercase', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>WhatsApp</p>
+                                        <p style={{ fontSize: '1rem' }}>+57 317 265 2487</p>
                                     </div>
                                 </div>
                                 <div style={{
-                                    marginTop: '2rem',
-                                    padding: '2rem',
+                                    marginTop: '1rem',
+                                    padding: '1.5rem',
                                     background: 'rgba(255, 255, 255, 0.03)',
-                                    borderRadius: '24px',
-                                    border: '1px solid var(--deep-navy-400)'
+                                    borderRadius: '20px',
+                                    border: '1px solid var(--deep-navy-800)'
                                 }}>
-                                    <h4 style={{ fontSize: '1rem', fontWeight: '800', marginBottom: '1rem', color: 'var(--deep-navy-800)' }}>Compromiso Tecnológico</h4>
-                                    <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.6', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
+                                    <h4 style={{ fontSize: '0.9rem', fontWeight: '800', marginBottom: '0.75rem', color: 'var(--deep-navy-800)' }}>Compromiso Tecnológico</h4>
+                                    <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.5', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>
                                         Nos adaptamos a su stack: Desarrollamos desde sistemas legacy en <strong>Java Swing</strong> hasta ecosistemas modernos con <strong>FastAPI</strong> y <strong>React</strong>.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+ 
                     {/* Contact Form Placeholder with Premium Style */}
                     <div style={{
                         background: 'rgba(255, 255, 255, 0.02)',
-                        padding: '3rem',
-                        borderRadius: '32px',
-                        border: '1px solid var(--deep-navy-400)',
+                        padding: '2rem',
+                        borderRadius: '24px',
+                        border: '1px solid var(--deep-navy-800)',
                         boxShadow: '0 20px 40px rgba(0,0,0,0.3)'
                     }}>
-                        <form style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                <label style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>NOMBRE COMPLETO</label>
+                        <form style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                                <label style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>NOMBRE COMPLETO</label>
                                 <input type="text" style={{
                                     background: 'rgba(0, 13, 39, 0.5)',
-                                    border: '1px solid var(--deep-navy-400)',
-                                    borderRadius: '12px',
-                                    padding: '1rem',
+                                    border: '1px solid var(--deep-navy-800)',
+                                    borderRadius: '10px',
+                                    padding: '0.75rem',
                                     color: 'white',
                                     outline: 'none'
                                 }} placeholder="John Doe" />
                             </div>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                <label style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>EMAIL CORPORATIVO</label>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                                <label style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>EMAIL CORPORATIVO</label>
                                 <input type="email" style={{
                                     background: 'rgba(0, 13, 39, 0.5)',
-                                    border: '1px solid var(--deep-navy-400)',
-                                    borderRadius: '12px',
-                                    padding: '1rem',
+                                    border: '1px solid var(--deep-navy-800)',
+                                    borderRadius: '10px',
+                                    padding: '0.75rem',
                                     color: 'white',
                                     outline: 'none'
                                 }} placeholder="john@empresa.com" />
                             </div>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                <label style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>MENSAJE / REQUISITOS</label>
-                                <textarea rows="4" style={{
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                                <label style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', fontFamily: "'Roboto', sans-serif", fontStyle: 'italic' }}>MENSAJE / REQUISITOS</label>
+                                <textarea rows="3" style={{
                                     background: 'rgba(0, 13, 39, 0.5)',
-                                    border: '1px solid var(--deep-navy-400)',
-                                    borderRadius: '12px',
-                                    padding: '1rem',
+                                    border: '1px solid var(--deep-navy-800)',
+                                    borderRadius: '10px',
+                                    padding: '0.75rem',
                                     color: 'white',
                                     outline: 'none',
                                     resize: 'none'
@@ -123,20 +120,20 @@ const Contact = () => {
                             <button style={{
                                 backgroundColor: 'var(--deep-navy-800)',
                                 color: 'white',
-                                padding: '1.2rem',
-                                borderRadius: '12px',
-                                fontSize: '1rem',
+                                padding: '1rem',
+                                borderRadius: '10px',
+                                fontSize: '0.95rem',
                                 fontWeight: '700',
                                 border: 'none',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
-                                gap: '0.75rem',
+                                gap: '0.5rem',
                                 cursor: 'pointer',
-                                marginTop: '1rem',
+                                marginTop: '0.5rem',
                                 boxShadow: '0 10px 20px rgba(0, 60, 180, 0.3)'
                             }}>
-                                Enviar Solicitud <Send size={20} />
+                                Enviar Solicitud <Send size={18} />
                             </button>
                         </form>
                     </div>

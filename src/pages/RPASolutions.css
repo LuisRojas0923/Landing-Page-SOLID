@@ -1,5 +1,5 @@
 .rpa-solutions-page {
-    background: var(--bg-main);
+    background: transparent;
     color: var(--text-primary);
     min-height: 100vh;
     padding: 120px 20px 80px;
@@ -183,7 +183,7 @@
 .result-box.erp-nucleus {
     width: 160px;
     height: 160px;
-    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.2), var(--bg-main));
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.2), transparent);
 }
 
 .result-box.dashboard {

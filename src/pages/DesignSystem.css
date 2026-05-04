@@ -2,7 +2,7 @@
 
 .ds-page {
     min-height: 100vh;
-    background: var(--bg-main);
+    background: transparent;
     color: var(--text-primary);
     font-family: var(--font-main);
 }

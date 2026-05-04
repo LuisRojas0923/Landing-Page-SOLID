@@ -86,7 +86,7 @@ const Home = () => {
                 padding: '2rem 2rem 8rem',
                 textAlign: 'center',
                 position: 'relative',
-                background: 'var(--home-hero-bg)',
+                background: 'transparent',
                 minHeight: '100vh',
                 display: 'flex',
                 alignItems: 'center',
@@ -162,7 +162,7 @@ const Home = () => {
             {/* RESULTS SECTION - Versión Premium exacta a la imagen */}
             <section id="impact" style={{
                 padding: '8rem 2rem',
-                background: 'var(--bg-main)',
+                background: 'transparent',
                 minHeight: '100vh',
                 display: 'flex',
                 alignItems: 'center',
@@ -271,7 +271,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section id="method" style={{ padding: '8rem 2rem', background: 'var(--home-section-bg)', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+            <section id="method" style={{ padding: '8rem 2rem', background: 'transparent', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
                         <div className="luxe-badge" style={{ marginBottom: '1.5rem' }}>Nuestro Método</div>
@@ -466,7 +466,7 @@ const Home = () => {
             {/* TECH STACK BAR */}
             <section id="tech-stack" style={{
                 padding: '8rem 1rem',
-                background: 'var(--home-section-bg)',
+                background: 'transparent',
                 minHeight: '100vh',
                 display: 'flex',
                 alignItems: 'center',

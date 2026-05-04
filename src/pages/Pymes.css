@@ -1,7 +1,7 @@
 /* PYMES Page - Light & Friendly Theme */
 .pymes-page {
-    background-color: #ffffff;
-    color: #1e293b; /* Slate 800 */
+    background-color: transparent;
+    color: var(--text-primary); /* Slate 800 */
     min-height: 100vh;
     padding-top: 100px;
     font-family: 'Inter', 'Roboto', sans-serif;
@@ -10,14 +10,14 @@
 .pymes-hero {
     padding: 4rem 2rem;
     text-align: center;
-    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+    background: transparent;
     border-bottom: 1px solid #e2e8f0;
 }
 
 .pymes-hero h1 {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 800;
-    color: #0f172a;
+    color: var(--text-primary);
     margin-bottom: 1.5rem;
     line-height: 1.2;
 }
@@ -28,7 +28,7 @@
 
 .pymes-hero p {
     font-size: 1.15rem;
-    color: #475569;
+    color: var(--text-secondary);
     max-width: 700px;
     margin: 0 auto 2.5rem;
     line-height: 1.6;
@@ -63,7 +63,7 @@
 }
 
 .pymes-section-alt {
-    background-color: #f8fafc;
+    background-color: transparent;
     border-top: 1px solid #f1f5f9;
     border-bottom: 1px solid #f1f5f9;
 }
@@ -72,7 +72,7 @@
     text-align: center;
     font-size: 2rem;
     font-weight: 800;
-    color: #0f172a;
+    color: var(--text-primary);
     margin-bottom: 3rem;
 }
 
@@ -83,8 +83,8 @@
 }
 
 .pymes-card {
-    background: white;
-    border: 1px solid #e2e8f0;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 24px;
     padding: 2.5rem;
     transition: all 0.3s ease;
@@ -126,9 +126,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    background: white;
-    border-radius: 24px;
-    border: 1px solid #e2e8f0;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
@@ -138,7 +137,7 @@
 }
 
 .vs-bad {
-    background: #fff1f2;
+    background: rgba(244, 63, 94, 0.05);
 }
 
 .vs-bad h3 {
@@ -150,7 +149,7 @@
 }
 
 .vs-good {
-    background: #ecfdf5;
+    background: rgba(16, 185, 129, 0.05);
 }
 
 .vs-good h3 {
@@ -166,7 +165,7 @@
     align-items: flex-start;
     gap: 0.75rem;
     margin-bottom: 1rem;
-    color: #334155;
+    color: var(--text-primary);
     font-size: 0.95rem;
     line-height: 1.5;
 }

@@ -90,7 +90,7 @@ const Services = () => {
     };
 
     return (
-        <div style={{ backgroundColor: 'var(--bg-main)', minHeight: '100vh', padding: '100px 20px 40px' }}>
+        <div style={{ backgroundColor: 'transparent', minHeight: '100vh', padding: '100px 20px 40px' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                 <motion.header
                     initial={{ opacity: 0, y: -20 }}
@@ -125,10 +125,10 @@ const Services = () => {
                             variants={itemVariants}
                             whileHover={{ y: -10 }}
                             style={{
-                                background: 'var(--bg-card)',
+                                background: 'rgba(255, 255, 255, 0.02)',
                                 padding: '2rem',
                                 borderRadius: '24px',
-                                border: '1px solid var(--border-color)',
+                                border: '1px solid var(--deep-navy-800)',
                                 position: 'relative',
                                 overflow: 'hidden',
                                 textAlign: 'left'
@@ -267,7 +267,7 @@ const Services = () => {
                                         left: 0,
                                         width: '100%',
                                         height: '14%',
-                                        background: 'var(--bg-main)',
+                                        background: 'transparent',
                                         display: 'flex',
                                         alignItems: 'center',
                                         padding: '0 1.5rem',
@@ -352,7 +352,7 @@ const Services = () => {
                                     left: 0,
                                     width: '100%',
                                     height: '14%',
-                                    background: 'var(--bg-main)',
+                                    background: 'transparent',
                                     display: 'flex',
                                     alignItems: 'center',
                                     padding: '0 1.5rem',
