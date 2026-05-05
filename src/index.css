@@ -76,6 +76,7 @@
     --accent-text: var(--deep-navy-800);
     --glow-shadow: 0 0 20px rgba(77, 163, 255, 0.7);
     --card-bg: linear-gradient(135deg, rgba(0, 32, 96, 0.1) 0%, rgba(0, 13, 39, 0.4) 100%);
+    --beam-color: var(--deep-navy-600);
     --card-border: var(--deep-navy-400);
     --terminal-border: var(--deep-navy-400);
     --workflow-border: rgba(255, 255, 255, 0.05);
@@ -145,7 +146,7 @@
     /* Mantener el azul original solicitado por el usuario */
     --glow-shadow: none;
     --card-bg: #ffffff;
-    --card-border: var(--deep-navy-800);
+    --card-border: rgba(90, 145, 255, 0.3);
     --terminal-border: var(--deep-navy-800);
     --workflow-border: var(--deep-navy-800);
     --icon-badge-border: var(--deep-navy-800);
@@ -167,6 +168,7 @@
     --capsule-active-glow: none;
 
     /* Animation & Terminal Backgrounds (Light Mode) */
+    --beam-color: var(--deep-navy-800);
     --card-hover-bg: rgba(90, 145, 255, 0.05);
     --terminal-bg: #f8fafc;
 }
