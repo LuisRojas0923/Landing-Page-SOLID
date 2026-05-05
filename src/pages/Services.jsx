@@ -125,7 +125,7 @@ const Services = () => {
                             variants={itemVariants}
                             whileHover={{ y: -10 }}
                             style={{
-                                background: 'rgba(255, 255, 255, 0.02)',
+                                background: 'linear-gradient(165deg, var(--bg-card) 0%, var(--bg-main) 100%)',
                                 padding: '2rem',
                                 borderRadius: '24px',
                                 border: '1px solid var(--deep-navy-800)',

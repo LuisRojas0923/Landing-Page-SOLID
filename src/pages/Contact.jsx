@@ -76,11 +76,11 @@ const Contact = () => {
  
                     {/* Contact Form Placeholder with Premium Style */}
                     <div style={{
-                        background: 'var(--bg-card)',
+                        background: 'linear-gradient(165deg, var(--bg-card) 0%, var(--bg-main) 100%)',
                         padding: '2rem',
                         borderRadius: '24px',
-                        border: '1px solid var(--card-border)',
-                        boxShadow: 'var(--card-shadow)'
+                        border: '1px solid var(--deep-navy-400)',
+                        boxShadow: '0 20px 50px rgba(0, 0, 0, 0.4)'
                     }}>
                         <form style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
