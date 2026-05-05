@@ -117,7 +117,7 @@ const Services = () => {
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
-                    style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.25rem' }}
+                    style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem' }}
                 >
                     {categories.map((category, idx) => (
                         <motion.div

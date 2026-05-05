@@ -77,7 +77,7 @@ const Contact = () => {
                     {/* Contact Form Placeholder with Premium Style */}
                     <div style={{
                         background: 'linear-gradient(165deg, var(--bg-card) 0%, var(--bg-main) 100%)',
-                        padding: '2rem',
+                        padding: 'clamp(1rem, 5vw, 2rem)',
                         borderRadius: '24px',
                         border: '1px solid var(--deep-navy-400)',
                         boxShadow: '0 20px 50px rgba(0, 0, 0, 0.4)'

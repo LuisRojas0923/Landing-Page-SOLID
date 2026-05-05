@@ -96,7 +96,7 @@ const CorporateLayout = () => {
                     >
                         {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
                     </button>
-                    <Link to="/contact" className="btn-consultancy" style={{ marginLeft: '1rem' }}>
+                    <Link to="/contact" className="btn-consultancy desktop-only" style={{ marginLeft: '1rem' }}>
                         Agenda tu Diagnóstico <ChevronRight className="btn-icon" size={18} />
                     </Link>
                 </div>

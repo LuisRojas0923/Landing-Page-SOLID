@@ -120,7 +120,7 @@ const Home = () => {
                     </div>
 
                     <h1 style={{
-                        fontSize: 'clamp(2.5rem, 8vw, 5rem)',
+                        fontSize: 'clamp(1.8rem, 8vw, 5rem)',
                         fontWeight: '800',
                         lineHeight: '1.2',
                         marginBottom: '2rem',
@@ -174,7 +174,7 @@ const Home = () => {
                     </div>
 
                     <h2 style={{
-                        fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
+                        fontSize: 'clamp(2.2rem, 8vw, 3.5rem)',
                         fontWeight: '800',
                         marginBottom: '1.5rem',
                         letterSpacing: '-0.02em',
@@ -185,12 +185,11 @@ const Home = () => {
 
                     <p style={{
                         color: 'var(--accent-text)',
-                        fontSize: '2rem',
+                        fontSize: 'clamp(1.2rem, 5vw, 2rem)',
                         fontWeight: '800',
                         letterSpacing: '-0.03em',
                         marginBottom: '2rem',
-                        lineHeight: '1.2',
-                        whiteSpace: 'nowrap'
+                        lineHeight: '1.2'
                     }}>
                         Menor costo operativo, mayor rentabilidad
                     </p>
@@ -251,7 +250,7 @@ const Home = () => {
                                 <div className="stat-content">
                                     <div className="stat-value-luxe" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
                                         <TrendingUp size={34} strokeWidth={3} />
-                                        <span>x</span>
+                                        <span style={{ fontSize: '2.2rem', fontWeight: '900' }}>X</span>
                                     </div>
                                     <div className="stat-label-luxe amber">EFICIENCIA</div>
                                 </div>
@@ -271,7 +270,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section id="method" style={{ padding: '8rem 2rem', background: 'transparent', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+            <section id="method" style={{ padding: 'clamp(4rem, 10vw, 8rem) 1rem', background: 'transparent', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
                         <div className="luxe-badge" style={{ marginBottom: '1.5rem' }}>Nuestro Método</div>
@@ -282,8 +281,7 @@ const Home = () => {
                             marginBottom: '1rem',
                             maxWidth: '1200px',
                             margin: '0 auto 1rem',
-                            letterSpacing: '-0.03em',
-                            whiteSpace: 'nowrap'
+                            letterSpacing: '-0.03em'
                         }}>
                             Así transformamos su operación
                         </h2>
@@ -291,11 +289,10 @@ const Home = () => {
                             color: 'var(--accent-text)',
                             maxWidth: 'none',
                             margin: '0 auto',
-                            fontSize: '2rem',
+                            fontSize: 'clamp(1.5rem, 6vw, 2rem)',
                             fontWeight: '800',
                             letterSpacing: '-0.03em',
-                            textAlign: 'center',
-                            whiteSpace: 'nowrap'
+                            textAlign: 'center'
                         }}>
                             Tres pasos que eliminan la fricción operativa de su empresa
                         </p>
@@ -480,10 +477,13 @@ const Home = () => {
                     </div>
                     <div className="tech-stack-container" style={{
                         display: 'flex',
+                        flexWrap: 'wrap',
                         justifyContent: 'center',
-                        gap: 'clamp(0.5rem, 2vw, 2rem)',
+                        gap: 'clamp(1.5rem, 4vw, 3rem)',
                         alignItems: 'center',
-                        padding: '0'
+                        padding: '1rem',
+                        maxWidth: '900px',
+                        margin: '0 auto'
                     }}>
                         {[
                             { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB', color: '3776AB' },

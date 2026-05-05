@@ -665,11 +665,14 @@
 
 /* Content Styles — matching reference layout */
 .method-title {
-    font-size: 1.8rem;
-    font-weight: 900;
+    font-size: clamp(1.4rem, 6vw, 1.8rem);
+    font-weight: 800;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
-    margin-top: 0.5rem; /* Minimal margin */
+    margin-top: 0.5rem;
+    line-height: 1.2;
+    height: auto;
+    text-align: center;
 }
 
 @media (max-width: 1024px) {
@@ -677,11 +680,12 @@
         margin-top: 0;
     }
 }
-    letter-spacing: -0.02em;
-    height: 2.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.method-tagline {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-style: italic;
+    letter-spacing: -0.01em;
 }
 
 .method-pill {
@@ -772,6 +776,7 @@ ul.window-inner-list {
     .method-grid {
         grid-template-columns: 1fr;
         gap: 5rem;
+        padding: 0 1.5rem;
     }
 
     .method-pipeline-track {
@@ -916,6 +921,9 @@ ul.window-inner-list {
     background: var(--terminal-bg);
     border-radius: 8px;
     border: 1px solid var(--terminal-border);
+    overflow-x: auto;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
 }
 
 .workflow-node-labeled {
@@ -1027,6 +1035,13 @@ section[id] {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .verticals-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1.5rem;
+    }
 }
 
 .vertical-card {
@@ -1444,11 +1459,20 @@ section[id] {
     margin-top: 0;
 }
 
+@media (max-width: 1024px) {
+    .results-premium-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
 .stat-card-premium {
-    background: var(--window-bg);
+    background: linear-gradient(165deg, var(--bg-card) 0%, var(--bg-main) 100%);
     border: 1px solid var(--card-border);
     border-radius: 20px;
-    padding: 2.5rem;
+    padding: 2rem;
+    min-height: 140px;
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -1462,6 +1486,13 @@ section[id] {
     backface-visibility: hidden;
     transform: translateZ(0);
     will-change: transform, box-shadow;
+}
+
+@media (max-width: 768px) {
+    .stat-card-premium {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
 }
 
 
