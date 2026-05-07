@@ -1,0 +1,270 @@
+.method-page {
+    overflow-x: hidden;
+    background: transparent;
+}
+
+.method-section {
+    padding: 8rem 2rem;
+    background: transparent;
+}
+
+.method-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.method-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.method-hero-title {
+    font-size: clamp(2rem, 7vw, 3.8rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: var(--text-primary);
+}
+
+.accent-blue {
+    color: var(--deep-navy-800);
+}
+
+.method-hero-desc {
+    color: var(--text-secondary);
+    font-size: clamp(1rem, 3.5vw, 1.3rem);
+    max-width: 850px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.method-steps-grid {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3rem, 7vw, 7rem);
+}
+
+.method-step-card {
+    display: flex;
+    gap: clamp(2rem, 5vw, 6rem);
+    align-items: center;
+    scroll-margin-top: 120px;
+    width: 100%;
+}
+
+.method-step-card.row { flex-direction: row; }
+.method-step-card.row-reverse { flex-direction: row-reverse; }
+
+.method-info-col {
+    flex: 1.2;
+    width: 100%;
+}
+
+.method-step-num-title {
+    font-size: clamp(1.6rem, 5vw, 2.8rem);
+    margin-bottom: 0.4rem;
+    font-weight: 900;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+}
+
+.method-step-tagline {
+    color: var(--deep-navy-800);
+    font-size: clamp(1.05rem, 4vw, 1.6rem);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.01em;
+}
+
+.method-step-desc {
+    color: var(--text-secondary);
+    font-size: clamp(0.95rem, 3.5vw, 1.25rem);
+    line-height: 1.5;
+    max-width: 550px;
+    margin: 0 0 1.5rem 0;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    opacity: 0.85;
+}
+
+.method-items-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.method-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    color: var(--text-primary);
+    font-size: clamp(0.9rem, 3vw, 1.15rem);
+    margin-bottom: 0.6rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.method-item-icon {
+    color: var(--deep-navy-800);
+    display: flex;
+    margin-top: 0.3rem;
+}
+
+.method-visual-col {
+    flex: 1;
+    width: 100%;
+    min-height: clamp(300px, 40vw, 400px);
+    background: var(--glass-bg);
+    border-radius: 40px;
+    border: 1px solid rgba(90, 145, 255, 0.15);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+}
+
+.method-visual-col:hover {
+    border-color: var(--deep-navy-800);
+    box-shadow: 0 30px 60px rgba(90, 145, 255, 0.1);
+}
+
+/* Diagram System */
+.diagram-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 0.2rem;
+    perspective: 1000px;
+    padding-bottom: 2rem;
+}
+
+.diagram-node-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+}
+
+.diagram-node-icon {
+    width: clamp(50px, 12vw, 74px);
+    height: clamp(50px, 12vw, 74px);
+    border-radius: 20px;
+    background: var(--bg-card-header);
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diagram-node-label {
+    position: absolute;
+    top: clamp(60px, 15vw, 85px);
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+
+.diagram-connector {
+    width: clamp(30px, 8vw, 90px);
+    height: 74px;
+    position: relative;
+}
+
+.diagram-connector svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.connector-path-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.05);
+    stroke-width: 1.5;
+}
+
+.connector-path-active {
+    fill: none;
+    stroke: var(--deep-navy-800);
+    stroke-width: 3;
+    stroke-linecap: round;
+}
+
+.central-icon {
+    width: clamp(60px, 15vw, 96px);
+    height: clamp(60px, 15vw, 96px);
+    border-radius: 28px;
+    background: var(--deep-navy-800);
+    color: #fff;
+    box-shadow: 0 0 30px rgba(90, 145, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 5;
+}
+
+.central-label {
+    top: clamp(75px, 18vw, 110px);
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: var(--deep-navy-800);
+}
+
+/* Specific alignments for zigzag (PC) */
+.method-step-card.row .method-info-col { text-align: left; }
+.method-step-card.row-reverse .method-info-col { text-align: right; }
+.method-step-card.row-reverse .method-items-list .method-item { justify-content: flex-end; }
+.method-step-card.row-reverse .method-step-desc { margin-left: auto; }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .method-section { padding: 5rem 1.5rem; }
+    
+    .method-step-card.row,
+    .method-step-card.row-reverse {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 3.5rem;
+    }
+
+    .method-info-col, .method-visual-col {
+        flex: none;
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .method-step-num-title, .method-step-tagline, .method-step-desc {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .method-items-list .method-item {
+        justify-content: center !important;
+        text-align: left;
+    }
+
+    .method-visual-col { order: 2; }
+    .method-info-col { order: 1; }
+}
+
+@media (max-width: 480px) {
+    .method-section { padding: 4rem 1rem; }
+    .method-visual-col { min-height: 260px; border-radius: 24px; }
+    
+    .diagram-container {
+        transform: scale(0.8);
+        transform-origin: center center;
+    }
+}
