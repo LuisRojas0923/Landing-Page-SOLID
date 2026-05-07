@@ -462,6 +462,12 @@ footer {
     border-top: 1px solid rgba(0, 20, 60, 0.1);
 }
 
+[data-theme="light"] .btn-consultancy {
+    background: var(--deep-navy-800) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(90, 145, 255, 0.3);
+}
+
 /* Extreme Responsive Force Hide */
 @media (max-width: 1024px) {
     .desktop-only, 
