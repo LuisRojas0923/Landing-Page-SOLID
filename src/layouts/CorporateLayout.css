@@ -453,7 +453,7 @@ footer {
 
 [data-theme="light"] .mobile-menu a.mobile-active::before {
     background: var(--deep-navy-800);
-    box-shadow: 0 0 10px rgba(90, 145, 255, 0.3);
+    box-shadow: none;
 }
 
 [data-theme="light"] footer {
@@ -465,7 +465,7 @@ footer {
 [data-theme="light"] .btn-consultancy {
     background: var(--deep-navy-800) !important;
     color: #ffffff !important;
-    box-shadow: 0 4px 15px rgba(90, 145, 255, 0.3);
+    box-shadow: none;
 }
 
 /* Extreme Responsive Force Hide */

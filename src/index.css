@@ -67,7 +67,7 @@
 
     /* Semantic UI Components */
     --badge-bg: rgba(0, 20, 60, 0.4);
-    --badge-text: #60a5fa;
+    --badge-text: var(--deep-navy-800);
     --step-number-text: rgba(90, 145, 255, 0.15);
     --pipeline-track-bg: linear-gradient(90deg, transparent 0%, rgba(90, 145, 255, 0.4) 15%, rgba(90, 145, 255, 0.4) 85%, transparent 100%);
     --window-bg: linear-gradient(160deg, var(--deep-navy-100), rgba(0, 13, 39, 0.6));
@@ -136,7 +136,7 @@
 
     /* Light UI Components */
     --badge-bg: #f8fafc;
-    --badge-text: #1d4ed8;
+    --badge-text: var(--deep-navy-800);
     --step-number-text: rgba(37, 99, 235, 0.08);
     --pipeline-track-bg: linear-gradient(90deg, transparent 0%, rgba(37, 99, 235, 0.15) 15%, rgba(37, 99, 235, 0.15) 85%, transparent 100%);
     --window-bg: #ffffff;
