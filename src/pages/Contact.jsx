@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
     Mail,
@@ -117,6 +118,18 @@ const Contact = () => {
                                     resize: 'none'
                                 }} placeholder="¿Cómo podemos ayudarle?"></textarea>
                             </div>
+                            <p style={{
+                                color: 'var(--text-secondary)',
+                                fontSize: '0.78rem',
+                                lineHeight: '1.5',
+                                fontFamily: "'Roboto', sans-serif",
+                                fontStyle: 'italic'
+                            }}>
+                                Al enviar esta solicitud, autoriza el tratamiento de sus datos personales conforme a la{' '}
+                                <Link to="/privacy" style={{ color: 'var(--deep-navy-800)', fontWeight: '700' }}>
+                                    Política de Privacidad
+                                </Link>.
+                            </p>
                             <button style={{
                                 backgroundColor: 'var(--deep-navy-800)',
                                 color: 'white',

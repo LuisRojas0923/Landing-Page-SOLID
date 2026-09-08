@@ -1383,10 +1383,6 @@ section[id] {
     box-shadow: 0 30px 60px rgba(90, 145, 255, 0.15) !important;
 }
 
-@media (max-width: 768px) {
-    }
-}
-
 /* =============================================
    IMPACTO MEDIBLE: Premium Redesign
    ============================================= */

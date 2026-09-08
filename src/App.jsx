@@ -10,6 +10,8 @@ import Method from './pages/Method';
 import RPASolutions from './pages/RPASolutions';
 import DesignSystem from './pages/DesignSystem';
 import Pymes from './pages/Pymes';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
 function ScrollToTop() {
     const { pathname } = useLocation();
@@ -34,6 +36,8 @@ function App() {
                     <Route path="brochure" element={<Brochure />} />
                     <Route path="pymes" element={<Pymes />} />
                     <Route path="solutions/rpa" element={<RPASolutions />} />
+                    <Route path="privacy" element={<Privacy />} />
+                    <Route path="terms" element={<Terms />} />
                 </Route>
             </Routes>
         </>
